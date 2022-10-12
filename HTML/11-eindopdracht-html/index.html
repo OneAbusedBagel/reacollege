@@ -17,6 +17,7 @@
 				</tr>
 			</thead>
 			<tbody>
+				
 				<tr>
 					<th colspan="3">Les 1 - Inleiding HTML</th>
 				</tr>
@@ -65,7 +66,7 @@
 				</tr>
 				<tr>
 					<td>&lt;meta&gt;</td>
-					<td>Hier plaats je metagegevens plaatsen (vooral voor SEO)</td>
+					<td>Hier kun je metagegevens plaatsen (vooral voor SEO)</td>
 					<td>n.v.t.</td>
 				</tr>				
 				<tr>
@@ -101,7 +102,7 @@
 				<tr>
 					<td>&lt;blockquote&gt;</td>
 					<td>Hiermee markeer je een stuk tekst als een (lange) quote</td>
-					<td><q>Dit is een langere voorbeeld omdat dit <br> specifiek voor langere quotes wordt gebruikt</q> -Mika</td>
+					<td><q>Dit is een langere voorbeeld omdat dit element <br> specifiek voor langere quotes wordt gebruikt</q> -Mika</td>
 				</tr>
 				<tr>
 					<td>&lt;abbr&gt;</td>
@@ -115,7 +116,166 @@
 					<td>&lt;ul&gt;</td>
 					<td>Hiermee kan je een unordered list maken</td>
 					<td><ul> <li>dit is een</li> <li>unordered list</li> <li>van drie "list items"</li> </ul></td>
-				</tr>			
+				</tr>
+				<tr>
+					<td>&lt;ol&gt;</td>
+					<td>Hiermee kan je een ordererd list maken</td>
+					<td><ol><li>dit is</li><li>een ordered list</li><li>van drie "list items"</li></ol></td>
+				</tr>
+				<tr>
+					<td>&lt;dl&gt;</td>
+					<td>Hiermee maak je een description list</td>
+					<td><dl><dt>de ul element</dt><dd>wordt gebruikt voor unordered list</dd><dt>de ol element</dt><dd>wordt gebruikt voor ordered lists</dd><dt>de dl element</dt><dd>wordt gebruikt voor description lists</dd></dt></td>					
+				</tr>
+				<tr>
+					<th colspan="3">Les 4 - Hyperlinks</th>
+				</tr>
+				<tr>
+					<td>&lt;a&gt;</td>
+					<td>Met dit element maken wij een hyperlink</td>
+					<td><a href="https://www.w3schools.com/tags/tag_a.asp">Dit is een hyperlink</a></td>					
+				</tr>
+				<tr>
+					<td>&lt;iframe&gt;</td>
+					<td>Hiermee maak je een inline frame</td>
+					<td><iframe src="https://www.w3schools.com/tags/tag_iframe.asp" frameborder="150">Pagina niet gevonden. <br> De pagina is mogelijk verhuisd.</iframe></td>					
+				</tr>
+				<tr>
+					<th colspan="5">Les 5 - Afbeeldingen</th>
+				</tr>
+				<tr>
+					<td>&lt;img&gt;</td>
+					<td>Met dit element kun je een image inn je webpage zetten</td>
+					<td><img src="Images/SVG-Export-2022-9-3-10-7.svg" alt="Dit is een willekeurige .jpg bestand" width="580" height="120"></td>					
+				</tr>
+				<tr>
+					<td>&lt;Link&gt;</td>
+					<td>Met dit element kun je een connectie tussen deze folder en een andere maken. <br>Dit wordt vaak gebruikt om external style sheets of een favicon te linken</td>
+					<td><link rel="icon" href="Images/l-logo.png">Als je naar de top van de webpagina kijkt <br> zou er nu een Favicon bij moeten staan</td>					
+				</tr>
+				<!--Ik weet niet waarom maar sommige link elementen werken niet, sommige zijn locale verwijzingen (zoals de favicon link hierboven) maar een ander is extern (de iframe) maar de hyperlinnk extern werkt wel en de css stylesheet link is lokaal en werkt wel dus weet ik niet precies wat de probleem is-->
+				<tr>
+					<td>&lt;map&gt;</td>
+					<td>Dit element wordt gebruikt om een 'image map' aan te wijzen</td>
+					<td><!--Ik weet niet precies how je dit demonstreert want het doet niet echt iets totdat je de <area> tag ermee gebruikt--></td>					
+				</tr>
+				<tr>
+					<td>&lt;area&gt;</td>
+					<td>met dit element defineerd een gebied in een image map</td>
+					<td><!--Ik heb hier het zelfde probleem als daar want <area> doet niet veel zonder de <map> tag --></td>					
+				</tr>
+				<tr>
+					<td>&lt;object&gt;</td>
+					<td>Met dit element defineer je een container voor een externe resource</td>
+					<td><object data="Images/SVG-Export-2022-9-3-10-7.svg" type="img/svg+xml">uw browser ondersteunt geen SVG</object></td> 
+					<!--En nu werkt svg ook niet -->					
+				</tr>
+				<tr>
+					<th colspan="3">Les 6 - Tabellen</th>
+				</tr>
+				<tr>
+					<td>&lt;table&gt;</td>
+					<td>Met dit element kun je het begin van een tabel maken. <br> maar een tabel bestaat uit meerdere elementen dus &lt;table&gt; alleen doet weinig </td>
+					<td><table> Dit is een tabel met alleen &lt;table&gt;</table></td>					
+				</tr>
+				<tr>
+					<td>&lt;tr&gt;</td>
+					<td>Dit element defineerd een rij in een tabel <br> maar net zoals &lt;table&gt; doet niet veel alleen</td>
+					<td><table> <tr>Dit is een tabel met &lt;table&gt;</tr><tr>en &lt;tr&gt;</tr></table></td>					
+				</tr>
+				<tr>
+					<td>&lt;td&gt;</td>
+					<td>Dit element defineerd een standaard data cel in een HTML tabel</td>
+					<td><table><tr><td> Dit is een tabel met het element &lt;table&gt;</td></tr><tr><td>Het element &lt;tr&gt; (zorgt voor de rijen)</td></tr><tr><td>en het element &lt;td&gt; (zorgt voor de standaard data cellen)</tr></td></table></td>					
+				</tr>
+				<tr>
+					<td>&lt;th&gt;</td>
+					<td>Dit element defineerd een header cell in een HTML tabel</td>
+					<td><table><tr><th> Een tabel met het element &lt;th&gt; (zorgt voor de header cell)</th></tr><tr><td> Het element &lt;table&gt; (zorgt voor de basis in code)</td></tr><tr><td>Het element &lt;tr&gt; (zorgt voor de rijen)</td></tr><tr><td>En het element &lt;td&gt; (zorgt voor de standaard data cellen)</tr></td></table></td>					
+				</tr>
+				<tr>
+					<td>&lt;style&gt;</td>
+					<td>Dit element defineer style informatie (Wat onder CSS valt) in een document</td>
+					<td><!-- hier weet ik nu niet een goede voorbeeld voor maar ik kom hier nog wel op terug--></td>					
+				</tr>
+				<tr>
+					<td>&lt;Caption&gt;</td>
+					<td>Met dit element kun je een bijschrift toevoegen aan je tabel</td>
+					<td><table><caption>Een tabel met het element &lt;Caption&gt; (zorgt voor dit bijschrift)</caption><tr><th> het element &lt;th&gt; (zorgt voor de header cell)</th></tr><tr><td> Het element &lt;table&gt; (zorgt voor de basis in code)</td></tr><tr><td>Het element &lt;tr&gt; (zorgt voor de rijen)</td></tr><tr><td>En het element &lt;td&gt; (zorgt voor de standaard data cellen)</tr></td></table></td>					
+				</tr>
+				<tr>
+					<td>&lt;thead&gt;</td>
+					<td>Dit element wordt gebruikt om header content de groupen</td>
+					<td>Dit is een puur achter de schermen verandering voor zoekmachines en schermlezers <br> zodat deze beter begrijpen hoe je tabel is opgebouwd<!--(Zover ik weet)--></td>					
+				</tr>
+				<tr>
+					<td>&lt;tbody&gt;</td>
+					<td>Dit element wordt gebruikt om body content de groupen</td>
+					<td>Dit is een puur achter de schermen verandering voor zoekmachines en schermlezers <br> zodat deze beter begrijpen hoe je tabel is opgebouwd<!--(Zover ik weet)--></td>					
+				</tr>
+				<tr>
+					<td>&lt;tfoot&gt;</td>
+					<td>Dit element wordt gebruikt om footer content de groupen</td>
+					<td>Dit is een puur achter de schermen verandering voor zoekmachines en schermlezers <br> zodat deze beter begrijpen hoe je tabel is opgebouwd<!--(Zover ik weet)--></td>					
+				</tr>
+				<tr>
+					<th colspan="3">Les 7 - Metagegevens</th>
+				</tr>
+				<tr>
+					<td>&lt;script&gt;</td>
+					<td>Dit element wordt gebruikt om een (client-side) (java)script  te 'embedden'</td>
+					<td><p id="voorbeeld">Als u dit ziet dan is er iets misgegaan met de script</p></td>
+					<script>document.getElementById("voorbeeld").innerHTML = "Dit was gedaan met een script";</script>					
+				</tr>
+				<!--Ik kon niks anders vinden om in deze les te zetten omdat de <meta> element all in les 2 was laten zien en het vooral ging over de attributen waarvan de meta element gebruik maakt-->
+				<tr>
+					<th colspan="3">Les 8 - Formulieren</th>
+				</tr>
+				<tr>
+					<td>&lt;form&gt;</td>
+					<td>Dit element wordt gebruikt een HTML formulier te maken</td>
+					<td><form action="index.html" name="demo"> Net zoals &lt;table&gt; doet &lt;form&gt; niet veel alleen</form></td>
+				</tr>
+				<tr>
+					<td>&lt;input&gt;</td>
+					<td>Dit element maakt een input field waar een geburiker data kan invoeren</td>
+					<td><form action="index.html" name="demo"> <input type="text"> Dit is een &lt;form&gt; met een &lt;input&gt; element </form></td>					
+				</tr>
+				<tr>
+					<td>&lt;label&gt;</td>
+					<td>dit element defineerd een label voor andere elmenten</td>
+					<td><label for="demo">Dit is een voorbeeld form</label> <br> <form action="index.html" name="demo"> <input type="text"> <br> Dit is een &lt;form&gt; met een &lt;input&gt; element en een &lt;label&gt; element </form></td>					
+				</tr>
+				<tr>
+					<td>&lt;select&gt;</td>
+					<td>Dit element wordt gebruikt om een drop-down list te maken</td>
+					<td><select name="selectdemo" id="selectdemo"></select>Net zoals &lt;table&gt; en &lt;form&gt; doet het niet veel alleen</td>					
+				</tr>
+				<tr>
+					<td>&lt;option&gt;</td>
+					<td>Dit element defineerd een optie en een &lt;select&gt; lijst</td>
+					<td><select name="selectdemo" id="selectdemo"><option value="Optie 1">Optie 1</option><option value="Optie 2">Optie 2</option><option value="Optie 3">Optie 3</option><option value="Optie 4">Optie 4</option></select></td>					
+				</tr>
+				<tr>
+					<td>&lt;optgroup&gt;</td>
+					<td>Dit element wordt gebruikt om gerelateerde opties in groupen te zetten in een select lijst</td>
+					<td><select name="selectdemo" id="selectdemo"><optgroup label="Groep 1"><option value="Optie 1">Optie 1</option><option value="Optie 2">Optie 2</option></optgroup><optgroup label="Groep 2"><option value="Optie 3">Optie 3</option><option value="Optie 4">Optie 4</option></optgroup></select></td>					
+				</tr>
+				<tr>
+					<th colspan="3">Les 9 - Media</th>
+				</tr>
+				<tr>
+					<td>&lt;audio&gt;</td>
+					<td>Dit element wordt gebruikt om audio te embedden op je pagina</td>
+					<td><audio controls><source src="audio/serenade-of-water.mp3" type="audio/mpeg">Uw browser kan dit liedje niet afspelen</audio></td>
+					<!--Audio file werkt ook niet weet niet waarom?-->
+				</tr>
+				<tr>
+					<td>&lt;video&gt;</td>
+					<td>Dit element wordt gebruikt om video te embedden op je pagina</td>
+					<td><video controls muted preload="none" width="100" height="100"><source src="Video/Washing machine.mp4"></video></td>	
+					<!--En de video ook niet-->				
+				</tr>				
 			</tbody>
 		</table>
 	</body>
@@ -125,10 +285,10 @@
 
 
 
-
 Temp tepmlate:
 
+<tr>
 	<td>&lt;Element&gt;</td>
 	<td>Uitleg</td>
-	<td>Demonstratie</td>
-
+	<td>Demonstratie</td>					
+</tr>
