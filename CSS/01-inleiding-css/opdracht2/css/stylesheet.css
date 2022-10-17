@@ -1,0 +1,14 @@
+body {
+    background-color: hsl(54, 77%, 75%);
+    font-size: 18px;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+h1 {color: rgb(255, 0, 0);}
+
+h2 {color: rgba(255, 166, 0, 0.404);}
+
+p {color: #11b611;}
+
+#paragraaf2 {color: hsla(240, 100%, 50%, 0.404);}
+
