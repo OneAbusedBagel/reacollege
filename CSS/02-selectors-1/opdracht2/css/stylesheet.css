@@ -1,0 +1,10 @@
+body {background-color: grey;}
+
+h2 {text-decoration: underline;}
+
+#algemeen {color: red; }
+#geschiedenis{color: orange;}
+#politiek {color: yellow;}
+#demografie {color: green;}
+#economie {color: blue;}
+#kunst {color: violet;}
