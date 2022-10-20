@@ -1,0 +1,8 @@
+
+body {background-color: grey;}
+
+a {text-decoration: none; color: black;}
+a:link {color: lightgreen;}
+a:visited {color: darkgreen;}
+a:hover {text-decoration: underline;}
+a:active {font-style: italic;}
