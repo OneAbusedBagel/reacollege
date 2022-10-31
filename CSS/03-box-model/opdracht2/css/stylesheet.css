@@ -1,0 +1,26 @@
+body {
+	background-color: grey;
+	font-size: 16px;
+	font-family: Verdana, Arial, sans-serif;
+	margin-top: 0px;
+}
+header {
+	background-color: goldenrod;
+	height: 200px;
+	text-align: center;
+}
+main {
+	background-color: khaki;
+	min-height: 500px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+article {
+	flex: 1;
+}
+h1 {
+	margin-top: 0px;
+}
+article {margin: 0px 50px;}
+h2, p {margin-bottom: 30px;}

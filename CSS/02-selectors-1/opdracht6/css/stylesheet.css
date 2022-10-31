@@ -1,1 +1,17 @@
-.divblock {background-color: hsla(182, 58%, 49%, 0.741); display: block;}
+
+#div1 {background-color: hsla(182, 58%, 49%, 1);}
+
+#div1 span {background-color: hsla(182, 58%, 49%, 1);
+    display: block;
+    margin-bottom: 20px;}
+
+input {background-color: gray;}
+input:focus {background-color: pink;}
+
+textarea {resize: none;}
+
+h1 {text-decoration: underline;}
+label {font-style: italic; cursor:pointer;}
+
+form {display: block;}
+

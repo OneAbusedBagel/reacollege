@@ -9,32 +9,24 @@
 		<h1>Neem contact met ons op!</h1>
 		<p>Gelieve onderstaand formulier volledig in te vullen.</p>
 		<hr>
-		<div class="divblock">
+		<div id="div1">
 			<form action="opdracht1.html" method="post">
+
 				<label for="gebruikersnaam">Gebruikersnaam</label>
-				<input type="text" name="gebruikersnaam" id="gebruikersnaam" required>
+				<span><input type="text" name="gebruikersnaam" id="gebruikersnaam" required></span>
 
-			</div>
-				<div class="divblock">
-				<label for="wachtwoord">Wachtwoord</label>
-				<input type="password" name="wachtwoord" id="wachtwoord" required>
+				<label for="wachtwoord">Wachtwoord</label> 
+				<span><input type="password" name="wachtwoord" id="wachtwoord" required></span>
+				
+				<label for="emailadres">E-mailadres</label> 
+				<span><input type="email" name="emailadres" id="emailadres" required>	</span>
 
-			</div>
-				<div class="divblock">
-				<label for="emailadres">E-mailadres</label>
-				<input type="email" name="emailadres" id="emailadres" required>	
+				<label for="vandaag">Huidige datum</label> 
+				<span><input type="date" name="vandaag" id="vandaag">	</span>
 
-			</div>
-				<div class="divblock">
-				<label for="vandaag">Huidige datum</label>
-				<input type="date" name="vandaag" id="vandaag">		
-
-			</div>
-				<div class="divblock">
 				<label for="commentaar">Commentaar</label>
-				<textarea name="commentaar" id="commentaar" maxlength="150" cols="30" rows="5"></textarea>
+				<span><textarea name="commentaar" id="commentaar" maxlength="150" cols="30" rows="5"></textarea> </span>
 
-				<div class="divblock">
 				<input type="submit" name="verzenden" value="Verzenden">
 				<input type="reset" value="Opnieuw">
 			</div>

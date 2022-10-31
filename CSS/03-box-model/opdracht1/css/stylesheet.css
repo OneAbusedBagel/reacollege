@@ -1,0 +1,9 @@
+
+#container {width: 1200px; margin: 0 auto; background-color: #ffffff;}
+
+body {background-color: rgb(128, 128, 128);}
+
+header {height: 185px; background-color: #b60b6c;}
+nav {height: 75px; background-color: #0000ff;}
+section {min-height: 400px;}
+footer {height: 40px;background-color: #00ff00; }
