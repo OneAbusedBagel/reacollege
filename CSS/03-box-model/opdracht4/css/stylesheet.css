@@ -1,0 +1,11 @@
+
+body {background-color: gray;}
+
+div {height: 200px; width: 300px; margin-bottom: 25px;}
+
+#div1 {background-color:rgb(230, 130, 238);border-style: dashed;border-width: 5px; width: 290px;}
+#div2 {background-color: rgb(60,179,113);border-style: solid;border-width: 20px 30px;border-color: rgb(30,144,255) rgb(106,90, 205); width: 240px;}
+#div3 {background-color: rgb(255,165,0);border-style: solid;border-width: 10px;border-color: rgb(255, 99, 71);border-radius: 35px;width: 280px;}
+#div4 {background-color: rgb(205,92,92);border-style:double;border-bottom-style:dotted;border-width: 10px;border-radius: 20px 55px 20px 55px;width: 280px;}
+
+#container {margin: 0 auto;}
