@@ -1,0 +1,28 @@
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+table, td, th {
+    border-width: 5px;
+    border-style: double;
+    border-color: rgb(0,0,110);
+    border-collapse: collapse;
+}
+table {
+    height: 181px;
+    width: 467px;
+}
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+td:hover {background-color: tomato; cursor: pointer;}
+td:active {background-color: green;}
+
+caption {
+    caption-side: bottom;
+    
+    border-width: 5px;
+    border-style: double;
+    border-color:  rgb(0,0,110);
+    border-top: hidden;
+}

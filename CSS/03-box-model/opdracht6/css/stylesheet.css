@@ -1,0 +1,21 @@
+body {
+	font-family: Calibri, Arial, sans-serif;
+	background-color: deepskyblue;
+}
+#container {
+	display: flex;
+	flex-direction: row;
+}
+.block {
+	width: 300px;
+	height: 300px;
+	background-color: aliceblue;
+	margin: 0 25px;
+}
+
+#article1 {overflow: visible;}
+#article2 {overflow: hidden;}
+#article3 {overflow: scroll;}
+#article4 {overflow: auto;}
+
+#article2:active {overflow: visible;}

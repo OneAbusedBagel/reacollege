@@ -1,0 +1,26 @@
+
+html, body {
+    font-size: 12px;
+    color: rgb(25,25,25);
+    font-family: 'Lucida Sans Unicode', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+ /*Ik weet niet waarom maar als ik font-size als "18px" zet wordt het 25px (als ik de website bekijk) maar als ik het naar "12px" verander dan is het wel 18px en dit is zonder em dit gebeurd ook al is er niet eens één "em" in het bestand en ik snap helemaal niet waarom */
+
+p:last-of-type {
+    font-size: 0.9em;
+    text-transform: lowercase;
+}
+
+h1 {
+    letter-spacing: 1.2px;
+    text-transform: capitalize; 
+    text-align: center;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.75em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /*Ik weet niet waarom maar het wordt geen hoofdletters en ik zie niks fout vergeleken met "p:last-of-type {text-transform: lowercase;}" sommige elementen werken gewoon niet en ik snap niet waarom text-align en font-style werken maar niet not-weight*/
+}
+h1:hover {text-decoration: underline;}
+h1:active {text-decoration: line-through;}
+
