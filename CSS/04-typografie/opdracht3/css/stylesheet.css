@@ -1,0 +1,39 @@
+
+body {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#p1 {
+    color: blue;
+    text-shadow: -6px 6px 0px olivedrab;
+}
+#p2 {
+    color: yellow;
+    text-shadow: 0px -4px 4px orange;
+}
+#p3 {
+    color: purple;
+    text-shadow: 2px 6px 2px green;
+}
+#p4 {
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+#p5 {
+    color: black;
+    text-shadow: 0px 0px 4px red;
+}
+#p6 {
+    color: white;
+    text-shadow: -4px -4px 2px black, 4px 4px 2px gray;
+}
+#p7 {
+    font-style: italic;
+    color: black;
+    text-shadow: -8px 0px 6px yellow, 8px -2px 6px red;
+}
+#p8 {
+    color: black;
+    text-shadow: -0.5em -2px 4px red, 12px -2px 4px blue, 0px 8px 4px green;
+}

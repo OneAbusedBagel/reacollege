@@ -9,7 +9,11 @@ table {
 table, th, td {
 	border: 1px solid rgb(20,20,20);
 	border-collapse: collapse;
+	background-color: #8080801c;
 }
+th:hover, td:hover {
+	outline:outset 2px gray ;
+} 
 th, td {
 	padding: 4px 8px;
 }

@@ -204,6 +204,16 @@
 					<td><table><caption>Een tabel met het element &lt;Caption&gt; (zorgt voor dit bijschrift)</caption><tr><th> het element &lt;th&gt; (zorgt voor de header cell)</th></tr><tr><td> Het element &lt;table&gt; (zorgt voor de basis in code)</td></tr><tr><td>Het element &lt;tr&gt; (zorgt voor de rijen)</td></tr><tr><td>En het element &lt;td&gt; (zorgt voor de standaard data cellen)</tr></td></table></td>					
 				</tr>
 				<tr>
+					<td>&lt;colspan&gt;</td>
+					<td>Met dit attribuut kun je één cel meerdere kolommen (columns) lang maken</td>
+					<td><table><tr><th colspan="4"> Een voorbeeld tabel</th></tr><tr><td>01</td><td>02</td><td>03</td><td>04</td></tr><tr><td>05</td><td>06</td><td>07</td><td>08</td></tr><tr><td>09</td><td>10</td><td>11</td><td>12</td></tr><tr><td>13</td><td>14</td><td>15</td><td>16</td></tr><caption>Vanwege de &lt;colspan&gt; attribuut is de header cell 4 kolommen breed</caption></table>				
+				</tr>
+				<tr>
+					<td>&lt;rowspan&gt;</td>
+					<td>Met dit attribuut kun je één cel meerdere rijen (rows) lang maken</td>
+					<td><table><tr><th colspan="5"> Een voorbeeld tabel</th></tr><tr><td rowspan="4">01</td><td>02</td><td>03</td><td>04</td></tr><tr><td>05</td><td>06</td><td>07</td><td>08</td></tr><tr><td>09</td><td>10</td><td>11</td><td>12</td></tr><tr><td>13</td><td>14</td><td>15</td><td>16</td></tr><caption>Vanwege de &lt;rowspan&gt; attribuut is de 1ste cell 4 rijen hoog <br> (en ook al lijkt die groot is het nogsteeds 1 kolom in breedte)</caption></table>				
+				</tr>
+				<tr>
 					<td>&lt;thead&gt;</td>
 					<td>Dit element wordt gebruikt om header content de groupen</td>
 					<td>n.v.t. <!--Dit is een puur achter de schermen verandering voor zoekmachines en schermlezers <br> zodat deze beter begrijpen hoe je tabel is opgebouwd (Zover ik weet)--></td>					
@@ -220,6 +230,12 @@
 				</tr>
 				<tr>
 					<th colspan="3">Les 7 - Metagegevens</th>
+				</tr>
+				<tr>
+					<th>&lt;charset&gt;</th>
+					<th>Met dit element vertel je de website welke "character set" te gebruiken</th>
+					<!-- Laat indien mogelijk ook de werking zien van het element. -->
+					<th>Dit is moeilijk om te demonstreren omdat het altijd in de &lt;head&gt; staat zodat het voor de hele pagina telt (dit is altijd nodig)</th>
 				</tr>
 				<tr>
 					<td>&lt;script&gt;</td>
