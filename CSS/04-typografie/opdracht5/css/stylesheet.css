@@ -1,0 +1,38 @@
+body {
+	font-size: 20px;
+	background-color: hsl(0, 0%, 50%, 0.750);
+}
+main {
+	display: flex;
+	flex-direction: row;
+}
+main > article {
+	flex: 1;
+}
+p {
+	border-style: solid;
+	padding:  5px;
+	margin-bottom: 0px;
+}
+img {
+	border: black;
+	border-radius: 5px;
+	border-style: groove;
+}
+
+:lang(el-GR) {
+	quotes: "\00AB" "\00BB";
+	color: #0D5EAF;
+}
+:lang(pl-PL) {
+	quotes: "„" "”";
+	color: #D22630;
+}
+:lang(de-DE) {
+	quotes: "„" "”" ;
+	color: #FFCD00;
+}
+:lang(fi-FI) {
+	quotes: "”" "”";
+	color: #002F6C;
+}

@@ -1,0 +1,48 @@
+
+html, body {
+    font-size: 20px;
+    background-color: gray;
+}
+
+.icons {
+    letter-spacing: 0px;
+    padding: 20px;
+    font-size: 3.0em;
+}
+#heart { color: red;}
+#phone { color: rgb(202, 161, 85);}
+#ghost { color: slateblue;}
+#slack { color: tomato;}
+#plane { color: mintcream;}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.facebook-icon {
+    color:#3b5998;
+}
+.linkedin-icon {
+    color: #0e76a8;
+
+}
+.wikipedia-icon {
+ color: #C7C8CA;
+}
+.google-icon {
+    color: #DB4437;
+}
+.deviantart-icon {
+    color: #05CC46;
+
+}
+button:hover {
+    cursor: pointer;;
+}
+button {
+    font-size: 25px;
+    background-color:black;
+    border: hidden;
+    color: mintcream;
+}
+

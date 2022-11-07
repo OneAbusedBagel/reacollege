@@ -1,19 +1,31 @@
 
-body {background-color: gray;}
+body {
+    background-color: gray;
+}
 
 #container {
     max-width: 1000px;
     outline:black ridge 5px;
 }
 
-ul {list-style-type:lower-greek;}
-li:hover {outline: blue dashed 1px;}
+ul {
+    list-style-type:lower-greek;
+}
+li:hover {
+    outline: blue dashed 1px;
+}
 
-a:active {outline:goldenrod dotted 2px;}
+a:active {
+    outline:goldenrod dotted 2px;
+}
 
-img {border: green double 15px; outline:tomato double 5px;}
+img {
+    border: green double 15px;
+     outline:tomato double 5px;
+    }
 
-/*#box {
+/*
+#box {
     display: inline-block;
     width: 200px;
     height: 200px;
@@ -22,5 +34,6 @@ img {border: green double 15px; outline:tomato double 5px;}
     padding: 15px;
     border-style: solid;
     border-image: url('/CSS/03-box-model/opdracht7/images/padang.png') 30 space;
-}*\
+}
+*\
 

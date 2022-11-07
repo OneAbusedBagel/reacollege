@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+
+@font-face {
+    src: url("../fonts/OldLondon.ttf");
+    font-family: "Oldlondon";
+}
+
+@font-face {
+    src: url("../fonts/BebasNeue-Regular.ttf");
+    font-family: "Bebasneue-regular";
+}
+
+html, body {
+    font-size: 20px;
+    font-family: "Oldlondon";
+}
+h1 {
+    font-size: 2.5em;
+    font-family: 'Dancing Script';
+}
+h2 {
+    font-family: 'Mr Dafoe';
+    font-size: 1.75em;
+    font-weight:lighter;
+}
+blockquote {
+    font-size: 1.25em;
+    writing-mode: vertical-rl;
+}
