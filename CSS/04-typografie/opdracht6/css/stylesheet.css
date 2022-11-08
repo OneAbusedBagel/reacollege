@@ -9,11 +9,12 @@ html, body {
     padding: 20px;
     font-size: 3.0em;
 }
-#heart { color: red;}
-#phone { color: rgb(202, 161, 85);}
-#ghost { color: slateblue;}
-#slack { color: tomato;}
-#plane { color: mintcream;}
+
+#spaghetti-monster {color:rgba(83, 73, 105, 0.815);text-shadow: 3px 3px 8px rgb(255, 137, 69) ;font-style: italic;}
+#biohazard { color: green; text-shadow: 2px 2px 2px hsl(90, 100%, 50%, 0.5);}
+#wafel { color:mediumaquamarine;}
+#explosion {color:#ff9a00; text-shadow: 4px 4px 4px rgba(220, 20, 60, 0.9);}
+#broadcast {color:silver; text-shadow: 2px 2px 20px #27a6d8 ;}
 
 a {
     text-decoration: none;
@@ -37,12 +38,31 @@ a {
 
 }
 button:hover {
-    cursor: pointer;;
+    cursor: pointer;
 }
 button {
-    font-size: 25px;
+    font-size: 20px;
     background-color:black;
     border: hidden;
     color: mintcream;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
 }
+#heart { 
+    color: red;
+}
+#phone { 
+    color: rgb(202, 161, 85);
+}
+#ghost { 
+    color: slateblue;
+}
+#slack {
+    color: tomato;
+}
+#plane { 
+    color: mintcream;
+}
+
 

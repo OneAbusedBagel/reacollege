@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+	<head>
+		<meta charset="UTF-8">
+		<title>Samenvatting HTML</title> <!--Opdracht 11-1-->
+		<link rel="stylesheet" href="css/stylesheet.css">
+	</head>
+	<body>
+		<!-- Tabel met elementen -->
+		<table>
+			<thead>
+				<tr>
+					<th>Element</th>
+					<th>Uitleg</th>
+					<!-- Laat indien mogelijk ook de werking zien van het element. -->
+					<th>Demonstratie</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+				<tr>
+					<th colspan="3">Les 1 - Inleiding HTML</th>
+				</tr>
+				<tr>
+					<td>&lt;html&gt;</td>
+					<td>Hiermee kun je een HTML document aanmaken</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;head&gt;</td>
+					<td>Hier plaats je alle informatie over de pagina</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;body&gt;</td>
+					<td>Hier plaats je de feitelijke content van de pagina</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;title&gt;</td>
+					<td>Wordt gebruikt om je pagina een titel te geven (voor het tabblad)</td>
+					<td>(zie tabblad)</td>
+				</tr>
+				<tr>
+					<td>&lt;p&gt;</td>
+					<td>Hiermee kun je een paragraaf aanmaken</td>
+					<td><p>Dit is een paragraaf.</p></td>
+				</tr>
+				<tr>
+					<td>&lt;br&gt;</td>
+					<td>Om een nieuwe regel te beginnen</td>
+					<td>Nieuwe regel<br>beginnen.</td>
+				</tr>
+				<tr>
+					<td>&lt;strong&gt;</td>
+					<td>Hiermee kun je tekst als belangrijk markeren</td>
+					<td>dit is <strong>belangrijk</strong>.</td>
+				</tr>
+				<tr>
+					<td>&lt;em&gt;</td>
+					<td>Hiermee kun je tekst als benadrukt markeren</td>
+					<td> dit is <em>benadrukt</em>.</td>
+				</tr>				
+				<tr>
+					<th colspan="3">Les 2 - Teksten</th>
+				</tr>
+				<tr>
+					<td>&lt;meta&gt;</td>
+					<td>Hier kun je metagegevens plaatsen (vooral voor SEO)</td>
+					<td>n.v.t.</td>
+				</tr>				
+				<tr>
+					<td>&lt;h1&gt; t/m &lt;h6&gt;</td>
+					<td>Met deze elementen kun je headings (kopjes) maken</td>
+					<td><h3>Dit is een h3-heading</h3></td>
+				</tr>
+				<tr>
+					<td>&lt;del&gt;</td>
+					<td>Hiermee defineer je deleted text in een document</td>
+					<td>Dit is een <del>slecht</del> goed voorbeeld.</td>
+				</tr>
+				<tr>
+					<td>&lt;ins&gt;</td>
+					<td>Hiermee markeer je inserted tekst</td>
+					<td>deze <ins>markup</ins> is inserted.</td>
+				</tr>
+				<tr>
+					<td>&lt;sup&gt;</td>
+					<td>Hiermee markeer je tekst als superscript</td>
+					<td>Een veel gebruikt voorbeeld is het trademark<sup>tm</sup> superscript.</td>
+				</tr>
+				<tr>
+					<td>&lt;sub&gt;</td>
+					<td>hiermee markeer je tekst als subscript</td>
+					<td>dit zie je vooral in scheikundige formules zoals CaCO<sub>4</sub>.</td>
+				</tr>
+				<tr>
+					<td>&lt;q&gt;</td>
+					<td>Hiermee markeer je een stuk tekst als een (korte) quote</td>
+					<td> <q>Dit is een korte voorbeeld</q> -Mika</td>
+				</tr>
+				<tr>
+					<td>&lt;blockquote&gt;</td>
+					<td>Hiermee markeer je een stuk tekst als een (lange) quote</td>
+					<td><q>Dit is een langere voorbeeld omdat dit element <br> specifiek voor langere quotes wordt gebruikt</q> -Mika</td>
+				</tr>
+				<tr>
+					<td>&lt;abbr&gt;</td>
+					<td>Hiermee markeer je een afkorting  </td>
+					<td>Of een acroniem zoals <abbr title="World Health Organization">WHO.</abbr></td>
+				</tr>
+				<tr>
+					<th colspan="3">Les 3 - Lijsten</th>
+				</tr>
+				<tr>
+					<td>&lt;ul&gt;</td>
+					<td>Hiermee kan je een unordered list maken</td>
+					<td><ul> <li>dit is een</li> <li>unordered list</li> <li>van drie "list items"</li> </ul></td>
+				</tr>
+				<tr>
+					<td>&lt;ol&gt;</td>
+					<td>Hiermee kan je een ordererd list maken</td>
+					<td><ol><li>dit is</li><li>een ordered list</li><li>van drie "list items"</li></ol></td>
+				</tr>
+				<tr>
+					<td>&lt;dl&gt;</td>
+					<td>Hiermee maak je een description list</td>
+					<td><dl><dt>de ul element</dt><dd>wordt gebruikt voor unordered list</dd><dt>de ol element</dt><dd>wordt gebruikt voor ordered lists</dd><dt>de dl element</dt><dd>wordt gebruikt voor description lists</dd></dt></td>					
+				</tr>
+				<tr>
+					<th colspan="3">Les 4 - Hyperlinks</th>
+				</tr>
+				<tr>
+					<td>&lt;a&gt;</td>
+					<td>Met dit element maken wij een hyperlink</td>
+					<td><a href="https://www.w3schools.com/tags/tag_a.asp">Dit is een hyperlink</a></td>					
+				</tr>
+				<tr>
+					<td>&lt;iframe&gt;</td>
+					<td>Hiermee maak je een inline frame</td>
+					<td><iframe src="https://www.w3schools.com/tags/tag_iframe.asp" frameborder="150">Pagina niet gevonden. <br> De pagina is mogelijk verhuisd.</iframe></td>					
+				</tr>
+				<tr>
+					<th colspan="5">Les 5 - Afbeeldingen</th>
+				</tr>
+				<tr>
+					<td>&lt;img&gt;</td>
+					<td>Met dit element kun je een image inn je webpage zetten</td>
+					<td><img src="Images/SVG-Export-2022-9-3-10-7.svg" alt="Dit is een willekeurige .jpg bestand" width="600" height="120"></td>					
+				</tr>
+				<tr>
+					<td>&lt;Link&gt;</td>
+					<td>Met dit element kun je een connectie tussen deze folder en een andere maken. <br>Dit wordt vaak gebruikt om external style sheets of een favicon te linken</td>
+					<td><link rel="icon" href="Images/l-logo.png">Als je naar de top van de webpagina kijkt <br> zou er nu een Favicon bij moeten staan</td>					
+				</tr>
+				<!--Ik weet niet waarom maar sommige link elementen werken niet, sommige zijn locale verwijzingen (zoals de favicon link hierboven) maar een ander is extern (de iframe) maar de hyperlinnk extern werkt wel en de css stylesheet link is lokaal en werkt wel dus weet ik niet precies wat de probleem is-->
+				<tr>
+					<td>&lt;map&gt;</td>
+					<td>Dit element wordt gebruikt om een 'image map' aan te wijzen</td>
+					<td><!--Ik weet niet precies how je dit demonstreert want het doet niet echt iets totdat je de <area> tag ermee gebruikt--></td>					
+				</tr>
+				<tr>
+					<td>&lt;area&gt;</td>
+					<td>met dit element definieert  een gebied in een image map</td>
+					<td><!--Ik heb hier het zelfde probleem als daar want <area> doet niet veel zonder de <map> tag --></td>					
+				</tr>
+				<tr>
+					<td>&lt;object&gt;</td>
+					<td>Met dit element defineer je een container voor een externe resource</td>
+					<td><object data="Images/SVG-Export-2022-9-3-10-7.svg" type="img/svg+xml">uw browser ondersteunt geen SVG</object></td> 
+					<!--En nu werkt svg ook niet -->					
+				</tr>
+				<tr>
+					<th colspan="3">Les 6 - Tabellen</th>
+				</tr>
+				<tr>
+					<td>&lt;table&gt;</td>
+					<td>Met dit element kun je het begin van een tabel maken. <br> maar een tabel bestaat uit meerdere elementen dus &lt;table&gt; alleen doet weinig </td>
+					<td><table> Dit is een tabel met alleen &lt;table&gt;</table></td>					
+				</tr>
+				<tr>
+					<td>&lt;tr&gt;</td>
+					<td>Dit element definieert  een rij in een tabel <br> maar net zoals &lt;table&gt; doet niet veel alleen</td>
+					<td><table> <tr>Dit is een tabel met &lt;table&gt;</tr><tr>en &lt;tr&gt;</tr></table></td>					
+				</tr>
+				<tr>
+					<td>&lt;td&gt;</td>
+					<td>Dit element definieert  een standaard data cel in een HTML tabel</td>
+					<td><table><tr><td> Dit is een tabel met het element &lt;table&gt;</td></tr><tr><td>Het element &lt;tr&gt; (zorgt voor de rijen)</td></tr><tr><td>en het element &lt;td&gt; (zorgt voor de standaard data cellen)</tr></td></table></td>					
+				</tr>
+				<tr>
+					<td>&lt;th&gt;</td>
+					<td>Dit element definieert  een header cell in een HTML tabel</td>
+					<td><table><tr><th> Een tabel met het element &lt;th&gt; (zorgt voor de header cell)</th></tr><tr><td> Het element &lt;table&gt; (zorgt voor de basis in code)</td></tr><tr><td>Het element &lt;tr&gt; (zorgt voor de rijen)</td></tr><tr><td>En het element &lt;td&gt; (zorgt voor de standaard data cellen)</tr></td></table></td>					
+				</tr>
+				<tr>
+					<td>&lt;style&gt;</td>
+					<td>Dit element defineer style informatie (Wat onder CSS valt) in een document</td>
+					<td>n.v.t. <!-- hier weet ik nu niet een goede voorbeeld voor (als er een is) maar ik kom hier nog wel op terug als ik iets vind--></td>					
+				</tr>
+				<tr>
+					<td>&lt;Caption&gt;</td>
+					<td>Met dit element kun je een bijschrift toevoegen aan je tabel</td>
+					<td><table><caption>Een tabel met het element &lt;Caption&gt; (zorgt voor dit bijschrift)</caption><tr><th> het element &lt;th&gt; (zorgt voor de header cell)</th></tr><tr><td> Het element &lt;table&gt; (zorgt voor de basis in code)</td></tr><tr><td>Het element &lt;tr&gt; (zorgt voor de rijen)</td></tr><tr><td>En het element &lt;td&gt; (zorgt voor de standaard data cellen)</tr></td></table></td>					
+				</tr>
+				<tr>
+					<td>&lt;colspan&gt;</td>
+					<td>Met dit attribuut kun je één cel meerdere kolommen (columns) lang maken</td>
+					<td><table><tr><th colspan="4"> Een voorbeeld tabel</th></tr><tr><td>01</td><td>02</td><td>03</td><td>04</td></tr><tr><td>05</td><td>06</td><td>07</td><td>08</td></tr><tr><td>09</td><td>10</td><td>11</td><td>12</td></tr><tr><td>13</td><td>14</td><td>15</td><td>16</td></tr><caption>Vanwege de &lt;colspan&gt; attribuut is de header cell 4 kolommen breed</caption></table>				
+				</tr>
+				<tr>
+					<td>&lt;rowspan&gt;</td>
+					<td>Met dit attribuut kun je één cel meerdere rijen (rows) lang maken</td>
+					<td><table><tr><th colspan="5"> Een voorbeeld tabel</th></tr><tr><td rowspan="4">01</td><td>02</td><td>03</td><td>04</td></tr><tr><td>05</td><td>06</td><td>07</td><td>08</td></tr><tr><td>09</td><td>10</td><td>11</td><td>12</td></tr><tr><td>13</td><td>14</td><td>15</td><td>16</td></tr><caption>Vanwege de &lt;rowspan&gt; attribuut is de 1ste cell 4 rijen hoog <br> (en ook al lijkt die groot is het nogsteeds 1 kolom in breedte)</caption></table>				
+				</tr>
+				<tr>
+					<td>&lt;thead&gt;</td>
+					<td>Dit element wordt gebruikt om header content de groupen</td>
+					<td>n.v.t. <!--Dit is een puur achter de schermen verandering voor zoekmachines en schermlezers <br> zodat deze beter begrijpen hoe je tabel is opgebouwd (Zover ik weet)--></td>					
+				</tr>
+				<tr>
+					<td>&lt;tbody&gt;</td>
+					<td>Dit element wordt gebruikt om body content de groupen</td>
+					<td>n.v.t. <!--Dit is een puur achter de schermen verandering voor zoekmachines en schermlezers <br> zodat deze beter begrijpen hoe je tabel is opgebouwd (Zover ik weet)--></td>					
+				</tr>
+				<tr>
+					<td>&lt;tfoot&gt;</td>
+					<td>Dit element wordt gebruikt om footer content de groupen</td>
+					<td>n.v.t. <!--Dit is een puur achter de schermen verandering voor zoekmachines en schermlezers <br> zodat deze beter begrijpen hoe je tabel is opgebouwd (Zover ik weet)--></td>					
+				</tr>
+				<tr>
+					<th colspan="3">Les 7 - Metagegevens</th>
+				</tr>
+				<tr>
+					<th>&lt;charset&gt;</th>
+					<th>Met dit element vertel je de website welke "character set" te gebruiken</th>
+					<!-- Laat indien mogelijk ook de werking zien van het element. -->
+					<th>Dit is moeilijk om te demonstreren omdat het altijd in de &lt;head&gt; staat zodat het voor de hele pagina telt (dit is altijd nodig)</th>
+				</tr>
+				<tr>
+					<td>&lt;script&gt;</td>
+					<td>Dit element wordt gebruikt om een (client-side) (java)script  te 'embedden'</td>
+					<td><p id="voorbeeld">Als u dit ziet dan is er iets misgegaan met de script</p></td>
+					<script>document.getElementById("voorbeeld").innerHTML = "Dit was gedaan met een script";</script>					
+				</tr>
+				<!--Ik kon niks anders vinden om in deze les te zetten omdat de <meta> element all in les 2 was laten zien en de rest vooral gaat over de attributen waarvan de meta element gebruik van maakt-->
+				<tr>
+					<th colspan="3">Les 8 - Formulieren</th>
+				</tr>
+				<tr>
+					<td>&lt;form&gt;</td>
+					<td>Dit element wordt gebruikt een HTML formulier te maken</td>
+					<td><form action="index.html" name="demo"> Net zoals &lt;table&gt; doet &lt;form&gt; niet veel alleen</form></td>
+				</tr>
+				<tr>
+					<td>&lt;input&gt;</td>
+					<td>Dit element maakt een input field waar een geburiker data kan invoeren</td>
+					<td><form action="index.html" name="demo"> <input type="text"> Dit is een &lt;form&gt; met een &lt;input&gt; element </form></td>					
+				</tr>
+				<tr>
+					<td>&lt;label&gt;</td>
+					<td>dit element definieert  een label voor andere elmenten</td>
+					<td><label for="demo">Dit is een voorbeeld form</label> <br> <form action="index.html" name="demo"> <input type="text"> <br> Dit is een &lt;form&gt; met een &lt;input&gt; element en een &lt;label&gt; element </form></td>					
+				</tr>
+				<tr>
+					<td>&lt;select&gt;</td>
+					<td>Dit element wordt gebruikt om een drop-down list te maken</td>
+					<td><select name="selectdemo" id="selectdemo"></select>Net zoals &lt;table&gt; en &lt;form&gt; doet het niet veel alleen</td>					
+				</tr>
+				<tr>
+					<td>&lt;option&gt;</td>
+					<td>Dit element definieert  een optie en een &lt;select&gt; lijst</td>
+					<td><select name="selectdemo" id="selectdemo"><option value="Optie 1">Optie 1</option><option value="Optie 2">Optie 2</option><option value="Optie 3">Optie 3</option><option value="Optie 4">Optie 4</option></select></td>					
+				</tr>
+				<tr>
+					<td>&lt;optgroup&gt;</td>
+					<td>Dit element wordt gebruikt om gerelateerde opties in groupen te zetten in een select lijst</td>
+					<td><select name="selectdemo" id="selectdemo"><optgroup label="Groep 1"><option value="Optie 1">Optie 1</option><option value="Optie 2">Optie 2</option></optgroup><optgroup label="Groep 2"><option value="Optie 3">Optie 3</option><option value="Optie 4">Optie 4</option></optgroup></select></td>					
+				</tr>
+				<tr>
+					<th colspan="3">Les 9 - Media</th>
+				</tr>
+				<tr>
+					<td>&lt;source&gt;</td>
+					<td>Dit element wordt gebruikt om meerdere mediabronnen voor media-elementen op te geven</td>
+					<td>alleen doet &lt;source&gt; niks maar zonder source zouden media elementen niet goed werken <br> (zoals audio en video) zonder een &lt;source&gt; voor de video/audio file gebeurt er niks</td>					
+				</tr>
+				<tr>
+					<td>&lt;audio&gt;</td>
+					<td>Dit element wordt gebruikt om audio te embedden op je pagina</td>
+					<td><audio controls><source src="audio/serenade-of-water.mp3" type="audio/mpeg">Uw browser kan dit liedje niet afspelen</audio></td>
+				</tr>
+				<tr>
+					<td>&lt;video&gt;</td>
+					<td>Dit element wordt gebruikt om video te embedden op je pagina</td>
+					<td><video controls muted preload="none" width="100" height="100"><source src="Video/Washing machine.mp4"></video></td>			
+				</tr>
+				<tr>
+					<td>&lt;embed&gt;</td>
+					<td>Dit element definieert een container voor een externe bron <br> Zoals images videos en tekst in de vorm van een html snippet</td>
+					<td><embed type="text/html" src="../04-hyperlinks/opdracht5/opdracht5.html" width="600" height="200"></td>					
+				</tr>
+				<tr>
+					<td>&lt;canvas&gt;</td>
+					<td>Dit element wordt gebruikt om afbeeldingen te tekenen via scripting <br> (in dit geval een vierkant) </td>
+					<td><canvas id="canvasdemo">Uw browser ondersteundt geen canvas element (of er is iets fout gegaan)</canvas> <script> var c =document.getElementById("canvasdemo"); var ctx = c.getContext("2d"); ctx.fillStyle = "#B00B69"; ctx.fillRect(0, 0, 160, 160); </script> </td>					
+				</tr>
+				<tr>
+					<th colspan="3">Les 10 - Divisies</th>
+				</tr>
+				<tr>
+					<td>&lt;div&gt;</td>
+					<td>Dit element definieert een divisie of sectie in een HTML document</td>
+					<td>n.v.t.</td>					
+				</tr>
+				<tr>
+					<td>&lt;header&gt;</td>
+					<td>Hiermee maak je de header die vaak een logo, een visueel aantrekkelijke banner <br> en/of functionele elementen (voor navigatie) heeft</td>
+					<td>n.v.t.</td>					
+				</tr>
+				<tr>
+					<td>&lt;footer&gt;</td>
+					<td>Dit element gebruik je voor de afsluiting van je pagina</td>
+					<td>n.v.t.</td>					
+				</tr>
+				<tr>
+					<td>&lt;nav&gt;</td>
+					<td>Dit element gebruik je voor de primaire navigatie van een website <br> (element gebruik je voor de primaire navigatie van een website)</td>
+					<td>n.v.t.</td>					
+				</tr>
+				<tr>
+					<td>&lt;section&gt;</td>
+					<td>Dit element gebruik je wanneer meerdere blokken content samen deel <br> uitmaken van een groter geheel </td>
+					<td><section><h3>sectie 1</h3><p>sectie-1 en sectie-2 zijn beide stukken van een groter geheel</p></section><section><h3>sectie 2</h3><p>omdat de twee secties deel van een geheel zijn wordt het &lt;section&gt; element gebruikt</p></section></td>					
+				</tr>
+				<tr>
+					<td>&lt;article&gt;</td>
+					<td>Dit element gebruik je voor meerdere individuele blokken van content</td>
+					<td><article><h3>Artikel 1</h3><p>Bij het &lt;article&gt; element zijn het individuele blokken content. <br> Maar visueel lijken het &lt;article&gt; element en het &lt;section&gt; element het zelfde</p></article><article><h3>Artikel 2</h3><p>Dit is een individueel blok tekst dat niets met het andere artikel te maken heeft</p></article></td>					
+				</tr>
+				<tr>
+					<td>&lt;aside&gt;</td>
+					<td>Dit element gebruik je voor ondersteunende content die niet (of indirect) <br> te maken heeft met de rest van de content</td>
+					<td><h2>Het demonstratie tekst:</h3><p>Ik ben bijna bij het einde van dit opdracht.</p><aside> <h4>Het aside element:</h4><p>Dit opdracht heb ik gemaakt in html</p></aside></td>					
+				</tr>
+				<tr>
+					<td>&lt;figure&gt;</td>
+					<td>Dit element geldt ook als een onderverdeling van je content</td>
+					<td><figure><img src="Images/gray-background-repeating-2.jpg" alt="figure1" width="100" height="100"> <br> maar &lt;figure&gt; markeert alleen waar content gaat en kan zelf geen images laten zien <br> (dus heb ik hiervoor een &lt;img&gt; gebruikt)</figure></td>					
+				</tr>
+				<tr>
+					<td>&lt;figcaption&gt;</td>
+					<td>Met dit element maak je een korte bijschrift (caption) over het &lt;figure&gt; element </td>
+					<td><figure><img src="Images/gray-background-repeating-2.jpg" alt="figure1" width="100" height="100"><figcaption>fig.1 - alleen gebruikt om een voorbeeld te zijn</figcaption></figure></td>					
+				</tr>						
+			</tbody>
+		</table>
+	</body>
+</html>
+
+<!--
+Reminder of useful sites:
+-Font Awesome: https://fontawesome.com/
+most popular icon library (has small selection of simple animation properties for said icons that can be repurposed for tekst)
+-W3school:https://www.w3schools.com/
+Very extensive/versatile site for help with code when struggling
+-->
