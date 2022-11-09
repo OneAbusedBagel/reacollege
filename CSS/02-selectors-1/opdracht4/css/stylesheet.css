@@ -1,13 +1,32 @@
 
-body {background-color: grey;}
+body {
+    background-color: grey;
+}
 
-a {text-decoration: none; color: black;}
-a:hover {text-decoration: underline;}
-a:active {font-style: italic;}
+a {
+    text-decoration: none; color: black;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+    font-style: italic;
+}
 
-.link1 {color: red;}
-.link1:visited {color:crimson;}
-.link2 {color: green;}
-.link2:visited{ color: chartreuse;}
-.link3 {color: blue;}
-.link3:visited{ color: royalblue; }
+.link1 {
+    color: red;
+}
+.link1:visited {
+    color:crimson;
+}
+.link2 {color: green;
+}
+.link2:visited{
+    color: chartreuse;
+}
+.link3 {
+    color: blue;
+}
+.link3:visited{
+    color: royalblue;
+}
