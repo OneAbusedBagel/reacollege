@@ -16,11 +16,15 @@ header {
 }
 header ol {
 	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
+	justify-content: left;
+	list-style: none;
 }
 header ol li {
-	min-width: 40px;
+	margin: 0px 0px;
+	
+}
+#icon1{
+	color: blue;
 }
 #products {
 	min-height: 400px;

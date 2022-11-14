@@ -16,14 +16,15 @@ html, body {
 }
 h1 {
     font-size: 2.5em;
-    font-family: 'Dancing Script';
+    font-family: 'Bebasneue-regular';
 }
 h2 {
-    font-family: 'Mr Dafoe';
+    font-family: 'Dancing Script';
     font-size: 1.75em;
     font-weight:lighter;
 }
 blockquote {
     font-size: 1.25em;
     writing-mode: vertical-rl;
+    font-family: 'Mr Dafoe';
 }
