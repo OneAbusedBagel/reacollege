@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    background-color: lightgrey;
+}
+#container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+
+}
+header {
+    height: 150px;
+    background-color: gray;
+    flex: 1 0 auto;
+}
+#sect1 article {
+    padding: 15px;
+    flex-direction: column;
+}
+#sect1 {
+    display: flex;
+}
+#html, #seo {
+    flex: 1;
+    background-color:peachpuff;
+}
+#css {
+    flex: 2;
+    background-color:lightblue;
+
+}
+footer {
+    background-color:rgba(178, 34, 34, 1);
+    color: mintcream;
+    text-align: center;
+    padding: 15px;
+    flex: 1 0 auto;
+}

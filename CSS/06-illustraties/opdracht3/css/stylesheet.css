@@ -1,0 +1,117 @@
+body {
+	font-family: Lora, Verdana, sans-serif;
+	font-size: 20px;
+	background-color: navajowhite;
+}
+header {
+	text-align: center;
+	font-style: italic;
+	text-decoration: underline;
+	letter-spacing: 2px;
+}
+.dogs {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 5px;
+}
+.dogs figure {
+	transition: transform 0.5s;
+	cursor: zoom-in;
+}
+.dogs figure:hover {
+	transform: scale(1.1);
+}
+.dogs figure img {
+	max-width: 360px;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px grey;
+}
+.dogs figcaption {
+	text-align: center;
+}
+
+.beagle img {
+	
+}
+.border-collie img {
+	
+}
+.boxer img {
+	
+}
+.bulldog img {
+	
+}
+.bullmastiff img {
+	
+}
+.cavalier-king-charles-spaniel img {
+	
+}
+.chihuahua img {
+	
+}
+.chow-chow img {
+	
+}
+.collie img {
+	
+}
+.corgi img {
+	
+}
+.dalmatian img {
+	
+}
+.doberman-pinscher img {
+	
+}
+.german-shepherd img {
+	filter: grayscale(50);
+}
+.french-bulldog img {
+	
+}
+.golden-retriever img {
+	
+}
+.labrador-retriever img {
+	
+}
+.maltese img {
+	
+}
+.pug img {
+	filter: invert();
+}
+.poodle img {
+	
+}
+.pomeranian img {
+	filter: grayscale();
+}
+.rottweiler img {
+	
+}
+.samoyed img {
+	
+}
+.schnauzer img {
+	
+}
+.shiba-inu img {
+	
+}
+.shih-tzu img {
+	
+}
+.siberian-husky img {
+	
+}
+.st-bernard img {
+	
+}
+.yorkshire-terrier img {
+	
+}
