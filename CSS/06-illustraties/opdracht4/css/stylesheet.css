@@ -1,0 +1,15 @@
+
+body {
+    background-color: black;
+}
+figure img {
+    border: tomato 5px solid;
+    flex: 1;
+}
+figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: wrap;
+    gap: 20px;
+}

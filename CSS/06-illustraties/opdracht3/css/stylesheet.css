@@ -32,8 +32,23 @@ header {
 }
 
 .beagle img {
-	
+	filter: saturate(120%);
+	clip-path: polygon(100% 100%, 0 100%, 0 0, 100% 0);
 }
+
+.beagle img:active {
+	transition-delay: 1;
+	transition-duration: 1s;
+	filter: saturate(120%) hue-rotate(80deg);
+	clip-path: polygon(71% 67%, 32% 66%, 32% 27%, 72% 29%);
+}
+.beagle img:hover {
+	transition-delay: 2.1s;
+	transition-duration: 1s;
+	filter: saturate(120%) hue-rotate(80deg) opacity(40%);
+	clip-path: polygon(71% 67%, 32% 66%, 32% 27%, 72% 29%);
+}
+
 .border-collie img {
 	
 }
@@ -44,61 +59,98 @@ header {
 	
 }
 .bullmastiff img {
-	
+	filter: saturate(150%) brightness(130%) blur(2px);
 }
 .cavalier-king-charles-spaniel img {
-	
+	filter: saturate(250%) hue-rotate(180deg) contrast(200%) opacity(40%);
+}
+.cavalier-king-charles-spaniel img:active {
+	transition-duration: 0.2s;
+	transform: scale(5.0);
+	filter: saturate(250%) hue-rotate(180deg) contrast(200%) opacity(1%);
 }
 .chihuahua img {
+	filter: contrast(150%) hue-rotate(330deg) sepia(60%);
+	clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 50% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+
+}
+.chihuahua img:hover {
+	transition-delay: 0.1s;
+	transition-duration: 0.5s;
+	filter: contrast(150%) hue-rotate(330deg) sepia(60%);
+	clip-path: polygon(50% 4%, 65% 15%, 75% 35%, 75% 65%, 67% 89%, 50% 96%, 33% 88%, 25% 65%, 25% 35%, 35% 15%)
+}
+.chihuahua img:active {
+	transition-delay: 0.1;
+	transition-duration: 4s;
+	transform:rotate(4320deg);
+	filter: contrast(150%) hue-rotate(10deg) sepia(60%) opacity(100%) ;
+	clip-path: polygon(50% 4%, 65% 15%, 75% 35%, 75% 65%, 67% 89%, 50% 96%, 33% 88%, 25% 65%, 25% 35%, 35% 15%);
 	
 }
 .chow-chow img {
-	
+	filter: hue-rotate(350deg) saturate(120%);
 }
 .collie img {
-	
+	filter: contrast(140%) sepia(60%) hue-rotate(330deg);
 }
 .corgi img {
-	
+	filter:drop-shadow(tomato 10px 10px 10px) hue-rotate(320deg);
 }
 .dalmatian img {
-	
+	filter: hue-rotate(180deg);
 }
 .doberman-pinscher img {
-	
+	transition-delay: 0.1;
+	transition-duration: 0.5s;
+	filter: hue-rotate(7deg);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);	
+
+}
+.doberman-pinscher img:hover {
+	filter: hue-rotate(50deg);
+	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
 }
 .german-shepherd img {
-	filter: grayscale(50);
+	filter: grayscale(50%) saturate(110%) hue-rotate(10deg);
 }
 .french-bulldog img {
-	
+	filter: brightness(160%) contrast(60%) saturate(200%);
 }
 .golden-retriever img {
 	
 }
 .labrador-retriever img {
-	
+	filter: sepia(70%) blur(60%);
+	;
 }
 .maltese img {
-	
+	filter: opacity(50%) grayscale(80%);
 }
 .pug img {
-	filter: invert();
+	filter: invert(100%);
+}
+.pug img:active {
+	transition-delay: 0.5s;
+	transition-duration: 0.2s;
+	transform: scale(5.5) rotatey(2000deg);
+	filter: invert() hue-rotate(100deg) opacity(3%);
 }
 .poodle img {
-	
+	filter: grayscale(100%);
 }
 .pomeranian img {
-	filter: grayscale();
+	filter: grayscale(70%) hue-rotate(120deg);
 }
 .rottweiler img {
-	
+	filter: hue-rotate(170deg) invert(100%) sepia(80%);
 }
 .samoyed img {
-	
+	filter: saturate(130%) hue-rotate(280deg);
 }
 .schnauzer img {
-	
+	filter: hue-rotate(100deg) blur(1px) sepia(50%);
 }
 .shiba-inu img {
 	
@@ -107,10 +159,10 @@ header {
 	
 }
 .siberian-husky img {
-	
+	filter: hue-rotate(220deg) blur(2px);
 }
 .st-bernard img {
-	
+	filter: invert() hue-rotate(100deg);
 }
 .yorkshire-terrier img {
 	
