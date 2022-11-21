@@ -4,12 +4,24 @@ body {
 }
 figure img {
     border: tomato 5px solid;
+    filter: opacity(75%);
     flex: 1;
 }
-figure {
+figure img:hover{
+    filter: opacity(100%);
+    outline: 2px solid rgb(185, 71, 51);
+    cursor: pointer;
+}
+#images {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-flow: wrap;
     gap: 20px;
+}
+figcaption {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px -1px 1px tomato;
 }
