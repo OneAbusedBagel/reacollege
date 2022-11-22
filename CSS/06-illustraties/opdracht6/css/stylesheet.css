@@ -1,13 +1,23 @@
 body {
     background-color: gray;
 }
-#images figure {
+#images {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    
 }
 img {
     margin: 50px;
+    max-width: 100%;
+
 }
 .rhombus {
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.octagon {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+.eclipse {
+    clip-path: ellipse(38% 46% at 50% 50%);
 }
