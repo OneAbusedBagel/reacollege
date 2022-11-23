@@ -255,12 +255,17 @@
 				<tr>
 					<td>&lt;input&gt;</td>
 					<td>Dit element maakt een input field waar een geburiker data kan invoeren</td>
-					<td><form action="index.html" name="demo"> <input type="text"> Dit is een &lt;form&gt; met een &lt;input&gt; element </form></td>					
+					<td><form action="index.html" name="demo"> <input type="text"> Dit is een &lt;form&gt; met een &lt;input type="text"&gt; element </form></td>					
+				</tr>
+				<tr>
+					<td>&lt;input type="radio"&gt;</td>
+					<td>Dit is een input type die de knop van een form veranderd </td>
+					<td><form action="index.html" name="demo"> <input type="radio" name="test"> <input type="radio" name="test"> <input type="radio" name="test"> Dit is een &lt;form&gt; met een &lt;input type="radio"&gt; element </form></td>
 				</tr>
 				<tr>
 					<td>&lt;label&gt;</td>
 					<td>dit element definieert  een label voor andere elmenten</td>
-					<td><label for="demo">Dit is een voorbeeld form</label> <br> <form action="index.html" name="demo"> <input type="text"> <br> Dit is een &lt;form&gt; met een &lt;input&gt; element en een &lt;label&gt; element </form></td>					
+					<td><label for="demo">Dit is een voorbeeld form</label> <br> <form action="index.html" name="demo"> <input type="text"> <br> Dit is een &lt;form&gt; met een &lt;input type="text"&gt; element en een &lt;label&gt; element </form></td>					
 				</tr>
 				<tr>
 					<td>&lt;select&gt;</td>
@@ -274,8 +279,18 @@
 				</tr>
 				<tr>
 					<td>&lt;optgroup&gt;</td>
-					<td>Dit element wordt gebruikt om gerelateerde opties in groupen te zetten in een select lijst</td>
+					<td>Dit element wordt gebruikt om gerelateerde opties in groupen te zetten in een &lt;select&gt; lijst</td>
 					<td><select name="selectdemo" id="selectdemo"><optgroup label="Groep 1"><option value="Optie 1">Optie 1</option><option value="Optie 2">Optie 2</option></optgroup><optgroup label="Groep 2"><option value="Optie 3">Optie 3</option><option value="Optie 4">Optie 4</option></optgroup></select></td>					
+				</tr>
+				<tr>
+					<td>&lt;fieldset&gt;</td>
+					<td>dit element groupt andere elementen in een form en maakt een doos eromheen</td>
+					<td> <fieldset><label for="demo">Dit is een voorbeeld tekst form</label> <br> <form action="index.html" name="demo"> <input type="text"> <br>  <input type="radio" id="radio-1" name="test"> <label for="radio-1">option-1</label> <input type="radio" id="radio-2" name="test"> <label for="radio-2">option-2</label> <input type="radio" id="radio-3" name="test"> <label for="radio-3">option-3</label> <br> Dit is een &lt;form&gt; met een &lt;input type="text"&gt; element, een &lt;input type="radio"&gt; element, een &lt;label&gt; element en een &lt;fieldset&gt; element</form> </fieldset></td>					
+				</tr>
+				<tr>
+					<td>&lt;legend&gt;</td>
+					<td>Met dit element maak je een korte bijschrift (caption) voor het &lt;fieldset&gt; element</td>
+					<td> <fieldset><legend>Dit is de &lt;legend&gt; element</legend> <label for="demo">Dit is een voorbeeld tekst form</label> <br> <form action="index.html" name="demo"> <input type="text"> <br>  <input type="radio" id="radio-1" name="test"> <label for="radio-1">option-1</label> <input type="radio" id="radio-2" name="test"> <label for="radio-2">option-2</label> <input type="radio" id="radio-3" name="test"> <label for="radio-3">option-3</label> <br> Dit is een &lt;form&gt; met een &lt;input type="text"&gt; element, een &lt;input type="radio"&gt; element, een &lt;label&gt; element en een &lt;fieldset&gt; element</form> </fieldset></td>					
 				</tr>
 				<tr>
 					<th colspan="3">Les 9 - Media</th>
