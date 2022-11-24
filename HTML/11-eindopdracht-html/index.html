@@ -231,11 +231,12 @@
 				<tr>
 					<th colspan="3">Les 7 - Metagegevens</th>
 				</tr>
+				<tr><td>Note!</td><td colspan="2"><strong>het is moeilijk om een demonstratie te geven voor de meeste meta gegevens omdat ze niet erg visueel zijn en dus hebben die een duidelijker uitleg gekregen in het demonstratie vak</strong></td></tr>
 				<tr>
-					<th>&lt;charset&gt;</th>
-					<th>Met dit element vertel je de website welke "character set" te gebruiken</th>
+					<td>&lt;charset&gt;</td>
+					<td>Met dit element vertel je de website welke "character set" te gebruiken</td>
 					<!-- Laat indien mogelijk ook de werking zien van het element. -->
-					<th>Dit is moeilijk om te demonstreren omdat het altijd in de &lt;head&gt; staat zodat het voor de hele pagina telt (dit is altijd nodig)</th>
+					<td>Dit is moeilijk om te demonstreren omdat het altijd in de &lt;head&gt; staat zodat het voor de hele pagina telt (dit is altijd nodig)</td>
 				</tr>
 				<tr>
 					<td>&lt;script&gt;</td>
@@ -243,7 +244,32 @@
 					<td><p id="voorbeeld">Als u dit ziet dan is er iets misgegaan met de script</p></td>
 					<script>document.getElementById("voorbeeld").innerHTML = "Dit was gedaan met een script";</script>					
 				</tr>
-				<!--Ik kon niks anders vinden om in deze les te zetten omdat de <meta> element all in les 2 was laten zien en de rest vooral gaat over de attributen waarvan de meta element gebruik van maakt-->
+				<tr>
+					<td>&lt;description&gt;</td>
+					<td>Dit element wordt gebruikt om een beschrijving over je webpagina te maken </td>
+					<td>De meta description wordt gebruikt op de SERP om alvast een klein stukje tekst te laten zien over je pagina (Dit is vooral nodig voor SERPs)</td>				
+				</tr>
+				<tr>
+					<td>&lt;title&gt;</td>
+					<td>Dit element wordt gebruikt om een titel voor je webpagina te maken </td>
+					<td>De titel is ook relevant voor de SEO van je pagina (en een titel is tegenwoordig verplicht)</td>
+				</tr>
+				<tr>
+					<td>&lt;viewport&gt;</td>
+					<td>Dit element wordt gebruikt om je webpagina er goed uit te laten zien op andere apparaten</td>
+					<td>Dit is vooral belangrijk voor mobiele apparaten omdat de grote van die schermen veel variaties heeft</td>				
+				</tr>
+				<tr>
+					<td>&lt;html lang="en"&gt;</td>
+					<td>Dit element definieert je webpagina's taal</td>
+					<td>Dit is belangrijk voor search engines zodat zij weten in welk taal jouw site is bijv: &lt;html lang="en"&gt; </td>				
+				</tr>
+				<tr>
+					<td>&lt;html lang="en-US"&gt;</td>
+					<td>Dit is nogsteeds het lang attribuut maar dit keer staat het landcode erbij</td>
+					<td>Het is belangrijk omt e weten dat de eerste twee letters de taalcode zijn en de tweede twee de landcode bijv: &lt;html lang="en-US"&gt;</td>				
+				</tr>
+				<!--Ik kon niks anders vinden om in deze les te zetten omdat de <meta> element all in les 2 was laten zien en de rest vooral gaat over de attributen waarvan de <meta> element gebruik van maakt-->
 				<tr>
 					<th colspan="3">Les 8 - Formulieren</th>
 				</tr>
@@ -253,44 +279,44 @@
 					<td><form action="index.html" name="demo"> Net zoals &lt;table&gt; doet &lt;form&gt; niet veel alleen</form></td>
 				</tr>
 				<tr>
-					<td>&lt;input&gt;</td>
+					<td>&lt;input type="text"&gt;</td>
 					<td>Dit element maakt een input field waar een geburiker data kan invoeren</td>
-					<td><form action="index.html" name="demo"> <input type="text"> Dit is een &lt;form&gt; met een &lt;input type="text"&gt; element </form></td>					
+					<td><form action="index.html" name="demo"> <input type="text" placeholder='het &lt;input type="text"&gt; element'> Dit is een &lt;form&gt; met een &lt;input type="text"&gt; element </formtd>					
 				</tr>
 				<tr>
 					<td>&lt;input type="radio"&gt;</td>
 					<td>Dit is een input type die de knop van een form veranderd </td>
-					<td><form action="index.html" name="demo"> <input type="radio" name="test"> <input type="radio" name="test"> <input type="radio" name="test"> Dit is een &lt;form&gt; met een &lt;input type="radio"&gt; element </form></td>
+					<td> <input type="radio" id="radio-1" name="test"> <label for="radio-1">radio-1</label> <input type="radio" id="radio-2" name="test"> <label for="radio-2">radio-2</label> <input type="radio" id="radio-3" name="test"> <label for="radio-3">radio-3</label> <br> Dit is een &lt;form&gt; met drie &lt;input type="radio"&gt; elementen </form></td>
 				</tr>
 				<tr>
 					<td>&lt;label&gt;</td>
 					<td>dit element definieert  een label voor andere elmenten</td>
-					<td><label for="demo">Dit is een voorbeeld form</label> <br> <form action="index.html" name="demo"> <input type="text"> <br> Dit is een &lt;form&gt; met een &lt;input type="text"&gt; element en een &lt;label&gt; element </form></td>					
+					<td><label for="demo">Dit is het &lt;label&gt; element</label> <br> <form action="index.html" name="demo"> <input type="text" placeholder='het &lt;input type="text"&gt; element'> <br> Dit is een &lt;form&gt; met een &lt;input type="text"&gt; element en een &lt;label&gt; element </form></td>					
 				</tr>
 				<tr>
 					<td>&lt;select&gt;</td>
 					<td>Dit element wordt gebruikt om een drop-down list te maken</td>
-					<td><select name="selectdemo" id="selectdemo"></select>Net zoals &lt;table&gt; en &lt;form&gt; doet het niet veel alleen</td>					
+					<td><select name="selectdemo" id="selectdemo"></select>Net zoals &lt;table&gt; en &lt;form&gt; doet &lt;select&gt; niet veel alleen</td>					
 				</tr>
 				<tr>
 					<td>&lt;option&gt;</td>
-					<td>Dit element definieert  een optie en een &lt;select&gt; lijst</td>
-					<td><select name="selectdemo" id="selectdemo"><option value="Optie 1">Optie 1</option><option value="Optie 2">Optie 2</option><option value="Optie 3">Optie 3</option><option value="Optie 4">Optie 4</option></select></td>					
+					<td>Dit element definieert een optie in een &lt;select&gt; lijst</td>
+					<td><select name="selectdemo" id="selectdemo"><option value="Optie 1">Optie 1</option><option value="Optie 2">Optie 2</option><option value="Optie 3">Optie 3</option><option value="Optie 4">Optie 4</option></select> Dit is een &lt;select&gt; list met vier &lt;option&gt; elementen <td>					
 				</tr>
 				<tr>
 					<td>&lt;optgroup&gt;</td>
 					<td>Dit element wordt gebruikt om gerelateerde opties in groupen te zetten in een &lt;select&gt; lijst</td>
-					<td><select name="selectdemo" id="selectdemo"><optgroup label="Groep 1"><option value="Optie 1">Optie 1</option><option value="Optie 2">Optie 2</option></optgroup><optgroup label="Groep 2"><option value="Optie 3">Optie 3</option><option value="Optie 4">Optie 4</option></optgroup></select></td>					
+					<td><select name="selectdemo" id="selectdemo"><optgroup label="Groep 1"><option value="Optie 1">Optie 1</option><option value="Optie 2">Optie 2</option></optgroup><optgroup label="Groep 2"><option value="Optie 3">Optie 3</option><option value="Optie 4">Optie 4</option></optgroup></select>  Dit is een &lt;select&gt; list met vier &lt;option&gt; elementen in twee &lt;optgroup&gt; elementen </td>					
 				</tr>
 				<tr>
 					<td>&lt;fieldset&gt;</td>
 					<td>dit element groupt andere elementen in een form en maakt een doos eromheen</td>
-					<td> <fieldset><label for="demo">Dit is een voorbeeld tekst form</label> <br> <form action="index.html" name="demo"> <input type="text"> <br>  <input type="radio" id="radio-1" name="test"> <label for="radio-1">option-1</label> <input type="radio" id="radio-2" name="test"> <label for="radio-2">option-2</label> <input type="radio" id="radio-3" name="test"> <label for="radio-3">option-3</label> <br> Dit is een &lt;form&gt; met een &lt;input type="text"&gt; element, een &lt;input type="radio"&gt; element, een &lt;label&gt; element en een &lt;fieldset&gt; element</form> </fieldset></td>					
+					<td> <fieldset><label for="demo">Dit is het &lt;label&gt; element</label> <br> <form action="index.html" name="demo"> <input type="text" placeholder='het &lt;input type="text"&gt; element'> <br>  <input type="radio" id="radio-1" name="test"> <label for="radio-1">radio-1</label> <input type="radio" id="radio-2" name="test"> <label for="radio-2">radio-2</label> <input type="radio" id="radio-3" name="test"> <label for="radio-3">radio-3</label> <br> Dit is een &lt;form&gt; met een &lt;input type="text"&gt; element, drie &lt;input type="radio"&gt; elementen, een &lt;label&gt; element en een &lt;fieldset&gt; element</form> </fieldset></td>					
 				</tr>
 				<tr>
 					<td>&lt;legend&gt;</td>
 					<td>Met dit element maak je een korte bijschrift (caption) voor het &lt;fieldset&gt; element</td>
-					<td> <fieldset><legend>Dit is de &lt;legend&gt; element</legend> <label for="demo">Dit is een voorbeeld tekst form</label> <br> <form action="index.html" name="demo"> <input type="text"> <br>  <input type="radio" id="radio-1" name="test"> <label for="radio-1">option-1</label> <input type="radio" id="radio-2" name="test"> <label for="radio-2">option-2</label> <input type="radio" id="radio-3" name="test"> <label for="radio-3">option-3</label> <br> Dit is een &lt;form&gt; met een &lt;input type="text"&gt; element, een &lt;input type="radio"&gt; element, een &lt;label&gt; element en een &lt;fieldset&gt; element</form> </fieldset></td>					
+					<td> <fieldset><legend>Dit is het &lt;legend&gt; element</legend> <label for="demo">Dit is het &lt;label&gt; element</label> <br> <form action="index.html" name="demo"> <input type="text" placeholder='het &lt;input type="text"&gt; element'> <br>  <input type="radio" id="radio-1" name="test"> <label for="radio-1">radio-1</label> <input type="radio" id="radio-2" name="test"> <label for="radio-2">radio-2</label> <input type="radio" id="radio-3" name="test"> <label for="radio-3">radio-3</label> <br> Dit is een &lt;form&gt; met een &lt;input type="text"&gt; element, drie &lt;input type="radio"&gt; elementen, een &lt;label&gt; element en een &lt;fieldset&gt; element</form> </fieldset></td>					
 				</tr>
 				<tr>
 					<th colspan="3">Les 9 - Media</th>
