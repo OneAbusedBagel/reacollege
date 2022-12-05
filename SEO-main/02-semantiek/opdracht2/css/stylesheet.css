@@ -1,0 +1,14 @@
+html,
+body {
+  background-color: gray;
+}
+figure {
+  align-items: center;
+}
+figure img {
+  max-width: 80%;
+}
+div p {
+  background-color: mintcream;
+  border: 5px groove gray;
+}

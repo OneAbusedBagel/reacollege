@@ -1,0 +1,12 @@
+user-agent: ChristCrawler.com
+disallow: /
+
+user-agent: *
+disallow: /javascript/
+Disallow: /ebooks/* .pdf
+
+user-agent: Askjeeves
+disallow: /oud/testpagina.html
+
+user-agent: Googlebot
+sallow: /javascript/
