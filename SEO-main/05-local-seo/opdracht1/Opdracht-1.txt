@@ -5,3 +5,11 @@
 -supermarkt
 -sportschool
 -restaurant
+
+5 zoekopdrachten, niet locate afhankelijk
+
+-
+-
+-
+-
+-

@@ -6,15 +6,17 @@ body {
   margin: 20px 0px;
   justify-content: flex-end;
   align-content: flex-end;
-  max-height: 1000px;
+  height: 1000px;
   background-color: #ece2b6;
   display: grid;
   grid-template-columns: 200px 200px 200px 200px;
   grid-template-rows: 200px 200px 200px 200px;
-  gap: 20px; /* "🚨️️️ grid-gap property is obsolete. Avoid using it.  Shorthand that specifies the gutters between grid columns and grid rows in one declaration. Replaced by 'gap' property."*/
+  gap: 20px;
 }
 .cell {
-  padding: 10px;
+  display: flex;
+  padding: 3rem;
   background-color: #fffbeb;
-  align-content: center;
+  justify-items: flex-start;
+  align-items: flex-end;
 }

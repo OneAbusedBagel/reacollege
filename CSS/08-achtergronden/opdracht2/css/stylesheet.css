@@ -14,13 +14,13 @@ body {
   width: 26px;
   background-image: url(../images/buttons.png);
 }
-.icon1 {
+#icon1 {
   background-position: -51px 1px;
 }
-.icon2 {
+#icon2 {
   background-position: -51px -25px;
 }
-.icon3 {
+#icon3 {
   background-position: 0px -25px;
 }
 #flags a {
@@ -29,49 +29,49 @@ body {
   width: 16px;
   background-image: url(../images/flags.png);
 }
-.flag-NL {
+#flag-NL {
   background-position: -80px -110px;
 }
-.flag-GB {
+#flag-GB {
   background-position: -176px -44px;
 }
-.flag-ES {
+#flag-ES {
   background-position: -16px -44px;
 }
-.flag-FR {
+#flag-FR {
   background-position: -144px -44px;
 }
-.flag-DE {
+#flag-DE {
   background-position: -80px -33px;
 }
-.flag-IT {
+#flag-IT {
   background-position: -208px -66px;
 }
-.flag-NL:hover {
+#flag-NL:hover {
   transition-duration: 90s;
   transition-delay: 2s;
   transform: translateX(390px) scaleX(50);
 }
-.flag-GB:hover {
+#flag-GB:hover {
   background-position: -176px -99px;
   transition-duration: 1s;
   transform: scale(3);
 }
-.flag-ES:hover {
+#flag-ES:hover {
   background-position: -160px -44px;
   transition-duration: 1s;
   transform: scale(3);
 }
-.flag-FR:hover {
+#flag-FR:hover {
   background-position: -80px -110px;
   transition-duration: 1s;
   transform: scale(3);
 }
-.flag-DE:active {
+#flag-DE:active {
   transition-duration: 3s;
   transform: scale(5.5) rotate(4320deg);
 }
-.flag-IT:hover {
+#flag-IT:hover {
   background-position: -16px -44px;
   transition-duration: 1s;
   transform: scale(3);
