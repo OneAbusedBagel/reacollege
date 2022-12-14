@@ -12,6 +12,7 @@ body {
   width: 600px;
   height: 200px;
   margin: 20px auto;
+  border: #20b2aa groove 5px;
 }
 #gradient1 {
   background-image: linear-gradient(to left, #ee82ee, #000000);
@@ -63,10 +64,24 @@ body {
   );
 }
 #gradient8 {
-  background-color: green;
+  background: green;
   background: linear-gradient(
-    to top right,
-    rgb(106, 90, 205, 0.75) 50%,
-    dodgerblue 100%
+    to bottom left,
+    rgb(0, 255, 255, 0.5) 5%,
+    rgb(255, 0, 255, 0.5) 50%,
+    rgb(0, 255, 0, 0.5) 90%
+  );
+}
+#gradient9 {
+  background: linear-gradient(to right, rgb(0, 0, 0, 0), rgb(0, 0, 0, 1)),
+    linear-gradient(to bottom, red, white, blue);
+}
+#gradient10 {
+  background: linear-gradient(
+    to right,
+    tomato 20%,
+    dodgerblue 20%,
+    80%,
+    slateblue 80%
   );
 }

@@ -1,0 +1,43 @@
+body {
+  background-color: cadetblue;
+}
+#container {
+  margin: 0 auto;
+  max-width: 800px;
+  background-color: darkcyan;
+  border: 5px groove gray;
+  padding: 20px;
+}
+#sprites a {
+  display: block;
+  width: 24px;
+  height: 32px;
+  background-image: url(../images/snowmen-sprites.png);
+}
+#sprite1 {
+  background-position: -96px -192px;
+}
+#sprite1:hover {
+  background-position: -72px -192px;
+}
+#sprite1:active {
+  background-position: -120px -192px;
+}
+#sprite2 {
+  background-position: -240px -96px;
+}
+#sprite2:hover {
+  background-position: -216px -96px;
+}
+#sprite2:active {
+  background-position: -264px -96px;
+}
+#sprite3 {
+  background-position: -96px 0px;
+}
+#sprite3:hover {
+  background-position: -72px 0px;
+}
+#sprite3:active {
+  background-position: -120px 0px;
+}

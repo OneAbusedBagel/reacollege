@@ -1,0 +1,51 @@
+body {
+  background-color: cadetblue;
+}
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  background-color: darkcyan;
+  border: 5px groove gray;
+  padding: 20px;
+}
+.gradient {
+  margin: 20px auto;
+  width: 600px;
+  height: 400px;
+  border: #20b2aa inset 5px;
+}
+#gradient1 {
+  background: radial-gradient(tomato, orange, dodgerblue, mediumseagreen);
+}
+#gradient2 {
+  background: radial-gradient(circle, violet, slateblue, lightgray);
+}
+#gradient3 {
+  height: 500px;
+  width: 500px;
+  background: radial-gradient(
+    circle,
+    white,
+    black,
+    white,
+    black,
+    white,
+    black,
+    white,
+    black,
+    white,
+    black,
+    white
+  );
+  border-radius: 50%;
+}
+#gradient4 {
+  background: linear-gradient(
+    to bottom right,
+    tomato,
+    orange,
+    mediumseagreen,
+    dodgerblue,
+    slateblue
+  );
+}
