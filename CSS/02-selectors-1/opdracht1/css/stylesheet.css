@@ -1,23 +1,23 @@
 body {
-    font-size: 18px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(88, 87, 87);
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(88, 87, 87);
 }
 
 ul {
-    list-style-type: circle;
+  list-style-type: circle;
 }
 
 .flanders {
-    color: gold;
+  color: gold;
 }
 .wallonia {
-    color: red;
+  color: red;
 }
 
 .greatest-area {
-    font-weight: bold;
+  font-weight: bold;
 }
 .most-populous {
-    font-style: italic;
+  font-style: italic;
 }

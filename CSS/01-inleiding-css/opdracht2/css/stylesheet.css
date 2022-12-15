@@ -1,14 +1,23 @@
 body {
-    background-color: hsl(54, 77%, 75%);
-    font-size: 18px;
-    font-family: Verdana, Tahoma, sans-serif;
+  background-color: hsl(54, 77%, 75%);
+  font-size: 18px;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
-h1 {color: rgb(255, 0, 0);}
+h1 {
+  color: rgb(255, 0, 0);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
 
-h2 {color: rgba(255, 166, 0, 0.404);}
+h2 {
+  color: rgba(255, 166, 0, 0.404);
+  font-family: "Comic Sans MS";
+}
 
-p {color: #11b611;}
+p {
+  color: #11b611;
+}
 
-#paragraaf2 {color: hsla(240, 100%, 50%, 0.404);}
-
+#paragraaf2 {
+  color: hsla(240, 100%, 50%, 0.404);
+}

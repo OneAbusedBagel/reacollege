@@ -1,0 +1,36 @@
+body {
+  background-color: cadetblue;
+}
+#container {
+  margin: 0 auto;
+  max-width: 1000px;
+  background-color: darkcyan;
+  border: 5px groove gray;
+  padding: 20px;
+}
+header {
+  margin: 10px auto;
+  width: 80%;
+  height: 50px;
+  background: linear-gradient(to bottom, cadetblue, lightskyblue);
+  position: relative;
+}
+.icons img {
+  width: 40px;
+  height: 40px;
+  bottom: 20px;
+  padding: 10px;
+  position: absolute;
+}
+.icons img:nth-child(1) {
+  right: 20px;
+}
+.icons img:nth-child(2) {
+  right: 80px;
+}
+.icons img:nth-child(3) {
+  right: 140px;
+}
+.icons img:hover {
+  filter: drop-shadow(2px 1px 0px red);
+}

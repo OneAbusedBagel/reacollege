@@ -1,29 +1,39 @@
 body {
-    font-family: Book-Antiqua;
-    background-color: grey;
+  font-family: Book-Antiqua;
+  background-color: grey;
 }
 
 h2 {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-ol {list-style-type: upper-roman;}
-
-#algemeen, .algemeen {
-    color: red;
+ol {
+  list-style-type: upper-roman;
 }
-#geschiedenis, .geschiedenis{
-    color: orange;
+p {
+  margin-bottom: 50px;
 }
-#politiek, .politiek{
-    color: yellow;
+#algemeen,
+.algemeen {
+  color: red;
 }
-#demografie, .demografie{
-    color: green;
+#geschiedenis,
+.geschiedenis {
+  color: orange;
 }
-#economie, .economie{
-    color: blue;
+#politiek,
+.politiek {
+  color: yellow;
 }
-#kunst, .kunst{
-    color: violet;
+#demografie,
+.demografie {
+  color: green;
+}
+#economie,
+.economie {
+  color: blue;
+}
+#kunst,
+.kunst {
+  color: violet;
 }

@@ -1,18 +1,30 @@
-body {font-size: 18px;
-     font-family: Verdana, Tahoma, sans-serif;
-     background-color: rgb(173, 216, 230);
-     color: rgb(65, 105, 255);}
+body {
+  font-size: 18px;
+  font-family: Verdana, Tahoma, sans-serif;
+  background-color: rgb(173, 216, 230);
+  color: rgb(65, 105, 255);
+}
 
-h1 {font-family: Arial, Helvetica, sans-serif;
-    color: rgb(255, 127, 80);
-    font-weight: bolder;}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(255, 127, 80);
+  font-weight: bolder;
+}
 
-#h2one {color: rgb(255, 0, 255);}
-        /*er staat dat alle gebruikte lettertypes voorkomen in het lijstje web safe fonts maar ik kan de fonts voor de 2de en 3rde headings niet vinden. */
-#h2two {color: rgb(238, 120, 238);}
+#h2one {
+  color: rgb(255, 0, 255);
+}
+/*er staat dat alle gebruikte lettertypes voorkomen in het lijstje web safe fonts maar ik kan de fonts voor de 2de en 3rde headings niet vinden. */
+#h2two {
+  color: rgb(238, 120, 238);
+}
 
-p  {color: blue;
-    font-family: 'Times New Roman', Times, serif;}
-li {color: rgb(34, 129, 34);
-    list-style-type: hiragana;
-    font-family: 'Courier New', Courier, monospace;}
+p {
+  color: blue;
+  font-family: "Times New Roman", Times, serif;
+}
+li {
+  color: rgb(34, 129, 34);
+  list-style-type: hiragana;
+  font-family: "Courier New", Courier, monospace;
+}

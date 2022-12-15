@@ -1,5 +1,11 @@
-button {cursor: pointer;}
+button {
+  cursor: pointer;
+}
 
-progress {cursor: wait;}
+progress {
+  cursor: wait;
+}
 
-#piratebay {cursor: not-allowed;}
+#piratebay {
+  cursor: not-allowed;
+}

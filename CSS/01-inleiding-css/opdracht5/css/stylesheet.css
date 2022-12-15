@@ -1,13 +1,24 @@
 body {
-	font-size: 18px;
-	font-family: Tahoma, Arial, sans-serif;
+  font-size: 18px;
+  font-family: Tahoma, Arial, sans-serif;
 }
 #container {
-	max-width: 1394px;
-	min-height: 600px;
-	margin: 0 auto;
+  max-width: 1394px;
+  min-height: 600px;
+  margin: 0 auto;
 }
-#kat1 {float: left;}
-#kat2 {float: right;}
-#levensduur {clear: left;}
-#geloof {clear: right;}
+img {
+  margin: 10px;
+}
+#kat1 {
+  float: left;
+}
+#kat2 {
+  float: right;
+}
+#levensduur {
+  clear: left;
+}
+#geloof {
+  clear: right;
+}
