@@ -40,28 +40,20 @@ body {
   border-radius: 50%;
 }
 #gradient4 {
-  background-image: linear-gradient(
+  background-image:     radial-gradient(
+    circle,
+    white,
+    black,
+    rgb(255, 255, 255, 0.5),
+    rgb(0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 50%
+  ), linear-gradient(
       to bottom right,
-      rgba(255, 99, 71, 0.5),
-      rgba(255, 166, 0, 0.5),
-      rgba(60, 179, 114, 0.5),
-      rgba(30, 143, 255, 0.5),
-      rgba(105, 90, 205, 0.5)
-    ),
-    radial-gradient(
-      circle,
-      white,
-      black,
-      white,
-      rgb(0, 0, 0) 50%,
-      white,
-      rgba(0, 0, 0, 0),
-      rgba(255, 255, 255, 0),
-      rgba(0, 0, 0, 0),
-      rgba(255, 255, 255, 0),
-      rgba(0, 0, 0, 0),
-      rgba(255, 255, 255, 0)
+      rgba(255, 99, 71, 1),
+      rgba(255, 166, 0, 1),
+      rgba(60, 179, 114, 1),
+      rgba(30, 143, 255, 1),
+      rgba(105, 90, 205, 1)
     );
-  border-radius: 50%, 0%;
   background-repeat: no-repeat;
 }
