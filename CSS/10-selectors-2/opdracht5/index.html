@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+	<head>
+		<meta charset="UTF-8">
+		<title>Preset</title>
+		<link rel="stylesheet" href="css/stylesheet.css">
+	</head>
+	<body>
+        <main>
+            <div id="container">
+                <form>
+                    <div id="box">
+                        <label for="naam">Naam:</label>
+                        <label for="mail">E-mail:</label>
+                        <label for="burgstaat">Burgerlijke staat</label>
+                        <label for="aantalkind">Aantal kinderen</label>
+                        <label for="nationaliteit">Nationaliteit</label>
+                    </div>
+                    <div id="box">
+                        <input type="text" name="naam">
+                        <input type="text" name="mail">
+                        <select name="burgstaat" id="burgstaat">
+                            <option>ongehuwd</option>
+                            <option>gehuwd</option>
+                        </select>
+                        <input type="number" name="aantalkind" id="aantalkind" min="0" value="0">
+                        <select name="nationaliteit" id="nationaliteit">
+                            <option>Nederlandse</option>
+                            <option>Niet Nederlandse</option>
+                        </select>
+                        <input type="submit" name="submit" value="verzenden">
+                    </div>
+                </form>
+            </div>
+        </main>
+	</body>
+</html>
