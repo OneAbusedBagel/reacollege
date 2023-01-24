@@ -1,0 +1,26 @@
+html, body {
+	color: rgb(18, 18, 18);
+	background-color: rgb(102, 194, 233);
+	font-size: 16px;
+	font-family: Newsreader, Times, serif;
+}
+.container {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+section {
+	padding: 3rem;
+}
+article.news {
+	background-color: white;
+	padding: 20px;
+	border: 1px solid darkgrey;
+}
+p.timestamp {
+	font-size: 0.8em;
+	color: darkgrey;
+}
+footer {
+	text-align: right;
+	font-style: italic;
+}

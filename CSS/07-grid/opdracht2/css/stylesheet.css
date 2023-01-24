@@ -1,0 +1,58 @@
+body {
+    background-color: cadetblue;
+}
+#container {
+    margin: 0 auto;
+    max-width: 90%;
+    background-color: darkcyan;
+    border: 5px groove gray;
+    padding: 20px;
+    display: grid;
+    grid-template-columns:5, 1fr;
+    gap: 10px;
+}
+#container > div:nth-child(1) {
+    grid-area: 1 / 1 / span 1 / span 5;
+    background-color: coral;           
+}
+#container > div:nth-child(2) {
+    grid-area: 2 / 1 / span 1 / span 1;
+    background-color: brown;          
+}
+#container > div:nth-child(3) {
+    grid-area: 2 / 2 / span 1 / span 4;
+    background-color: darkslateblue;
+}
+#container > div:nth-child(4) {
+    grid-area: 3 / 1 / span 1 / span 2;
+    background-color: yellow;            
+}
+#container > div:nth-child(5) {
+    grid-area: 3 / 3 / span 2 / span 1;
+    background-color:darksalmon;
+}
+#container > div:nth-child(6) {
+    grid-area: 3 / 4 / span 1 / span 2;
+    background-color: cornflowerblue;
+}
+#container > div:nth-child(7) {
+    grid-area: 4 / 1 / span 1 / span 2;
+    background-color: chartreuse;
+}
+#container > div:nth-child(8) {
+    grid-area: 4 / 4 / span 1 / span 2;
+    background-color: orange;     
+}
+#container > div:nth-child(9) {
+    grid-area: 5 / 1 / span 1 / span 4;
+    background-color: antiquewhite;
+}
+#container > div:nth-child(10) {
+    grid-area: 5 / 5 / span 1 / span 1;
+    background-color: forestgreen;
+}
+#container > div:nth-child(11) {
+    grid-area: 6 / 1 / span 1 / span 5;
+    background-color:mediumvioletred ;
+}
+

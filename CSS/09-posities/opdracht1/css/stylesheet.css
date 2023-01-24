@@ -11,7 +11,7 @@ body {
 header {
   margin: 10px auto;
   width: 80%;
-  height: 50px;
+  height: 200px;
   background: linear-gradient(to bottom, cadetblue, lightskyblue);
   position: relative;
 }
