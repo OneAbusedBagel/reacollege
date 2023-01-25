@@ -30,10 +30,16 @@ img {
     width: 200px;
     height: 200px;
     background-color: indianred;
-    border-width: 20px;
-    padding: 15px;
-    border-style: solid;
-    border-image: url('/CSS/03-box-model/opdracht7/images/padang.png') 30 space;
+    padding: 25px;
+    margin: 0px 20px;
+    border-image: url('/CSS/03-box-model/opdracht7/images/padang.png') 30% stretch;
+    border: 15px solid transparent;
 }
-*\
+*/
+#box {
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(/CSS/03-box-model/opdracht7/images/padang.png) round;
+    border-image-slice: 30%;
+}
 

@@ -4,8 +4,6 @@ body {
 #container {
   margin: 0 auto;
   max-width: 1000px;
-  background-color: darkcyan;
-  border: 5px groove gray;
   padding: 20px;
 }
 header {
@@ -15,22 +13,22 @@ header {
   background: linear-gradient(to bottom, cadetblue, lightskyblue);
   position: relative;
 }
-.icons img {
+.icons a {
   width: 40px;
   height: 40px;
   bottom: 20px;
   padding: 10px;
   position: absolute;
 }
-.icons img:nth-child(1) {
+.icons a:nth-child(1) {
   right: 20px;
 }
-.icons img:nth-child(2) {
+.icons a:nth-child(2) {
   right: 80px;
 }
-.icons img:nth-child(3) {
+.icons a:nth-child(3) {
   right: 140px;
 }
-.icons img:hover {
+.icons a:hover {
   filter: drop-shadow(2px 1px 0px red);
 }
