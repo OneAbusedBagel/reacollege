@@ -1,0 +1,59 @@
+body, html {
+	font-size: 40px;
+	font-family: Calibri, Arial, sans-serif;
+}
+#container {
+	width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-image: url('../images/background.png');
+}
+header, footer, aside, article {
+	box-sizing: border-box;
+	padding: 20px;
+	text-align: center;
+}
+header {
+	width: 1000px;
+	height: 200px;
+}
+aside {
+	width: 200px;
+	height: 400px;
+}
+section {
+	display: flex;
+	flex-direction: column;
+}
+section>article:first-of-type{
+	width: 600px;
+	height: 200px;
+}
+section>article:last-of-type{
+	width: 600px;
+	height: 200px;
+}
+footer {
+	width: 1000px;
+	height: 200px;
+}
+#container header:nth-of-type(1)>p {
+	transform:scaleY(3);
+}
+#container aside:nth-of-type(1)>p {
+	transform: rotate(90deg);
+}
+#container aside:nth-of-type(2)>p {
+	transform: rotate(315deg);
+}
+#container section>article:nth-of-type(1){
+	transform: scale(3.5, 0.8) translatey(-4px);
+}
+#container section>article:nth-of-type(2){
+	transform: skewy(15deg);
+}
+#container footer>p {
+	transform: skew(60deg,-5deg);
+}

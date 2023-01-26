@@ -1,0 +1,49 @@
+#container {
+	width: 800px;
+	min-height: 600px;
+	margin: 0 auto;
+}
+.puzzle {
+	width: 800px;
+	height: 600px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.piece {
+	width: 200px;
+	height: 200px;
+}
+.piece:nth-of-type(2) {
+	transform: translate(400px, 200px);
+}
+.piece:nth-of-type(3) {
+	transform: translate(0px, 400px);
+}
+.piece:nth-of-type(4) {
+	transform: translate(-400px, 0px);
+}
+.piece:nth-of-type(5) {
+	transform: translate(400px, 0px);
+}
+.piece:nth-of-type(6) {
+	transform: translate(-200px, 200px);
+}
+.piece:nth-of-type(7) {
+	transform: translate(-400px, 0px);
+}
+.piece:nth-of-type(8) {
+	transform: translate( 0px, -200px);
+}
+.piece:nth-of-type(9) {
+	transform: translate( 200px, -200px);
+}
+.piece:nth-of-type(10) {
+	transform: translate( 0px, -0x);
+}
+.piece:nth-of-type(11) {
+	transform: translate( 0px, -400px);
+}
+.piece:nth-of-type(12) {
+	transform: translate( 0px, 0px);
+}

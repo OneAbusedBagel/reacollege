@@ -1,0 +1,47 @@
+
+body {
+    background-color: black;
+}
+figure {
+    transform: translate(50px, 50px);
+}
+figure:hover img, figure:hover figcaption {
+    transform: scale(120%);
+}
+figure:active img, figure:active figcaption {
+    transform: skew(-9deg, -9deg);
+    transition: 1s;
+}
+figure figcaption {
+    transform: rotate(-10deg) translatey(-10px);
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+figure:nth-of-type(6):active img {
+    transform: skew(91deg, 91deg) translate(20px, -25px) scale(0.5);
+    transition: 1s;
+    filter: opacity(90%);
+}
+figure img {
+    border: tomato 5px solid;
+    filter: opacity(75%);
+    flex: 1;
+}
+figure img:hover{
+    filter: opacity(100%);
+    outline: 2px solid rgb(185, 71, 51);
+    cursor: pointer;
+}
+#images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    gap: 20px;
+}
+figcaption {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px -1px 1px tomato;
+}

@@ -1,0 +1,54 @@
+body {
+	font-family: Calibri, Verdana, sans-serif;
+	font-size: 20px;
+}
+#container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	perspective: 100px;
+}
+.kader {
+	position: relative;
+	height: 300px;
+	width: 300px;
+	margin: 25px;
+	border: 1px solid black;
+	perspective: 100px;
+	background-color: lightgrey;
+}
+
+.blokje {
+	height: 100px;
+	width: 100px;	
+	position: absolute;
+	left: 100px;
+	top: 100px;
+	border: 1px solid black;
+	background: rgba(100,100,100,0.5);
+	background: linear-gradient(to bottom, tomato, orange, mediumseagreen, dodgerblue, violet);
+}
+#container>.kader:nth-of-type(1)>.blokje {
+	transform: rotatex(45deg);
+}
+#container>.kader:nth-of-type(2)>.blokje {
+	transform: rotateY(-30deg);
+}
+#container>.kader:nth-of-type(3)>.blokje {
+	transform: rotatez(90deg);
+}
+#container>.kader:nth-of-type(4)>.blokje {
+	transform: rotateY(75deg);
+}
+#container>.kader:nth-of-type(5)>.blokje {
+	transform: rotatex(15deg) rotateZ(45deg);
+}
+#container>.kader:nth-of-type(6)>.blokje {
+
+}
+#container>.kader:nth-of-type(7)>.blokje {
+	
+}
+#container>.kader:nth-of-type(8)>.blokje {
+
+}
