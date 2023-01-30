@@ -44,11 +44,28 @@ body {
 	transform: rotatex(15deg) rotateZ(45deg);
 }
 #container>.kader:nth-of-type(6)>.blokje {
-
+	transform: rotateX(-30deg) rotateY(60deg) rotateZ(180deg);
 }
 #container>.kader:nth-of-type(7)>.blokje {
-	
+	transform: rotateX(45deg) rotateY(-30deg) rotateZ(-45deg);
+}
+#container>.kader:nth-of-type(7)>.blokje:active{
+	transform: rotateX(285deg) rotateY(360deg) rotateZ(300deg);
+	transition: 3s linear;
+	transition-timing-function: steps(60);
 }
 #container>.kader:nth-of-type(8)>.blokje {
-
+	transform: rotateX(-75deg) rotateY(-0deg) rotateZ(-60deg)
 }
+#container>.kader:nth-of-type(8)>.blokje:active  {
+	transform: rotateX(-345deg) rotateY(-315deg) rotateZ(-360deg);
+	transition: 6s ease-out;
+	transition-timing-function: steps(260);
+	filter: drop-shadow( 0px 0px 5px gray);
+}
+/* #container>.kader:nth-of-type(9) .blokje~.blokje {
+	transform: rotateX(45deg) rotateY(-30deg) rotateZ(-45deg);
+}
+#container>.kader:nth-of-type(9):active .blokje~.blokje  {
+	transform: rotateX(-30deg) rotateY(60deg) rotateZ(180deg);
+}  */

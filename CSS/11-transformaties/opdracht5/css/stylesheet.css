@@ -1,0 +1,22 @@
+body {
+	background-image: url('../images/star-wars-background.jpg');
+	font-family: 'Franklin Gothic', Arial, sans-serif;
+	color: #ffd54e;
+	overflow: hidden;
+}
+main {
+	display: flex;
+	justify-content: center;
+	font-size: 50px;
+}
+h2 {
+	text-transform:uppercase;
+}
+h1, h2 {
+text-align: center;
+}
+h1, h2, p {
+	letter-spacing: 5px;
+	word-spacing: 5px;
+}
+	
