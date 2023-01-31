@@ -1,0 +1,56 @@
+body {
+    background-color: cadetblue;
+  }
+/* #container {
+    margin: 0 auto;
+    width: 90%;
+    min-width: 300px;
+    min-height: 400px;
+    background-color:plum;
+    border: 5px groove gray;
+    padding: 20px;
+    position: relative;
+  }  */
+  #div-colors {
+    position:absolute;
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    animation: colors 4s 2s forwards infinite ease-in-out ;
+  }
+
+  @keyframes colors {
+0% {
+    background-color: orange;
+    position: relative;
+    border-radius: 0px;
+    left: 0%;
+    top: 0%;
+}
+20% {
+    background-color: purple;
+    right: 0px;
+    top: 0%;
+}
+50% {
+    background-color: darkslategray;
+    animation-duration: 1s;
+    border-radius: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+75% {
+    background-color: gray;
+    animation-duration: 1s;
+    border-radius: 100%;
+    left: 0px;
+    bottom: 0px;
+ }
+100% {
+    background-color: orange;
+    animation-duration: 1s;
+    border-radius: 0px;
+    left: 0px;
+    top: 0px;
+}
+  }

@@ -1,0 +1,43 @@
+#container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.block-1, .block-2, .block-3 {
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+	margin: 20px;
+}
+.block-1 {
+	background-color: khaki;
+}
+.block-2 {
+	background-color: lightblue;
+}
+.block-3 {
+	background-color: lightgreen;
+}
+@keyframes test-animation {
+	from {
+		width: 200px;
+		height: 200px;
+		background-color: dodgerblue;
+	}
+	to {
+		width: 400px;
+		height: 400px;
+		background-color: indianred;
+	}
+}
+.block-1 {
+	animation: test-animation  1s 250ms both 1 normal linear;
+}
+.block-2 {
+	animation: test-animation   2s 250ms forwards 5  reverse ease-in;
+
+}
+.block-3 {
+	animation: test-animation 3s 250ms backwards infinite alternate ease-in-out;
+}
+
