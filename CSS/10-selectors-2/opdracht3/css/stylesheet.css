@@ -15,11 +15,11 @@ body {
     border: #20b2aa inset 5px;
   }
   #table-1 table, th, td {
-    border: 2px solid darkslategray;
+    border: 1px solid darkslategray;
     border-collapse: collapse;
 }
 #table-1 th, td {
-    padding: 8px;
+    padding: 4px;
 }
 #table-1 tr>td:first-child, #table-1 tr>td:last-child {
     font-weight: bold;
