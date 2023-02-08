@@ -1,0 +1,9 @@
+body {
+	counter-reset: teller 0;
+}
+h2 {
+	counter-increment: teller;
+}
+h2::before {
+	content: "Chapter " counter(teller) " - ";
+}
