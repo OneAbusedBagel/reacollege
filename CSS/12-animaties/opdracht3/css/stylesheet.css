@@ -1,41 +1,47 @@
 body {
     background-color: cadetblue;
-  }
-  #div-colors {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background-color: orange;
-    transition: background-color 1s;
-    animation: colors 4s;
+    width: 500px;
+    height: 500px;
   }
 
   @keyframes colors {
 0% {
     background-color: orange;
-    position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 0%;
+    top: 0%;
 
 }
-20% {
+25% {
     background-color: purple;
-    position: absolute;
-    right: 0px;
-    top: 0px;
+    border-radius: 50%;
+    left: 100%;
+    top: 0%;
 }
 50% {
     background-color: darkslategray;
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
+    border-radius: 0%;
+    left: 100%;
+    top: 100%;
 }
 75% {
     background-color: gray;
-    position: absolute;
+    border-radius: 50%;
+    left: 0%;
+    top: 100%;
 }
 100% {
     background-color: orange;
-    position: absolute;
+    left: 0%;
+    top: 0%;
 }
+  }
+  #div-colors {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    transition: background-color 1s;
+    animation-name: colors;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
   }

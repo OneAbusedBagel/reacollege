@@ -1,0 +1,50 @@
+body, html {
+	height: 100%;
+	margin: 0;
+	font-size: 20px;
+	color: darkgray;
+	font-family: sans-serif
+}
+header {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+section {
+    min-height: 100px;
+    padding: 40px;
+}
+.message {
+	text-align: center;
+	letter-spacing: 2px;
+}
+.message span {
+	text-transform: uppercase;
+	font-size: 2em;
+	color: white;
+	background-color: rgb(50,50,50);
+	padding: 20px;
+}
+.parallax {
+	opacity: 0.8;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.bg-1 {
+	background-image: url("https://i.ibb.co/FVjJq8K/ff6wallpaper043-1920x1080.jpg");
+	min-height: 100%;
+}
+.bg-2 {
+	background-image: url("https://i.ibb.co/CMhSrgc/ff6wallpaper033-1920x1200.jpg");
+	min-height: 300px;
+}
+.bg-3 {
+	background-image: url("https://i.ibb.co/K0MnPPT/ff6wallpaper026-2560x1600.png");
+	min-height: 200px;
+}
+.bg-4 {
+	background-image: url("https://i.ibb.co/njMdWPk/ff6wallpaper044-1920x1080.jpg");
+	min-height: 100%;
+}
