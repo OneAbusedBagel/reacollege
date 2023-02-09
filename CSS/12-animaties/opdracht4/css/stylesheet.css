@@ -4,11 +4,11 @@ body {
 }
 figure {
     transform: translate(50px, 50px);
-    transition: all 1500ms;
+
 }
 figure:hover img, figure:hover figcaption {
     transform: scale(120%);
-    transition:all 3500ms; /* wist niet precies of het delay of duration moest zijn */
+    transition:all 30ms; 
 }
 figure:active img, figure:active figcaption {
     border-color: deeppink;
@@ -29,7 +29,7 @@ figure img {
     border: tomato 5px solid;
     filter: opacity(75%);
     flex: 1;
-    transition: all 3s;
+    transition: all 1500ms;
 }
 figure img:hover{
     filter: opacity(100%);

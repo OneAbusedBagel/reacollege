@@ -9,6 +9,10 @@ main {
 	justify-content: center;
 	font-size: 50px;
 }
+section {
+	width: 1080px;
+transform: perspective(20em) translateZ(-900px) rotateX(45deg) ;
+}
 h2 {
 	text-transform:uppercase;
 }
@@ -18,5 +22,10 @@ text-align: center;
 h1, h2, p {
 	letter-spacing: 5px;
 	word-spacing: 5px;
+}
+p {
+	line-height: 1.5;
+	text-align: justify ;
+	white-space: wrap;
 }
 	

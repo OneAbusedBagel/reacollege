@@ -4,36 +4,35 @@
 	margin: 120px auto;
 }
 
-
 @keyframes spincube {
 	0% {
 
 	}
-	20% {
+	17% {
 		transform: rotatey(-90deg);
 	}
-	40%{
+	33%{
 		transform: rotatey(-90deg) rotatez(90deg);
 	} 
-	60%{
+	50%{
 		transform: rotatey(-90deg) rotatez(90deg) rotateX(-90deg);
 	}
-	80%{
+	66%{
 		transform: rotatey(-90deg) rotatez(180deg) rotateX(-90deg)
 	}
-	100%{
-		
+	83%{
+		transform: rotatey(-180deg) rotatez(180deg) rotateX(-90deg)
 	}
+	100% {
 
-	
+	}
 }
-
 
 .cubespinner {
 	animation-name: spincube;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
-	animation-duration: 12s;
+	animation-duration: 8s;
 	animation-delay: 1s;
 	transform-style: preserve-3d;
 	transform-origin: 240px 240px 0;
