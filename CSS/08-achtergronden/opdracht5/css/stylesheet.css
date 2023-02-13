@@ -41,3 +41,12 @@ body {
 #sprite3:active {
   background-position: -120px 0px;
 }
+#sprite4 {
+  background-position: -168px -160px;
+}
+#sprite4:hover {
+  background-position: -144px -160px;
+}
+#sprite4:active {
+  background-position: -192px -160px;
+}

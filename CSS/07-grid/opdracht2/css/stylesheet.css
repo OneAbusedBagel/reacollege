@@ -4,13 +4,14 @@ body {
 #container {
     margin: 0 auto;
     max-width: 90%;
-    background-color: darkcyan;
+    background-color: rgb(0, 0, 0);
     border: 5px groove gray;
     padding: 20px;
     display: grid;
     grid-template-columns:5, 1fr;
     gap: 10px;
 }
+
 #container > div:nth-child(1) {
     grid-area: 1 / 1 / span 1 / span 5;
     background-color: coral;           
@@ -56,3 +57,6 @@ body {
     background-color:mediumvioletred ;
 }
 
+#container div {
+    padding: 50px 0px;
+}
