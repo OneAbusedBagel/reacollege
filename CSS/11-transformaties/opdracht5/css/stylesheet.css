@@ -11,13 +11,22 @@ main {
 }
 section {
 	width: 1080px;
-transform: perspective(20em) translateZ(-900px) rotateX(45deg) ;
+transform: perspective(20em) translateZ(300px) translateY(450px) rotateX(45deg) ;
+}
+section:hover {
+	transform: perspective(20em) translatez(-900px) translateY(-1200px) rotateX(45deg) ;
+	transition-duration: 30s;
+	transition-timing-function: linear;
 }
 h2 {
 	text-transform:uppercase;
 }
 h1, h2 {
 text-align: center;
+}
+h2 {
+	width: 900px;
+	margin: 0 auto;
 }
 h1, h2, p {
 	letter-spacing: 5px;
