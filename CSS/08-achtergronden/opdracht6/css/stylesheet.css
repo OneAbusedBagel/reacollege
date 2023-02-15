@@ -57,3 +57,18 @@ body {
     );
   background-repeat: no-repeat;
 }
+#gradient5 {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-image: conic-gradient(
+    #e61010 69.8%,
+    #f6ac43 69.8% 85.5%,
+    #fef34b 85.5% 89.6%,
+    #c6e628 89.6% 92.9%,
+    #0066cc 92.9% 94.2%,
+    #dda0dd 94.2% 100%
+  ) ;
+  background-repeat: no-repeat;
+}
+

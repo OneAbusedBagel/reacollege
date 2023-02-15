@@ -1,0 +1,30 @@
+body {
+  background-color: rgb(95, 158, 160);
+}
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  background-color: rgb(0, 139, 139);
+  border: 5px groove gray;
+  padding: 20px;
+}
+.gradient {
+  margin: 20px auto;
+  width: 600px;
+  height: 400px;
+  border: #20b2aa inset 5px;
+}
+#gradient1 {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-image: conic-gradient(
+    #e61010 69.8%,
+    #f6ac43 69.8% 85.5%,
+    #fef34b 85.5% 89.6%,
+    #c6e628 89.6% 92.9%,
+    #0066cc 92.9% 94.2%,
+    #dda0dd 94.2% 100%
+  ) ;
+}
+
