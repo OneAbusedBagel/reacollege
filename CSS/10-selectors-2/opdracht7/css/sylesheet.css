@@ -26,3 +26,16 @@ html, body {
 .row:nth-of-type(even) .square:nth-of-type(odd) {
     background-color: rgb(166,125,93) ;
 }
+.white:hover {
+    background-image: radial-gradient(
+        circle,
+        white,
+        white
+    ), linear-gradient( 
+        to bottom right,
+        rgb(166,125,93),
+        rgb(166,125,93)
+    );
+    transform: scale(1.1);
+    background-repeat: no-repeat;
+}

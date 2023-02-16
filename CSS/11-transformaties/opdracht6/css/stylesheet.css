@@ -1,0 +1,94 @@
+body {
+	font-family: Georgia, Times, serif;
+	font-size: 20px;
+	background-color: khaki;
+}
+#container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+figure {
+	border: 1px solid darkorange;
+	background-color: white;
+	box-shadow: 0px 0px 5px gray;
+	filter: sepia(0.65);
+	padding: 10px;
+	clip-path: fill-box;
+
+}
+figure:hover {
+	border: 1px solid black;
+	filter: none;
+}
+figcaption {
+	text-align: center;
+	letter-spacing: 4px;
+	font-family: 'Crete Round', serif;
+}
+figure:nth-of-type(1):active {
+	transform: translatex(402px) translatey(584px) rotate(180deg);
+	transition-duration: 1s;
+	z-index: 2;
+}
+figure:nth-of-type(2):hover {
+	transform: translatey(292px) scaleY(1.6);
+	transition-duration: 1s;
+	z-index: 10;
+}
+figure:nth-of-type(3):hover {
+	transform: rotate(7020deg) scale(-1);
+	transition-duration: 4s;
+	transition-delay: 0.5s;
+}
+figure:nth-of-type(4):active {
+	transform: skew( 20deg, 140deg) rotate(220deg);
+	transition-duration: .6s;
+}
+figure:nth-of-type(5):hover {
+	transform: translatex(402px) rotate(180deg) scale(-1);
+	transition-duration: 4s;
+	transition-delay: .5s;
+	z-index: 4;
+}
+figure:nth-of-type(6):hover {
+	transform: translatex(-79px) rotatex(7200deg) rotateY(180deg) scalex(-3);
+	transition-duration: 4s;
+	transition-delay: 2s;
+}
+figure:nth-of-type(7):active {
+	transform: translateZ(400deg); scale: 0.5;
+	transition-duration: 4s;
+	transition-delay: 10ms;
+	outline: 100px white double;
+}
+
+figure:nth-of-type(8):active {
+	transform: scale(-1) rotatex(400deg) rotatey(400deg) rotatez(400deg) ;
+	transition-duration: 4s;
+	transition-delay: 10ms;
+}
+figure:nth-of-type(9):active {
+	transform: skew(-180deg, 2deg) translateX(402px) scale(1.2);
+	transition-duration: 2s;
+	z-index: 1;
+}
+figure:nth-of-type(10):hover {
+	transform: scaleY(-1) translateY(584px) rotatex(540deg) translateX(402px);
+	transition-duration: 2s;
+	transition-delay: .3s;
+
+}
+figure:nth-of-type(11):active {
+	transform: scaleY(3.35) translateY(-88px);
+	transition-timing-function: ease-out;
+	transition-duration: 2s;
+	transition-delay: .1s;
+
+}
+figure:nth-of-type(12):active {
+	transform: scale(0.0001) rotate(3600deg) translateX(450px)  translatey(200px);
+	transition-timing-function: ease-out;
+	transition-duration: 10s;
+
+}

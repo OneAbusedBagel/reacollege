@@ -61,6 +61,7 @@ body {
   height: 500px;
   width: 500px;
   border-radius: 50%;
+  background-repeat: no-repeat;
   background-image: conic-gradient(
     #e61010 69.8%,
     #f6ac43 69.8% 85.5%,
@@ -69,6 +70,5 @@ body {
     #0066cc 92.9% 94.2%,
     #dda0dd 94.2% 100%
   ) ;
-  background-repeat: no-repeat;
 }
 
