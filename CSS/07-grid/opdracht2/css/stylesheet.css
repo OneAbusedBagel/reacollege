@@ -14,11 +14,11 @@ body {
 
 #container > div:nth-child(1) {
     grid-area: 1 / 1 / span 1 / span 5;
-    background-color: coral;           
+    background-color: coral;
 }
 #container > div:nth-child(2) {
     grid-area: 2 / 1 / span 1 / span 1;
-    background-color: brown;          
+    background-color: brown;
 }
 #container > div:nth-child(3) {
     grid-area: 2 / 2 / span 1 / span 4;
@@ -26,7 +26,7 @@ body {
 }
 #container > div:nth-child(4) {
     grid-area: 3 / 1 / span 1 / span 2;
-    background-color: yellow;            
+    background-color: yellow;
 }
 #container > div:nth-child(5) {
     grid-area: 3 / 3 / span 2 / span 1;
@@ -42,7 +42,7 @@ body {
 }
 #container > div:nth-child(8) {
     grid-area: 4 / 4 / span 1 / span 2;
-    background-color: orange;     
+    background-color: orange;
 }
 #container > div:nth-child(9) {
     grid-area: 5 / 1 / span 1 / span 4;

@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+background-color: rgb(25, 25, 25);
+}
+#container {
+    max-width: 1600px;
+}
+.tiles {
+    display: grid;
+    max-height: 534px;
+    background-color: chartreuse;
+    grid-template-columns: repeat(6, minmax(80px, 1fr));
+    grid-template-rows: repeat(2,  267px);
+}
+.tiles > div:nth-child(1) {
+    background-color: rgb(131, 157, 184);
+    background-image: url(../images/image-1.png);
+}
+.tiles > div:nth-child(2) {
+    background-color:rgb(255, 255, 121);
+    background-image: url(../images/image-2.png);
+}
+.tiles > div:nth-child(3) {
+    background-color: rgb(131, 157, 184);
+    background-image: url(../images/image-4.png);
+    grid-area: span 2 / span 1;
+}
+.tiles > div:nth-child(4) {
+    background-color: rgb(255, 255, 121);
+    background-image: url(../images/image-5.png);
+    grid-area: span 2 / span 1;
+}
+.tiles > div:nth-child(5) {
+    background-color: rgb(131, 157, 184);
+    background-image: url(../images/image-6.png);
+    grid-area: span 1 / span 2;
+}
+.tiles > div:nth-child(6) {
+    background-color:lightgreen;
+    background-image: url(../images/image-3.png);
+    grid-area: span 1 / span 2;
+}
+.tiles > div:nth-child(7) {
+    background-color:lightgreen;
+    background-image: url(../images/image-7.png);
+}
+.tiles > div:nth-child(8) {
+    background-color:rgb(255, 255, 121);
+    background-image: url(../images/image-8.png);
+}
+.banner {
+    height: 200px;
+    background-color: cornflowerblue;
+}
+.content {
+    height: 469px;
+    background-color: rgba(255, 255, 255, 0.884);
+}

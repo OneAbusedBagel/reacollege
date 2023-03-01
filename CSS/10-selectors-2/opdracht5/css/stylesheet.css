@@ -10,7 +10,17 @@ body {
   border: 5px groove gray;
   padding: 20px;
   flex-direction: column;
-  display: flex;
+}
+#container > form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+}
+#container > form > div:nth-child(1) {
+  display: grid;
+}
+#container > form > div:nth-child(2) {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(5px, 1fr));
 }
 #box {
   padding: 20px;
