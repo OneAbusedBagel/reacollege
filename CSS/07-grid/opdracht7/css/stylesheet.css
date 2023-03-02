@@ -1,0 +1,86 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+background-color: rgb(25, 25, 25);
+}
+
+#container {
+    max-width: 1600px;
+}
+
+.tiles {
+    display: grid;
+    max-height: 534px;
+    background-color: chartreuse;
+    grid-template-columns: repeat(6, minmax(80px, 1fr));
+    grid-template-rows: repeat(auto, minmax(0px, 267px));
+}
+
+img {
+    z-index: 1;
+    max-width: 100%;
+    max-height: auto;
+}
+
+.tiles > div:nth-child(1) {
+    background-color: rgb(131, 157, 184);
+    grid-area: span 1 / span 1;
+}
+
+.tiles > div:nth-child(2) {
+    background-color:rgb(255, 255, 121);
+    grid-area: span 1 / span 1;
+}
+
+.tiles > div:nth-child(3) {
+    background-color: rgb(131, 157, 184);
+    grid-area: span 2 / span 1;
+}
+
+.tiles > div:nth-child(4) {
+    background-color: rgb(255, 255, 121);
+    grid-area: span 2 / span 1;
+}
+
+.tiles > div:nth-child(5) {
+    background-color: rgb(131, 157, 184);
+    grid-area: span 1 / span 2;
+}
+
+.tiles > div:nth-child(6) {
+    background-color:lightgreen;
+    grid-area: span 1 / span 2;
+    z-index: 0;
+}
+
+.tiles > div:nth-child(7) {
+    background-color:lightgreen;
+    grid-area: span 1 / span 1;
+}
+
+.tiles > div:nth-child(8) {
+    background-color:rgb(255, 255, 121);
+    grid-area: span 1 / span 1;
+}
+
+.banner {   
+    display: grid;
+    height: 200px;
+    background-color: cornflowerblue;
+    grid-template-columns: 1fr, minmax(200px, 1fr), 1fr; /*waarom is dit verticaal?*/
+}
+.banner > div:nth-of-type(2) {
+    background-color: pink;
+}
+.content {   
+    display: grid;
+    height: 469px;
+    background-color: rgba(255, 255, 255, 0.884);
+    grid-template-columns: 1fr, 200px, 1fr;
+}
+.content > div:nth-of-type(2) {
+    background-color: orange;
+}

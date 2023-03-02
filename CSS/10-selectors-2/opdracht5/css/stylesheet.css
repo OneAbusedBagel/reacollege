@@ -1,42 +1,89 @@
 body {
-    background-color: cadetblue;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
 }
+
 #container {
-  margin: 0 auto;
-  max-width: 80%;
-  background-color: darkcyan;
-  border: 5px groove gray;
-  padding: 20px;
-  flex-direction: column;
+  max-width: 300px;
+  height: 480px;
 }
+
 #container > form {
+  height: 90%;
   display: grid;
   grid-template-columns: repeat(2, minmax(200px, 1fr));
 }
-#container > form > div:nth-child(1) {
+
+#container > form > div:nth-child(1)  {
   display: grid;
+  padding-bottom: 30px;
+  grid-template-rows: repeat(auto-fill, 25px);
 }
-#container > form > div:nth-child(2) {
+
+#container > form > div:nth-child(2)  {
   display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(5px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(10px, 30px));
+  gap: 20px;
 }
+
+#container > form > div *:required {
+  background-color: wheat;
+}
+#container > form  input:focus:invalid {
+  background-color: tomato;
+  transition-duration: .3s;
+}
+#container > form  input:focus:valid {
+  background: lime;
+  transition-duration: .3s;
+}
+
+  #container > form > div label[for="naam"]::after,
+  #container > form > div label[for="mail"]::after {
+  content: " *";
+  color: red;
+}
+
+form span {
+  position: relative;
+  color: red;
+  font-size: 14px;
+  padding: 20px;
+  transform: translateY(-25px);
+}
+
+form span::before {
+  content: " *";
+}
+
 #box {
   padding: 20px;
-  box-sizing: border-box;
-  border-color: sandybrown saddlebrown saddlebrown sandybrown;	border-width: 2px;	border-style: solid;	background-color: peru;
   flex: 1/2;
 }
 
-/*form>*{display: flex;	flex-flow: row wrap;
-  flex-direction: row;
-}*/
 form select {
-	flex: 1;
-	display: flex;
-	flex-flow: row wrap;
-	gap: 20px;
-  width: 177px;
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+}
+
+p {
+  min-height: 20px;
+}
+p:empty {
+  visibility: hidden;
+}
+
+p:nth-of-type(1) {
+ background-color: darkcyan;
+}
+
+p:nth-of-type(2) {
+background-color: fuchsia;
+}
+
+p:nth-of-type(3) {
+background-color: cadetblue;
 }
 

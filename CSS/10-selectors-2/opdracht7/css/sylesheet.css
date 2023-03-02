@@ -1,6 +1,7 @@
 html, body {
     background-color: khaki;
 }
+
  #checker-board {
     margin: 30px auto;
     width: 500px;
@@ -8,24 +9,31 @@ html, body {
     border: 5px solid black;
     display: grid;
 }
+
 .row {
     display: flex;
 }
+
 .square {
     flex: 1;
 }
+
 .row:nth-of-type(odd) .square:nth-of-type(odd) {
     background-color: rgb(232,208,107) ;
 }
+
 .row:nth-of-type(odd) .square:nth-of-type(even) {
     background-color: rgb(166,125,93) ;
 }
+
 .row:nth-of-type(even) .square:nth-of-type(even) {
     background-color: rgb(232,208,107) ;
 }
+
 .row:nth-of-type(even) .square:nth-of-type(odd) {
     background-color: rgb(166,125,93) ;
 }
+
 .white:hover {
     background-image: radial-gradient(
         circle,
@@ -39,3 +47,4 @@ html, body {
     transform: scale(1.1);
     background-repeat: no-repeat;
 }
+
