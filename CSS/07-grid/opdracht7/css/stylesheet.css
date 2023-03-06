@@ -70,17 +70,21 @@ img {
     display: grid;
     height: 200px;
     background-color: cornflowerblue;
-    grid-template-columns: 1fr, minmax(200px, 1fr), 1fr; /*waarom is dit verticaal?*/
+    grid-template-columns: 1fr, minmax(200px, 1fr), 1fr; /*waarom is dit horizontaal?*/
 }
+
 .banner > div:nth-of-type(2) {
     background-color: pink;
 }
+
 .content {   
     display: grid;
     height: 469px;
     background-color: rgba(255, 255, 255, 0.884);
     grid-template-columns: 1fr, 200px, 1fr;
 }
+
 .content > div:nth-of-type(2) {
     background-color: orange;
 }
+

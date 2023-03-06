@@ -1,6 +1,7 @@
 html,body {
     background-color: #e5e5e5;
 }
+
 div#modal-01{
     position: absolute;
     background-color: white;
@@ -12,6 +13,7 @@ div#modal-01{
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
 div#modal-01 div#frame-1041 {
 display: flex;
 flex-direction: row;
@@ -30,6 +32,7 @@ background: #e5e5e5;
 border-radius: 29px;
 z-index: 20;
 }
+
 div#modal-01>div#frame-1038 {
 display: flex;
 flex-direction: column;
@@ -51,6 +54,7 @@ box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 20px 20px rgba(0, 0, 0, 0.08);
 border-radius: 8px;
 
 }
+
 div#modal-01>div#frame-1038>div#frame-1045{
     display: flex;
     flex-direction: row;
@@ -65,31 +69,45 @@ div#modal-01>div#frame-1038>div#frame-1045{
     order: 0;
     flex-grow: 0;
 }
+
 div#modal-01>div#frame-1038>div#frame-1045>div#frame-1039 {
     display: flex;
+    flex-wrap: row;
 }
-/* div#modal-01>div#frame-1038>div#frame-1045>div#frame-1039>div#icon {
-    
-width: 56px;
-height: 56px;
 
-background: #F5F5F5;
-border-radius: 8px;
+div#modal-01>div#frame-1038>div#frame-1045>div#icon {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    font-size: 28px;
 
-flex: none;
-order: 0;
-flex-grow: 0;
-} */
+    background: #F5F5F5;
+    border-radius: 8px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+} 
+
+div#modal-01>div#frame-1038>div#frame-1045>div#icon>I.fa-regular {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 14px;
+    top: 14px;   
+}
+
 div#modal-01>div#frame-1038>div#frame-1045>div#frame-1039 span:nth-of-type(1){
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-color: #54595E;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
 
-flex: none;
-order: 0;
-flex-grow: 0;
+    color: #54595E;
+
+    flex: 1;
+
 }
+
 div#modal-01>div#frame-1038>div#frame-1045>div#frame-1039 span:nth-of-type(2){
     font-style: normal;
     font-weight: 400;
@@ -97,7 +115,10 @@ div#modal-01>div#frame-1038>div#frame-1045>div#frame-1039 span:nth-of-type(2){
     line-height: 22px;
 
     color: #54595e99;
+
+    flex: 1;
 }
+
 div#modal-01>div#frame-1038>div#frame-167{
     display: flex;
     flex-direction: row;
@@ -112,6 +133,7 @@ div#modal-01>div#frame-1038>div#frame-167{
     order: 1;
     flex-grow: 0;
 }
+
 div#modal-01>div#frame-1038>div#frame-167 button:nth-of-type(1){
 box-sizing: border-box;
 
@@ -134,6 +156,7 @@ flex: none;
 order: 0;
 flex-grow: 1;
 }
+
 div#modal-01>div#frame-1038>div#frame-167 button:nth-of-type(2){
 
 display: flex;
