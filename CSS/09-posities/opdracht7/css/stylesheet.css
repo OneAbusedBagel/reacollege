@@ -1,0 +1,134 @@
+body,html {
+    background-color: rgba(241, 255, 255, 0.918);
+}
+
+/* #container {
+	max-width: 90%;
+	margin: 0 auto;
+    padding-top: 20px;
+
+	border: 1px solid gray;
+	position: relative;
+} */
+
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+    position: absolute;
+    width:  80%;
+    height: 36px;
+    left: 15%;
+    top: 29px;
+}
+
+header>div#logo {
+    width: 112px;
+    height: 27px;
+
+    position: absolute;
+    left: 0%;
+    right: 92.07%;
+    top: 0%;
+    bottom: 24.96%;
+
+    flex: 1;
+}
+
+header>div#logo>#subtract {
+    height: 27px;
+    width: 80px;
+    border-radius: 0px;
+}
+
+
+
+header>div#logo>#subtract>span {
+
+    width: 85px;
+    height: 51px;
+
+    left: -2.2%;
+    right: 26%;
+    top: -44.42%;
+    bottom: -44.36%;
+
+    
+    position: absolute;
+
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 51px;
+
+    text-transform: uppercase;
+
+    color: #222222;
+
+
+}
+
+header>div#logo>#subtract>#rectangle-6 {
+    position: absolute;
+
+    height: 9.37px;
+    width: 4px;
+
+
+    left: 13%;
+    top: -12%;
+
+    border-radius: 0px;
+    
+    
+    background: #FFFFFF;
+    transform: rotate(-45deg);
+}
+
+header>div#logo>#subtract>#rectangle-5 {
+    height: 29px;
+    width: 4px;
+    border-radius: 0px;
+    
+    position: absolute;
+    left: 28%;
+    top: -5%;
+
+
+    background: #FFFFFF;
+    transform: rotate(-45deg);
+}
+
+header>div#logo>div#ellipse-9 {
+    height: 26px;
+    width: 26px;
+    left: 80px;
+    top: 0px;
+    border-radius: 50%;
+    
+    position: absolute;
+
+    background: #C32929;
+}
+
+header>nav {
+    flex: 1;
+}
+
+header>nav>span {
+    position: absolute;
+    left: 18%;
+    top: 11.11%;
+
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+
+    text-transform: uppercase;
+
+    color: #222222;
+}
