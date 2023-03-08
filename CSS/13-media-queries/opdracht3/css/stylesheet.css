@@ -1,0 +1,40 @@
+body {
+    background-color: cadetblue;
+    font-family: stonin-island;
+    font-size: 19px;
+  }
+  h1, h2, h3, h4 {
+    font-family: treasure-island;
+  }
+  @font-face {
+    font-family: treasure-island;
+    src: url(../fonts/TREAI___.TTF);
+  }
+  @font-face {
+    font-family:stonin-island;
+    src: url(../fonts/STONIN__.TTF);
+  }
+  #container {
+    margin: 0 auto;
+    max-width: 90%;
+    background-image: linear-gradient(yellow, yellow, cyan, red );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border: 5px groove gray;
+  }
+  #container>section {
+    padding: 40px;
+  }
+  #container section p::first-line, #container>section blockquote::first-line {
+    text-shadow: 2px 2px 2px white;
+  }
+  #container section :not(blockquote)::first-letter {
+    color: orange;
+  }
+  #container section>section blockquote::selection {
+    background-color: green;
+  }
+  #container section  p:first-of-type {
+    font-style: italic;
+  }
+
