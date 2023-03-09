@@ -11,7 +11,7 @@ main {
 }
 section {
 	width: 1080px;
-transform: perspective(20em) translateZ(300px) translateY(450px) rotateX(45deg) ;
+	transform: perspective(20em) translateZ(300px) translateY(440px) rotateX(45deg) ;
 }
 section:hover {
 	transform: perspective(20em) translatez(-900px) translateY(-1200px) rotateX(45deg) ;
