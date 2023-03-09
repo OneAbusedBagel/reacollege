@@ -46,3 +46,33 @@ footer {
 	color: white;
 	font-weight: bold;
 }
+
+img {
+    z-index: 1;
+    max-width: 100%;
+    max-height: auto;
+}
+
+@media (max-width: 768px) {
+	main {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 576px) {
+	figure {
+		display: none;
+	}
+}
+
+@media (min-width: 1200px) {
+	body {
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 1600px) or (max-width: 400px) {
+	header {
+		background-color: lightblue;
+	}
+}

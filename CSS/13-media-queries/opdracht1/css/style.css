@@ -98,7 +98,7 @@ iframe {
 	margin: 20px 0;
 }
 #print-tekst {
-	visibility: hidden;
+	display: none;
 }
 
 @media print {
@@ -120,7 +120,7 @@ iframe {
 		text-decoration: none;
 	}
 	header, nav>ul, iframe, frame>input:last-of-type {
-		visibility: hidden;
+		display: none;
 	}
 	#print-tekst {
 		visibility: visible;
