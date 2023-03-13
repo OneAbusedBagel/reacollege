@@ -1,0 +1,28 @@
+html, body {
+    font-family: sans-serif;
+}
+
+section {
+    padding: 20px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+header {
+    height: 250px;
+    background-size: cover;
+    background-color: maroon;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/wok-wok.jpg");
+}
+.background {
+    display: none;
+}
