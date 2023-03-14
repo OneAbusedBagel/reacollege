@@ -1,9 +1,20 @@
 body {
-	counter-reset: teller 0;
+	counter-reset: section 0;
+	counter-reset: article 0;
 }
-h2 {
-	counter-increment: teller;
+section {
+	counter-increment: section 1;
 }
-h2::before {
-	content: "Chapter " counter(teller) " - ";
+h1 {
+	counter-increment: article 1;
+}
+h1::before {
+	content: counter(section) "." counter(article) ". ";
+}
+section>h1:first-child::before {
+	counter-increment: article -1;
+	content: "";
+}
+section>h1:first-child {
+	counter-reset: article 0;
 }

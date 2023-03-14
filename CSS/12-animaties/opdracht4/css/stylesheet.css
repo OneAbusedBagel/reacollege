@@ -13,7 +13,7 @@ figure:hover img, figure:hover figcaption {
 figure:active img, figure:active figcaption {
     border-color: deeppink;
     transform: skew(-9deg, -9deg);
-    transition: transform 12ms border-color 2s;
+    transition: transform 12ms, border-color 2s;
 }
 figure figcaption {
     transform: rotate(-10deg) translatey(-10px);
@@ -29,13 +29,13 @@ figure img {
     border: tomato 5px solid;
     filter: opacity(75%);
     flex: 1;
-    transition: all 1500ms;
+    transition: all 1500ms, border-color 2s;
 }
 figure img:hover{
     filter: opacity(100%);
     outline: 2px solid rgb(185, 71, 51);
     cursor: pointer;
-    transition: 5s;
+    transition: 5s, border-color 2ms;
 }
 #images {
     display: flex;
