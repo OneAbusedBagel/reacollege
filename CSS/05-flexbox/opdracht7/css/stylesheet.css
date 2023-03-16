@@ -1,0 +1,22 @@
+html {
+    background-color: cadetblue;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 80vw;
+    background-color: darkcyan;
+    border: 5px groove gray;
+    padding: 2rem;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    column-width: 20em;
+	column-gap: 4em;
+
+    column-rule: darkslategray 5px solid;
+}
+#dud-smirk {
+    column-span: all;
+    font-weight: bold;
+    margin: 20px 0px;
+}
