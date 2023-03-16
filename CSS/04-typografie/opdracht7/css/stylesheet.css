@@ -1,0 +1,18 @@
+html, body {
+    background-color: antiquewhite;
+    font-size: 2rem;   
+    word-spacing: 10px;
+}
+ruby {
+    text-shadow: 2px 2px 2px rgba(255, 0, 0, 0.671);
+}
+
+ruby * {
+    ruby-position: over;
+    padding-right: 10px;
+    color: rgba(128, 128, 128, 0.644);
+    text-shadow: none;
+}
+body section:last-of-type ruby:last-of-type  {
+    ruby-position: under;
+}

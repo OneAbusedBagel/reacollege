@@ -1,0 +1,13 @@
+:root {
+	--col-dark-red: rgb(3, 94, 122);
+	--col-light-pink: rgb(178, 243, 255);
+	--col-dark-pink: rgb(100, 150, 207);
+	--col-transparent-black: rgba(255,255,255,0);
+	--col-transparent-white:  rgba(255,255,255,0.8);
+	--col-red: red ;
+	--col-dodgerblue: dodgerblue ;
+	--col-yellow: yellow ;
+	--col-purple: purple;
+	--col-mediumseagreen: mediumseagreen ;
+	--col-crimson: crimson ;
+}
