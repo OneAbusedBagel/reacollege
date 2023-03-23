@@ -1,0 +1,86 @@
+:root {
+	--scarlet: rgb(158, 42, 34);
+	--violet: rgb(85, 34, 119);
+}
+
+html, body {
+	font-size: 20px;
+	color: rgb(62, 59, 58);
+	font-family: 'Nunito Sans', sans-serif;
+	background-color: rgb(62, 59, 58);
+	background-image: url('../img/pattern-grey.jpg');
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	font-size: clamp(20px, 2.5vw, 30px);
+	max-width: 1440px;
+	margin: 0 auto;
+	border-left: var(--clamp-border) solid var(--scarlet);
+	border-right: var(--clamp-border) solid var(--violet);
+}
+
+header > img {
+	display: block;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	gap: var(--clamp-pad-gap);
+	padding: var(--clamp-pad-gap);
+	background-color: rgb(255, 255, 255);
+	background-image: url('../img/pattern-white.jpg');
+}
+
+main > section {
+	flex: 1;
+}
+
+section:first-child > p:first-child {
+	font-style: italic;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+}
+
+footer > figure {
+	flex: 1;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+footer > figure:first-child {
+	background-color: var(--scarlet);
+}
+
+footer > figure:last-child {
+	background-color: var(--violet);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.scarlet {
+	color: var(--scarlet);
+}
+
+.violet {
+	color: var(--violet);
+}
+
+@media screen and (max-width: 720px) {
+	main {
+		flex-direction: column;
+	}
+}
+:root {
+	--clamp-pad-gap: clamp(1rem, 3rem, 50px);
+	--clamp-border: clamp(5px, 1.5vw, 20px);
+}

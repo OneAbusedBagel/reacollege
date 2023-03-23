@@ -1,0 +1,55 @@
+html, body {
+	font-family: Calibri, Arial, sans-serif;
+	font-size: 18px;
+	background-color: #d7be86;
+	counter-reset: figure 0;
+}
+
+#container {
+	max-width: max(1200px, 75%);
+	background-color: #f0e6be;
+	margin: 0 auto;
+}
+
+#gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: min(3vw, 2rem);
+}
+
+#gallery figure {
+	text-align: center;
+
+}
+#gallery figure figcaption::before {
+	counter-increment: figure 1;
+	content: counter(figure) ". ";
+}
+
+#gallery img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+#graph figure {
+	text-align: center;
+}
+
+#graph img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* @media(min-width: 1200px) {
+	#container {
+		min-width: 1200px;
+	}
+}
+
+@media (max-width: max(1200px, 75vw)) {
+	#container {
+		width: 75%;
+	}
+} */
