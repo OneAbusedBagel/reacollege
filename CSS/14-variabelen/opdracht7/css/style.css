@@ -43,17 +43,6 @@ html, body {
 }
 
 #graph a::after {
-	content: " - " attr(href);
+	content: "\a bron: " attr(href);
+	white-space: pre;
 }
-
-/* @media(min-width: 1200px) {
-	#container {
-		min-width: 1200px;
-	}
-}
-
-@media (max-width: max(1200px, 75vw)) {
-	#container {
-		width: 75%;
-	}
-} */
