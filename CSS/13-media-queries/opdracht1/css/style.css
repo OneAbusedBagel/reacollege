@@ -4,33 +4,40 @@ html, body {
 	font-size: 24px;
 	color: white;
 }
+
 h1 {
 	text-align: center;
 	font-size: 60px;
 	color: royalblue;
 }
+
 h2 {
 	font-size: 40px;
 	color: lime;
 }
+
 h3 {
 	font-size: 30px;
 	color: palegreen;
 }
+
 h1, h2, h3 {
 	text-shadow: 1px 1px 3px black;
 }
+
 #container {
 	max-width: 1200px;
 	min-height: 600px;
 	margin: 0 auto;
 }
+
 header {
 	height: 200px;
 	background-color: navy;
 	font-family: "Comic Sans MS", Arial, sans-serif;
 	overflow: auto;
 }
+
 nav ul {
 	list-style-type: none;
 	margin: 0;
@@ -40,6 +47,7 @@ nav ul {
 	flex-direction: row;
 	justify-content: flex-start; 
 }
+
 nav ul li {
 	border-right: 1px solid white;
 	box-sizing: border-box;
@@ -47,9 +55,11 @@ nav ul li {
 	flex: 1;
 	text-align: center;
 }
+
 nav ul li:last-child {
 	border-right: 0;
 }
+
 nav ul li a {
 	color: white;
 	text-decoration: none;
@@ -58,9 +68,11 @@ nav ul li a {
 	display: block;
 	font-size: 1rem;
 }
+
 nav ul li a:hover {
 	background-color: green;
 }
+
 main {
 	min-height: 400px;
 	background-color: darkcyan;
@@ -68,14 +80,17 @@ main {
 	display: flex;
 	flex-direction: row;
 }
+
 main a {
 	color: aqua;
 	font-weight: bold;
 }
+
 main img {
 	margin: 40px;
 	border: 3px double black;
 }
+
 footer {
 	height: 40px;
 	line-height: 40px;
@@ -84,22 +99,27 @@ footer {
 	text-align: center;
 	background-color: darkgreen;
 }
+
 section {
 	width: 50%;
 	padding: 5%;
 	box-sizing: border-box;
 	flex: 1;
 }
+
 input, label {
 	display: block;
 	margin-bottom: 10px;
 }
+
 iframe {
 	margin: 20px 0;
 }
+
 #print-tekst {
 	display: none;
 }
+
 
 @media print {
 	* {
@@ -126,3 +146,4 @@ iframe {
 		visibility: visible;
 	}
 }
+

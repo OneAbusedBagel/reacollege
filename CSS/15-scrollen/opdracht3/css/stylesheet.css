@@ -1,0 +1,77 @@
+body {
+	margin: 0 auto;
+	font-size: 20px;
+	font-family: calibri, sans-serif;
+	background-color: thistle;
+}
+
+#container {
+	max-width: 800px;
+	max-height: 600px;
+	margin: 0 auto;
+	background-color: lemonchiffon;
+	overflow: auto;
+	padding: 3rem;
+}
+
+section {
+	overflow: auto;
+	padding: 1rem;
+}
+
+.inner {
+	width: 300px;
+	height: 200px;
+	background-color: palegreen;
+}
+
+.outer {
+	width: 500px;
+	height: 400px;
+	background-color: mistyrose;
+}
+
+.layer-1::before {
+	content: "Laag 1. ";
+	font-weight: bold;
+}
+
+.layer-2::before {
+	content: "Laag 2. ";
+	font-weight: bold;
+	overscroll-behavior: contain;
+}
+
+.layer-3::before {
+	content: "Laag 3. ";
+	font-weight: bold;
+}
+
+.outer {
+	overscroll-behavior: contain;
+}
+
+
+p:not([class|="layer"]) {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+/* @media print {
+	* {
+		background-color: white;
+		padding: none;
+	}
+	.outer {
+		width: 90%;
+		height: 800px;
+		overflow: visible;
+	}
+	.inner {
+		width: 90%;
+		height: 500px;
+		overflow: visible;
+	}
+	footer {
+		overflow: visible;
+	}
+} */
