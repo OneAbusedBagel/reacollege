@@ -1,10 +1,14 @@
 html,body {
     background-color: khaki;
 }
+
 #checker-board {
     margin: 10px auto;
-    width: 500px;
-    height:500px;
+    max-width: 1000px;
+    max-height: 1000px;  
+    width: 70vw;
+    height: 70vh;
+
     border: 4px solid black;
     display: grid;
 }
@@ -16,6 +20,7 @@ html,body {
 .square {
     flex: 1;
     z-index: 1;
+    display: flex;
 }
 
 .row:nth-of-type(odd) .square:nth-of-type(odd) {
@@ -35,15 +40,15 @@ html,body {
 }
 
 .p-white, .p-black {
-    width: 100%;
-    height: 100%;
+    flex: 1;
     background-color: white;
     border-radius: 50%;
 }
+
 .p-white {
     background-color: white;
 }
+
 .p-black {
     background-color: black;
 }
-

@@ -56,22 +56,21 @@ p:not([class|="layer"]) {
 	color: rgba(0, 0, 0, 0.5);
 }
 
-/* @media print {
+@media print {
 	* {
 		background-color: white;
 		padding: none;
+		overflow: none;
 	}
 	.outer {
 		width: 90%;
 		height: 800px;
-		overflow: visible;
 	}
 	.inner {
 		width: 90%;
 		height: 500px;
-		overflow: visible;
 	}
 	footer {
-		overflow: visible;
+
 	}
-} */
+}
