@@ -1,0 +1,39 @@
+body {
+  font-family: Book-Antiqua;
+  background-color: grey;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+ol {
+  list-style-type: upper-roman;
+}
+p {
+  margin-bottom: 50px;
+}
+#algemeen,
+.algemeen {
+  color: red;
+}
+#geschiedenis,
+.geschiedenis {
+  color: orange;
+}
+#politiek,
+.politiek {
+  color: yellow;
+}
+#demografie,
+.demografie {
+  color: green;
+}
+#economie,
+.economie {
+  color: blue;
+}
+#kunst,
+.kunst {
+  color: violet;
+}
