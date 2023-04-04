@@ -58,19 +58,17 @@ p:not([class|="layer"]) {
 
 @media print {
 	* {
-		background-color: white;
+		background-color: none;
 		padding: none;
 		overflow: none;
 	}
 	.outer {
-		width: 90%;
-		height: 800px;
+
 	}
 	.inner {
-		width: 90%;
-		height: 500px;
+
 	}
 	footer {
-
+		
 	}
 }
