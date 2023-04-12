@@ -70,21 +70,63 @@ img {
     display: grid;
     height: 200px;
     background-color: cornflowerblue;
-    grid-template-columns: 1fr, minmax(200px, 1fr), 1fr; /*waarom is dit horizontaal?*/
+    grid-template-columns: minmax(0px, 1fr) minmax(500px, 1fr) minmax(0px, 1fr); /*waarom is dit horizontaal?*/
 }
 
 .banner > div:nth-of-type(2) {
-    background-color: pink;
+    font-size: 1em;
+    color: aliceblue;
+    background-color: rgb(40, 47, 53);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.banner > div:nth-of-type(2) > span {
+    border:solid aliceblue 1px ;
+    padding: 10px 15px 10px 15px;
 }
 
 .content {   
     display: grid;
     height: 469px;
     background-color: rgba(255, 255, 255, 0.884);
-    grid-template-columns: 1fr, 200px, 1fr;
+    grid-template-columns: 1fr minmax(500px, 1fr) 1fr;
 }
 
 .content > div:nth-of-type(2) {
-    background-color: orange;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
 }
 
+.content > div:nth-of-type(2)>form>input:first-of-type {
+    border:solid 1px gray;
+    filter: opacity(.55);
+    font-style: italic;
+
+    height: 20px;
+    width: 95%;
+    padding: 5px;
+}
+.content > div:nth-of-type(2)>form>input:last-of-type {
+    border:solid 1px gray;
+    filter: opacity(.55);
+    font-style: italic;
+
+    padding: 5px 10px;
+}
+
+.content > div:nth-of-type(2) > form {
+    gap: 5px;
+    width: 55%;
+    display: flex;
+}
+@media (max-width:501px) {
+    .content > div:nth-of-type(2) > form {
+        flex-direction: column;
+    }
+}

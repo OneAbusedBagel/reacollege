@@ -71,4 +71,12 @@ body {
     #dda0dd 94.2% 100%
   ) ;
 }
+/* #gradient6 {
+  background-image:     radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 10%,
+    rgba(0, 0, 0, 0.6) 99%
+  );
+  background-repeat: no-repeat;
+} */
 
