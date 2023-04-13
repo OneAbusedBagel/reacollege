@@ -1,6 +1,6 @@
 
 
-.language-javascript, .language-php, .language-css {
+code {
     overflow-wrap: break-word;
     white-space: pre-line;
     background-color: rgba(240, 248, 255, 0.05);

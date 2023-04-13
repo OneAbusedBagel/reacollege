@@ -60,7 +60,7 @@ figcaption {
       transform: perspective(200px) translateZ(-80px);
 
       padding: 0px;
-      background-color: red;
+      /* background-color: red; */
     }
     figure {
       margin: 0;

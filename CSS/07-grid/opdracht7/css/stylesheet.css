@@ -38,11 +38,13 @@ img {
 .tiles > div:nth-child(3) {
     background-color: rgb(131, 157, 184);
     grid-area: span 2 / span 1;
+    max-height: calc(100% + 4px);
 }
 
 .tiles > div:nth-child(4) {
     background-color: rgb(255, 255, 121);
     grid-area: span 2 / span 1;
+    max-height: calc(100% + 4px);
 }
 
 .tiles > div:nth-child(5) {
@@ -103,6 +105,12 @@ img {
     flex-direction: column;
 }
 
+.content > div:nth-of-type(2)  > span {
+    color: rgba(0, 0, 0, 0.480);
+    font-style: italic;
+    font-weight: bold;
+}
+
 .content > div:nth-of-type(2)>form>input:first-of-type {
     border:solid 1px gray;
     filter: opacity(.55);
@@ -113,11 +121,13 @@ img {
     padding: 5px;
 }
 .content > div:nth-of-type(2)>form>input:last-of-type {
-    border:solid 1px gray;
-    filter: opacity(.55);
-    font-style: italic;
+    border:none;
+    filter: opacity(.85);
+    font-weight: bold;
 
-    padding: 5px 10px;
+    padding: 5px 15px;
+    background-color:rgb(60, 200, 130);
+    color: whitesmoke;
 }
 
 .content > div:nth-of-type(2) > form {
@@ -128,5 +138,10 @@ img {
 @media (max-width:501px) {
     .content > div:nth-of-type(2) > form {
         flex-direction: column;
+    }
+    .content > div:nth-of-type(2)>form>input:last-of-type {
+        margin: 0 auto;
+        padding: 10px 30px;
+
     }
 }
