@@ -44,7 +44,7 @@ object{
 	margin: 3px 10px;
 	position: absolute;
 	filter: invert(70%) opacity(50%);
-	transition: filter 0.5s;
+	transition-duration: filter 0.5s;
 }
 
 object:hover{
@@ -132,7 +132,7 @@ nav ul li a{
 	text-transform: uppercase;
 	box-sizing: border-box;
 	text-align: center;
-	transition: background-color 0.2s;
+	transition-duration: background-color 0.2s;
 }
 
 nav ul li a:hover{
@@ -310,8 +310,11 @@ figcaption{
 	0% {
 		right: -140px;
 	}
-	50% {
-		right: 50vw;
+	40% {
+		right: calc(50vw - 70px);
+	}
+	60% {
+		right: calc(50vw - 70px);
 	}
 	100% {
 		right: 101vw;
@@ -355,12 +358,12 @@ footer{
 	nav:hover>ul{
 		visibility: visible;
 		opacity: 1;
-		transition: opacity 0.5s;
+		transition-duration: opacity 0.5s;
 	}
 	
 	nav:hover+div {
 		margin-top: 200px;
-		transition: margin-top 1s;
+		transition-duration: margin-top 1s;
 	}
 	
 	nav>ul>li, nav>ul>li>a, .dropdown{

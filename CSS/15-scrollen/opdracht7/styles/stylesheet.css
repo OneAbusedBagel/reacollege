@@ -44,6 +44,7 @@ section img {
 	width: 100%;
 	height: 100%;
 	scroll-snap-align: start;
+
 }
 
 .level-1-1 {
@@ -134,4 +135,12 @@ section img {
 		rgb(255, 0, 0) 80%
 	);
 	z-index: 2;
+background-size: 10%;
 }
+
+/* section[class~="level"]:not(.dark) {
+
+}
+section:where([class~="level"] .dark) {
+
+} */

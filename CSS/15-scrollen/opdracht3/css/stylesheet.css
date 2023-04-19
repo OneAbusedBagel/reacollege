@@ -60,15 +60,27 @@ p:not([class|="layer"]) {
 	* {
 		background-color: none;
 		padding: none;
-		overflow: none;
-	}
-	.outer {
 
+	}
+	.outer, .inner, footer {
+		position: absolute;
+		overflow: visible;
+		width: fit-content;
+		left: 0px;
+	}
+	p {
+		position: relative;
 	}
 	.inner {
-
+		top: 0px;
+	}
+	.outer>p:nth-of-type(2) {
+		top: 335px;
+	}
+	.outer>p:nth-of-type(1) {
+		top: 350px;
 	}
 	footer {
-		
+		bottom: 0px;
 	}
 }
