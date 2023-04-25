@@ -1,6 +1,8 @@
 :root {
 	--scarlet: rgb(158, 42, 34);
 	--violet: rgb(85, 34, 119);
+	--clamp-pad-gap: clamp(1rem, 3rem, 50px);
+	--clamp-border: clamp(5px, 1.5vw, 20px);
 }
 
 html, body {
@@ -79,8 +81,4 @@ img {
 	main {
 		flex-direction: column;
 	}
-}
-:root {
-	--clamp-pad-gap: clamp(1rem, 3rem, 50px);
-	--clamp-border: clamp(5px, 1.5vw, 20px);
 }

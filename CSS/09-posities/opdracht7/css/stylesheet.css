@@ -1,8 +1,9 @@
 :root {
     --bg-col-body: #ffffff;
-    --def-col-blk: rgb(34, 34, 34);
-    --bg-col-shade: rgba(28, 28, 28, 0.28);
-    --bg-col-table:  rgb(219, 219, 219);
+    --def-col-blk: #222222;
+    --bg-col-trans: #1c1c1c47;
+    --bg-col-table:  #dbdbdb07;
+    --bg-col-footer: rgb(180, 170, 170);
  /* --def-col-blk: rgb( calc(var(--rgb-a)+34) calc(var(--rgb-g)+34) calc(var(--rgb-b)+34) );  test turned irrelevant*/
     --rgb-r: 0; /* max:255 min:0*/
     --rgb-g: 0; /* max:255 min:0*/
@@ -36,7 +37,7 @@ header {
     top: 30px;
 }
 
-header>div#logo {
+header>div.logo {
     width: 112px;
     height: 27px;
 
@@ -49,16 +50,13 @@ header>div#logo {
     flex: 1;
 }
 
-header>div#logo>#subtract {
+header>div.logo>.subtract {
     height: 27px;
     width: 80px;
     border-radius: 0px;
 }
 
-
-
-header>div#logo>#subtract>span {
-
+header>div.logo>.subtract>span {
     width: 85px;
     height: 51px;
 
@@ -67,7 +65,6 @@ header>div#logo>#subtract>span {
     top: -44.42%;
     bottom: -44.36%;
 
-    
     position: absolute;
 
     font-family: 'Jost', sans-serif;
@@ -79,28 +76,24 @@ header>div#logo>#subtract>span {
     text-transform: uppercase;
 
     color: var(--def-col-blk);
-
-
 }
 
-header>div#logo>#subtract>#rectangle-6 {
+header>div.logo>.subtract>.rectangle-6 {
     position: absolute;
 
     height: 9.37px;
     width: 4px;
-
 
     left: 13%;
     top: -12%;
 
     border-radius: 0px;
     
-    
     background: var(--bg-col-body);
     transform: rotate(-45deg);
 }
 
-header>div#logo>#subtract>#rectangle-5 {
+header>div.logo>.subtract>.rectangle-5 {
     height: 29px;
     width: 4px;
     border-radius: 0px;
@@ -109,12 +102,11 @@ header>div#logo>#subtract>#rectangle-5 {
     left: 28%;
     top: -5%;
 
-
     background: var(--bg-col-body);
     transform: rotate(-45deg);
 }
 
-header>div#logo>div#ellipse-9 {
+header>div.logo>div.ellipse-9 {
     height: 26px;
     width: 26px;
     left: 80px;
@@ -152,6 +144,7 @@ header>nav>span {
     top: 155px;
     left: 10%;
 }
+
 #page-title>span {
     font-weight: 700;
     text-transform: uppercase;
@@ -192,20 +185,24 @@ header>nav>span {
     grid-gap: 0px;
     
 }
+
 #page-inner>#order-table>div:first-of-type {
-    background-color: var(--bg-col-shade);    
+    background-color: var(--bg-col-trans);    
 
 }
+
 #page-inner>#order-table>.table-segment > div {
     justify-content: left;
     border: none;
 }
+
 #page-inner>#order-table>.table-segment > div > div {
     background-color: var(--def-col-blk);
     color: var(--bg-col-body);
     max-width: 130px;
     border: none;
 }
+
 #page-inner>#order-table>.table-segment > span:first-of-type {
     text-decoration: underline;
 }
@@ -222,13 +219,12 @@ header>nav>span {
     flex: 1;
 }
 
-
-
 #order-table > div > span {
     flex: 1;
     text-transform: uppercase;
     padding: 5px;
 }
+
 #order-table>.table-head {
     width: 60vw;
     justify-content: space-evenly;
@@ -246,8 +242,8 @@ footer {
     top: 700px;
     left: 0px;
     height: 571px;
-    max-width: 1920px;
-    background-color: var(--bg-col-shade);
+    /* max-width: 1920px; */ width: 100%;
+    background-color: var(--bg-col-footer);
 }
 
 footer>#inner {
@@ -255,8 +251,201 @@ footer>#inner {
     left: 13.28%;
     top: 17.51%;
 
-    max-width: 1410px;
+    width: 1410px;
     height: 296px;
-    background-color: rebeccapurple;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer>#inner>.inner-segment {
+    border: #50f3ff 1px solid;
+    position:relative;
+
+    font-family:'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+footer>#inner > .seg-1 {
+    height: 255px;
+    max-width: 286px;
+    flex:1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#inner>.seg-1>div.logo {
+    width: 85px;
+    height: 51px;
+
+    position: relative;
+}
+
+#inner>.seg-1>div.logo>.subtract {
+    height: 27px;
+    width: 80px;
+    border-radius: 0px;
+}
+
+#inner>.seg-1>div.logo>.subtract>span {
+    width: 85px;
+    height: 51px;
+
+    position: relative;
+
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 51px;
+
+    text-transform: uppercase;
+
+    color: var(--def-col-blk);
+}
+
+#inner>.seg-1>div.logo>.subtract>.rectangle-6 {
+    position: absolute;
+
+    height: 9.37px;
+    width: 4px;
+
+    left: 18.8%;
+    top: 14%;
+    
+    background: var(--bg-col-footer);
+    transform: rotate(-45deg);
+}
+
+#inner>.seg-1>div.logo>.subtract>.rectangle-5 {
+    height: 29px;
+    width: 4px;
+    
+    position: absolute;
+    left: 40%;
+    top: 20%;
+
+    background: var(--bg-col-footer);
+    transform: rotate(-45deg);
+}
+
+#inner>.seg-1>div.logo>div.ellipse-9 {
+    height: 26px;
+    width: 26px;
+    left: 80px;
+    top: 11px;
+    border-radius: 50%;
+    
+    position: absolute;
+
+    background: var(--bg-col-body); 
+} 
+
+#inner>.seg-1>div.socials {
+    height: 16px;
+    width: 205px;
+
+    display: flex;
+    justify-content: space-between;
+}
+footer>#inner > .seg-2 {
+    height: 293px;
+    max-width: 286px;
+    flex:1;
+}
+
+footer>#inner > .seg-3 {
+    height: 283px;
+    max-width: 330px;
+    flex:1;
+}
+
+
+/* -------------------for temporary convenience------------------- */ 
+
+header>div.logo {
+    width: 112px;
+    height: 27px;
+
+    position: absolute;
+    left: 0%;
+    right: 92.07%;
+    top: 0%;
+    bottom: 24.96%;
+
+    flex: 1;
+}
+
+header>div.logo>.subtract {
+    height: 27px;
+    width: 80px;
+    border-radius: 0px;
+}
+
+header>div.logo>.subtract>span {
+    width: 85px;
+    height: 51px;
+
+    left: -2.2%;
+    right: 26%;
+    top: -44.42%;
+    bottom: -44.36%;
+
+    position: absolute;
+
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 51px;
+
+    text-transform: uppercase;
+
+    color: var(--def-col-blk);
+}
+
+header>div.logo>.subtract>.rectangle-6 {
+    position: absolute;
+
+    height: 9.37px;
+    width: 4px;
+
+    left: 13%;
+    top: -12%;
+
+    border-radius: 0px;
+    
+    background: var(--bg-col-body);
+    transform: rotate(-45deg);
+}
+
+header>div.logo>.subtract>.rectangle-5 {
+    height: 29px;
+    width: 4px;
+    border-radius: 0px;
+    
+    position: absolute;
+    left: 28%;
+    top: -5%;
+
+    background: var(--bg-col-body);
+    transform: rotate(-45deg);
+}
+
+header>div.logo>div.ellipse-9 {
+    height: 26px;
+    width: 26px;
+    left: 80px;
+    top: 0px;
+    border-radius: 50%;
+    
+    position: absolute;
+
+    background: #C32929;
 }
 
