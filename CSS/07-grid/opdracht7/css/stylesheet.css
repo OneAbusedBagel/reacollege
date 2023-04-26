@@ -73,7 +73,7 @@ img {
     display: grid;
     height: 200px;
     background-color: cornflowerblue;
-    grid-template-columns: minmax(0px, 1fr) minmax(500px, 1fr) minmax(0px, 1fr); /*waarom is dit horizontaal?*/
+    grid-template-columns: minmax(0px, 1fr) minmax(500px, 1fr) minmax(0px, 1fr);
 }
 
 .banner > div:nth-of-type(2) {
