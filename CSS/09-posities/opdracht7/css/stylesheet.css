@@ -11,10 +11,15 @@
  /* --rgb-b: 0; /* max:255 min:0 */ 
  /* --rgb-a: 1.0; /* max:1 min:0 */ 
 
-}
+} 
 
 body,html {
     background-color: var(--bg-col-body);
+} 
+
+body::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
 }
 
 header {
@@ -27,7 +32,7 @@ header {
     height: 36px;
     left: 10%;
     top: 30px;
-}
+} 
 
 header>div.logo {
     width: 112px;
@@ -40,13 +45,13 @@ header>div.logo {
     bottom: 24.96%;
 
     flex: 1;
-}
+} 
 
 header>div.logo>.subtract {
     height: 27px;
     width: 80px;
     border-radius: 0px;
-}
+} 
 
 header>div.logo>.subtract>span {
     width: 85px;
@@ -68,7 +73,7 @@ header>div.logo>.subtract>span {
     text-transform: uppercase;
 
     color: var(--def-col-blk);
-}
+} 
 
 header>div.logo>.subtract>.rectangle-6 {
     position: absolute;
@@ -83,7 +88,7 @@ header>div.logo>.subtract>.rectangle-6 {
     
     background: var(--bg-col-body);
     transform: rotate(-45deg);
-}
+} 
 
 header>div.logo>.subtract>.rectangle-5 {
     height: 29px;
@@ -96,7 +101,7 @@ header>div.logo>.subtract>.rectangle-5 {
 
     background: var(--bg-col-body);
     transform: rotate(-45deg);
-}
+} 
 
 header>div.logo>div.ellipse-9 {
     height: 26px;
@@ -108,13 +113,14 @@ header>div.logo>div.ellipse-9 {
     position: absolute;
 
     background: var(--logo-color-red);
-}
+} 
 
 header>nav {
     flex: 1;
     display: flex;
     justify-content: space-between;
-}
+} 
+
 header>nav > span {
     font-family: 'Jost', sans-serif;
     font-style: normal;
@@ -125,6 +131,16 @@ header>nav > span {
 
     flex: 1;
     position: absolute;
+} 
+
+header>nav>span>div.nav-line {
+    position: absolute;
+    right: 3%;
+    bottom: 0px;
+
+    width: 26px;
+    height: 2px;
+    background-color: var(--def-col-blk);
 }
 
 header>nav>span:nth-of-type(1) {
@@ -134,17 +150,18 @@ header>nav>span:nth-of-type(1) {
     text-transform: uppercase;
 
     color: var(--def-col-blk);
-}
+} 
+
 header>nav>span:nth-of-type(2) {
     right: 0px;
     top: 11.11%;
-}
+} 
 
 #page-title {
     position: absolute;
     top: 155px;
     left: 10%;
-}
+} 
 
 #page-title>span {
     font-weight: 700;
@@ -154,7 +171,7 @@ header>nav>span:nth-of-type(2) {
 
     width: 138px;
     height: 49px;
-}
+} 
 
 #sidebar-menu {
     position: absolute;
@@ -171,7 +188,7 @@ header>nav>span:nth-of-type(2) {
     line-height: 50px;
 
     color: var(--def-col-blk);
-}
+} 
 
 #page-inner>#order-table  {
     position: absolute;
@@ -184,27 +201,27 @@ header>nav>span:nth-of-type(2) {
     display: grid;
     grid-template-rows: repeat(5, minmax(20px, 1fr));
     grid-gap: 0px;
-}
+} 
 
 #page-inner>#order-table>div:first-of-type {
     background-color: var(--bg-col-trans);
-}
+} 
 
 #page-inner>#order-table>.table-segment > div {
     justify-content: left;
     border: none;
-}
+} 
 
 #page-inner>#order-table>.table-segment > div > div {
     background-color: var(--def-col-blk);
     color: var(--bg-col-body);
     max-width: 130px;
     border: none;
-}
+} 
 
 #page-inner>#order-table>.table-segment > span:first-of-type {
     text-decoration: underline;
-}
+} 
 
 #page-inner>#order-table div {
     align-items: center;
@@ -216,34 +233,35 @@ header>nav>span:nth-of-type(2) {
 
     display: flex;
     flex: 1;
-}
+} 
 
 #order-table > div > span {
     flex: 1;
     text-transform: uppercase;
     padding: 5px;
-}
+} 
 
 #order-table>.table-head {
     width: 60vw;
     justify-content: space-evenly;
 
-}
+} 
 
 #order-table>.table-head span {
     flex: 1;
     text-transform: uppercase;
     padding: 5px;
-}
+} 
 
 footer {
+
     position: absolute;
     top: 700px;
     left: 0px;
     height: 571px;
     /* max-width: 1920px; */ width: 100%;
     background-color: var(--bg-col-body);
-}
+} 
 #up>.back-to-top {
     position: absolute;
     bottom: 0px;
@@ -253,30 +271,31 @@ footer {
     height: 45px;
 
     z-index: 12;
-}
+} 
 #up>.back-to-top>a {
     text-decoration: none;
     font-size: 2rem;
 
     text-align: center;
     color: black;
-}
+} 
 
 footer>#inner {
+    margin: 0 auto;
     position: absolute;
     left: 8.28%;
     top: 17.51%;
 
-    width: clamp(600px, 1410px) ;
+    max-width: 90% ;
     height: 296px;
 
     display: grid;
-    grid-template-columns: minmax(100px, 1fr) minmax(0px, .3fr) minmax(100px, 1fr) minmax(0px, .3fr)  minmax(100px, 1fr)  ;
-}
+    grid-template-columns: minmax(100px, 1fr) minmax(0px, .1fr) minmax(100px, 1fr) minmax(0px, .1fr)  minmax(100px, 1fr)  ;
+} 
 
-/* footer>#inner > .blank {
-
-} */
+ footer>#inner>div:last-of-type {
+    margin-right: 10px;
+} 
 
 footer>#inner>.inner-segment {
     position:relative;
@@ -287,7 +306,7 @@ footer>#inner>.inner-segment {
     line-height: 24px;
 
     flex: 1;
-}
+} 
 
 footer>#inner > .seg-1 {
     height: 255px;
@@ -297,20 +316,20 @@ footer>#inner > .seg-1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+} 
 
 #inner>.seg-1>div.logo {
     width: 85px;
     height: 51px;
 
     position: relative;
-}
+} 
 
 #inner>.seg-1>div.logo>.subtract {
     height: 27px;
     width: 80px;
     border-radius: 0px;
-}
+} 
 
 #inner>.seg-1>div.logo>.subtract>span {
     width: 85px;
@@ -327,7 +346,7 @@ footer>#inner > .seg-1 {
     text-transform: uppercase;
 
     color: var(--def-col-blk);
-}
+} 
 
 #inner>.seg-1>div.logo>.subtract>.rectangle-6 {
     position: absolute;
@@ -340,7 +359,7 @@ footer>#inner > .seg-1 {
     
     background: var(--bg-col-body);
     transform: rotate(-45deg);
-}
+} 
 
 #inner>.seg-1>div.logo>.subtract>.rectangle-5 {
     height: 29px;
@@ -352,7 +371,7 @@ footer>#inner > .seg-1 {
 
     background: var(--bg-col-body);
     transform: rotate(-45deg);
-}
+} 
 
 #inner>.seg-1>div.logo>div.ellipse-9 {
     height: 26px;
@@ -373,15 +392,15 @@ footer>#inner > .seg-1 {
 
     display: flex;
     justify-content: space-between;
-}
+} 
 
 #inner>.seg-1>div.socials i {
     color: var(--def-col-blk);
-}
+} 
 
 #inner>.seg-1>div.socials i:nth-of-type(2) {
     color: #767676;
-}
+} 
 
 footer>#inner > .seg-2 {
     height: 293px;
@@ -390,14 +409,13 @@ footer>#inner > .seg-2 {
 
     display: grid;
     grid-template-columns: repeat(3, 1fr) ;
-}
-
-
+} 
 
 footer>#inner > .seg-2 > p:nth-of-type(-n+3)  {
     text-transform: uppercase;
     font-weight: bold;
-}
+} 
+
 footer>#inner > .seg-2 > div.line {
     position: absolute;
     background-color: var(--def-col-blk);
@@ -407,17 +425,17 @@ footer>#inner > .seg-2 > div.line {
     left: 0px;
     top: 43%;
 
-}
+} 
 
 footer>#inner > .seg-3 {
     height: 283px;
     max-width: 330px;
     flex:1;
-}
+} 
 
 footer>#inner > .seg-3 > p:first-of-type {
     text-transform: uppercase;
-}
+} 
 
 footer>#inner > .seg-3 > span {
     position: relative;
@@ -427,19 +445,21 @@ footer>#inner > .seg-3 > span {
 
     background-color: var(--bg-col-body);
     z-index: 15;
-}
+} 
+
 footer>#inner > .seg-3 > span >p:nth-of-type(2) {
     text-transform: uppercase;
     padding: 0px 20px;
-}
+} 
 
 footer>#inner > .seg-3 > p:last-of-type {
     font-weight: bold;
-}
+} 
+
 footer>#inner > .seg-3 > img {
     max-width: 100%;
     height: auto;
-}
+} 
 
  footer>#bottom {
     position: absolute;
@@ -452,13 +472,16 @@ footer>#inner > .seg-3 > img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+} 
+
 footer>#bottom>span {
     flex: 1;
-}
+} 
+
 footer>#bottom>span:first-of-type {
     max-width: 50%;
-}
+} 
+
 footer>#bottom> span:last-of-type {
     display: flex;
     flex-wrap: nowrap;
@@ -466,13 +489,13 @@ footer>#bottom> span:last-of-type {
     align-content: flex-start;
     justify-content: space-around;
 
-}
+} 
 footer>#bottom>span>span  {
     flex: 1;
 } 
 footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:nth-of-type(2) > span:nth-of-type(3)>span:first-of-type {
     color: gray;
-}
+} 
 #bg {
     position: absolute;
     bottom: 0px;
@@ -480,7 +503,7 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
     /* max-width: 1920px; */ width: 100%;
     background-color: var(--bg-col-trans);
     z-index: 10;
-}
+} 
 .bg-line {
     position: absolute;
 
@@ -490,4 +513,4 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
 
     left: 8.28%;
     bottom: 50px;
-}
+} 

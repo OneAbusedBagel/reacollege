@@ -1,0 +1,185 @@
+:root {
+    --bg-col-test: rgba(250, 4, 4, 0.5) ;
+    --bg-col-temp: rgba(100, 210, 220, 0.5) ;
+    --bg-col-line:rgb(255, 255, 255, 0.2);
+    --bg-col-body: #F7F8FA;
+    --bg-col-head: #0F2041;
+    --bg-col-slider:#ffffff;
+
+}
+
+.test {
+    background-color: var(--bg-col-test);
+    width: 20px;
+    height: 20px;
+    border: 1px groove var(--bg-col-temp);
+}
+
+.icons {
+    font-size: 12px;
+    line-height: 13.8px;
+    word-spacing: 10px;
+
+    color: var(--bg-col-slider);
+}
+
+/* llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll */
+body,html {
+    background-color: var(--bg-col-body);
+    max-width: 1920px;
+}
+
+body::-webkit-scrollbar { 
+    width: 0px; 
+    height: 0px;
+} 
+
+header {
+    position: absolute;
+    width: 100vw;
+    height: 232px;
+    left: 0px;
+    top: 0px;
+
+    background-color: var(--bg-col-head);
+}
+
+#tops-box {
+    position: absolute;
+    top: 0px;
+    left: 13.3vw;
+
+    /* max-width: 1920px; */ width: 73.5vw;
+    height: 33px;
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap;
+
+    overflow: hidden;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+/* [Temp width test]
+temporary element added for testing the positioning in vw for dynamic width 
+
+div#tops-box.test {
+    left: 255px;
+    background-color: var(--bg-col-test);
+} */
+
+div#tops-box>.left {
+    width: 240px;
+    height: 100%;
+
+    align-items: center;
+    color: var(--bg-col-slider);
+}
+
+div#tops-box>.left>span {
+    height: 15;
+    line-height: 24px;
+    font-size: 13px;
+    font-weight: 400;
+    word-spacing: 10px;
+
+} 
+
+div#tops-box>.right{
+    width: 220px;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    overflow: hidden;
+    gap: 5px;
+
+}
+
+#tops-box>.right> div {
+    font-size: 12px;
+    line-height: 13.8px;
+    word-spacing: 10px;
+
+    color: var(--bg-col-slider);
+}
+
+div#tops>div.line {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+
+    width: 100vw;
+    height: 1px;
+    background-color: var(--bg-col-line);
+}
+
+div#center-top {
+    position: absolute;
+    top: 45px;
+    left: 13.3vw;
+
+    /* max-width: 1920px; */ width: 73.5vw;
+    height: 30px;
+
+    background-color: var(--bg-col-temp);
+
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+}
+
+div#center-top>.right {
+    width: 20vw;
+}
+
+div#center-top>.right> span:nth-of-type(1) {
+    width: 155px;
+    height: 100%;
+}
+div#center-top>.right> span:nth-of-type(2) {
+    width: 129px;
+    height: 100%;
+}
+
+main {
+
+}
+
+main>#slider {
+    position: absolute;
+    width: 100vw;
+    height: 660px;
+    left: 0px;
+    top: 232px;
+
+    background-color: var(--bg-col-slider); 
+}
+
+main>#content {
+
+}
+
+footer {
+
+}
+
+
+
+
+
+
+
+
+
+
+
