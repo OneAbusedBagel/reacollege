@@ -9,4 +9,4 @@ user-agent: Askjeeves
 disallow: /oud/testpagina.html
 
 user-agent: Googlebot
-sallow: /javascript/
+allow: /javascript/

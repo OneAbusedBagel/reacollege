@@ -1,15 +1,16 @@
 
-5 zoekopdrachten, locatie afhankelijk
+5 zoekopdrachten, locatie afhankelijk:
 
--school
--supermarkt
--sportschool
--restaurant
+-"school"
+-"supermarkt"
+-"sportschool"
+-"restaurant"
+-"kapper"
 
-5 zoekopdrachten, niet locate afhankelijk
+5 zoekopdrachten, niet locate afhankelijk:
 
--
--
--
--
--
+-"wikipagina voor de Tachtigjarige Oorlog"
+-"Codecrashers.nl"
+-"mozilla developer webiste"
+-"Wat is Search Engine Optimisation?"
+-"Verschillende carriere opties voor webdeveloper"
