@@ -262,6 +262,7 @@ footer {
     /* max-width: 1920px; */ width: 100%;
     background-color: var(--bg-col-body);
 } 
+
 #up>.back-to-top {
     position: absolute;
     bottom: 0px;
@@ -272,6 +273,7 @@ footer {
 
     z-index: 12;
 } 
+
 #up>.back-to-top>a {
     text-decoration: none;
     font-size: 2rem;
@@ -490,12 +492,15 @@ footer>#bottom> span:last-of-type {
     justify-content: space-around;
 
 } 
+
 footer>#bottom>span>span  {
     flex: 1;
 } 
+
 footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:nth-of-type(2) > span:nth-of-type(3)>span:first-of-type {
     color: gray;
 } 
+
 #bg {
     position: absolute;
     bottom: 0px;
@@ -504,6 +509,7 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
     background-color: var(--bg-col-trans);
     z-index: 10;
 } 
+
 .bg-line {
     position: absolute;
 
