@@ -5,8 +5,10 @@
     --bg-col-cont: #D3D3D3;
     --bg-col-body: #F7F8FA;
     --bg-col-head: #0F2041;
+    --bg-col-circ: #c4c4c4;
     --def-col-blk: #000000;
-    --bg-col-slider:#ffffff;
+    --bg-col-slider:#ffffff; 
+    --gray-col-text: #767676;
     --bg-col-mustard:#F6CD46;
 
     --stnd-div-width: 73.3vw;
@@ -38,6 +40,8 @@ body,html {
     max-width: 1920px;
     font-family: 'Exo 2', sans-serif;
     font-size: 14px;
+
+
 }
 
 body::-webkit-scrollbar { 
@@ -531,10 +535,12 @@ main>#content>#categories>.bottom > div.box span {
     margin-top: 10px;
 }
 
+
+/*  ------------------------------------------------ change scaling to add more rows and /not/ reduce size*/
+
 main>#content>#special {
     position: relative;
-    height: 858px;
-
+    height: auto;
 
     gap: 30px;
     display: flex;
@@ -563,19 +569,18 @@ main>#content>#special>.top>span:last-of-type  { }
 
 main>#content>#special>.bottom {
     width: var(--stnd-div-width);
-    height: 792px;
+    height: auto;
 
-    display: grid;
-    grid-template-columns: repeat(5, 1fr) ;
-    grid-template-rows: auto auto ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
 
     background-color: var(--bg-col-temp);
 }
 
 main>#content>#special>.bottom>.box {
-    width: 100%;
-    height: 381px;
+    flex: 1;
 
     display: flex;
     flex-direction: column;
@@ -685,23 +690,25 @@ main>#content>#popular>.bottom {
     height: 381px;
 
 }
-
+/* --------------------------------------------- fix issue of sending excess boxes to the aether in stead of making new row */
 main>#content>#popular>.bottom>.container {
     position: relative;
     left: 5.2vw;
-    height: 381px;
+    height: auto;
 
     width: var(--stnd-div-width);
 
-    display: grid;
-    grid-template-columns: repeat(5, 1fr) ;
-    grid-template-rows: auto ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
+
+
+
 }
 
 main>#content>#popular>.bottom>.container>.box {
-    width: 100%;
-    height: 381px;
+    flex: 1;
 
     display: flex;
     flex-direction: column;
@@ -764,21 +771,255 @@ main>#content>#testimonials {
     height: 686px;
     left: 0px;
 
-    background-color: var(--bg-col-temp);
-    /* background-color: var(--bg-col-slider); */
+    background-color: var(--bg-col-slider);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 
-main>#content>#testimonials>span {
+main>#content>#testimonials>span.top {
     font-weight: 600;
-    font-size: 30px;
+    font-size: 28px;
     line-height: 36px;
     text-transform: uppercase;
 
     color: var(--bg-col-head);
+    background-color: var(--bg-col-test);
 }
+
+main>#content>#testimonials>.middle {
+    width: 95.75vw;
+    height: 320px;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+} 
+
+main>#content>#testimonials>.middle>.sub-box {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: space-evenly;
+    padding-left: 4vw;
+    
+    border: 1px solid #E4E4E4;
+    box-shadow: 0px 6px 15px rgba(64, 79, 104, 0.05);
+    border-radius: 8px;
+
+    background-color: var(--bg-col-test);
+}
+
+main>#content>#testimonials>.middle>.sub-box>span:first-of-type {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: var(--bg-col-head);
+}
+
+main>#content>#testimonials>.middle>.sub-box>span:last-of-type  {
+    font-size: 16px; 
+    line-height: 26px; 
+    color: var(--gray-col-text) ;
+}
+
+main>#content>#testimonials>.middle>.sub-box>.sub-sub-box {
+    width: 10vw;
+    height: 70px;
+    gap: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+main>#content>#testimonials>.middle>.sub-box>.sub-sub-box>.circle {
+    height: 3.6vw;
+    width: 3.6vw;
+    border-radius: 50%;
+
+    background-color: var(--bg-col-circ);
+}
+
+main>#content>#testimonials>.middle>.sub-box>.sub-sub-box>.box-text {}
+
+#testimonials>.middle>.sub-box>.sub-sub-box>.box-text>p:first-of-type {
+    text-transform: uppercase;
+    line-height: 18px;
+    font-weight: 600;
+    font-size: 15px;
+}
+#testimonials>.middle>.sub-box>.sub-sub-box>.box-text>p:last-of-type {
+    text-transform: capitalize;
+    line-height: 17px;
+    font-size: 14px;
+
+    color: var(--gray-col-text);
+}
+
+main>#content>#testimonials>.bottom {
+    width: 132px;
+    height: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+    background-color: var(--bg-col-test);   
+}
+main>#content>#testimonials>.bottom>.circle {
+    height: 6px;
+    width: 6px;
+
+    border-radius: 50%;
+    background-color: #5E6B8C;
+}
+
+
+main>#content>#blog {
+    width: var(--stnd-div-width);
+    height: 504px;
+
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main>#content>#blog>.top {
+    width: 17.6vw;
+    height: 36px;
+
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+
+    text-transform: uppercase;
+    color: var(--bg-col-head);
+}
+
+main>#content>#blog>.bottom {
+    width: var(--stnd-div-width);
+    height: 438px;
+
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+}
+
+main>#content>#blog>.bottom>.box {
+    flex: 1;
+
+    border-radius: 8px;
+    background-color: var(--bg-col-slider);
+    box-shadow: 0px 6px 15px rgba(64, 79, 104, 0.05);
+}
+
+main>#content>#blog>.bottom>.box>.box-img  {
+    width: 100%;
+    height: 220px;
+
+    background-color: var(--bg-col-test);
+}
+
+main>#content>#blog>.bottom>.box>.box-text  {
+    width: 90%;
+    margin-left: 10%;
+
+    gap: 0px;    
+    display: flex;
+    flex-direction: column;
+
+}
+
+main>#content>#blog>.bottom>.box>.box-text>.top  {
+    font-size: 14px;
+    line-height: 17px;
+
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    color: var(--gray-col-text);
+}
+
+main>#content>#blog>.bottom>.box>.box-text>.top>.circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #696969;
+}
+
+main>#content>#blog>.bottom>.box>.box-text>.middle>p:first-of-type {
+    font-weight: 600;
+    font-size: 15px; 
+    line-height: 18px; 
+    text-transform: uppercase; 
+    color: var(--bg-col-head);
+}
+
+main>#content>#blog>.bottom>.box>.box-text>.middle>p:last-of-type  {
+    font-size: 14px; 
+    line-height: 17px; 
+    color: var(--gray-col-text); 
+}
+
+main>#content>#blog>.bottom>.box>.box-text>.bottom {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+main>#content>#blog>.bottom>.box>.box-text>.bottom .chevron {
+    font-weight: bold;
+    font-size: 1.4em;
+
+    transform: scaleX(0.8) scaleY(2);
+}
+
+
+main>#content>#logos {
+    width: var(--stnd-div-width);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main>#content>#logos>.top {
+    text-transform: uppercase;    
+    font-weight: bold;
+    line-height: 36px;
+    font-size: 30px;
+
+}
+main>#content>#logos>.bottom > span {
+    background-color: var(--bg-col-test);
+}
+
+
+
 
 footer {
 
 }
+
+
+
+
 
 
