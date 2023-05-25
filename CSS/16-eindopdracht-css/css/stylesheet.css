@@ -37,20 +37,25 @@
 
 body,html {
     background-color: var(--bg-col-body);
-    max-width: 1920px;
+    width: 100%;
+    height: auto;
     font-family: 'Exo 2', sans-serif;
     font-size: 14px;
 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 
+    margin: 0px;
 }
 
 body::-webkit-scrollbar { 
     width: 0px; 
     height: 0px;
-} 
+}
 
 header {
-    position: absolute;
+    position: relative;
     width: 100vw;
     height: 232px;
     left: 0px;
@@ -73,7 +78,6 @@ header {
     flex-wrap: nowrap;
 
     gap: 20px;
-    overflow: hidden;
     justify-content: space-between;
     align-items: center;
 }
@@ -101,7 +105,7 @@ div#tops-box>.left>span {
     font-weight: 400;
     word-spacing: 10px;
 
-} 
+}
 
 div#tops-box>.right{
     width: 220px;
@@ -113,7 +117,6 @@ div#tops-box>.right{
     flex-direction: row;
     flex-wrap: nowrap;
 
-    overflow: hidden;
     gap: 5px;
 }
 
@@ -317,21 +320,26 @@ div#center-bottom>.right>div:last-of-type {
   /* ------------------------[ Main divider line for ease of navigation ]----------------------------- */
 
 main {
+    position: relative;
+    outline: none;
+    flex: 1;
 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 main>#slider {
-    position: absolute;
+    position: relative;
     width: 100vw;
     height: 660px;
     left: 0px;
-    top: 232px;
 
     background-color: var(--bg-col-slider); 
 }
 
 main>#slider>#slider-box {
-    position: absolute;
+    position: relative;
     width: var(--stnd-div-width);
     height: 500px;
     left: 13.3vw;
@@ -425,10 +433,12 @@ main>#slider>#slider-box {
     grid-area: span-1;
     font-weight: bold;
 }
+
 #slider>#icons>.icons-box>span:nth-of-type(2) {
     grid-area: span-2;
     line-height: 14px;
 }
+
 #slider>#icons>.icons-box>.fa-solid {
     top: 10px;
     font-size: 30px;
@@ -436,12 +446,12 @@ main>#slider>#slider-box {
 }
 
 main>#content {
-    position: absolute;
-    top:  992px;
+    position: relative;
     width: 100vw;
-    height: 3708px;
+    height: auto;
 
     left: 0px;
+    top: 140px;
 
     display: flex;
     flex-direction: column;
@@ -538,6 +548,12 @@ main>#content>#categories>.bottom > div.box span {
 
 /*  ------------------------------------------------ change scaling to add more rows and /not/ reduce size*/
 
+
+
+
+
+
+
 main>#content>#special {
     position: relative;
     height: auto;
@@ -562,7 +578,7 @@ main>#content>#special>.top>span {
 
 
     background-color: var(--bg-col-temp);
-} 
+}
 
 main>#content>#special>.top>span:first-of-type { }
 main>#content>#special>.top>span:last-of-type  { }
@@ -659,11 +675,13 @@ main>#content>#banner > .box {
 main>#content>#popular {
     position: relative;
     width: 83.89vw;
-    height: 447px;
+    height: auto;
     left: 8vw;
 
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+
     gap: 30px;
 
     background-color: var(--bg-col-temp);
@@ -683,7 +701,7 @@ main>#content>#popular>.top {
 main>#content>#popular>.top>span {
 
     background-color: var(--bg-col-temp);
-} 
+}
 
 main>#content>#popular>.bottom {
     width: var(--stnd-div-width);
@@ -799,7 +817,7 @@ main>#content>#testimonials>.middle {
     flex-direction: row;
     justify-content: space-between;
     gap: 30px;
-} 
+}
 
 main>#content>#testimonials>.middle>.sub-box {
     width: 100%;
@@ -859,6 +877,7 @@ main>#content>#testimonials>.middle>.sub-box>.sub-sub-box>.box-text {}
     font-weight: 600;
     font-size: 15px;
 }
+
 #testimonials>.middle>.sub-box>.sub-sub-box>.box-text>p:last-of-type {
     text-transform: capitalize;
     line-height: 17px;
@@ -879,6 +898,7 @@ main>#content>#testimonials>.bottom {
 
     background-color: var(--bg-col-test);   
 }
+
 main>#content>#testimonials>.bottom>.circle {
     height: 6px;
     width: 6px;
@@ -890,7 +910,7 @@ main>#content>#testimonials>.bottom>.circle {
 
 main>#content>#blog {
     width: var(--stnd-div-width);
-    height: 504px;
+    height: auto;
 
     gap: 30px;
     display: flex;
@@ -899,8 +919,7 @@ main>#content>#blog {
 }
 
 main>#content>#blog>.top {
-    width: 17.6vw;
-    height: 36px;
+    flex: 1;
 
     font-size: 28px;
     font-weight: 600;
@@ -918,6 +937,7 @@ main>#content>#blog>.bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;  
+    flex-wrap: wrap;
 }
 
 main>#content>#blog>.bottom>.box {
@@ -984,6 +1004,7 @@ main>#content>#blog>.bottom>.box>.box-text>.bottom {
     line-height: 24px;
     text-transform: uppercase;
 }
+
 main>#content>#blog>.bottom>.box>.box-text>.bottom .chevron {
     font-weight: bold;
     font-size: 1.4em;
@@ -996,8 +1017,9 @@ main>#content>#logos {
     width: var(--stnd-div-width);
 
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
 }
 
 main>#content>#logos>.top {
@@ -1007,17 +1029,49 @@ main>#content>#logos>.top {
     font-size: 30px;
 
 }
-main>#content>#logos>.bottom > span {
-    background-color: var(--bg-col-test);
+
+main>#content>#logos>.bottom {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
+main>#content>#logos>.bottom >.box-img  {
+    display: flex;
+    align-items: center;
+}
 
-
+main>#content>#logos>.bottom >.box-img >img {
+    width: 100%;
+    height: auto;
+}
 
 footer {
+    position: relative;
+    top: 100%;
+    width: 100%;
+    height: 60px;
 
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--bg-col-temp);
+   /* background-color: var(--bg-col-head); */
 }
 
+footer>.top {
+    width: 37.5vw;
+    height: 304px;
+}
+
+footer>.bottom {
+    width: 100%;
+    height: 90px;
+}
 
 
 
