@@ -33,6 +33,7 @@
     font-size: 2em;
     font-weight: 400;
 }
+
 /* lllllllllllllllllllllllllllllll [TEMP] lllllllllllllllllllllllllllllll */
 
 body,html {
@@ -317,9 +318,12 @@ div#center-bottom>.right>div:last-of-type {
     gap: 10px;
 }
 
-  /* ------------------------[ Main divider line for ease of navigation ]----------------------------- */
+  /* ------------------------[ Main divider line for ease of navigation ]----------------------------- */ 
 
 main {
+    width: 100%;
+    height: auto;
+
     position: relative;
     outline: none;
     flex: 1;
@@ -389,7 +393,7 @@ main>#slider>#slider-box {
 
 }
 
-#slider-box>#categories>ul>li {}
+#slider-box>#categories>ul>li { }
 
 #slider-box>#slide {
     grid-area: slide ;
@@ -409,7 +413,6 @@ main>#slider>#slider-box {
     flex-wrap:wrap;
     justify-content: space-between;
     align-items: center;
-
 }
 
 #slider>#icons>.icons-box {
@@ -549,11 +552,6 @@ main>#content>#categories>.bottom > div.box span {
 /*  ------------------------------------------------ change scaling to add more rows and /not/ reduce size*/
 
 
-
-
-
-
-
 main>#content>#special {
     position: relative;
     height: auto;
@@ -564,24 +562,58 @@ main>#content>#special {
 }
 
 main>#content>#special>.top {
-    width: var(--stnd-div-width);
+    width: 100%;
     height: 36px;
 
     background-color: var(--bg-col-test);
 
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main>#content>#special>.top>*{
+    display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
 }
 
-main>#content>#special>.top>span {
-
-
-    background-color: var(--bg-col-temp);
+main>#content>#special>.top>.left {
+    font-size: clamp(1rem, 1.5vw, 2.5rem);
+    line-height: 36px;
+    width: 22.6vw;
 }
 
-main>#content>#special>.top>span:first-of-type { }
-main>#content>#special>.top>span:last-of-type  { }
+main>#content>#special>.top>.right {
+    width: 17vw;
+}
+main>#content>#special>.top>*>.sub-box> div.line {
+    position: relative;
+}
+main>#content>#special>.top>*>.sub-box> div.line {
+    position: absolute;
+    top: 28px;
+
+    height: 2px;
+    width: 50px;
+
+    background-color: var(--def-col-blk);
+}
+
+main>#content>#special>.top span {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+main>#content>#special>.top>span.left {
+
+}
+
+main>#content>#special>.top>div.right>span {
+    font-size: 13px;
+    line-height: 16px;
+}
 
 main>#content>#special>.bottom {
     width: var(--stnd-div-width);
@@ -688,19 +720,41 @@ main>#content>#popular {
 }
 
 main>#content>#popular>.top {
-    width: 83.89vw;
+    width: 100%;
     height: 36px;
 
-    background-color: var(--bg-col-test);
-
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
+
+    margin-bottom: 30px;
+
+    background-color: var(--bg-col-test);
 }
 
-main>#content>#popular>.top>span {
+main>#content>#popular>.top>div>.line {
+    position: relative;
+    top: 5px;
 
-    background-color: var(--bg-col-temp);
+    height: 2px;
+    width: 50px;
+
+    background-color: var(--def-col-blk);
+}
+
+main>#content>#popular>.top span {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+main>#content>#popular>.top>span.left {
+    font-size: 30px;
+    line-height: 36px;
+}
+
+main>#content>#popular>.top>div.right>span {
+    font-size: 13px;
+    line-height: 16px;
 }
 
 main>#content>#popular>.bottom {
@@ -805,7 +859,6 @@ main>#content>#testimonials>span.top {
     text-transform: uppercase;
 
     color: var(--bg-col-head);
-    background-color: var(--bg-col-test);
 }
 
 main>#content>#testimonials>.middle {
@@ -858,7 +911,6 @@ main>#content>#testimonials>.middle>.sub-box>.sub-sub-box {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
 }
 
 main>#content>#testimonials>.middle>.sub-box>.sub-sub-box>.circle {
@@ -868,8 +920,6 @@ main>#content>#testimonials>.middle>.sub-box>.sub-sub-box>.circle {
 
     background-color: var(--bg-col-circ);
 }
-
-main>#content>#testimonials>.middle>.sub-box>.sub-sub-box>.box-text {}
 
 #testimonials>.middle>.sub-box>.sub-sub-box>.box-text>p:first-of-type {
     text-transform: uppercase;
@@ -894,9 +944,6 @@ main>#content>#testimonials>.bottom {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-
-    background-color: var(--bg-col-test);   
 }
 
 main>#content>#testimonials>.bottom>.circle {
@@ -1050,27 +1097,77 @@ main>#content>#logos>.bottom >.box-img >img {
 }
 
 footer {
-    position: relative;
-    top: 100%;
+    position:relative;
+    bottom: -225px;
     width: 100%;
-    height: 60px;
+    height: 600px;
 
     gap: 10px;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    justify-content: space-between;
 
-    background-color: var(--bg-col-temp);
-   /* background-color: var(--bg-col-head); */
+    background-color: var(--bg-col-head); 
 }
 
 footer>.top {
     width: 37.5vw;
     height: 304px;
+
+    margin-top: 90px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: var(--bg-col-temp);
+}
+
+/* footer>.top>* {
+
+} */
+
+
+footer>.top>span:nth-of-type(1) {
+    font-weight:600;
+    font-size: 30px;
+    line-height: 36px;
+
+    text-transform: uppercase;
+    color: white;
+}
+
+footer>.top>span:nth-of-type(2) {
+    line-height: 17px;
+
+    color: rgb(255, 255, 255, 0.7);
+}
+
+footer>.top>div.box {
+    width: 100%;
+    height: 59px;
+
+    background-color: var(--bg-col-test);
+}
+
+footer>.line {
+    height: 0.98px;
+    width: 100%;
+
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 footer>.bottom {
     width: 100%;
     height: 90px;
+
+    background-color: var(--bg-col-temp);
+}
+
+footer>.bottom>div {
+    background-color: var(--bg-col-test);
 }
 
 
