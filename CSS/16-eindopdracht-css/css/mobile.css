@@ -1,0 +1,10 @@
+body, html {
+    background-color: skyblue;
+}
+
+/* @media screen and (min-width:600px) {
+    html  {
+        content: url(file:///H:/reacollege/CSS/16-eindopdracht-css/index.html);
+    }
+    
+} was testing auto-redirects based on scren size.. didn't work*/
