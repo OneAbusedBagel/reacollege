@@ -8,11 +8,17 @@
     --bg-col-head: #0F2041;
     --bg-col-circ: #c4c4c4;
     --def-col-blk: #000000;
-    --bg-col-slider:#ffffff; 
+    --red-col-text: #C32929;
+    --bg-col-slider:#ffffff;
+    --bg-mob-slider:#F5E6E0;
     --gray-col-text: #767676;
     --bg-col-mustard:#F6CD46;
 
     --stnd-div-width: 73.3vw;
+}
+
+#mobile-site {
+    display: none;
 }
 
 .test {
@@ -551,7 +557,6 @@ main>#slider>#slider-box {
     border-radius: 50%;
     background-color: var(--bg-col-slider);
 }
-
 
 #slider>#icons {
     position: absolute;
@@ -1412,9 +1417,230 @@ footer>.bottom>.chevron {
     color: var(--bg-col-slider);
 }
 
-/* @media screen and (max-width:500px) {
-    *  {
-        content: url(file:///H:/reacollege/CSS/16-eindopdracht-css/mobile.html);
+@media (max-width:550px) {
+    body,html {
+        background-color: var(--bg-mob-slider);
+    }
+    #desktop-site  {
+        display: none;
+    }
+    #mobile-site {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .mob-header {
+        height: 60px;
+        width: 100%;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        background-color: var(--bg-col-test);
+    }
+    .mob-header>* {
+        background-color: var(--bg-col-temp);
+    }
+    .mob-header>.mob-nav { width: 60px; height: auto;}
+    .mob-header>.mob-uom { width: 60px; height: auto;}
+    .mob-header>.mob-bag { width: 60px; height: auto;}
+
+    .mob-slider {
+        height: 600px;
+        width: auto;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 30px;
+
+        background-color: var(--bg-mob-slider);
+    }
+    .mob-slider>.mob-void {
+        background-color:var(--bg-col-test);
+    }
+    .mob-slider>.mob-text {
+        width: 270px; 
+        height: 134px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        text-transform: uppercase;
+    }
+    .mob-slider>.mob-text>.mob-top {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        color: var(--red-col-text);
+    }
+    .mob-slider>.mob-text>.mob-top>.mob-line {
+        position: relative;
+        width: 40px;
+        height: 2px;
+        background-color: var(--red-col-text);
+    }
+    .mob-slider>.mob-text>.mob-middle {
+        font-size: 30px;
+        font-weight: 400;
+    }
+    .mob-slider>.mob-text>.mob-bottom>.mob-line {
+        position: relative;
+        top: 23px;
+        width: 96px;
+        height: 2px;
+        background-color: var(--def-col-blk);
+    }
+    .mob-slider>.mob-dots {
+        width: 132px; 
+        height: 30px; 
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .mob-slider>.mob-dots>.mob-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: var(--def-col-blk);
+    }
+    .mob-dot-dot {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+    
+        border-radius: 50%;
+        border: 2px solid var(--def-col-blk);
+    }
+
+    .mob-sticky {
+        position: sticky;
+        height: 55px;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+
+        background-color: var(--bg-col-slider);
+    }
+    .mob-sec {
+        position: sticky;
+        height: 50px;
+        width: auto;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .mob-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mob-content>.mob-box {
+        margin-top: 20px;
+        height: 6011px;
+        width: 384px;
+
+        display: flex;
+        flex-direction: column;
+
+        background-color: var(--bg-col-slider);
+    }
+    .mob-content>.mob-box>.mob-top {height: 135px; width: 100%; background-color: var(--bg-col-temp); }
+    .mob-content>.mob-box>.mob-top>.mob-sub-top {
+        width: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+
+        text-transform: uppercase;
+
+        margin-top: 20px;
+    }
+    .mob-content>.mob-box>.mob-top>.mob-sub-top>div:nth-of-type(1) {
+        font-size: 30px;
+    }
+    .mob-content>.mob-box>.mob-top>.mob-sub-top>div:nth-of-type(2) {
+        width: 80%; 
+        font-weight: 500; 
+        line-height: 35px; 
+        display: flex; 
+        justify-content: space-around;
+    }
+    .mob-content>.mob-box>.mob-top>.mob-sub-top>div:nth-of-type(3) {
+        color: var(--gray-col-text);
     }
     
-} This clearly did not work*/
+    .mob-content>.mob-box>.mob-middle {
+        height: 600px; 
+        width: 100%; 
+
+        gap: 14px;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .mob-content>.mob-box>.mob-middle>.sub-box {
+        width: 185px;
+        height: 292px;
+
+        outline: 2px var(--bg-col-test) solid;
+    }
+    .mob-content>.mob-box>.mob-middle>.sub-box>.sub-top {
+        width: 100%;
+        height: 210px;
+
+        background-color: var(--bg-col-test);
+    }
+    .mob-content>.mob-box>.mob-middle>.sub-box>.sub-bottom {
+        width: 100%;
+        height: 82px;
+
+        font-weight: bold;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .mob-content>.mob-box>.mob-bottom {
+        height: 60px; 
+        width: 100%; 
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bg-col-temp);
+    }
+    .mob-content>.mob-box>.mob-bottom .mob-line {
+        width: 100px;
+        height: 2px;
+
+        position: relative;
+        top: 23px;
+        left: 12px;
+
+        background-color: var(--def-col-blk);
+    }
+    .mob-content>.mob-box>.mob-bottom .text {
+        text-transform: uppercase;
+    }
+    
+
+
+
+
+}
