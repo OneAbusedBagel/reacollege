@@ -2,16 +2,19 @@
     --bg-col-trans-white: rgb(255, 255, 255, 0.6);
     --bg-col-test: rgba(250, 4, 4, 0.5) ;
     --bg-col-temp: rgba(100, 210, 220, 0.5) ;
-    --bg-col-line: rgb(255, 255, 255, 0.2);
+    --bg-col-line: rgba(255, 255, 255, 0.2);
     --bg-col-cont: #D3D3D3;
     --bg-col-body: #F7F8FA;
     --bg-col-head: #0F2041;
     --bg-col-circ: #c4c4c4;
     --def-col-blk: #000000;
+    --mob-col-line: #CFCDCD;
     --red-col-text: #C32929;
     --bg-col-slider:#ffffff;
     --bg-mob-slider:#F5E6E0;
+    --bg-mob-footer: #e4e4e4;
     --gray-col-text: #767676;
+
     --bg-col-mustard:#F6CD46;
 
     --stnd-div-width: 73.3vw;
@@ -341,7 +344,7 @@ div#center-bottom>.right>div:last-of-type {
     gap: 10px;
 }
 
-  /* ------------------------[ Main divider line for ease of navigation ]----------------------------- */ 
+/* ------------------------[ Main divider line for ease of navigation ]----------------------------- */ 
 
 main {
     width: 100%;
@@ -1551,7 +1554,7 @@ footer>.bottom>.chevron {
     }
     .mob-content>.mob-box {
         margin-top: 20px;
-        height: 6011px;
+        height: auto;
         width: 384px;
 
         display: flex;
@@ -1638,8 +1641,166 @@ footer>.bottom>.chevron {
     .mob-content>.mob-box>.mob-bottom .text {
         text-transform: uppercase;
     }
+    .mob-footer {
+        height: 1008px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        background-color: var(--bg-mob-footer);
+    }
+
+    .mob-footer>div{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .mob-footer>.mob-top {
+        height: 220px; 
+    }
+
+    .mob-footer .mob-sub-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .mob-footer .mob-sub-box:nth-of-type(4) {
+        width: 55%;
+
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mob-footer>.mob-middle-1 {
+        height: 240px;
+    }
+
+    .mob-footer>div>span:first-of-type {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .mob-footer>.mob-middle-2 {
+        height: 283px; 
+    }
+
+    .mob-footer>.mob-middle-2>.sub-box-top {
+        height: 55px;
+        padding:  0px 20px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        background-color: var(--bg-col-body);
+    }
+    .mob-footer>.mob-middle-2>.sub-box-top>span:last-of-type {
+        text-transform: uppercase;
+        font-family: 'Jost', sans-serif;
+    }
+    .mob-footer>.mob-middle-2>.sub-box-bot>.img-bot {
+
+     }
+
+    .mob-footer>.mob-bottom {
+        height: 160px;
+    }
+    .mob-footer>.mob-bottom>.line {
+        height: 2px;
+        width: 100%;
+        background-color:var(--mob-col-line) ;
+    }
+
+    .mob-footer>.mob-bottom>div {
+        gap: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+    .mob-footer>.mob-bottom>div>span:nth-of-type(1) {
+        color: var(--gray-col-text);
+    }
+    .mob-footer>.mob-bottom .chevron {
+        position: relative;
+        font-size: 1.4em;
     
 
+        transform: translateX(-2px) scalex(1.8) scaleY(1.8);
+    }
+
+
+
+    div.uom {
+        display: flex;
+        flex-direction: row;
+    }
+    div.uom>.subtract {
+        height: 27px;
+        width: 80px;
+        border-radius: 0px;
+    
+        display: flex;
+        flex-direction: row;
+    }
+    
+    div.uom>.subtract>span {
+        width: 85px;
+        height: 51px;
+    
+        position: relative;
+        top: -9px;
+    
+        font-family: 'Jost', sans-serif;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 35px;    
+    
+        color: var(--def-col-blk);
+    }
+    
+    div.uom>.subtract>.rectangle-6 {
+        position: absolute;
+    
+        height: 10px;
+        width: 6px;
+     
+        border-radius: 0px;
+     
+        background: var(--bg-mob-footer);
+        transform: translateX(17px) translateY(-1px) rotate(-45deg);
+    }
+    
+    div.uom>.subtract>.rectangle-5 {
+        position: absolute;
+    
+        height: 32px;
+        width: 4px;
+        border-radius: 0px;
+    
+    
+        background: var(--bg-mob-footer);
+        transform: translateX(34px) translateY(0px) rotate(-45deg);
+    }
+     
+    div.uom>div.ellipse-9 {
+        height: 26px;
+        width: 26px;
+        top: 2px;
+        border-radius: 50%;
+    
+        position: relative;
+    
+        background: var(--red-col-text);
+    }
+
+    
 
 
 
