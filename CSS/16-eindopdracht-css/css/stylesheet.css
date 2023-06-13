@@ -399,6 +399,7 @@ main>#slider>#slider-box {
     flex-direction: column;
     justify-content: space-around;
     text-transform: uppercase;
+    overflow: hidden;
 
     color: var(--bg-col-head);
 }
@@ -436,6 +437,7 @@ main>#slider>#slider-box {
 }
 
 #slider-box>#img-1 {
+    position: relative;
     grid-area: img-1 ; 
     width: 17.08vw;
     height: 235px;
@@ -443,9 +445,19 @@ main>#slider>#slider-box {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    overflow: hidden;
     text-transform: uppercase;
 
     color: var(--bg-col-slider);
+}
+
+#slider-box>#img-1>img {
+    position: absolute;
+    align-self: flex-end;
+
+    width: auto;
+    height: 100%;
 }
 
 #slider-box>#img-1>.top {
@@ -460,9 +472,9 @@ main>#slider>#slider-box {
 }
 
 #slider-box>#img-1>.bottom {
+    margin-bottom: 70px;    
     width: 72px;
     height: 24px;
-    margin-bottom: 70px;
 
     font-size: 13px;
     font-weight: 600;
@@ -844,15 +856,53 @@ main>#content>#banner {
 }
 
 main>#content>#banner > .box {
+    position: relative;
     width: 23.34vw;
     height: 235px;
+
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    color: var(--bg-col-slider);
+    text-transform: uppercase;
+    overflow: hidden;
 
     background-color: var(--bg-col-test);
 }
 
-main>#content>#banner > .box>img {
+main>#content>#banner > .box:nth-of-type(1) { 
+    background-color: #e94738; 
+}
+
+main>#content>#banner > .box:nth-of-type(2) { 
+    background-color: #222222; 
+    background-image: url(images/image407.png); 
+
+}
+main>#content>#banner > .box:nth-of-type(3) { }
+
+main>#content>#banner > .box>.sub-box {
+    position: absolute;
     width: 100%;
     height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+main>#content>#banner > .box>.sub-box>.top {
+    display: flex;
+    flex-direction: column;
+}
+
+main>#content>#banner > .box>.sub-box>.bottom { }
+
+
+main>#content>#banner > .box>img {
+    width: 448px;
+    height: 235px;
 }
 
 main>#content>#popular {
@@ -1534,7 +1584,6 @@ footer>.bottom>.chevron {
         height: 32px;
         width: 4px;
         border-radius: 0px;
-    
     
         background-color: var(--bg-col-slider);
         transform: translateX(34px) translateY(0px) rotate(-45deg);
