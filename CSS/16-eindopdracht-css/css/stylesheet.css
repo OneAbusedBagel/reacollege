@@ -20,6 +20,10 @@
     --stnd-div-width: 73.3vw;
 }
 
+* {
+    z-index: 10;
+}
+
 #mobile-site {
     display: none;
 }
@@ -45,7 +49,8 @@
 }
 
 .link {
-    text-decoration: none  ;
+    text-decoration: underline  ;
+    color: white;
 }
 
 .fa-star {
@@ -391,6 +396,7 @@ main>#slider>#slider-box {
 }
 
 #slider-box>#img-2 {
+    position: relative;
     grid-area: img-2 ; 
     width: 17.08vw;
     height: 235px;
@@ -398,10 +404,22 @@ main>#slider>#slider-box {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    overflow: hidden;   
     text-transform: uppercase;
-    overflow: hidden;
 
     color: var(--bg-col-head);
+}
+
+
+#slider-box>#img-2>img {
+    position: absolute;
+    align-self: flex-end;
+
+    width: 330px;
+    height: 235px;
+
+    z-index: 9;
 }
 
 #slider-box>#img-2>.top {
@@ -458,6 +476,8 @@ main>#slider>#slider-box {
 
     width: auto;
     height: 100%;
+
+    z-index: 9;
 }
 
 #slider-box>#img-1>.top {
@@ -880,16 +900,18 @@ main>#content>#banner > .box:nth-of-type(2) {
     background-image: url(images/image407.png); 
 
 }
-main>#content>#banner > .box:nth-of-type(3) { }
 
 main>#content>#banner > .box>.sub-box {
     position: absolute;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
+    gap: 20px;
 
+    margin-left: 44px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-self: flex-start;
 }
 
 main>#content>#banner > .box>.sub-box>.top {
@@ -897,7 +919,15 @@ main>#content>#banner > .box>.sub-box>.top {
     flex-direction: column;
 }
 
-main>#content>#banner > .box>.sub-box>.bottom { }
+main>#content>#banner > .box>.sub-box>.bottom>.line {
+    position: relative;
+    top: 30px;
+
+    width: 47px;
+    height: 3px;
+
+    background-color: var(--bg-col-body);
+}
 
 
 main>#content>#banner > .box>img {
@@ -1251,6 +1281,7 @@ main>#content>#blog>.bottom>.box>.box-text>.bottom {
 main>#content>#blog>.bottom>.box>.box-text>.bottom .chevron {
     font-weight: bold;
     font-size: 1.4em;
+    text-decoration: none;
 
     transform: scaleX(0.8) scaleY(2);
 }
@@ -1470,6 +1501,7 @@ footer>.bottom>.up {
 footer>.bottom>.chevron {
     font-size: 2.4em;
     transform: translateY(3px);
+    text-decoration: none;
 
     color: var(--bg-col-slider);
 }
