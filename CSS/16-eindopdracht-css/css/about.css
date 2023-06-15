@@ -9,7 +9,7 @@
     --bg-col-circ: #c4c4c4;
     --def-col-blk: #000000;
     --mob-col-line: #CFCDCD;
-    --red-col-text: #C32929;
+    --red-col-logo: #C32929;
     --bg-col-slider:#ffffff;
     --bg-mob-slider:#F5E6E0;
     --bg-mob-footer: #e4e4e4;
@@ -19,24 +19,42 @@
 
     --stnd-div-width: 73.3vw;
 
-
-    --bg-col-body: #ffffff;
-    --def-col-blk: #222222;
     --bg-col-trans: #1c1c1c25;
     --bg-col-table:  #dbdbdb07;
-    --bg-col-footer: #e4e4e46b;
-    --logo-color-red: #C32929;
+    --bg-col-footer: #0F2041;
+    --col-text-foot: #F7F8FA;
 }
 
+/* another temp line for important/overarching classes */
 
+* {
+    z-index: 10;
+}
 
-/* another temp line for frequently occuring classes */
+#desktop-site {
+    display: visible;
+}
 
+.dis-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 
-/* non-altered code from previous exercise as temp shoe-in */
+}
 
 body,html {
     background-color: var(--bg-col-body);
+    width: 99%;
+    height: auto;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 14px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    margin: 0px;
+    padding: 0px;
 } 
 
 body::-webkit-scrollbar {
@@ -49,21 +67,105 @@ header {
     flex-wrap: nowrap;
     justify-content: space-between;
 
-    position: absolute;
+    position: relative;
     width:  80%;
     height: 36px;
-    left: 10%;
-    top: 30px;
+    left: 10vw;
+
+    background-color: var(--bg-col-temp);
 } 
 
+header>.left {
+    height: 100%; 
+    width: 112px; 
+    background-color: var(--bg-col-test); 
+}
 
+header>.middle {
+    height: 100%; 
+    width: 520px;
+    background-color: var(--bg-col-test); 
+}
+
+header>.right {
+    height: 100%; 
+    width: 232px;
+    background-color: var(--bg-col-test); 
+}
+
+main {
+    position: relative;
+    width: 80%;
+    height: auto;
+    left: 10vw;
+
+}
+
+main>.title {
+    text-transform: uppercase;
+}
+main>.inner {
+    width: 100%;
+    height: auto;
+
+    gap: 20px;
+}
+
+main>.inner>* {
+    width: 100%;
+    height: auto;
+}
+
+main .inner .text .top  { 
+    position: relative;
+    width: 66%;
+    left: 17%;
+
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    background-color: var(--bg-col-temp);
+}
+main .inner .text .middle {
+    position: relative;
+    width: 66%;
+    left: 17%;
+
+    gap: 20px;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+}
+
+main .inner .text .middle .sub-box { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+main .inner .text .bottom { 
+    position: relative;
+
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    background-color: var(--bg-col-temp);
+}
+
+/*  ===================================================  */
+ 
+ 
 footer {
-
-    position: absolute;
+    position: relative;
     top: 700px;
     left: 0px;
     height: 571px;
-    /* max-width: 1920px; */ width: 100%;
+    width: 100%;
+
+    color:var(--col-text-foot);
     background-color: var(--bg-col-body);
 } 
 
@@ -84,7 +186,127 @@ footer {
 
     text-align: center;
     color: black;
+}  
+
+footer>#inner {
+    margin: 0 auto;
+    position: absolute;
+    left: 8.28%;
+    top: 17.51%;
+
+    max-width: 90% ;
+    height: 296px;
+
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) minmax(0px, .1fr) minmax(100px, 1fr) minmax(0px, .1fr)  minmax(100px, 1fr)  ;
 } 
+
+ footer>#inner>div:last-of-type {
+    margin-right: 10px;
+} 
+
+footer>#inner>.inner-segment {
+    position:relative;
+
+    font-family:'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+
+    flex: 1;
+} 
+
+footer>#inner > .seg-1 {
+    height: 255px;
+    max-width: 286px;
+    flex:1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+
+#inner>.seg-1>div.logo {
+    width: 85px;
+    height: 51px;
+
+    position: relative;
+} 
+
+#inner>.seg-1>div.logo>.subtract {
+    height: 27px;
+    width: 80px;
+    border-radius: 0px;
+} 
+
+#inner>.seg-1>div.logo>.subtract>span {
+    width: 85px;
+    height: 51px;
+
+    position: relative;
+
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 51px;
+
+    text-transform: uppercase;
+
+    color: var(--col-text-foot);
+} 
+
+#inner>.seg-1>div.logo>.subtract>.rectangle-6 {
+    position: absolute;
+
+    height: 9.37px;
+    width: 4px;
+
+    left: 18.8%;
+    top: 14%;
+    
+    background: var(--bg-col-footer);
+    transform: rotate(-45deg);
+} 
+
+#inner>.seg-1>div.logo>.subtract>.rectangle-5 {
+    height: 29px;
+    width: 4px;
+    
+    position: absolute;
+    left: 40%;
+    top: 20%;
+
+    background: var(--bg-col-footer);
+    transform: rotate(-45deg);
+} 
+
+#inner>.seg-1>div.logo>div.ellipse-9 {
+    height: 26px;
+    width: 26px;
+    left: 80px;
+    top: 11px;
+    border-radius: 50%;
+    
+    position: absolute;
+
+    background: var(--bg-col-mustard); 
+    z-index: 15;
+} 
+
+#inner>.seg-1>div.socials {
+    height: 16px;
+    max-width: 205px;
+
+    display: flex;
+    justify-content: space-between;
+} 
+
+#inner>.seg-1>div.socials i {
+    color: var(--col-text-foot);
+} 
+
+
 
 footer>#inner > .seg-2 {
     height: 293px;
@@ -127,7 +349,10 @@ footer>#inner > .seg-3 > span {
     flex-direction: row;
     justify-content: space-between;
 
-    background-color: var(--bg-col-body);
+    border: 2px solid var(--bg-col-mustard);
+    border-radius: 5px;
+    background-color: var(--bg-col-mustard);
+    color: var(--def-col-blk);
     z-index: 15;
 } 
 
@@ -143,6 +368,9 @@ footer>#inner > .seg-3 > p:last-of-type {
 footer>#inner > .seg-3 > img {
     max-width: 100%;
     height: auto;
+
+    outline: auto;
+    background-color: var(--bg-col-body);
 } 
 
  footer>#bottom {
@@ -188,8 +416,8 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
     bottom: 0px;
     height: 571px;
     /* max-width: 1920px; */ width: 100%;
-    background-color: var(--bg-col-trans);
-    z-index: 10;
+    background-color: var(--bg-col-footer);
+    z-index: 9;
 } 
 
 .bg-line {
@@ -197,7 +425,7 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
 
     height: 2px;
     width: 84%;
-    background-color: var(--bg-col-trans);
+    background-color: var(--bg-col-footer);
 
     left: 8.28%;
     bottom: 50px;

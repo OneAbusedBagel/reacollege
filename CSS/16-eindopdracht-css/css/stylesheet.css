@@ -411,7 +411,6 @@ main>#slider>#slider-box {
     color: var(--bg-col-head);
 }
 
-
 #slider-box>#img-2>img {
     position: absolute;
     align-self: flex-end;
@@ -928,7 +927,6 @@ main>#content>#banner > .box>.sub-box>.bottom>.line {
 
     background-color: var(--bg-col-body);
 }
-
 
 main>#content>#banner > .box>img {
     width: 448px;
