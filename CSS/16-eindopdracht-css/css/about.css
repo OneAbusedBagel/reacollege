@@ -71,26 +71,117 @@ header {
     width:  80%;
     height: 36px;
     left: 10vw;
-
-    background-color: var(--bg-col-temp);
 } 
 
 header>.left {
     height: 100%; 
-    width: 112px; 
-    background-color: var(--bg-col-test); 
+    width: 112px;  
 }
+
+/*/ past uomo ref
+
+header>div.left {
+    width: 112px;
+    height: 100%;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    flex: 1;
+} 
+
+header>div.left>.subtract {
+    height: 27px;
+    width: 80px;
+    border-radius: 0px;
+} 
+
+header>div.left>.subtract>span {
+    width: 85px;
+    height: 51px;
+
+    position: relative;
+
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 51px;
+
+    text-transform: uppercase;
+
+    color: var(--def-col-blk);
+} 
+
+header>div.left>.subtract>.rectangle-6 {
+    position: relative;
+
+    height: 9.37px;
+    width: 4px;
+
+    border-radius: 0px;
+    
+    background: var(--bg-col-body);
+    transform: rotate(-45deg);
+} 
+
+header>div.left>.subtract>.rectangle-5 {
+    height: 29px;
+    width: 4px;
+    border-radius: 0px;
+    
+    position: absolute;
+    left: 28%;
+    top: -5%;
+
+    background: var(--bg-col-body);
+    transform: rotate(-45deg);
+} 
+
+header>div.left>div.ellipse-9 {
+    height: 26px;
+    width: 26px;
+    left: 80px;
+    top: 0px;
+    border-radius: 50%;
+    
+    position: absolute;
+
+    background: var(--logo-color-red);
+} 
+
+/*/
 
 header>.middle {
     height: 100%; 
-    width: 520px;
-    background-color: var(--bg-col-test); 
+    width: 420px;
+
+    display: flex;
+    align-items: center;
+
+    text-transform: uppercase;
+    word-spacing: 10px;
+}
+
+header>.middle >.line {
+    height: 2px;
+    width: 30px;
+
+    position: absolute;
+    transform: translatey(15px) translateX(0px);
+
+    background-color: var(--def-col-blk);
 }
 
 header>.right {
     height: 100%; 
     width: 232px;
-    background-color: var(--bg-col-test); 
+
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
 }
 
 main {
@@ -98,12 +189,16 @@ main {
     width: 80%;
     height: auto;
     left: 10vw;
-
 }
 
 main>.title {
+
+    font-size: 20px;
+    font-weight: bold;
     text-transform: uppercase;
+
 }
+
 main>.inner {
     width: 100%;
     height: auto;
@@ -121,12 +216,12 @@ main .inner .text .top  {
     width: 66%;
     left: 17%;
 
-    display: flex; 
-    flex-direction: row; 
-    justify-content: space-between; 
-    flex-wrap: wrap; 
-    background-color: var(--bg-col-temp);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
 main .inner .text .middle {
     position: relative;
     width: 66%;
@@ -135,32 +230,47 @@ main .inner .text .middle {
     gap: 20px;
     display: flex; 
     flex-direction: row; 
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 main .inner .text .middle .sub-box { 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-between; 
-    flex-wrap: wrap; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 main .inner .text .bottom { 
     position: relative;
 
-    display: flex; 
-    flex-direction: row; 
-    justify-content: space-between; 
-    flex-wrap: wrap; 
-    background-color: var(--bg-col-temp);
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;    
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-/*  ===================================================  */
- 
- 
+main .inner .text .bottom > * {
+    flex: 1;
+}
+
+main .inner .text .bottom > img { 
+    width: 100%;
+    height: auto;
+    background-color: rgba(128, 128, 128, 0.527);
+}
+
+main .inner .text .bottom > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+   /*  ===================================================  */
+  
 footer {
     position: relative;
-    top: 700px;
+    margin-top:100px;
     left: 0px;
     height: 571px;
     width: 100%;
@@ -201,7 +311,7 @@ footer>#inner {
     grid-template-columns: minmax(100px, 1fr) minmax(0px, .1fr) minmax(100px, 1fr) minmax(0px, .1fr)  minmax(100px, 1fr)  ;
 } 
 
- footer>#inner>div:last-of-type {
+footer>#inner>div:last-of-type {
     margin-right: 10px;
 } 
 
@@ -306,8 +416,6 @@ footer>#inner > .seg-1 {
     color: var(--col-text-foot);
 } 
 
-
-
 footer>#inner > .seg-2 {
     height: 293px;
     max-width: 593px;
@@ -373,7 +481,7 @@ footer>#inner > .seg-3 > img {
     background-color: var(--bg-col-body);
 } 
 
- footer>#bottom {
+footer>#bottom {
     position: absolute;
 
     left: 8.28%;
@@ -430,3 +538,121 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
     left: 8.28%;
     bottom: 50px;
 } 
+
+
+    /*/ Temp divider line for uom-logo fix /*/
+
+
+header div.left {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+header div.left>.subtract {
+    height: 27px;
+    width: 80px;
+    border-radius: 0px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+header div.left>.subtract>span {
+    width: 85px;
+    height: 51px;
+
+    position: relative;
+    top: -9px;
+
+    font-family: 'Jost', sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;    
+
+    color: var(--def-col-blk);
+}
+
+header div.left>.subtract>.rectangle-6 {
+    position: absolute;
+
+    height: 10px;
+    width: 6px;
+ 
+    border-radius: 0px;
+ 
+    background-color: var(--bg-col-body);
+    transform: translateX(17px) translateY(-1px) rotate(-45deg);
+}
+
+header div.left>.subtract>.rectangle-5 {
+    position: absolute;
+
+    height: 32px;
+    width: 4px;
+    border-radius: 0px;
+
+    background-color: var(--bg-col-body);
+    transform: translateX(34px) translateY(0px) rotate(-45deg);
+}
+ 
+header div.left>div.ellipse-9 {
+    height: 26px;
+    width: 26px;
+    top: 2px;
+    border-radius: 50%;
+
+    position: relative;
+    background-color: var(--red-col-logo);
+}
+
+
+    /*/ Temp divider line for icons work-in /*/
+
+    
+main>.inner>.icons {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        margin-top: 40px;
+    
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+}
+
+main>.inner>.icons>.icons-box {
+        margin-top:none;
+    
+        height: 45px;
+        width: 16vw;
+        line-height: 0px;
+    
+        display: grid;
+        grid-template-areas:
+        'fa-icon span-1'
+        'fa-icon span-2' ;
+        gap: 0.7vw;
+    
+        align-content: center;
+}
+
+main>.inner>.icons>.icons-box>span:nth-of-type(1) {
+        text-transform: uppercase;
+        grid-area: span-1;
+        font-weight: bold;
+}
+
+main>.inner>.icons>.icons-box>span:nth-of-type(2) {
+        grid-area: span-2;
+        line-height: 14px;
+}
+
+main>.inner>.icons>.icons-box>.fa-solid {
+        top: 10px;
+        font-size: 30px;
+        grid-area: fa-icon;
+}
