@@ -34,7 +34,7 @@ header {
     top: 30px;
 } 
 
-header>div.left {
+header>div.logo {
     width: 112px;
     height: 27px;
 
@@ -47,13 +47,13 @@ header>div.left {
     flex: 1;
 } 
 
-header>div.left>.subtract {
+header>div.logo>.subtract {
     height: 27px;
     width: 80px;
     border-radius: 0px;
 } 
 
-header>div.left>.subtract>span {
+header>div.logo>.subtract>span {
     width: 85px;
     height: 51px;
 
@@ -75,7 +75,7 @@ header>div.left>.subtract>span {
     color: var(--def-col-blk);
 } 
 
-header>div.left>.subtract>.rectangle-6 {
+header>div.logo>.subtract>.rectangle-6 {
     position: absolute;
 
     height: 9.37px;
@@ -90,7 +90,7 @@ header>div.left>.subtract>.rectangle-6 {
     transform: rotate(-45deg);
 } 
 
-header>div.left>.subtract>.rectangle-5 {
+header>div.logo>.subtract>.rectangle-5 {
     height: 29px;
     width: 4px;
     border-radius: 0px;
@@ -103,7 +103,7 @@ header>div.left>.subtract>.rectangle-5 {
     transform: rotate(-45deg);
 } 
 
-header>div.left>div.ellipse-9 {
+header>div.logo>div.ellipse-9 {
     height: 26px;
     width: 26px;
     left: 80px;
@@ -384,7 +384,7 @@ footer>#inner > .seg-1 {
     
     position: absolute;
 
-    background: var(--bg-col-body); 
+    background: var(--logo-color-red); 
     z-index: 15;
 } 
 
