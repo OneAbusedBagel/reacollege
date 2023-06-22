@@ -226,87 +226,175 @@ main {
     flex-direction: column;
     align-items: center;
     margin-bottom: 80px;
+
+
 }
 
-main>.title {
-    position: relative;
-    left: 19.25vw;
+main>.top { 
+    width: 80%;
+    margin-top: 50px;
 
-    font-size: 30px;
-    font-weight: bold;
-    align-self: flex-start;    
+    display: flex;
+    flex-direction: column;
+
     text-transform: uppercase;
-
-    padding: 10px 0px;
 }
 
-main>.map {
-    width: 100%;
-    height: auto;
+main>.top>.top {
+    font-size: 35px;
+    font-weight: 700;
 }
 
+main>.top>.bottom {
+    font-size: 16px;
+    font-weight: 500;
+    word-spacing: 10px;
+}
 
-main>.stores {
+main>.top>.bottom>.line {
+    height: 2px;
+    width: 35px;
+    
     position: relative;
-    width: 60.5vw;
-    height: auto;
+    left: 126px;
+    bottom: -4px;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    background-color: var(--def-col-blk);
 }
 
-main>.stores > .box {
-    width: auto;
-    height: 160px;
-
-    gap: 20px;    
-    display: flex;
-    flex-direction: column;
-}
-
-main>.stores > .box *{
-    display: flex;
-    flex-direction: column;
-}
-
-main>.form {
+main>.middle { 
     position: relative;
-    width: 60.5vw;
+
+    width: 80%;
     height: auto;
 
     gap: 20px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;    
+    flex-direction: row;
+    justify-content: center;
+
 }
 
-main>.form>span {
-    font-size: 18px;
-    font-weight: bold;
+main>.middle > .box {
+    width:  410px;
+    height: 576px;
+
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
 }
 
-main>.form>form {
+main>.middle > .box>.top  {
+    width: 100%;
+    height: 400px;
 
-    gap: 10px;
+    margin-bottom: 30px;
+
+    background-color: var(--bg-col-test);
+}
+
+main>.middle > .box>.bottom {
+    width: 100%;
+    height: auto;
+    margin-left: 5px;
+
+    gap: 5px;
     display: flex;
     flex-direction: column;
 }
 
-main>.form>form>* {
-    width: 100%;
-    height: 20px;
+main>.middle > .box>.bottom >div:first-of-type {
+    text-transform: uppercase;
 
-    padding: 10px;
+    gap: 23px;
+    display: flex;
 
-    border: solid var(--def-col-blk) 2px;
-    background-color: var(--bg-col-body); 
+    color: var(--gray-col-text);
 }
 
-main>.form>form>textarea {
-    height: 120px;
+main>.middle > .box>.bottom >div:nth-of-type(3) {
+    font-size: 13px;
+    margin-top: 15px;
 }
 
-/*/ ==============[ footer ]============== /*/
+main>.middle > .box>.bottom >div:last-of-type {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 5px;
+
+    color: var(--def-col-blk);
+}
+
+main>.middle > .box>.bottom >div:last-of-type>.line {
+    height: 2px;
+    width: 110px;
+
+    position: relative;
+    bottom: -3px;
+
+    background-color: var(--def-col-blk);
+}
+
+main>.bottom { 
+    height: 80px;
+    width: 300px;
+
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+main>.bottom>.top {
+    font-weight: 600;
+}
+main>.bottom>.middle {
+
+}
+
+main>.bottom>.middle>.line:nth-of-type(1) {
+    height: 6px;
+    width: 300px;
+
+    position: absolute;
+    left: 0px;
+
+    border-radius: 8px;
+
+    background-color: var(--bg-col-circ);
+}
+
+main>.bottom>.middle>.line:nth-of-type(2) {
+    height: 6px;
+    width: 123px;
+
+    position: absolute;
+    left: 0px;
+
+    border-radius: 8px;
+
+    background-color: var(--def-col-blk);
+}
+
+main>.bottom>.bottom {
+    text-transform: uppercase;
+
+}
+
+main>.bottom>.bottom>.line {
+    height: 2px;
+    width: 60px;
+
+    position: relative;
+    bottom: -3px;
+
+    background-color: var(--def-col-blk);
+}
+
+
+
+/*/ =====================[ footer ]===================== /*/
 
 footer {
     position: relative;
@@ -593,9 +681,3 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
     bottom: 50px;
 } 
 
-
-@media (max-width:710px) {
-    #map {
-        display: none;
-    }
-}

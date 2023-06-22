@@ -50,14 +50,14 @@
 
 .link {
     text-decoration: underline  ;
-    color: white;
+    color: var(--bg-col-body);
 }
 
 .fa-star {
     color: #F6CD46;
 }
 
-/* lllllllllllllllllllllllllllllll [TEMP] lllllllllllllllllllllllllllllll */
+/* ---------------------------- [TEMP] ---------------------------- */
 
 body,html {
     background-color: var(--bg-col-body);
@@ -115,7 +115,7 @@ div#tops-box.test {
 } */
 
 div#tops-box>.left {
-    width: 240px;
+    width: auto;
     height: 100%;
 
     align-items: center;
@@ -353,7 +353,9 @@ div#center-bottom>.right>div:last-of-type {
     gap: 10px;
 }
 
+
 /* ------------------------[ Main divider line for ease of navigation ]----------------------------- */ 
+
 
 main {
     width: 100%;
@@ -1319,6 +1321,10 @@ main>#content>#logos>.bottom >.box-img >img {
     height: auto;
 }
 
+
+/*/ ----------------------------[ footer divider line ]---------------------------- /*/
+
+
 footer {
     position:relative;
     bottom: -225px;
@@ -2030,9 +2036,10 @@ footer>.bottom>.chevron {
         font-family: 'Jost', sans-serif;
     }
 
+    */*
     .mob-footer>.mob-middle-2>.sub-box-bot>.img-bot {
 
-    }
+    } */*
 
     .mob-footer>.mob-bottom {
         height: 160px;
