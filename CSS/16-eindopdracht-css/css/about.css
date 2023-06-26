@@ -249,8 +249,10 @@ main .inner .text .middle .sub-box {
     justify-content: space-between;
 }
 
-main .inner .text .bottom { 
+main .inner .text .bottom {
     position: relative;
+    width: 75%;
+    left: 12%;
 
     gap: 10px;
     display: flex;
@@ -273,6 +275,8 @@ main .inner .text .bottom > div {
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    margin: 50px 0px;
 }
 
 main>.inner>.icons {

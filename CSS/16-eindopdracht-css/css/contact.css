@@ -298,12 +298,23 @@ main>.form>form>* {
 
     padding: 10px;
 
-    border: solid var(--def-col-blk) 2px;
+    border: solid var(--bg-col-head) 2px;
     background-color: var(--bg-col-body); 
 }
 
 main>.form>form>textarea {
     height: 120px;
+}
+
+main>.form>form>input:last-of-type {
+    max-width: 90px;
+    height: auto;
+
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    background-color: var(--bg-col-mustard);
 }
 
 /*/ ==============[ footer ]============== /*/
@@ -592,7 +603,6 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
     left: 8.28%;
     bottom: 50px;
 } 
-
 
 @media (max-width:710px) {
     #map {
