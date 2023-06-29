@@ -282,25 +282,26 @@ main>.middle {
 
 main>.middle > .box {
     width:  410px;
-    height: 576px;
+    height: auto;
 
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
 }
 
+main>.middle > .box a {
+    color: var(--def-col-blk);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 main>.middle > .box>.top  {
-    width: 100%;
-    height: 400px;
-
-    margin-bottom: 30px;
-
-    background-color: var(--bg-col-test);
+    display: none;
 }
 
 main>.middle > .box>.bottom {
     width: 100%;
     height: auto;
-    margin-left: 5px;
+    padding: 10px 5px;
 
     gap: 5px;
     display: flex;
@@ -316,7 +317,13 @@ main>.middle > .box>.bottom >div:first-of-type {
     color: var(--gray-col-text);
 }
 
+main>.middle > .box>.bottom >div:nth-of-type(2) {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 15px;
+}
 main>.middle > .box>.bottom >div:nth-of-type(3) {
+    width: 95%;
     font-size: 13px;
     margin-top: 15px;
 }
@@ -990,4 +997,3 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
         transform: translateX(-2px) scalex(1.8) scaleY(1.8);
     }
 }
-

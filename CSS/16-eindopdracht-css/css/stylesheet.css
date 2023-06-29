@@ -342,7 +342,7 @@ div#center-bottom>.right>div:last-of-type {
 }
 
 
-/* ------------------------[ Main divider line for ease of navigation ]----------------------------- */ 
+/* ------------------------[ Main divider line for ease of navigation ]------------------------ */ 
 
 
 main {
@@ -361,8 +361,12 @@ main {
 main>#slider {
     position: relative;
     width: 100vw;
-    height: 660px;
+    height: auto;
     left: 0px;
+
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
 
     background-color: var(--bg-col-slider); 
 }
@@ -374,137 +378,19 @@ main>#slider>#slider-box {
     left: 13.3vw;
     top: 30px;
 
-    display: grid;
-    grid-template-areas:
-    'categories slide slide img-2'
-    'categories slide slide img-1' ;
-    gap: 1.4vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
 }
 
 #slider-box>div:nth-of-type(4) {
     background-color: var(--gray-col-text);
 }
 
-#slider-box>#img-2 {
-    position: relative;
-    grid-area: img-2 ; 
-    width: 17.08vw;
-    height: 235px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    overflow: hidden;   
-    text-transform: uppercase;
-
-    color: var(--bg-col-head);
-}
-
-#slider-box>#img-2>img {
-    position: absolute;
-    align-self: flex-end;
-
-    width: 330px;
-    height: 235px;
-
-    z-index: 9;
-}
-
-#slider-box>#img-2>.top {
-    width: 140px;
-    height: 48px;
-    margin-top: 70px;
-
-    font-size:20px; 
-    font-weight: 600;
-    line-height: 24px;
-    padding-left: 3vw;
-}
-
-#slider-box>#img-2>.bottom {
-    width: 72px;
-    height: 24px;
-    margin-bottom: 70px;
-
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 24px;
-    padding-left: 3vw;
-}
-
-#slider-box>#img-2>.bottom>.line {
-    position: relative;
-    top: 25px;
-
-    width: 47px;
-    height: 2px;
-
-    background-color: var(--bg-col-head);
-}
-
-#slider-box>#img-1 {
-    position: relative;
-    grid-area: img-1 ; 
-    width: 17.08vw;
-    height: 235px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    overflow: hidden;
-    text-transform: uppercase;
-
-    color: var(--bg-col-slider);
-}
-
-#slider-box>#img-1>img {
-    position: absolute;
-    align-self: flex-end;
-
-    width: auto;
-    height: 100%;
-
-    z-index: 9;
-}
-
-#slider-box>#img-1>.top {
-    width: 140px;
-    height: 48px;
-    margin-top: 70px;
-
-    font-size:20px; 
-    font-weight: 600;
-    line-height: 24px;
-    padding-left: 3vw;
-}
-
-#slider-box>#img-1>.bottom {
-    margin-bottom: 70px;    
-    width: 72px;
-    height: 24px;
-
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 24px;
-    padding-left: 3vw;
-}
-
-#slider-box>#img-1>.bottom>.line {
-    position: relative;
-    top: 25px;
-
-    width: 47px;
-    height: 2px;
-
-    background-color: var(--bg-col-slider);
-} 
-
 #slider-box>#categories {
-    grid-area: categories;
-    width: 15vw;
-    height: 500px;   
+    width: 200px;
+    height: 500px;
     
     border: 1px solid #E4E4E4;
     border-radius: 8px;
@@ -520,12 +406,18 @@ main>#slider>#slider-box {
 }
 
 #slider-box>#slide {
-    grid-area: slide ;
     width: 38.3vw;
+    height: 500px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    background-color: rgba(128, 128, 128, 0.753);
+    background-image: url(https://autopartswinkel.nl/assets/images/Voorjaarsschoonmaak.png);
+    background-repeat: no-repeat;
+	background-position: right bottom;
+    background-size: auto 100%;
 }
 
 #slider-box>#slide>.top-box {
@@ -586,12 +478,139 @@ main>#slider>#slider-box {
     background-color: var(--bg-col-slider);
 }
 
-#slider>#icons {
+#slider-box>#images {
+    height: 500px;
+    width: 330px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+#slider-box>#images>#img-2 {
+    position: relative;
+    width: 100%;
+    height: 235px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    overflow: hidden;
+    text-transform: uppercase;
+
+    color: var(--bg-col-slider);
+}
+
+#slider-box>#images>#img-2>img {
     position: absolute;
-    bottom: 40px;
-    left: 13.3vw;
+    align-self: flex-end;
+
+    width: 330px;
+    height: 235px;
+
+    z-index: 9;
+}
+
+#slider-box>#images>#img-2>.top {
+    width: 140px;
+    height: 48px;
+    margin-top: 70px;
+
+    font-size:20px; 
+    font-weight: 600;
+    line-height: 24px;
+    padding-left: 3vw;
+}
+
+#slider-box>#images>#img-2>.bottom {
+    width: 72px;
+    height: 24px;
+    margin-bottom: 70px;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-left: 3vw;
+}
+
+#slider-box>#images>#img-2>.bottom>.line {
+    position: relative;
+    top: 25px;
+
+    width: 47px;
+    height: 2px;
+
+    background-color: var(--bg-col-slider);
+}
+
+#slider-box>#images>#img-1 {
+    position: relative;
+    grid-area: img-1 ; 
+    width: 100%;
+    height: 235px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    overflow: hidden;
+    text-transform: uppercase;
+
+    color: var(--bg-col-slider);
+}
+
+#slider-box>#images>#img-1>img {
+    position: absolute;
+    align-self: flex-end;
+
+    width: auto;
+    height: 100%;
+
+    z-index: 9;
+}
+
+#slider-box>#images>#img-1>.top {
+    width: 140px;
+    height: 48px;
+    margin-top: 70px;
+
+    font-size:20px; 
+    font-weight: 600;
+    line-height: 24px;
+    padding-left: 3vw;
+}
+
+#slider-box>#images>#img-1>.bottom {
+    margin-bottom: 70px;    
+    width: 72px;
+    height: 24px;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-left: 3vw;
+}
+
+#slider-box>#images>#img-1>.bottom>.line {
+    position: relative;
+    top: 25px;
+
+    width: 47px;
+    height: 2px;
+
+    background-color: var(--bg-col-slider);
+} 
+
+#slider>#icons {
     width: var(--stnd-div-width);
     height: 50px;
+    margin: 30px 0px;
+
+    position: relative;
+    left: 13.3vw;
 
     display: flex;
     flex-direction: row;
@@ -603,15 +622,14 @@ main>#slider>#slider-box {
 #slider>#icons>.icons-box {
     margin-top:none;
 
-    height: 45px;
-    width: 16vw;
+    flex: 1;
     line-height: 0px;
 
+    gap: 2px;
     display: grid;
     grid-template-areas:
     'fa-icon span-1'
     'fa-icon span-2' ;
-    gap: 0.7vw;
 
     align-content: center;
 }
@@ -629,6 +647,7 @@ main>#slider>#slider-box {
 
 #slider>#icons>.icons-box>.fa-solid {
     top: 10px;
+    width: 30px;
     font-size: 30px;
     grid-area: fa-icon;
 }
