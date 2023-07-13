@@ -1,7 +1,8 @@
 :root {
     --drk-sec-col: #000000;    
-    --bg-col-body: rgb(224, 224, 224);
-    --bg-col-head: #35a6d3;
+    --bg-col-body: cadetblue;
+    --bg-col-cont: dARKcyan;
+    --bg-col-head: ;
 
     --mob-bg-body: ;
     --mob-bg-head: ;
@@ -26,7 +27,9 @@
     color: var(--bg-col-body);
 }
 
+
 /* ---------------------------- [TEMP] ---------------------------- */
+
 
 body,html {
     background-color: var(--bg-col-body);
@@ -44,6 +47,18 @@ body,html {
 body::-webkit-scrollbar { 
     width: 0px; 
     height: 0px;
+}
+
+body {
+  background-color: cadetblue;
+}
+
+#desktop-site {
+  margin: 0 auto;
+  width: 80vw;
+  background-color: darkcyan;
+  border: 5px groove gray;
+  padding: 20px;
 }
 
 header {
@@ -68,10 +83,36 @@ main {
     outline: none;
     flex: 1;
     left: 10%;
+    gap: 10px;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+}
+
+.box {
+    width: 60%;
+    height: 732px;
+
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    font-weight: bold;
+}
+
+img {
+    position: relative;
+    top: -100px;
+
+    width: 278px;
+    height: 100%;
+}
+
+iframe {
+    width: auto;
+    height: 100%;
 }
 
 
