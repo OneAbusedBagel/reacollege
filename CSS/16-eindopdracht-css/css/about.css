@@ -818,7 +818,7 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
 
         .mob-footer {
             height: 1008px;
-            width: 100%;
+            width: auto;
     
             display: flex;
             flex-direction: column;
@@ -829,7 +829,7 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
         }
     
         .mob-footer>div{
-            width: 100%;
+            width: auto;
     
             display: flex;
             flex-direction: column;
@@ -837,7 +837,8 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
         }
     
         .mob-footer>.mob-top {
-            height: 220px; 
+            height: 220px;
+            margin-left: 15px;
         }
     
         .mob-footer .mob-sub-box {
@@ -917,6 +918,7 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
     
         .mob-footer>.mob-middle-1 {
             height: 240px;
+            margin-left: 15px;
         }
     
         .mob-footer>div>span:first-of-type {
@@ -927,6 +929,11 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
     
         .mob-footer>.mob-middle-2 {
             height: 283px; 
+        }
+    
+        .mob-footer>.mob-middle-2 > span:not(span:nth-of-type(3)),
+        .mob-footer>.mob-middle-2>.sub-box-bot>span {
+            margin-left: 15px;
         }
     
         .mob-footer>.mob-middle-2>.sub-box-top {
@@ -956,8 +963,17 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
             background-color: var(--bg-col-body);
         }
     
+        .mob-footer>.mob-middle-2>.sub-box-bot>.img-box>img {
+            margin-left: 15px;
+        }
+    
         .mob-footer>.mob-bottom {
             height: 160px;
+        }
+    
+        .mob-footer>.mob-bottom >div:not(div:first-of-type),
+        .mob-footer>.mob-bottom >span {
+            margin-left: 15px;
         }
     
         .mob-footer>.mob-bottom>.line {
@@ -980,6 +996,7 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
             position: relative;
             font-size: 1.4em;
         
+    
             transform: translateX(-2px) scalex(1.8) scaleY(1.8);
         }
 }

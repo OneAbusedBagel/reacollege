@@ -14,6 +14,7 @@
     --bg-mob-slider:#F7F8FA;
     --bg-mob-footer: #0F2041;
     --gray-col-text: #767676;
+    --grn-col-money: #86BC42;
 
     --bg-col-mustard:#F6CD46;
 
@@ -399,7 +400,7 @@ main>#slider>#slider-box {
 #slider-box>#categories>ul {
     margin: 25px 0px;
     line-height: 357%;
-    font-size: 14px; 
+    font-size: clamp(12px, 0.75vw, 14px);
 
     font-weight: 480;
     text-transform: uppercase;
@@ -441,7 +442,7 @@ main>#slider>#slider-box {
     width: 100%;
     height: 108px;
 
-    font-size: 45px;
+    font-size: clamp(1.6rem, 3vw, 3.2rem);
     font-weight: 600;
     line-height: 54px;
     color: var(--bg-col-slider);
@@ -606,7 +607,7 @@ main>#slider>#slider-box {
 
 #slider>#icons {
     width: var(--stnd-div-width);
-    height: 50px;
+    height: auto;
     margin: 30px 0px;
 
     position: relative;
@@ -622,7 +623,8 @@ main>#slider>#slider-box {
 #slider>#icons>.icons-box {
     margin-top:none;
 
-    flex: 1;
+    height: auto;
+    max-width: 269px;
     line-height: 0px;
 
     gap: 2px;
@@ -632,6 +634,10 @@ main>#slider>#slider-box {
     'fa-icon span-2' ;
 
     align-content: center;
+}
+
+#slider>#icons>.icons-box>span {
+    font-size: clamp(12px, 0.75vw, 14px);
 }
 
 #slider>#icons>.icons-box>span:nth-of-type(1) {
@@ -879,7 +885,7 @@ main>#content>#special>.bottom>.box {
     font-weight: 600; 
     font-size: 16px; 
     line-height: 19px;   
-    color: #86BC42;
+    color: var(--grn-col-money);
 }
 
 main>#content>#banner {
@@ -1088,7 +1094,7 @@ main>#content>#popular>.bottom>.container>.box {
     font-weight: 600; 
     font-size: 16px; 
     line-height: 19px;   
-    color: #86BC42;
+    color: var(--grn-col-money);
 }
 
 main>#content>#testimonials {
@@ -1876,7 +1882,7 @@ footer>.bottom>.chevron {
     }
     
     .mob-content>.mob-box>.mob-middle {
-        height: 600px; 
+        height: auto; 
         width: 100%; 
 
         gap: 14px;
@@ -1887,7 +1893,7 @@ footer>.bottom>.chevron {
 
     .mob-content>.mob-box>.mob-middle>.sub-box {
         width: 185px;
-        height: 292px;
+        height: auto;
 
         background-color: var(--bg-col-slider);
         box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
@@ -1904,14 +1910,19 @@ footer>.bottom>.chevron {
     }
 
     .mob-content>.mob-box>.mob-middle>.sub-box>.sub-bottom {
-        width: 100%;
-        height: 82px;
+        width: fit-content;
+        height: auto;
 
         font-weight: bold;
+        margin-left: 15px;
 
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+    }
+
+    .mob-content>.mob-box>.mob-middle>.sub-box>.sub-bottom>p:last-of-type {
+        color: var(--grn-col-money);
     }
 
     .mob-content>.mob-box>.mob-bottom {
@@ -1935,7 +1946,7 @@ footer>.bottom>.chevron {
 
     .mob-footer {
         height: 1008px;
-        width: 100%;
+        width: auto;
 
         display: flex;
         flex-direction: column;
@@ -1946,7 +1957,7 @@ footer>.bottom>.chevron {
     }
 
     .mob-footer>div{
-        width: 100%;
+        width: auto;
 
         display: flex;
         flex-direction: column;
@@ -1954,7 +1965,8 @@ footer>.bottom>.chevron {
     }
 
     .mob-footer>.mob-top {
-        height: 220px; 
+        height: 220px;
+        margin-left: 15px;
     }
 
     .mob-footer .mob-sub-box {
@@ -2034,6 +2046,7 @@ footer>.bottom>.chevron {
 
     .mob-footer>.mob-middle-1 {
         height: 240px;
+        margin-left: 15px;
     }
 
     .mob-footer>div>span:first-of-type {
@@ -2044,6 +2057,11 @@ footer>.bottom>.chevron {
 
     .mob-footer>.mob-middle-2 {
         height: 283px; 
+    }
+
+    .mob-footer>.mob-middle-2 > span:not(span:nth-of-type(3)),
+    .mob-footer>.mob-middle-2>.sub-box-bot>span {
+        margin-left: 15px;
     }
 
     .mob-footer>.mob-middle-2>.sub-box-top {
@@ -2073,8 +2091,17 @@ footer>.bottom>.chevron {
         background-color: var(--bg-col-body);
     }
 
+    .mob-footer>.mob-middle-2>.sub-box-bot>.img-box>img {
+        margin-left: 15px;
+    }
+
     .mob-footer>.mob-bottom {
         height: 160px;
+    }
+
+    .mob-footer>.mob-bottom >div:not(div:first-of-type),
+    .mob-footer>.mob-bottom >span {
+        margin-left: 15px;
     }
 
     .mob-footer>.mob-bottom>.line {
