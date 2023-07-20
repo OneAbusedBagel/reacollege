@@ -173,6 +173,7 @@ div#center-top {
     width: var(--stnd-div-width);
     height: 30px;
 
+    gap: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -181,6 +182,7 @@ div#center-top {
 
 div#center-top>.left {
     background-color: var(--bg-col-head);
+    width: 105px;
 }
 
 #center-top>div.left>.subtract {
@@ -192,7 +194,7 @@ div#center-top>.left {
 }
 
 #center-top>div.left>.subtract>span {
-    width: 85px;
+    width: 105px;
     height: 51px;
 
     position: absolute;
@@ -236,7 +238,7 @@ div#center-top>.left {
     background: var(--bg-col-head);
     transform: translateX(-1px) translateY(-2px) rotate(-45deg);
 }
- 
+
 #center-top>div.left>div.ellipse-9 {
     height: 26px;
     width: 26px;
@@ -250,15 +252,17 @@ div#center-top>.left {
 }
 
 div#center-top>.middle {
-    gap: 1vw;
+    gap: 0.5vw;
+    flex: 1;
+
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 div#center-top>.middle> span {
     text-transform: uppercase;
-
+    font-size: clamp(14px, 1.5vw, 20px);
     color: var(--bg-col-slider);
 }
 
@@ -613,10 +617,11 @@ main>#slider>#slider-box {
     position: relative;
     left: 13.3vw;
 
+    gap: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -627,28 +632,42 @@ main>#slider>#slider-box {
     max-width: 269px;
     line-height: 0px;
 
-    gap: 2px;
-    display: grid;
-    grid-template-areas:
-    'fa-icon span-1'
-    'fa-icon span-2' ;
+    gap: 6px;
+    display: flex;
+    flex-direction: row;
 
     align-content: center;
 }
 
-#slider>#icons>.icons-box>span {
-    font-size: clamp(12px, 0.75vw, 14px);
+#slider>#icons>.icons-box>.box-left {
+    width: 34px;
+    height: 30px;
+
+    font-size: 30px;
 }
 
-#slider>#icons>.icons-box>span:nth-of-type(1) {
+#slider>#icons>.icons-box>.box-right {
+    flex: 1;
+
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+#slider>#icons>.icons-box>div>span {
+    font-size: clamp(10px, 0.9vw, 16px);
+}
+
+#slider>#icons>.icons-box>div>span:nth-of-type(1) {
     text-transform: uppercase;
-    grid-area: span-1;
     font-weight: bold;
+    flex: 1;
+    line-height: 14px;
 }
 
-#slider>#icons>.icons-box>span:nth-of-type(2) {
-    grid-area: span-2;
+#slider>#icons>.icons-box>div>span:nth-of-type(2) {
     line-height: 14px;
+    flex: 1;
 }
 
 #slider>#icons>.icons-box>.fa-solid {
@@ -917,7 +936,9 @@ main>#content>#banner > .box:nth-of-type(1) {
 
     background-color: var(--bg-col-slider);    
     background-position: right;
+
     color: var(--def-col-blk);
+    text-shadow: white 0px 0px 3px;
 }
 
 main>#content>#banner > .box:nth-of-type(1)>.sub-box>.bottom>.line {
@@ -1154,7 +1175,7 @@ main>#content>#testimonials>.middle>.sub-box>span:first-of-type {
 }
 
 main>#content>#testimonials>.middle>.sub-box>span:last-of-type  {
-    font-size: 16px; 
+    font-size: clamp(14px, 1vw, 16px); 
     line-height: 26px; 
     color: var(--gray-col-text) ;
 }
@@ -1614,7 +1635,7 @@ footer>.bottom>.chevron {
         display: flex;
         flex-direction: row;
     }
-    
+
     .mob-header div.uom>.subtract>span {
         width: 85px;
         height: 51px;
@@ -1630,7 +1651,7 @@ footer>.bottom>.chevron {
     
         color: var(--bg-col-body);
     }
-    
+
     .mob-header div.uom>.subtract>.rectangle-6 {
         position: absolute;
     
@@ -1642,7 +1663,7 @@ footer>.bottom>.chevron {
         background-color: var(--bg-col-head);
         transform: translateX(17px) translateY(-1px) rotate(-45deg);
     }
-    
+
     .mob-header div.uom>.subtract>.rectangle-5 {
         position: absolute;
     
@@ -1653,7 +1674,7 @@ footer>.bottom>.chevron {
         background-color: var(--bg-col-head);
         transform: translateX(34px) translateY(0px) rotate(-45deg);
     }
-     
+
     .mob-header div.uom>div.ellipse-9 {
         height: 26px;
         width: 26px;

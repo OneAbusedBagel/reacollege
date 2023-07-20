@@ -316,54 +316,75 @@ main .inner .text .bottom > div {
     margin: 50px 0px;
 }
 
-main>.inner>.icons {
-    position: relative;
+main>.inner>#icons {
     width: 100%;
-    height: 50px;
-    margin-top: 40px;
+    height: auto;
+    margin: 30px 0px;
 
+    position: relative;
+
+    gap: 20px;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
 }
 
-main>.inner>.icons>.icons-box {
+main>.inner>#icons>.icons-box {
     margin-top:none;
 
-    height: 45px;
-    width: 16vw;
+    height: auto;
+    max-width: 269px;
     line-height: 0px;
 
-    display: grid;
-    grid-template-areas:
-    'fa-icon span-1'
-    'fa-icon span-2' ;
-    gap: 0.7vw;
+    gap: 6px;
+    display: flex;
+    flex-direction: row;
 
     align-content: center;
 }
 
-main>.inner>.icons>.icons-box>span:nth-of-type(1) {
-    text-transform: uppercase;
-    grid-area: span-1;
-    font-weight: bold;
+main>.inner>#icons>.icons-box>.box-left {
+    width: 34px;
+    height: 30px;
+
+    font-size: 30px;
 }
 
-main>.inner>.icons>.icons-box>span:nth-of-type(2) {
-    grid-area: span-2;
+main>.inner>#icons>.icons-box>.box-right {
+    flex: 1;
+
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+main>.inner>#icons>.icons-box>div>span {
+    font-size: 15px;
+}
+
+main>.inner>#icons>.icons-box>div>span:nth-of-type(1) {
+    text-transform: uppercase;
+    font-weight: bold;
+    flex: 1;
     line-height: 14px;
 }
 
-main>.inner>.icons>.icons-box>.fa-solid {
+main>.inner>#icons>.icons-box>div>span:nth-of-type(2) {
+    line-height: 14px;
+    flex: 1;
+}
+
+main>.inner>#icons>.icons-box>.fa-solid {
     top: 10px;
+    width: 30px;
     font-size: 30px;
     grid-area: fa-icon;
 }
 
    /*  =========================================================================================================================[ footer ]=========================================================================================================================  */
-  
+
 footer {
     position: relative;
     margin-top:100px;
@@ -763,7 +784,7 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
             background-color: var(--bg-col-head);
             transform: translateX(34px) translateY(0px) rotate(-45deg);
         }
-         
+    
         .mob-header div.uom>div.ellipse-9 {
             height: 26px;
             width: 26px;
@@ -790,7 +811,7 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
         /*/ ===============[ Main ]=============== /*/
 
 
-        main>.inner>.icons {
+        main>.inner>#icons {
             display: none;
         }
 
@@ -880,9 +901,9 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
         
             height: 10px;
             width: 6px;
-         
+
             border-radius: 0px;
-         
+
             background: var(--bg-mob-footer);
             transform: translateX(17px) translateY(-1px) rotate(-45deg);
         }
@@ -898,7 +919,7 @@ footer>#bottom>span:nth-of-type(2) > span:nth-of-type(1), footer>#bottom> span:n
             background: var(--bg-mob-footer);
             transform: translateX(34px) translateY(0px) rotate(-45deg);
         }
-         
+
         .mob-footer div.uom>div.ellipse-9 {
             height: 26px;
             width: 26px;
