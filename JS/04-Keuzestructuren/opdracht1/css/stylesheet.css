@@ -1,0 +1,12 @@
+html, body {
+	font-size: 16px;
+	font-family: Calibri, Arial, sans-serif;
+}
+
+#false {
+    background-color: red;
+}
+
+#true {
+    background-color: greenyellow;
+}
