@@ -18,11 +18,11 @@ const katachtigen = [
 
 const animal = prompt()
 
-hondachtigen.pop();
+hondachtigen.pop()
 hondachtigen.unshift("Coyote")
 katachtigen.push("Luipaard", "Jaguar")
 
-const zoogdieren = animal.concat(katachtigen, hondachtigen)
+const zoogdieren = katachtigen.concat(animal, hondachtigen)
 
 zoogdieren.sort()
 
@@ -32,7 +32,8 @@ console.log(zoogdieren)
 
 
 
-const text = zoogdieren.join(`\n`)
+const text = (zoogdieren.join(`\n`))
+
+console.log(zoogdieren)
 
 alert(`This is an alertbox! \n ${text}`)
-
