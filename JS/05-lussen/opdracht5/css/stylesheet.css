@@ -1,0 +1,36 @@
+html, body {
+	font-size: 16px;
+	font-family: Calibri, Arial, sans-serif;
+    background-color: rgb(95, 158, 160);
+}
+
+.container {
+margin: 0 auto;
+min-width: 800px;
+background-color: rgb(0, 139, 139);
+border: 5px groove gray;
+padding: 20px;
+display: flex;
+flex-direction: row;
+
+}
+
+article {
+margin: 20px auto;
+size: flex;
+max-width: 250px;
+border: #20b2aa inset 5px;
+display: flex;
+flex-direction: column;
+}
+
+.sub-box {
+    position: relative;
+    justify-content: center;
+    margin: 10px auto;
+    size: flex;
+    display: flex;
+    flex-direction: row;
+}
+
+
