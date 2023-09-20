@@ -1,3 +1,7 @@
+:root {
+    --bg-test:style="--title-bg: url('+arr[i][3]+')" ;
+}
+
 html, body {
 	font-size: 16px;
 	font-family: Calibri, Arial, sans-serif;
@@ -31,6 +35,10 @@ flex-direction: column;
     size: flex;
     display: flex;
     flex-direction: row;
+}
+
+#art-1-2 {
+    content: url(../images/zelda.jpg);
 }
 
 
