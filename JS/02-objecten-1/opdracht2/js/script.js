@@ -27,9 +27,9 @@ const Dog = {
 Dog.Age = Dog.Age + 1 ;
 Dog.HouseTrained = false;
 
-console.log(Dog)
+console.log(Dog);
 
-alert ( `Hello My name is ${Dog.Name}, My parents are ${Dog.Family.mother} and ${Dog.Family.father} and I am a very cute ${Dog.Age} year old (in dog years!) ${Dog.Breed}. My fur is ${Dog.Furcolour}.`)
+alert ( `Hello My name is ${Dog.Name}, My parents are ${Dog.Family.mother} and ${Dog.Family.father} and I am a very cute ${Dog.Age} year old (in dog years!) ${Dog.Breed}. My fur is ${Dog.Furcolour}.`);
 
 Dog.sleep();
 

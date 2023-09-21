@@ -8,12 +8,12 @@ const lyrics1 = "I'm blue,";
 const lyrics2 = "Da ba dee da ba di";
 
 
-dkc = dkc.padEnd(30,".")
-anthem = anthem.replace("Queen", "King")
+dkc = dkc.padEnd(30,".");
+anthem = anthem.replace("Queen", "King");
 
-document.getElementById("h-1").innerHTML = `${dkc} `
+document.getElementById("h-1").innerHTML = `${dkc} `;
 
-document.getElementById("li-1").innerHTML = `${anthem} `
-document.getElementById("li-2").innerHTML = `${lyrics1} ${(` ${lyrics2}`).repeat(7)}`
+document.getElementById("li-1").innerHTML = `${anthem} `;
+document.getElementById("li-2").innerHTML = `${lyrics1} ${(` ${lyrics2}`).repeat(7)}`;
 // document.getElementById("li-3").innerHTML = `${(  )}`
 // document.getElementById("li-4").innerHTML = `${(  )}`

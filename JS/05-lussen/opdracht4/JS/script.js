@@ -124,71 +124,48 @@ const games = [
 	},
 ];
 
-
-
 var x = 1;
 var y = 1;
 var i = 0;
 
-
 for (const element of games) {
     console.log(element)
-		
-	document.getElementById(`art-${x}-${y}`).innerHTML = `${games[x].name}  \n`
 
-	let z = 'test'
-	switch (y) {
-		case 1:
-			z = 'name'
-			break;
-		case 2:
-			z = 'img'
-			break;
-		case 3:
-			z = 'releaseEU'
-			break;
-		case 4:
-			z = 'platform'
-			break;
-	}
-	console.log(z)
+//		var z = 'test'
+//	switch (y) {
+//		case 1:
+//			z = 'name'
+//			break;
+//		case 2:
+//			z = 'img'
+//			break;
+//		case 3:
+//			z = 'releaseEU'
+//			break;
+//		case 4:
+//			z = 'platform'
+//			break;
+//	}	
+
+	//	document.getElementById(`art-${x}-${y}`).innerHTML = `${games[x].z}  \n`
+
+	document.getElementById(`art-${x}-1`).innerHTML = `${games[x].name}  \n`
+	document.getElementById(`art-${x}-2`).innerHTML = `${games[x].img}  \n`
+	document.getElementById(`art-${x}-3`).innerHTML = `${games[x].releaseEU}  \n`
+	document.getElementById(`art-${x}-4`).innerHTML = `${games[x].platform}  \n`
+
+
+	console.log(x)
 	console.log(y)
+	
 
-	y == 4 ? y -= 4 :
-
-	//document.getElementById(`art-${i+1}-${a+1}`).innerHTML += "<li>" + city + "</li>";
+	y == 4 ? y -= 4 : x-= 1;
+	
 	x++
 	y++
 	i++
 }
 
-console.log()
+console.log(x)
 console.log(y)
 console.log(i)
-
-//  let numbers = [
-
-//  ]
-
-//  console.log(numbers)
-//  let i = 0;
-//  while (i < 8) {
-//      let rng = Math.round(Math.random() * 10000);
-//      if (rng === 666) {
-//          break
-//      };
-//      if (rng <= 999) {
-//          continue
-//      }
-//      numbers.push(rng);
-//      i++
-//      numbers.sort()
-//  };
-
-//  console.log(numbers);
-
-//  const order = numbers.join(`\n`);
-//  console.log(order);
-//  document.getElementById("true").innerHTML = `${order}`;
-
-//  alert(numbers.join(`\n`));

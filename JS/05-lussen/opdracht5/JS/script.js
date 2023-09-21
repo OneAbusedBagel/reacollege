@@ -28,7 +28,7 @@ const courses = {
 let output = "";
 for (let property in user) {
     output += "<p>" + property + "</p>";
-}
+};
 
 //  let numbers = [
 

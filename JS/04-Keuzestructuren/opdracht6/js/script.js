@@ -16,6 +16,6 @@ let age = 17;
 let message;
 
 
-message = (age >=18 ? "Je mag zelfstandig autorijden." : (age >= 16.5 ? "Je mag al beginnen met rijlessen" : "Je bent nog te jong om te autorijden.")   )
+message = (age >=18 ? "Je mag zelfstandig autorijden." : (age >= 16.5 ? "Je mag al beginnen met rijlessen" : "Je bent nog te jong om te autorijden.")   );
 
 console.log(message);

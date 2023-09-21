@@ -18,6 +18,6 @@ do {
 } while (total < 2000);
 
 
-console.log(total)
-document.getElementById("true").innerHTML = `${total}`
-console.log(i)
+console.log(total);
+document.getElementById("true").innerHTML = `${total}`;
+console.log(i);

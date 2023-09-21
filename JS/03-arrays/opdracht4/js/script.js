@@ -1,5 +1,6 @@
 "use strict";
 
+
 let a, b, c, d, e, f, g, h, i, j;
 const biggestCitiesBenelux = [
 	"Brussel",
@@ -35,8 +36,8 @@ const myPets = [
 
 [a, b, c, d, e, f, g, h, i, j] = biggestCitiesBenelux;
 myPets.flat();
-console.log(myPets)
-console.log(myPets.flat())
+console.log(myPets);
+console.log(myPets.flat());
 
 // const animal = prompt()
 
@@ -56,7 +57,7 @@ console.log(myPets.flat())
 
 //const text = zoogdieren.join(`\n`)
 
-alert(`De grootste steden in de Benelux zijn ${a} en ${b} `)
+alert(`De grootste steden in de Benelux zijn ${a} en ${b} `);
 
-alert(`Dit zijn mijn huisdieren, Ik heb een ${dog}, ${cat}, ${rabbit} en 4 schattige cavias! ${cavia2} `)
+alert(`Dit zijn mijn huisdieren, Ik heb een ${dog}, ${cat}, ${rabbit} en 4 schattige cavias! ${cavia2} `);
 

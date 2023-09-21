@@ -1,5 +1,5 @@
 
-var language = prompt(`maak een keuze tussen “nl”, “en”, “de” en “es”.`, `en`)
+var language = prompt(`maak een keuze tussen “nl”, “en”, “de” en “es”.`, `en`);
 
 switch (language) {
 	case "nl":
@@ -17,5 +17,5 @@ switch (language) {
 	default:
 		alert("Geen taal gekozen..");
 		break;
-}
+};
 

@@ -1,5 +1,6 @@
 "use strict";
 
+
 const hondachtigen = [
     "Hond",
     "Wolf",
@@ -16,24 +17,24 @@ const katachtigen = [
     "Poema"
 ];
 
-const animal = prompt()
+const animal = prompt();
 
-hondachtigen.pop()
-hondachtigen.unshift("Coyote")
-katachtigen.push("Luipaard", "Jaguar")
+hondachtigen.pop();
+hondachtigen.unshift("Coyote");
+katachtigen.push("Luipaard", "Jaguar");
 
-const zoogdieren = katachtigen.concat(animal, hondachtigen)
+const zoogdieren = katachtigen.concat(animal, hondachtigen);
 
-zoogdieren.sort()
+zoogdieren.sort();
 
-console.log(hondachtigen)
-console.log(katachtigen)
-console.log(zoogdieren)
+console.log(hondachtigen);
+console.log(katachtigen);
+console.log(zoogdieren);
 
 
 
-const text = (zoogdieren.join(`\n`))
+const text = (zoogdieren.join(`\n`));
 
-console.log(zoogdieren)
+console.log(zoogdieren);
 
-alert(`This is an alertbox! \n ${text}`)
+alert(`This is an alertbox! \n ${text}`);

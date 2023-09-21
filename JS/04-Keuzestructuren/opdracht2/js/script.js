@@ -7,8 +7,8 @@ if (rng2 < 5) {
 	alert("exactly 5")
 } else {
 	alert("greater than 5")
-}
+};
 
-alert(rng2)
+alert(rng2);
 
-console.log(rng2)
+console.log(rng2);
