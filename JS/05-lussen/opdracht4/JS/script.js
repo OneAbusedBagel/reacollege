@@ -149,20 +149,21 @@ for (const element of games) {
 
 	//	document.getElementById(`art-${x}-${y}`).innerHTML = `${games[x].z}  \n`
 
-	document.getElementById(`art-${x}-1`).innerHTML = `${games[x].name}  \n`
-	document.getElementById(`art-${x}-2`).innerHTML = `${games[x].img}  \n`
-	document.getElementById(`art-${x}-3`).innerHTML = `${games[x].releaseEU}  \n`
-	document.getElementById(`art-${x}-4`).innerHTML = `${games[x].platform}  \n`
+	document.getElementById(`art-${x}-1`).innerHTML = `${games[x - 1].name}  \n`
+	document.getElementById(`art-${x}-2`).innerHTML = `${games[x - 1 ].img}  \n`
+	document.getElementById(`art-${x}-3`).innerHTML = `${games[x - 1].platform}  \n`
+	document.getElementById(`art-${x}-4`).innerHTML = `${ games[x - 1].releaseEU  == `null` ? "Niet uitgebracht" : games[x - 1].releaseEU}  \n`
+
 
 
 	console.log(x)
 	console.log(y)
 	
 
-	y == 4 ? y -= 4 : x-= 1;
-	
+	//	y == 4 ? y -= 4 : x-= 1;
+
 	x++
-	y++
+	//	y++
 	i++
 }
 
