@@ -6,7 +6,7 @@ let dkc = "Donkey Kong Country";
 let anthem = "God Save the Queen";
 const lyrics1 = "I'm blue,";
 const lyrics2 = "Da ba dee da ba di";
-
+const yoda = "you must have patience my young Padawan";
 
 dkc = dkc.padEnd(30,".");
 anthem = anthem.replace("Queen", "King");
