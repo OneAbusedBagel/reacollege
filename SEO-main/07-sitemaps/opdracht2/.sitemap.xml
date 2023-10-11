@@ -1,0 +1,40 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+
+        <loc>file:///H:/reacollege/SEO-main/07-sitemaps/opdracht2/php.html</loc>
+
+        <lastmod>2023-10-11</lastmod>
+
+        <changefreq>never</changefreq>
+
+        <priority>0.5</priority>
+
+    </url>
+
+    <url>
+
+        <loc>file:///H:/reacollege/SEO-main/07-sitemaps/opdracht2/sql.html</loc>
+
+        <lastmod>2023-10-11</lastmod>
+
+        <changefreq>never</changefreq>
+
+        <priority>0.5</priority>
+
+    </url>
+
+    <url>
+
+        <loc>file:///H:/reacollege/SEO-main/07-sitemaps/opdracht2/javascript.html</loc>
+
+        <lastmod>2023-10-11</lastmod>
+
+        <changefreq>never</changefreq>
+
+        <priority>0.5</priority>
+
+    </url>
