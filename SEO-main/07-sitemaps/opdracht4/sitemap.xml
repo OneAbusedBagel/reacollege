@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://www.sushigrillgeleen.nl/</loc>
+		<changefreq>monthly</changefreq>
+        <lastmod>2023-10-12T12:00+01:00</lastmod>
+		<priority>0.5</priority>
+	</url>
+    <url>
+        <loc>http://www.sushigrillgeleen.nl/wp-content/uploads/2023/06/SUSHI-23001_menukaart_140x297mm.pdf </loc>
+        <changefreq>yearly</changefreq>
+        <lastmod>2023-10-12T12:00+01:00</lastmod>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://www.sushigrillgeleen.nl/wp-content/uploads/2017/08/sushi-grill-geleen_foto03.jpg </loc>
+        <changefreq>yearly</changefreq>
+        <lastmod>2023-10-12T12:00+01:00</lastmod>
+        <priority>0.2</priority>
+    </url>
+    <url>
+        <loc>https://www.sushigrillgeleen.nl/wp-content/uploads/2017/08/sushi-grill-geleen_foto05.jpg </loc>
+        <changefreq>yearly</changefreq>
+        <lastmod>2023-10-12T12:00+01:00</lastmod>
+        <priority>0.2</priority>
+    </url>
+    <url>
+        <loc>https://www.sushigrillgeleen.nl/wp-content/uploads/2017/08/sushi-grill-geleen_foto04.jpg </loc>
+        <changefreq>yearly</changefreq>
+        <lastmod>2023-10-12T12:00+01:00</lastmod>
+        <priority>0.2</priority>
+    </url>
+</urlset>

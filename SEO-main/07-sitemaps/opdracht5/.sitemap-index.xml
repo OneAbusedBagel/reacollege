@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <sitemap>
+        <loc>H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-de.xml</loc>
+        <xhtml:link rel="alternate" hreflang="de-DE" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-de.xml" />
+		<xhtml:link rel="alternate" hreflang="en-GB" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-en.xml" />
+		<xhtml:link rel="alternate" hreflang="fr-FR" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-fr.xml" />
+		<xhtml:link rel="alternate" hreflang="nl-NL" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-nl.xml" />
+        <lastmod>2023-10-12T12:00+01:00</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-en.xml</loc>
+        <xhtml:link rel="alternate" hreflang="de-DE" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-de.xml" />
+		<xhtml:link rel="alternate" hreflang="en-GB" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-en.xml" />
+		<xhtml:link rel="alternate" hreflang="fr-FR" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-fr.xml" />
+		<xhtml:link rel="alternate" hreflang="nl-NL" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-nl.xml" />
+        <lastmod>2023-10-12T12:00+01:00</lastmod>
+    </sitemap>
+    
+    <sitemap>
+        <loc>H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-fr.xml</loc>
+        <xhtml:link rel="alternate" hreflang="de-DE" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-de.xml" />
+		<xhtml:link rel="alternate" hreflang="en-GB" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-en.xml" />
+		<xhtml:link rel="alternate" hreflang="fr-FR" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-fr.xml" />
+		<xhtml:link rel="alternate" hreflang="nl-NL" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-nl.xml" />
+        <lastmod>2023-10-12T12:00+01:00</lastmod>
+    </sitemap>
+    
+    <sitemap>
+        <loc>H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-nl.xml</loc>
+        <xhtml:link rel="alternate" hreflang="de-DE" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-de.xml" />
+		<xhtml:link rel="alternate" hreflang="en-GB" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-en.xml" />
+		<xhtml:link rel="alternate" hreflang="fr-FR" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-fr.xml" />
+		<xhtml:link rel="alternate" hreflang="nl-NL" href="H:\reacollege\SEO-main\07-sitemaps\opdracht5\sitemap-nl.xml" />
+        <lastmod>2023-10-12T12:00+01:00</lastmod>
+    </sitemap>

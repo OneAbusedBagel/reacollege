@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /
+
+User-agent: Googlebot
+Disallow: /admin/
+
+Sitemap: H:\reacollege\SEO-main\07-sitemaps\opdracht4\sitemap.xml
