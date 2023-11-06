@@ -1,0 +1,7 @@
+1. Lange TTFB.
+2. 7 Javascript file blokkeren page rendering (moet een defer attribute bij).
+3. 3 External CSS files blokkeren page rendering (misschien beter als inline style elementen).
+4. 22 Afbeeldingen buiten de 'critical viewpage' oftewel beneden de vouw moeten lazy gelaad worden.
+5. 44 Files zouden beter van een CDN kunnen gebruikmaken.
+6. 45 Files moeten hun cache settings verniewen en verbeterenm.
+7. Html file is bijna 8% groter geworden vanwege te veel javascript-gebaseerd Html content.
