@@ -1,0 +1,11 @@
+# Verzoek dat de server niet begrijpt
+ErrorDocument 400 /errors/400.html
+# Authenticatie ontbreekt
+ErrorDocument 401 /errors/401.html
+# Verboden toegang
+ErrorDocument 403 /errors/403.html
+# Pagina niet gevonden
+ErrorDocument 404 /errors/404.html
+
+# Deactiveert directory indexing voor alle onderliggende mappen
+Options -Indexes

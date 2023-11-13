@@ -1,0 +1,55 @@
+body {
+	background-color: cadetblue;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 20px;
+}
+
+#container {
+	max-width: 480px;
+	margin: 0 auto;
+	padding: 40px;
+	background-color: darkcyan;
+	border: 5px groove gray;
+	position: relative;
+}
+
+#backtotop {
+	align-items: center;
+	height: 40px;
+	width: 40px;
+	background-color:darkslategray;
+	display: block;
+	border-radius: 25%;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+}
+
+#backtotop i {
+margin: 10px 12px ;
+text-align: center;
+}
+
+#backtotop a {
+color: black;
+text-decoration: none;
+}
+
+section>h1 {
+	background-color: steelblue;
+	outline: 5px solid rgba(0, 0, 0, 0.8) ;
+	color: white;
+	padding: 10px;
+	border-radius: 15px;
+	position: sticky;
+	top: 10px;
+	letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+
+section span {
+	line-height: 1.3;
+}
+
+

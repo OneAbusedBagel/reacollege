@@ -1,0 +1,9 @@
+# Verandert de homepage naar "magus.html"
+DirectoryIndex magus.html
+
+# Deactiveert directory indexing voor alle onderliggende mappen
+Options -Indexes
+
+<Files Chrono-Trigger-Magus.pdf>
+    Header add Link '<http://www.chronotrigger.com/characters/magus.html>; rel="canonical"'
+</Files>
