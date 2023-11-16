@@ -1,0 +1,19 @@
+EN:
+1. improve/fix the current meta description tag
+2. reduce length of title tag to fit wihin 580px (less than roughly 70 characters) 
+3. increase useful content wordcount on main page (roughly 800 words)
+4. (improve performance)  reduce amount of loaded css files
+5. (improve performance) reduce amount of loaded javascript files
+6.  
+7. add alt attributes to increase image SEO 
+8.
+
+NL:
+1. verwijder de 2de meta description element
+2. verkort de titel element tot binnnen 580 pixels (ongeveer 70 karakters)
+3. plaats meer goeie content op de main page vand e site
+4. zorg dat er minder css files gebruikt worden voor snellere laad tijden (door de files compact maken bijv:)
+5. zorg dat er minder js files gebruikt worden voor snellere laad tijden  (door de files compact maken bijv:)
+6. 
+7. 
+8. 
