@@ -1,0 +1,2 @@
+# Gebruikers omleiden naar nieuwe pagina
+Redirect 301 /nieuws.html /news.html
