@@ -9,11 +9,40 @@ html, body {
 	color: rgb(20,20,20);
 }
 #container {
-	max-width: 100%;
+	margin: 0 auto;
+	margin-top: 60px;
+	max-width: 90%;
+	height: auto;
 }
+
 main {
 	padding: 80px;
+	position: relative;
+	min-height: 650px;
+
+	padding: 20px;
+    display: grid;
+    grid-template:auto, 1fr;
+    gap: 10px;
 }
+article {
+	background-color: rgba(151, 255, 255, 0.348);
+	padding: 20px;
+	border: groove 5px rgba(204, 255, 255, 0.267);
+}
+main article:nth-of-type(1) {
+    grid-area: 1 / 1 / span 2 / span 1;
+}
+main article:nth-of-type(2) {
+    grid-area: 1 / 2 / span 1 / span 4;
+}
+main article:nth-of-type(3) {
+    grid-area: 2 / 2 / span 1 / span 4;
+}
+main article:nth-of-type(4) {
+    grid-area: 1 / 6 / span 2 / span 1;
+}
+
 article {
 	min-height: 50px;
 }
