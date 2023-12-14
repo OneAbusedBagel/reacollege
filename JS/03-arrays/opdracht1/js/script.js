@@ -16,7 +16,7 @@ const movies = [
     "movie-5"
 ];
 
-movies[3] = "new-movie-6";
+movies[movies.length - 1] = "new-movie-6";
 document.getElementById("span-1").innerHTML = `There are ${movies.length} variables in the array`;
 
 document.getElementById("li-1").innerHTML = `${names} `;

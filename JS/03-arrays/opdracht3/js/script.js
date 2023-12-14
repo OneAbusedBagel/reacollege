@@ -17,7 +17,7 @@ const katachtigen = [
     "Poema"
 ];
 
-const animal = prompt();
+const animal = prompt(`Wat is jouw favoriete beestje?`);
 
 hondachtigen.pop();
 hondachtigen.unshift("Coyote");

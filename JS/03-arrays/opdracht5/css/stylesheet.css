@@ -18,8 +18,15 @@ th, td {
 	padding: 4px 8px;
 }
 th {
+	text-transform: capitalize;
 	background-color: rgb(240,240,240);
 }
 td:nth-child(1) {
 	font-family: "Courier New", monospace;
+}
+.right {
+	text-align: right;
+}
+.center {
+	text-align: center;
 }

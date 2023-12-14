@@ -16,7 +16,7 @@ const biggestCitiesBenelux = [
 ];
 
 
-let dog, cat, rabbit, rest;
+let dog, cat, rabbit, cavias;
 const myPets = [
 	"Hond",
 	"Kat",
@@ -30,34 +30,24 @@ const myPets = [
 ];
 
 
+// let myFlatPets = myPets.flat();
 
-// [dog, cat, rabbit, cavia1, cavia2, cavia3, cavia4] = myPets;
-[dog, cat, rabbit, ...rest] = myPets;
+// console.log(myFlatPets);
+
+
+
+[dog, cat, rabbit, cavias] = myPets;
+
+console.log(dog, cat, rabbit, cavias);
+
+// [dog, cat, rabbit, ...rest] = myPets;
 
 [a, b, c, d, e, f, g, h, i, j] = biggestCitiesBenelux;
 myPets.flat();
 console.log(myPets);
 console.log(myPets.flat());
 
-// const animal = prompt()
-
-// hondachtigen.pop();
-// hondachtigen.unshift("Coyote")
-// katachtigen.push("Luipaard", "Jaguar")
-
-// const zoogdieren = hondachtigen.concat(katachtigen, animal)
-
-//zoogdieren.sort()
-
-//console.log(hondachtigen)
-//console.log(katachtigen)
-//console.log(zoogdieren)
-
-
-
-//const text = zoogdieren.join(`\n`)
-
 alert(`De grootste steden in de Benelux zijn ${a} en ${b} `);
 
-alert(`Dit zijn mijn huisdieren, Ik heb een ${dog}, ${cat}, ${rabbit} en 4 schattige cavias! ${cavia2} `);
+alert(`Dit zijn mijn huisdieren, Ik heb een ${dog}, ${cat}, ${rabbit} en 4 schattige cavias! ${megaCavias} `);
 
