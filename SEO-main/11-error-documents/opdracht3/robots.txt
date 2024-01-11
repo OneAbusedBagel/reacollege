@@ -1,2 +1,8 @@
 user-agent: *
 disallow: /
+
+# redirect to new site domain
+Redirect 301 /nieuws.html /news.html
+
+# redirect to new site domain
+Redirect 301 /over-css.html /about-css.html

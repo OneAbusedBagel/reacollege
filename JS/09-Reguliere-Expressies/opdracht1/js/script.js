@@ -1,6 +1,6 @@
 "use strict"
 
-const pattern = /^ (A|O|E|I|U)/;
+const pattern = /^(A|O|E|I|U)/;
 
 let blep = window.prompt();
 
