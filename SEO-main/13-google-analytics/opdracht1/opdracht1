@@ -4,16 +4,16 @@ EN:
 3. increase useful content wordcount on main page (roughly 800 words)
 4. (improve performance)  reduce amount of loaded css files
 5. (improve performance) reduce amount of loaded javascript files
-6.  
-7. add alt attributes to increase image SEO 
-8.
+6. add alt attributes to increase image SEO 
+7. usability improvements for better mobile experience (helps rankingfactor)
+8. Page speed optimization on both mobile and desktop.
 
 NL:
-1. verwijder de 2de meta description element
-2. verkort de titel element tot binnnen 580 pixels (ongeveer 70 karakters)
-3. plaats meer goeie content op de main page vand e site
-4. zorg dat er minder css files gebruikt worden voor snellere laad tijden (door de files compact maken bijv:)
-5. zorg dat er minder js files gebruikt worden voor snellere laad tijden  (door de files compact maken bijv:)
-6. 
-7. 
-8. 
+1. verwijder de 2de meta description element.
+2. verkort de titel element tot binnnen 580 pixels (ongeveer 70 karakters).
+3. verbeter de zinvolle content op de main page van de site.
+4. zorg dat er minder css files gebruikt worden voor snellere laad tijden (door de files compact maken bijv:).
+5. zorg dat er minder js files gebruikt worden voor snellere laad tijden  (door de files compact maken bijv:).
+6. voeg Alt attributes toe ald extra informatie bij afbeeldingen voor betere SEO.
+7. Verbeter de user experience op Mobiele telefoon.
+8. Pagina snelheid moet worden verbetered worden voor beide site versies.
