@@ -14,6 +14,6 @@ NL:
 3. verbeter de zinvolle content op de main page van de site.
 4. zorg dat er minder css files gebruikt worden voor snellere laad tijden (door de files compact maken bijv:).
 5. zorg dat er minder js files gebruikt worden voor snellere laad tijden  (door de files compact maken bijv:).
-6. voeg Alt attributes toe ald extra informatie bij afbeeldingen voor betere SEO.
+6. voeg Alt attributes toe als extra informatie bij afbeeldingen voor betere SEO.
 7. Verbeter de user experience op Mobiele telefoon.
 8. Pagina snelheid moet worden verbetered worden voor beide site versies.

@@ -68,3 +68,6 @@ main article:nth-of-type(10) {
 article {
 	min-height: 50px;
 }
+details {
+	text-shadow: black 0px 0px 3px;
+}
