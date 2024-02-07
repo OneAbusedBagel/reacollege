@@ -7,3 +7,11 @@ Opdracht 1.2
 Opdracht 1.3
 -The "10 tips to get your website to the top of google search" is likely to get more backlinks due to the popularity of list posts and the ease of linking to them. list posts on average generate more links than other content formats.
 
+Opdracht 1.4
+-I tried to find a resource page but was unable to find one linked to 'keukenapparatuur' even with the resource page finding 'search strings' that I found in the Backlinko 'definitive SEO Linkbuilding Guide'.
+
+The search strings mentioned:
+“Keyword” + inurl:links
+“Keyword” + “helpful resources”
+“Keyword” + “useful resources”
+“Keyword” + “useful links”

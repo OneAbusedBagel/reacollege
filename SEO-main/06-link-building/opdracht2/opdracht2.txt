@@ -1,15 +1,15 @@
--Page itself has to be related to your site. (forexample a link from a vet would be worth more than that of a ..bank. because it's directly related to the topic of dogs
 
--add your site to a directory or resource page
+Ik heb nogal moeite met het echte rappoort gedeelte maar hier zijn in ieder geval een aantal punten waarmee de site "malpieheide.nl" verbetered kan worden.
 
--unique searches and, focusing on local SEO
+1. -establish a linkbuilding technique, the page that links back to your content should be related to your site. (forexample a link from a vet would be worth more than that of a bank. because it's directly related to the topic of dogs).
+2. -add your site to a directory or resource page associated with your content
+3. -add more focus on unique Long tail searches and on local SEO
+4. -Link from high authority domain (Make sure it's not an unnatural link)
+5. -add 301 redirects to fix the traffic between the regular and sub-domain.
+6. -The links position on a page is important, keep this in mind when linkbuilding.
+7. -Make sure the link and the actual content are relevant to eachother and not just keyword/anchor text spam.
+8. -Mobile optimisation is a large influence in ranking factor.
 
--Link from high authority domain
 
--Make sure it's not an unnatural link
-
--The links position on a page is important
-
--Make sure the link and the actual content are relevant to eachother and not just keyword/acnhor text spam.
 
 
