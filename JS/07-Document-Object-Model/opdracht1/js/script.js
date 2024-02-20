@@ -1,9 +1,10 @@
 "use strict"
 
 function knop1Functie(){
-    const title = document.getElementById("#title");
-    console.log(title)
-    alert(`random test =${title}= text`)
+    let title = document.getElementById("title").innerHTML;
+    console.log(title);
+    document.getElementById("knop-1").innerText = "this one works";
+    alert(`Titel:${title} text`)
 }
 
 function knop2Functie(){
