@@ -1,0 +1,36 @@
+
+body {
+    background-color: lightgray;
+}
+
+div {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    max-width: 350px;
+    gap: 10px;
+}
+
+div.mini-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+div.left {
+    text-align-last: right;
+}
+div.mid {
+    flex-direction: row;
+    font-size: 2.2rem;
+    margin-top: 10px;
+}
+div.right {
+    text-align: left;
+}
+
+input {
+    padding: 3px;
+    width: 70px;
+}
+

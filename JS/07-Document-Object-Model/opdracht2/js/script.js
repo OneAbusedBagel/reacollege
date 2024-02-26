@@ -1,21 +1,19 @@
+"use strict"
 
 var x = 0;
 var i = 0;
 
-// const list = [
-
-// ];
-
-const list = document.querySelectorAll("li")
-console.log(list)
+const list = document.querySelectorAll("li");
+console.log(list);
 
 function knop1Functie() {
 
     for (let i = 0; i < list.length; i++) {
         if (i === 5) {
-            console.log(i)
+            console.log(i);
+            continue
         }
-        list[i].innerText = `Dit is item ${i + 1}`
+        list[i].innerText = `Dit is item ${i + 1}`;
         console.log(i)
     }
 }
