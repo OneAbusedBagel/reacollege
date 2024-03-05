@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>This</title>
+		<link rel="stylesheet" href="css/stylesheet.css">
+		<script src="js/script.js" defer></script>
+        <script src="https://kit.fontawesome.com/e9b552d600.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+        <button id="knop-1">knop voor makkelijker testen</button>
+		<div id="container">
+			<form action="">
+				<span>Kies een element!</span>
+				<select name="element" id="element">
+					<option value="h1">Header 1</option>
+					<option value="h2">Header 2</option>
+					<option value="h3">Header 3</option>
+					<option value="p">Paragraph</option>
+					<option value="blockquote">Blockquote</option>
+				</select>
+				<br>
+				<label for="tekst">Zet hierin uw tekst</label>
+				<input type="text" placeholder="Dit is een <h1> element!" name="tekst" id="tekst">
+				<br>
+				<label for="font">Kies hier een lettertype</label>
+				<select name="font" id="font">
+					<option value="Times New Roman">Times New Roman</option>
+					<option value="Courier">Courier</option>
+					<option value="Calibri">Calibri</option>
+					<option value="Arial">Arial</option>
+				</select>
+				<label for="background-color">Pagina een kleurtje geven</label>
+				<input type="color" name="background-color" id="background-color">
+				<label for="tekst-color">De tekst ook</label>
+				<input type="color" name="tekst-color" id="tekst-color">
+				<label for="font-size">En nog een lettergroote </label>
+				<input type="number" min="1" max="32" name="font-size" id="font-size">
+				<br>
+				<label for="add">Now let's see what you made!</label>
+			</form>
+			<button name="add" id="add">Toevoegen</button>
+			<button name="remove" id="remove">Weghalen</button>
+			<span id="divider"></span>
+			<div id="output"></div>
+		</div>
+	</body>
+</html> 

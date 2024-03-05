@@ -1,50 +1,43 @@
 "use strict"
 
-// // JavaScript code: een nieuw h1 element aanmaken.
-// const n = document.createElement("h1");
-// const text = document.createTextNode("Nieuwsartikel"); n.appendChild(text);
-
-// // JavaScript code: het h2 element vervangen door het h1 element.
-// const o = document.querySelector("#kopje");
-// const parent = document.querySelector("#artikel"); parent.replaceChild(n, o);
-
-// het zelfde als de code hiervoor. alles telt als null, dus niks werkt. Ben terug gegaan naar opdracht 1-2-3 die werken allemaal nog well, maar als ik dezelfde javascript hier heen kopier dan werkt het opeens niet.
+// Null probleem is gefixt
 
 
-var li = [];
-var text = [];
-const steden = [
-    "Den Haag",
-	"Antwerpen",
-	"Utrecht",
-	"Gent",
-	"Eindhoven",
-	"Groningen",
-	"Tilburg"
-];
 
-steden.sort();
-console.log(steden);
+const blok_list = document.getElementsByClassName("blok");
+console.log(blok_list);
 
-const ol = document.createElement("ol");
 
-document.querySelector("body").appendChild(ol);
+for (let i = 0; i < blok_list.length; i++) {
+    blok_list[i].addEventListener("click",getThis, true );
+    // blok_list[i].innerText = `Dit is blok ${i + 1}`;
+    console.log(i)
+}
 
-function knop1Functie() {
+function getThis() {
+    // 'This' = whatever called/activated it? (in this case whatever 'button' starts the function)
+    console.log(this);
+    this.style.backgroundColor = "lightblue"
+}
 
-    for (let i = 0; i < steden.length; i++) {
-        li[i] = document.createElement("li");
 
-        document.querySelector("ol").appendChild(li[i]);
+// let knop_1 = document.getElementById("knop-1");
+// knop_1.addEventListener("click",getThis, true )
 
-        text[i] = document.createTextNode("simple li test");
+// let knop_2 = document.getElementById("knop-2");
+// knop_2.addEventListener("click",getThis, true )
 
-        li[i].appendChild(text[i]);
-        li[i].innerText = (steden[i]);
-        console.log(i)
-    }
-};
 
-let knop_1 = document.getElementById("knop-1");
-knop_1.addEventListener("click",knop1Functie, true )
+// ---------[divide line]--------
+
+// const obj1 = { name: "obj1" };
+// const obj2 = { name: "obj2" };
+
+// obj1.getThis = getThis;
+// obj2.getThis = getThis;
+
+// console.log(obj1.getThis()); // { name: 'obj1', getThis: [Function: getThis] }
+// console.log(obj2.getThis()); // { name: 'obj2', getThis: [Function: getThis] }
+// console.log(obj1)
+// console.log(obj2)
 

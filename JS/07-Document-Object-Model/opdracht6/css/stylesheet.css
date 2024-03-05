@@ -25,6 +25,9 @@ div.mid {
     font-size: 2.2rem;
     margin-top: 10px;
 }
+div.mid:hover {
+    cursor: pointer;
+}
 div.right {
     text-align: left;
 }
