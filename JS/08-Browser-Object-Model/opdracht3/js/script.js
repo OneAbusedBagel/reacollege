@@ -1,25 +1,53 @@
 "use strict"
 
-alert("test")
+let venster = "";
 
-const windowHeightOutput = document.querySelector("#size-y");
-const windowWidthOutput = document.querySelector("#size-x");
+function knop1Functie(){
+    venster = window.open("https://wikipedia.com/wiki/chair", "_blank", "width=400,height=300");
+    return venster;
+};
 
-const posHeightOutput =  document.querySelector("#pos-y");
-const posWidthOutput = document.querySelector("#pos-x");
 
-function reportWindowSize() {
-    windowHeightOutput.textContent = window.innerHeight;
-    windowWidthOutput.textContent = window.innerWidth;
+
+function knop2Functie() {
+    venster.close()
 }
 
-function reportScrollPos() {
-    posHeightOutput.textContent = window.scrollY;
-    posWidthOutput.textContent = window.scrollX;
+function knop3Functie() {
+    location.reload()
 }
 
-window.onresize = reportWindowSize;
-window.onscroll = reportScrollPos
-window.onload = reportWindowSize
+function knop4Functie() {
+    window.history.back()
+}
 
-// Geen null gedoe dus ik kan eindelijk weer doorwerken
+function knop5Functie() {
+    window.history.forward()
+}
+
+function knop6Functie() {
+
+    console.log(screen.width);
+    console.log(screen.height);
+}
+
+
+const knop_1 = document.getElementById("sprite-1");
+knop_1.addEventListener("click", knop1Functie, true);
+
+var knop_2 = document.getElementById("sprite-2");
+knop_2.addEventListener("click", knop2Functie, true)
+
+const knop_3 = document.getElementById("sprite-3");
+knop_3.addEventListener("click", knop3Functie, true);
+
+var knop_4 = document.getElementById("sprite-4");
+knop_4.addEventListener("click", knop4Functie, true)
+
+const knop_5 = document.getElementById("sprite-5");
+knop_5.addEventListener("click", knop5Functie, true);
+
+var knop_6 = document.getElementById("sprite-6");
+knop_6.addEventListener("click", knop6Functie, true)
+
+

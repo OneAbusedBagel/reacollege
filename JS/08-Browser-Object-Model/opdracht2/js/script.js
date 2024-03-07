@@ -6,7 +6,7 @@ var date = (today.getDate().length >1 ? today.getDate() : "0"+today.getDate())+'
 
 
 function knop1Functie(){
-	venster = window.open("", "_blank", "width=200,height=150");
+	venster = window.open("", "_blank", "width=300,height=200");
 	venster.document.write(`<html>
 								<head id=window>
 									<meta charset="UTF-8">
@@ -17,11 +17,10 @@ function knop1Functie(){
 								<body>
 									<container id="window">
 										<h2> ${date} </h2>
-										<p>you've got to be kidding me</p>
+										<!-- <p>it be workin for once</p> -->
 									</container>
 								</body>
-							</html>`);
-
+							</html>`)
 };
 
 function knop2Functie(){

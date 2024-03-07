@@ -4,48 +4,45 @@ body {
 	font-size: 20px;
 }
 #container {
-	width: 1200px;
+	max-width: 300px;
 	margin: 0 auto;
-	background-color: white;
+	background-color: lightblue;
 	position: relative;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
 	gap: 20px;
-	padding-top: 40px;
-}
-section {
-	padding: 0 40px;
-}
-section h1 {
-	background-color: rebeccapurple;
-	color: white;
-	padding: 10px;
-	border-radius: 15px;
-	position: sticky;
-	top: 10px;
-}
-figure img {
-	max-width: 100%;
-	margin: 60px 0;
-}
-aside {
-	height: 500px;
-	background-image: linear-gradient(to bottom, white, plum);
-}
-.box {
-	width: 300px;
-	height: 200px;
-	background-color: white;
-	position: fixed;
-	border: 5px solid rebeccapurple;
 	padding: 20px;
-	box-sizing: border-box;
 }
-#window-info {
-	top: 10px;
-	left: 10px;
+.sprite {
+	background-image: url(../images/navigation-buttons-s.png);
+	background-size: 300% 200%;
+	width: 75px;
+	height: 75px;
 }
-#scroll-info {
-	top: 10px;
-	right: 10px;
+
+.sprite:hover {
+	cursor: pointer;
+} 
+
+#sprite-1 {
+	background-position: 0px 0px;
 }
+#sprite-2 {
+	background-position: -75px -0px;
+}
+#sprite-3 {
+	background-position: -150px -0px;
+}
+#sprite-4 {
+	background-position: -0px -75px;
+}
+#sprite-5 {
+	background-position: -75px -75px;
+}
+#sprite-6 {
+	background-position: -150px -75px;
+}
+
