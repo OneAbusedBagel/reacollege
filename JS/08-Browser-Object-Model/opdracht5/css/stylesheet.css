@@ -1,3 +1,9 @@
+
+@font-face {
+    font-family: "HackerMan";
+    src: url(../fonts/alarm\ clock.ttf);
+}
+
 html, body {
 	font-size: 16px;
 	font-family: Calibri, Arial, sans-serif;
@@ -6,30 +12,22 @@ html, body {
 
 #container {
 margin: 0 auto;
-min-width: 800px;
+min-width: 400px;
 
-background-color: hsl(9, 87%, 63%);
+background-color: hsl(0, 0%, 0%);
 border: 5px groove gray;
 padding: 20px;
+color: lime;
+font-family: HackerMan;
+font-size:  3em;
 
 gap: 30px;
 display: flex;
-flex-direction: row;
+flex-direction: column;
 flex-wrap: wrap;
-}
-
-img {
-    border: 2px solid black;
-    border-radius: 20px;
-}
-img:hover {
-    cursor: grab;
-}
-img:active {
-    cursor: grabbing;
 }
 
 #p-1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 2em;
+    font-size: 40px;
 }
