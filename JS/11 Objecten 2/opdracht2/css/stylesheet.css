@@ -1,11 +1,17 @@
-body {
-    background-color: gray
-}
+
 
 #container {
-    color:teal ;
+    color:darkslategrey;
+    background: khaki;
 }
 
-#canvas {
-    background: whitesmoke;
+table > *, table > * > * > * {
+    outline: 1px solid black;
+}
+tr {
+    background-color: rgba(0, 222, 238, 0.151);
+}
+td {
+    text-transform: capitalize;
+    padding: 3px;
 }

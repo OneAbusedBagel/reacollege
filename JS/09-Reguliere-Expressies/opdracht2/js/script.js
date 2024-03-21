@@ -12,6 +12,7 @@ function check() {
         console.log("check is true")
         console.log(pattern)
         console.log(telcheck)
+        invalid.innerHTML = ("")
     } else {
         btn.disabled = true
         console.error("check sees false")

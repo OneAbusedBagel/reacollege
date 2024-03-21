@@ -2,12 +2,16 @@
 
 #container {
     color:darkslategrey;
+    background: khaki;
 }
 
 table > *, table > * > * > * {
     outline: 1px solid black;
 }
-
-#container {
-    background: khaki;
+tr {
+    background-color: rgba(0, 222, 238, 0.151);
+}
+td {
+    text-transform: capitalize;
+    padding: 3px;
 }
