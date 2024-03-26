@@ -20,10 +20,23 @@ const audi = {
         motorinhoud: "1.984 cc",
         topsnelheid: "250 km/h",
         vermogen: "211 pk",
+    },
+    buy: function() {
+        console.log(`YOU HAVE BOUGHT THE ${this.naam} FOR ${this.prijs} WOW!! WHAT A DEAL CIRCA ${this.bouwjaar}.`)
+    },
+    accelerate: function() {
+        console.log(`THIS ${this.naam} CAN GET TO A TOPSPEED OF ${this.motor.topsnelheid}. INCREDIBLE! SO FAST IT'S (almost)ILLEGAL!!`)
+    },
+    refuel: function() {
+        console.log(`THE ${this.naam} DRINKS ABOUT ${this.motor.verbruik} SO DON'T WORRY ABOUT PAYING IT'S TAB FOR ${this.brandstof}`)
     }
 }
 
+audi.buy()
+audi.accelerate()
+audi.refuel()
 
+console.log("it all works, but man what a weird car salesman...")
 
 document.getElementById("naam").innerHTML = audi.naam
 document.getElementById("bouwjaar").innerHTML = audi.bouwjaar
