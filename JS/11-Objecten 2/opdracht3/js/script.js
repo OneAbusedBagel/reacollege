@@ -32,7 +32,7 @@ const audi = {
     },
 
     get naam() {
-        console.log("THIS IS A FKN RECURSION LOOP YOU IDIOUT")
+        console.log("THIS IS A RECURSION LOOP YOU IDIOUT FIX IT")
 		return this.bouwjaar+" "+this.naam;
 	}
 

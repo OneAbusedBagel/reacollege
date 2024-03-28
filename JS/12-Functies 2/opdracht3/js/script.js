@@ -5,12 +5,33 @@
 // 	return result;
 // }
 
-const sectionMaker = inputText => "<section><p>" + inputText + "</p></section>" 
-
+const sectionMaker = inputText => `<section class="container"><p>` + inputText + "</p></section>" 
 document.getElementById("output").innerHTML = sectionMaker('This is testing text');
- 
 
+const names = ["Jeremiah", "Brienne", "Gaspar", "Yoeri"];
+const results = names.map(name => name.substring(0,3));
+console.log(results);
 
+const persons = [
+    {name: "Tom", age: 33, loc: "Weert"},
+    {name: "Tim", age: 32, loc: "Woort"},
+    {name: "Tam", age: 31, loc: "Wiirt"},
+    {name: "Tum", age: 34, loc: "Waart"},
+    {name: "Tem", age: 35, loc: "Wuurt"}
+]
+var x;
+var y;
+var z;
+var check =[];
+
+const formatPerson = persons.map(person => person.name.substring(0,1)+".")
+const formatPerson1= persons.map(person => person.age + 1)
+const formatPerson2= persons.map(person => (person.loc).style.textTransform = "capitalize")
+
+console.log(check)
+console.log(formatPerson)
+console.log(formatPerson1)
+console.log(formatPerson2)
 
 // const bmo = function(x, y) {
 //     return x + y 
