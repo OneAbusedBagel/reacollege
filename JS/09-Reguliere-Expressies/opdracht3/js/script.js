@@ -1,13 +1,14 @@
 "use strict"
 
-const names = "Branford, Terra \nCole, Locke \nGaramonde, Cyan"
+const names = "Branford, Terra\nCole, Locke\nGaramonde, Cyan\nChère, Celes"
 const str = "p, a, img, table, form";
-const swap = /(\w+)\s(\w+)/;
+const swap = /(\w+)/gi;
 
 console.log(names)
 // console.log(names.replace())
 const newstring = names.replace(swap, "$2, $1")
 console.log(newstring)
+console.log(names.replace((/[\p{L}\p{N}_]/g), "1"))
 console.log(str)
 console.log(str.replace(/(\w+)/gi, "<$1>"))
 

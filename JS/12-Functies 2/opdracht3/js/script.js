@@ -19,19 +19,20 @@ const persons = [
     {name: "Tum", age: 34, loc: "Waart"},
     {name: "Tem", age: 35, loc: "Wuurt"}
 ]
+
 var x;
 var y;
 var z;
 var check =[];
 
-const formatPerson = persons.map(person => person.name.substring(0,1)+".")
-const formatPerson1= persons.map(person => person.age + 1)
-const formatPerson2= persons.map(person => (person.loc).style.textTransform = "capitalize")
+const formatPerson = persons.map(person => person.name.substring(0,1)+".");
+const formatPerson1= persons.map(person => person.age + 1);
+const formatPerson2= persons.map(person => (person.loc).style.textTransform = "capitalize");
 
-console.log(check)
-console.log(formatPerson)
-console.log(formatPerson1)
-console.log(formatPerson2)
+console.log(check);
+console.log(formatPerson);
+console.log(formatPerson1);
+console.log(formatPerson2);
 
 // const bmo = function(x, y) {
 //     return x + y 

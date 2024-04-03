@@ -16,5 +16,5 @@ document.getElementById("leeftijd").onchange = function() {
 
 	console.log(age);
 
-		alert(age);
+	alert(age);
 };

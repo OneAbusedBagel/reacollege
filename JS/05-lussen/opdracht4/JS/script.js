@@ -152,7 +152,7 @@ for (const element of games) {
 	document.getElementById(`art-${x}-1`).innerHTML = `${games[x - 1].name}  \n`
 	document.getElementById(`art-${x}-2`).innerHTML = `${games[x - 1 ].img}  \n`
 	document.getElementById(`art-${x}-3`).innerHTML = `${games[x - 1].platform}  \n`
-	document.getElementById(`art-${x}-4`).innerHTML = `${ games[x - 1].releaseEU  == `null` ? "Niet uitgebracht" : games[x - 1].releaseEU}  \n`
+	document.getElementById(`art-${x}-4`).innerHTML = `${ games[x - 1].releaseEU  === null ? "Niet uitgebracht" : games[x - 1].releaseEU}  \n`
 
 
 
