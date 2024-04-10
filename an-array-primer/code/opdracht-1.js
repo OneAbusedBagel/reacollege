@@ -1,0 +1,1 @@
+let mijnInkomsten = new Array(12);

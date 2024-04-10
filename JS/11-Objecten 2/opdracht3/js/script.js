@@ -22,7 +22,7 @@ const audi = {
         _vermogen: "211 pk",
     },
     buy: function() {
-        console.log(`YOU HAVE BOUGHT THE ${this.naam} FOR ${this.prijs} WOW!! WHAT A DEAL CIRCA ${this.bouwjaar}.`)
+        console.log(`YOU HAVE BOUGHT THE ${this.naam} FOR ${this.prijs} WOW!! WHAT A DEAL FROM CIRCA ${this.bouwjaar}.`)
     },
     accelerate: function() {
         console.log(`THIS ${this.naam} CAN GET TO A TOPSPEED OF ${this.motor.topsnelheid}. INCREDIBLE! SO FAST IT'S [almost]ILLEGAL!!`)
@@ -32,7 +32,7 @@ const audi = {
     },
 
     get naam() {
-        console.log("THIS IS A RECURSION LOOP YOU IDIOUT FIX IT")
+        console.log("THIS IS A RECURSION LOOP YOU IDIOT FIX IT") // I don't remember if I fixed it... | Addendum, still a recursion loop
 		return this.bouwjaar+" "+this.naam;
 	}
 
@@ -76,8 +76,6 @@ const audi = {
 audi.buy()
 audi.accelerate()
 audi.refuel()
-
-console.log("it all works, but man what a weird car salesman...")
 
 document.getElementById("naam").innerHTML = audi.naam
 document.getElementById("bouwjaar").innerHTML = audi.bouwjaar

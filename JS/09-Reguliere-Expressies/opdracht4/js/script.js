@@ -8,8 +8,8 @@ const invalidWeb = document.querySelector('#invalid-add');
 const invalidpas = document.querySelector('#invalid-pas');
 
 const patternTel = /^(06)\-[0-9]{8}|^(06 )([0-9]{8})|^(06)([0-9]{8})|^(\+31 6 )([0-9]{8})/;
-const patternBir = / hmm? /;
-const patternAdd = / hmm? /;
+const patternBir = / ^(*[0-9])\-(*[0-9]) | /;
+const patternAdd = / hmm? /; // straat huisnummer
 const patternWeb = / hmm? /;
 const patternpas = / hmm? /;
 

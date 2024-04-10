@@ -1,0 +1,1 @@
+printnl(mijnInkomsten);

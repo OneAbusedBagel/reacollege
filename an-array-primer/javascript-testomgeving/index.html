@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+<head>
+<meta charset="UTF-8">
+<title>PIPET JavaScript-testomgeving</title>
+
+<link rel="stylesheet" href="codemirror/lib/codemirror.css">
+
+<link rel="stylesheet" href="codemirror/theme/3024-day.css">
+<link rel="stylesheet" href="codemirror/theme/3024-night.css">
+<link rel="stylesheet" href="codemirror/theme/abcdef.css">
+<link rel="stylesheet" href="codemirror/theme/ambiance-mobile.css">
+<link rel="stylesheet" href="codemirror/theme/ambiance.css">
+<link rel="stylesheet" href="codemirror/theme/base16-dark.css">
+<link rel="stylesheet" href="codemirror/theme/base16-light.css">
+<link rel="stylesheet" href="codemirror/theme/bespin.css">
+<link rel="stylesheet" href="codemirror/theme/blackboard.css">
+<link rel="stylesheet" href="codemirror/theme/cobalt.css">
+<link rel="stylesheet" href="codemirror/theme/colorforth.css">
+<link rel="stylesheet" href="codemirror/theme/darcula.css">
+<link rel="stylesheet" href="codemirror/theme/dracula.css">
+<link rel="stylesheet" href="codemirror/theme/duotone-dark.css">
+<link rel="stylesheet" href="codemirror/theme/duotone-light.css">
+<link rel="stylesheet" href="codemirror/theme/eclipse.css">
+<link rel="stylesheet" href="codemirror/theme/elegant.css">
+<link rel="stylesheet" href="codemirror/theme/erlang-dark.css">
+<link rel="stylesheet" href="codemirror/theme/gruvbox-dark.css">
+<link rel="stylesheet" href="codemirror/theme/hopscotch.css">
+<link rel="stylesheet" href="codemirror/theme/icecoder.css">
+<link rel="stylesheet" href="codemirror/theme/idea.css">
+<link rel="stylesheet" href="codemirror/theme/isotope.css">
+<link rel="stylesheet" href="codemirror/theme/lesser-dark.css">
+<link rel="stylesheet" href="codemirror/theme/liquibyte.css">
+<link rel="stylesheet" href="codemirror/theme/lucario.css">
+<link rel="stylesheet" href="codemirror/theme/material-darker.css">
+<link rel="stylesheet" href="codemirror/theme/material-ocean.css">
+<link rel="stylesheet" href="codemirror/theme/material-palenight.css">
+<link rel="stylesheet" href="codemirror/theme/material.css">
+<link rel="stylesheet" href="codemirror/theme/mbo.css">
+<link rel="stylesheet" href="codemirror/theme/mdn-like.css">
+<link rel="stylesheet" href="codemirror/theme/midnight.css">
+<link rel="stylesheet" href="codemirror/theme/monokai.css">
+<link rel="stylesheet" href="codemirror/theme/moxer.css">
+<link rel="stylesheet" href="codemirror/theme/neat.css">
+<link rel="stylesheet" href="codemirror/theme/neo.css">
+<link rel="stylesheet" href="codemirror/theme/night.css">
+<link rel="stylesheet" href="codemirror/theme/nord.css">
+<link rel="stylesheet" href="codemirror/theme/oceanic-next.css">
+<link rel="stylesheet" href="codemirror/theme/panda-syntax.css">
+<link rel="stylesheet" href="codemirror/theme/paraiso-dark.css">
+<link rel="stylesheet" href="codemirror/theme/paraiso-light.css">
+<link rel="stylesheet" href="codemirror/theme/pastel-on-dark.css">
+<link rel="stylesheet" href="codemirror/theme/railscasts.css">
+<link rel="stylesheet" href="codemirror/theme/rubyblue.css">
+<link rel="stylesheet" href="codemirror/theme/seti.css">
+<link rel="stylesheet" href="codemirror/theme/shadowfox.css">
+<link rel="stylesheet" href="codemirror/theme/solarized.css">
+<link rel="stylesheet" href="codemirror/theme/ssms.css">
+<link rel="stylesheet" href="codemirror/theme/the-matrix.css">
+<link rel="stylesheet" href="codemirror/theme/tomorrow-night-bright.css">
+<link rel="stylesheet" href="codemirror/theme/tomorrow-night-eighties.css">
+<link rel="stylesheet" href="codemirror/theme/ttcn.css">
+<link rel="stylesheet" href="codemirror/theme/twilight.css">
+<link rel="stylesheet" href="codemirror/theme/vibrant-ink.css">
+<link rel="stylesheet" href="codemirror/theme/xq-dark.css">
+<link rel="stylesheet" href="codemirror/theme/xq-light.css">
+<link rel="stylesheet" href="codemirror/theme/yeti.css">
+<link rel="stylesheet" href="codemirror/theme/yonce.css">
+<link rel="stylesheet" href="codemirror/theme/zenburn.css">
+
+<script src="codemirror/lib/codemirror.js"></script>
+<script src="codemirror/mode/javascript/javascript.js"></script>
+
+<script src="./html2canvas.js"></script>
+
+<style>
+.CodeMirror {
+  width: 100%;
+  height: auto;
+  margin: auto auto;
+  border: 3px outset black;
+  border-radius: 5px;
+}
+body{
+  background: #23bb9b;
+  font-family: monospace;
+  font-size: 24px;
+  background-image: url("img/pipet-background.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+  opacity: 0.95;
+}
+h2{
+  text-align: center;
+  font-family: montserrat, sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  font-variant: small-caps;
+  margin: 2px;
+  color: white;
+}
+h3{
+  text-align: center;
+  font-family: montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 2px;
+  color: #fecd31;
+}
+#xcodespace,
+#writespace{
+  display: block;
+  width: 70%;
+  height: 200px;
+  margin: auto auto;
+  overflow-y: auto;
+  padding: 8px;
+  background: #ccc;
+  font-family: monospace;
+  font-size: 24px;
+  border: 3px outset black;
+  border-radius: 5px;
+  color: #066;
+}
+#loadspace{
+  margin-left: -8px;
+  position: fixed;
+  top: 0;
+  min-width: 200px;
+  height: 100%;
+  overflow-y: auto;
+  background: #ccc;
+  font-family: monospace;
+  font-size: 24px;
+  color: #066;
+  border: 3px outset black;
+  border-radius: 5px;
+}
+#button-wrapper{
+  margin: 8px auto;
+  text-align: center;
+}
+.button:active{
+  border: 3px inset black;
+}
+.button{
+  width: 120px;
+  height: 36px;
+  font-family: sans-serif;
+  font-size: 18px;
+  border: 4px outset black;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #ccc;
+}
+.delete-all{
+  display: block;
+  background: darkred;
+  color: white;
+  text-align: center;
+}
+.load-wrapper{
+  display: block;
+}
+.load{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  vertical-align: top;
+  float: left;
+}
+.trashcan:active{
+  border: 3px inset black;
+}
+.trashcan{
+  height: 30px;
+  cursor: pointer;
+  border: 3px outset black;
+  border-radius: 5px;
+  float: right;
+  margin-right: 4px;
+}
+.elbow{
+  margin-right: 4px;
+}
+#canvas-wrapper {
+  width: 100%;
+  height: auto;
+  margin: 20px auto 0px auto;
+}
+canvas {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+</style>
+<script>
+// ---------------------------------------------------------------------
+"use strict";
+
+// ---------------------------------------------------------------------
+var cl = console.log;
+
+// ---------------------------------------------------------------------
+function print(s){
+// ---------------------------------------------------------------------
+  if(s === undefined){
+    s = "undefined";
+  }
+  // naive version
+  document.getElementById("writespace").innerHTML += s;
+/*
+  var sOutput = "";
+//cl(s.constructor);
+  if(s.constructor === Object){
+    var sName = s.constructor.name;
+    sOutput = "<pre>" + sName + "&nbsp;";
+    sOutput += JSON.stringify(s, null, 2);
+    sOutput += "<\/pre>";
+    //sOutput = sOutput.replace(/\x0a/g, "<br>");
+    //sOutput = sOutput.replace(/\x20/g, "&nbsp;");
+  }else{
+    sOutput += "<pre>" + s + "<\/pre>";
+    sOutput = sOutput.replace(/\x0a/g, "<br>");
+    sOutput = sOutput.replace(/\x20/g, "&nbsp;");
+  }
+  document.getElementById("writespace").innerHTML += sOutput;
+*/
+}
+
+// ---------------------------------------------------------------------
+function printnl(s){
+// ---------------------------------------------------------------------
+  print(s);
+  print("<br>");
+}
+
+// ---------------------------------------------------------------------
+function onRunButtonClicked(){
+// ---------------------------------------------------------------------
+  var writespace = document.getElementById("writespace");
+  writespace.innerHTML = "";
+  var codespace = oEditor.getValue();
+  var s = codespace.replace(/document.write/g, "print");
+  try{
+    eval(s);
+  }
+  catch(error){
+    printnl(error.name + " - " + error.description + ": " + error.message);
+  }
+}
+
+// ---------------------------------------------------------------------
+function onEraseButtonClicked(){
+// ---------------------------------------------------------------------
+  oEditor.setValue("");
+//  document.getElementById("codespace").value = "";
+  document.getElementById("writespace").innerHTML = "";
+  document.getElementById("filename").innerHTML = "Geen bestandsnaam";
+}
+
+// ---------------------------------------------------------------------
+function onAboutButtonClicked(){
+// ---------------------------------------------------------------------
+  var sSource ='Over de PIPET JavaScript-testomgeving\n\n\
+De PIPET JavaScript-testomgeving is afgeleid van de HTML-,\n\
+CSS- en JavaScriptcode voor "Een eenvoudige JavaScript\n\
+testpagina\" die hier gevonden kan worden:\n\
+\n\
+https://nl.wikibooks.org/wiki/Programmeren_in_JavaScript/Appendices/Appendix_B:_testomgeving';
+  alert(sSource);
+}
+
+// ---------------------------------------------------------------------
+function onHelpButtonClicked(){
+// ---------------------------------------------------------------------
+  var sSource ="Met de functies:\n\n\
+\tprint(x):\t\tToon je de inhoud van \"x\" in het uitvoer-veld.\n\n\
+\tprintnl(x):\tToon je de inhoud van \"x\" in het uitvoer-veld\n\
+\t\t\t\tgevolgd door een nieuwe regel.\n\n";
+  alert(sSource);
+}
+
+// ---------------------------------------------------------------------
+function onDeleteAllButtonClicked() {
+// ---------------------------------------------------------------------
+  var sTheme = localStorage.getItem("$$$theme$$$");
+
+  var aKeys = Object.keys(localStorage);
+  if(aKeys.length > 1){ // theme is always present
+    var bDeleteAll = confirm("Weet je zeker dat je alle bestanden wilt verwijderen?");
+    if(bDeleteAll){
+      localStorage.clear();
+      showAllFiles();
+    }
+  }
+
+  localStorage.setItem("$$$theme$$$", sTheme);
+}
+
+// ---------------------------------------------------------------------
+function showAllFiles() {
+// ---------------------------------------------------------------------
+  var aKeys = Object.keys(localStorage);
+
+  var oCollator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
+  aKeys.sort(oCollator.compare);
+
+  var oLoadSpace = document.getElementById("loadspace");
+  oLoadSpace.innerHTML = "<button class=\"delete-all load button\""
+    + "onclick=\"onDeleteAllButtonClicked();\">Delete all<\/button>";
+
+    for(var i = 0; i < aKeys.length; i++){
+      oLoadSpace.innerHTML += "<div class=\"load-wrapper\">";
+
+      var sName = aKeys[i];
+      if(sName === "$$$theme$$$"){
+        continue;
+      }
+
+      oLoadSpace.innerHTML +=
+        "<button class=\"load button\" title=\"" + sName + "\" onclick=\"onLoadButtonClicked('"
+        + sName
+        + "');\">"
+        + sName
+        + "<\/button>";
+
+      oLoadSpace.innerHTML += "<img class=\"trashcan\" src=\"img/trashcan.png\" "
+        + "alt=\"trashcan\" title=\"Delete "
+        + sName
+        + "\" "
+        + "onclick=\"onDeleteButtonClicked('"
+        + sName
+        + "');\""
+        + ">";
+
+      oLoadSpace.innerHTML += "<\/div>";
+    }
+}
+
+// ---------------------------------------------------------------------
+function onDeleteButtonClicked(sName){
+// ---------------------------------------------------------------------
+  var bDelete = confirm("Weet je zeker dat je \""
+    + sName
+    + "\" wilt verwijderen?");
+  if(bDelete){
+    localStorage.removeItem(sName);
+    showAllFiles();
+  }
+}
+
+// ---------------------------------------------------------------------
+function onLoadButtonClicked(sName){
+// ---------------------------------------------------------------------
+//  document.getElementById("codespace").value = localStorage.getItem(sName);
+  oEditor.setValue(localStorage.getItem(sName));
+  document.getElementById("writespace").innerHTML = "";
+  document.getElementById("filename").innerHTML = sName;
+}
+
+// ---------------------------------------------------------------------
+function onSaveAsButtonClicked(){
+// ---------------------------------------------------------------------
+  var sName = "";
+  var bQueriedFileName = false;
+  while(sName === ""){
+    sName = prompt("Opslaan als...\n\nVoer een bestandsnaam in:", sName);
+    if(sName === null){
+      return;
+    }
+    bQueriedFileName = true;
+  }
+
+  var bOverwrite = true;
+  var bExists = localStorage.getItem(sName) !== null;
+  if(bExists && bQueriedFileName){
+    bOverwrite = prompt("Opslaan als...\n\nHet bestand \""
+    + sName
+    + "\" bestaat al.\n\nWil je dit bestand overschrijven?\n\n", sName);
+  }
+
+  if(bOverwrite){
+    localStorage.setItem(sName, oEditor.getValue());
+    if(!bExists){
+      showAllFiles();
+    }
+
+    document.getElementById("filename").innerHTML = sName;
+  }
+}
+
+// ---------------------------------------------------------------------
+function onSaveButtonClicked(){
+// ---------------------------------------------------------------------
+  var sName = document.getElementById("filename").innerHTML;
+  if(sName === "Geen bestandsnaam"){
+    sName = "";
+  }
+
+  var bQueriedFileName = false;
+  while(sName === ""){
+    sName = prompt("Opslaan\n\nVoer een bestandsnaam in:", sName);
+    if(sName === null){
+      return;
+    }
+    bQueriedFileName = true;
+  }
+
+  var bOverwrite = true;
+  var bExists = localStorage.getItem(sName) !== null;
+  if(bExists && bQueriedFileName){
+    bOverwrite = prompt("Opslaan\n\nHet bestand \""
+    + sName
+    + "\" bestaat al.\n\nWil je dit bestand overschrijven?\n\n", sName);
+  }
+
+  if(bOverwrite){
+    localStorage.setItem(sName, oEditor.getValue());
+    if(!bExists){
+      showAllFiles();
+    }
+
+    document.getElementById("filename").innerHTML = sName;
+  }
+}
+
+// ---------------------------------------------------------------------
+function onCleanButtonClicked(){
+// ---------------------------------------------------------------------
+  var sCode = oEditor.getValue();
+  sCode = sCode.replace(/\x09/g, "  ");
+  sCode = sCode.replace(/\x0b/g, "\n");
+  oEditor.setValue(sCode);
+  oEditor.refresh();
+}
+
+// ---------------------------------------------------------------------
+function changeTheme(sTheme){
+// ---------------------------------------------------------------------
+  oEditor.setOption("theme", sTheme);
+  localStorage.setItem("$$$theme$$$",sTheme);
+}
+
+// ---------------------------------------------------------------------
+function onPseudoShot() {
+// ---------------------------------------------------------------------
+  let oCanvas =  document.getElementById('canvas-wrapper');
+  oCanvas.innerHTML = '';
+  html2canvas(document.querySelector(".CodeMirror")).then(canvas => {
+    oCanvas.appendChild(canvas);
+  });
+}
+
+// ---------------------------------------------------------------------
+</script>
+</head>
+<body>
+  <h2><strong>PIPET</strong> JavaScript-testomgeving</h2>
+  <h3 id="filename">Geen bestandsnaam</h3>
+  <!-- textarea requires two extra line feeds following the notification -->
+  <textarea id="codespace">// Voer je JavaScript-code hier in en klik op &quot;Uitvoeren&quot;.&#013;&#010;&#013;&#010;</textarea>
+  <div id="button-wrapper">
+    <button type="button" class="button elbow" onclick="onRunButtonClicked();">Uitvoeren</button>
+
+    <button type="button" class="button elbow" onclick="onCleanButtonClicked();">Opschonen</button>
+
+    <button type="button" class="button elbow" onclick="onPseudoShot();">Screen&nbsp;shot</button>
+
+    <button type="button" class="button" onclick="onSaveButtonClicked();">Opslaan</button>
+    <button type="button" class="button elbow" onclick="onSaveAsButtonClicked();">Opslaan&nbsp;als</button>
+
+    <button type="button" class="button elbow" onclick="onEraseButtonClicked();">Wissen</button>
+
+    <button type="button" class="button" onclick="oEditor.setSize('71%', '200px');">Klein</button>
+    <button type="button" class="button elbow" onclick="oEditor.setSize('71%', '600px');">Groot</button>
+
+    <button type="button" class="button" onclick="onHelpButtonClicked();">Help</button>
+    <button type="button" class="button" onclick="onAboutButtonClicked();">Over...</button>
+
+    <br>
+
+    <select id="theme-selector" onchange="changeTheme(this.value);">
+      <option value="default">Kies een thema</option>
+      <option value="3024-day">3024-day</option>
+      <option value="3024-night">3024-night</option>
+      <option value="abcdef">abcdef</option>
+      <option value="ambiance-mobile">ambiance-mobile</option>
+      <option value="ambiance">ambiance</option>
+      <option value="base16-dark">base16-dark</option>
+      <option value="base16-light">base16-light</option>
+      <option value="bespin">bespin</option>
+      <option value="blackboard">blackboard</option>
+      <option value="cobalt">cobalt</option>
+      <option value="colorforth">colorforth</option>
+      <option value="darcula">darcula</option>
+      <option value="dracula">dracula</option>
+      <option value="duotone-dark">duotone-dark</option>
+      <option value="duotone-light">duotone-light</option>
+      <option value="eclipse">eclipse</option>
+      <option value="elegant">elegant</option>
+      <option value="erlang-dark">erlang-dark</option>
+      <option value="gruvbox-dark">gruvbox-dark</option>
+      <option value="hopscotch">hopscotch</option>
+      <option value="icecoder">icecoder</option>
+      <option value="idea">idea</option>
+      <option value="isotope">isotope</option>
+      <option value="lesser-dark">lesser-dark</option>
+      <option value="liquibyte">liquibyte</option>
+      <option value="lucario">lucario</option>
+      <option value="material-darker">material-darker</option>
+      <option value="material-ocean">material-ocean</option>
+      <option value="material-palenight">material-palenight</option>
+      <option value="material">material</option>
+      <option value="mbo">mbo</option>
+      <option value="mdn-like">mdn-like</option>
+      <option value="midnight">midnight</option>
+      <option value="monokai">monokai</option>
+      <option value="moxer">moxer</option>
+      <option value="neat">neat</option>
+      <option value="neo">neo</option>
+      <option value="night">night</option>
+      <option value="nord">nord</option>
+      <option value="oceanic-next">oceanic-next</option>
+      <option value="panda-syntax">panda-syntax</option>
+      <option value="paraiso-dark">paraiso-dark</option>
+      <option value="paraiso-light">paraiso-light</option>
+      <option value="pastel-on-dark">pastel-on-dark</option>
+      <option value="railscasts">railscasts</option>
+      <option value="rubyblue">rubyblue</option>
+      <option value="seti">seti</option>
+      <option value="shadowfox">shadowfox</option>
+      <option value="solarized">solarized</option>
+      <option value="ssms">ssms</option>
+      <option value="the-matrix">the-matrix</option>
+      <option value="tomorrow-night-bright">tomorrow-night-bright</option>
+      <option value="tomorrow-night-eighties">tomorrow-night-eighties</option>
+      <option value="ttcn">ttcn</option>
+      <option value="twilight">twilight</option>
+      <option value="vibrant-ink">vibrant-ink</option>
+      <option value="xq-dark">xq-dark</option>
+      <option value="xq-light">xq-light</option>
+      <option value="yeti">yeti</option>
+      <option value="yonce">yonce</option>
+      <option value="zenburn">zenburn</option>
+    </select>
+  </div>
+  <div id="writespace">Hier zie je het resultaat van je JavaScript code.</div>
+  <div id="canvas-wrapper"></div>
+  <div id="loadspace"></div>
+  <script>
+    showAllFiles();
+
+    //
+    // get theme
+    //
+    sTheme = localStorage.getItem("$$$theme$$$");
+    if(sTheme === null){
+      sTheme = "default";
+      localStorage.setItem("$$$theme$$$", sTheme);
+    }
+
+    //
+    // reset all options and
+    // check selected option
+    //
+    var oThemeSelector = document.getElementById("theme-selector");
+    var aoOptions = oThemeSelector.getElementsByTagName('option');
+    var iThemeTrap = 0;
+    for(var i = 0; i< aoOptions.length; i++){
+      aoOptions[i].selected = "";
+      if(aoOptions[i].value === sTheme){
+        iThemeTrap = i;
+      }
+    }
+    aoOptions[iThemeTrap].selected = "selected";
+
+    var oCodeSpace = document.getElementById("codespace");
+    var oEditor = CodeMirror.fromTextArea(oCodeSpace, {
+      viewportMargin: Infinity,
+      theme: sTheme,
+      lineNumbers: true,
+      smartIndent: true,
+      tabSize: 2,
+      indentWithTabs: false,
+    });
+    oEditor.setSize("71%", "600px");
+  </script>
+</body>
+</html>

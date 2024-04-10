@@ -1,0 +1,1 @@
+let ladekast = new Array(3);
