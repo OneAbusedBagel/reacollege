@@ -9,15 +9,18 @@ let i = 0;
 while (i < 8) {
     let rng = Math.round(Math.random() * 10000);
     if (rng === 666) {
-        break
-    };
-    if (rng <= 999) {
-        continue
+        break;
     }
+
+    if (rng <= 999) {
+        continue;
+    }
+
     numbers.push(rng);
-    i++
-    numbers.sort()
-};
+    numbers.sort();
+
+    i++;
+}
 
 console.log(numbers);
 

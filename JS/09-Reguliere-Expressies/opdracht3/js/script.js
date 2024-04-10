@@ -1,75 +1,16 @@
 "use strict"
 
-const names = "Branford, Terra\nCole, Locke\nGaramonde, Cyan\nChère, Celes"
+const names = "Branford, Terra\nCole, Locke\nGaramonde, Cyan\nChère, Celes";
 const str = "p, a, img, table, form";
-const swap = /(\w+)/gi;
+const swap = /([A-zÀ-ú]+)\,\s([A-zÀ-ú]+)/gi;
+const test = /([A-zÀ-ú]+)\,\s([A-zÀ-ú]+)/gi;
 
-console.log(names)
-// console.log(names.replace())
-const newstring = names.replace(swap, "$2, $1")
-console.log(newstring)
-console.log(names.replace((/[\p{L}\p{N}_]/g), "1"))
-console.log(str)
-console.log(str.replace(/(\w+)/gi, "<$1>"))
+console.log(names);
+console.log(names.replace(test, `$2, $1`));
+// I assume it wants me to use a function as the replacement but due to the way it says 'BINNEN één replace method' twijfel ik nu daarover.
 
+const newstring = names.replace(swap, "$2, $1");
+console.log(newstring);
 
-// const btn = document.querySelector("#submit")
-// const invalid = document.querySelector("#invalid")
-// const pattern = /^(06)\-[0-9]{8}|^(06 )([0-9]{8})|^(06)([0-9]{8})|^(\+31 6 )([0-9]{8})/
-
-
-// function check() {
-//     let telcheck = document.querySelector("#tel").value;
-//     console.log(telcheck)   
-//     if (pattern.test(telcheck) == true) {
-//         btn.disabled = false
-//         console.log("check is true")
-//         console.log(pattern)
-//         console.log(telcheck)
-//     } else {
-//         btn.disabled = true
-//         console.error("check sees false")
-//         invalid.innerHTML = ("Invalid phone number!")
-//     }
-// }
-
-
-// const el = document.getElementById("tel");
-// el.addEventListener("input", check);
-
-
-//-----------------[division line to reduce clutter]----
-
-
-// let check = "+31 6 12345678"
-
-// console.log(check)
-// console.log(pattern)
-// console.log(pattern.test(check))
-
-// function submitFunctie() {
-//     alert("don't go just yet<,!")
-// }
-
-// function log() {
-
-//     console.log(`this is the le1 log ${telcheck}`)
-
-//     if (pattern.test(telcheck) === true) {
-//         console.log(`log pass`)
-//     } else {
-//         console.error(`log no pass.`)
-//     }
-//     alert("it uh work?")
-// }
-
-// const el1 = document.getElementById("submit");
-// el1.addEventListener("click", log);
-
-// const el2 = document.getElementById("knop-1");
-// el2.addEventListener("click", log())
-
-// function testFunctie() {
-//     var head = document.getElementById("tel").value
-//     document.getElementById("output").innerHTML = `<i> ${head} </i>`;
-// }
+console.log(str);
+console.log(str.replace(/(\w+)/gi, "<$1>"));

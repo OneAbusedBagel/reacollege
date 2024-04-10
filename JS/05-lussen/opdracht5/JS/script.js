@@ -22,7 +22,7 @@ const courses = {
 		"Meta tags",
 		"Webcrawlers",
 		"Local SEO",
-	],
+	]
 };
 
 
@@ -31,9 +31,9 @@ for (let property in courses) {
     output += "<h3>" + property + "</h3>";
 
 	for (let lesson of courses[property]) {
-		output += "<li>" + lesson + "</li>"
+		output += "<li>" + lesson + "</li>";
 	}
-};
+}
 
 document.querySelector("body").innerHTML = output;
 

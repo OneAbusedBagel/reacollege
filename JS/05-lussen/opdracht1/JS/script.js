@@ -9,7 +9,7 @@ console.log(numbers);
 for (let i = 0; i < 8; i++) {
     let rng = Math.round(Math.random() * 10000);
     numbers.push(rng);
-};
+}
 
 console.log(numbers);
 
