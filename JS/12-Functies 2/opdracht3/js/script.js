@@ -1,5 +1,13 @@
 "use strict"
 
+const persons = [
+    {name: "Tom", age: 33, loc: "Weert"},
+    {name: "Tim", age: 32, loc: "Woort"},
+    {name: "Tam", age: 31, loc: "Wiirt"},
+    {name: "Tum", age: 34, loc: "Waart"},
+    {name: "Tem", age: 35, loc: "Wuurt"}
+]
+
 // FunctionStorage [
 //     function sectionMaker(inputText){
 //         let result = "<section><p>"+inputText+"</p></section>";
@@ -26,30 +34,22 @@
 
 // ] 
 
-
 const pageMaker = (name, age, loc) => `<h1> ${name} </h1> <p>  ${age}  </p> <p>  ${loc}  </p>`
 
-document.getElementById("output").innerHTML = pageMaker('this is testin text'); // testing text will be changed to the const 'formattedPersons' 
-
-const persons = [
-    {name: "Tom", age: 33, loc: "Weert"},
-    {name: "Tim", age: 32, loc: "Woort"},
-    {name: "Tam", age: 31, loc: "Wiirt"},
-    {name: "Tum", age: 34, loc: "Waart"},
-    {name: "Tem", age: 35, loc: "Wuurt"}
-]
+document.getElementById("output").innerHTML = pageMaker(persons[0]); // testing text will be changed to the const 'formattedPersons' 
+console.log(pageMaker)
 
 const formattedPersons = [
 
 ]
 
-const formatPerson = person => persons.name;
-console.log(formatPerson.paramater)
+const formatPerson = person => person.name;
+console.log(formatPerson)
 
-// const formatPerson0 = (person => person.name.substring(0,1) + (person.age + 1) + person.loc.toUpperCase());
-// const formatPerson1 = persons.map(person => person.age + 1);
-// const formatPerson2 = persons.map(person => person.loc.toUpperCase());
+const formatNames = persons.map(person => person.name.substring(0,1));
+const formatAges = persons.map(person => person.age + 1);
+const formatLocs = persons.map(person => person.loc.toUpperCase());
 
-// console.log(formatPerson0);
-// console.log(formatPerson1);
-// console.log(formatPerson2);
+console.log(formatNames);
+console.log(formatAges );
+console.log(formatLocs );
