@@ -35,7 +35,8 @@ gamePromise.then(() => {
 	getGames();
 })
 
-gamePromise.catch(() => {
-	console.log("didn't work idiot, dunno why though,");
-	console.log(games);
-})
+// Apparently I wasn't supposed to do this yet...
+// gamePromise.catch(() => {
+// 	console.log("didn't work idiot, dunno why though,");
+// 	console.log(games);
+// })

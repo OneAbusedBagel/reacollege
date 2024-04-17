@@ -15,50 +15,29 @@ function getGames(){
 	}, 1000);
 }
 
-
-// Unaltered original addgames function
-
-// function addGames(newGames){
-// 	setTimeout(() => {
-// 		if (Array.isArray(newGames)){
-// 			games.push(...newGames);
-// 		} else {
-// 			console.error("Dit is geen geldige input.");
-// 		}
-// 	}, 2000);
-// }
-
-
-
-
-
 const gamePromise = new Promise((resolve, reject) => {
 	function addGames(newGames){
-	console.log("addgames active")
+	// console.log("addgames activated")
 	setTimeout(() => {
 		games.push(...newGames);
-		if (variable.constructor == Array){
+		if (newGames.constructor == Array){
 			resolve();
-			console.log("it work")
+			console.log("variable is an array, promise resolved")
+			// console.log(games)
 		} else {
 			reject();
-			console.log("NO, no it not work")
+			console.log("Variable is NOT an array, rejecting promise")
+			// console.log(games)
 		}
 	}, 2000);
 
 	}addGames([
 		{title: `Legend of Mana`, description:`Set off on a journey to find the mystical Mana Tree seen in a dream, before discovering... the world map is empty! During your travels, you’ll acquire special artifacts; place these wherever you’d like on the map to bring towns and dungeons to life and advance the story. Meet a colorful cast of characters, square off against fearsome monsters, and complete quests in the vast world of Fa’Diel.` },
 		{title: `Project Triangle Strategy`, description:`Command a group of warriors as Serenoa, heir of House Wolffort, in a tangled plot where your decisions make all the difference. Key choices you make will bolster one of three convictions—Utility, Morality, Liberty—which together make up Serenoa’s world view and influence how the story will unfold. When faced with truly momentous decisions, multiple characters will weigh in by casting their votes on the Scales of Conviction.` }
-	]);
+	])
+	console.log(games)
 })
 
-addGames([
-	{title: `Legend of Mana`, description:`Set off on a journey to find the mystical Mana Tree seen in a dream, before discovering... the world map is empty! During your travels, you’ll acquire special artifacts; place these wherever you’d like on the map to bring towns and dungeons to life and advance the story. Meet a colorful cast of characters, square off against fearsome monsters, and complete quests in the vast world of Fa’Diel.` },
-	{title: `Project Triangle Strategy`, description:`Command a group of warriors as Serenoa, heir of House Wolffort, in a tangled plot where your decisions make all the difference. Key choices you make will bolster one of three convictions—Utility, Morality, Liberty—which together make up Serenoa’s world view and influence how the story will unfold. When faced with truly momentous decisions, multiple characters will weigh in by casting their votes on the Scales of Conviction.` }
-]);
-
-gamePromise
-gamePromise()
 
 // Test met valide input
 gamePromise.then(() => {
@@ -69,6 +48,5 @@ gamePromise.then(() => {
 gamePromise.catch(() => {
 	console.log("didn't work idiot, dunno why though,");
 	console.log(games);
-	addGames("Dit is duidelijk geen array");
 	getGames();
 })

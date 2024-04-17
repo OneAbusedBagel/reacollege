@@ -41,27 +41,110 @@
 		</figure>
 	</body>
 	<script>
-		setTimeout(() => {
-			document.querySelector(".blok:nth-child(1)").style.backgroundColor = "dodgerblue";
+		// setTimeout(() => {
+		// 	document.querySelector(".blok:nth-child(1)").style.backgroundColor = "dodgerblue";
+		// 	setTimeout(() => {
+		// 		document.querySelector(".blok:nth-child(2)").style.backgroundColor = "khaki";
+		// 		setTimeout(() => {
+		// 			document.querySelector(".blok:nth-child(3)").style.backgroundColor = "mediumseagreen";
+		// 			setTimeout(() => {
+		// 				document.querySelector(".blok:nth-child(4)").style.backgroundColor = "silver";
+		// 				setTimeout(() => {
+		// 					document.querySelector(".blok:nth-child(5)").style.backgroundColor = "violet";
+		// 					setTimeout(() => {
+		// 						document.querySelector("h1").innerHTML = "You say tomato, but I say Kenny";
+		// 						setTimeout(() => {
+		// 							document.querySelector("img").src = "images/kenny.png";
+		// 						}, 1000);						
+		// 					}, 600);
+		// 				}, 400);				
+		// 			}, 200);			
+		// 		}, 400);		
+		// 	}, 600);	
+		// }, 1000);
+
+		const kennyPromise = new Promise((myResolve, myReject) => {
 			setTimeout(() => {
-				document.querySelector(".blok:nth-child(2)").style.backgroundColor = "khaki";
+				let value = "dodgerblue";
+				document.querySelector(".blok:nth-child(1)").style.backgroundColor = value;
+			myResolve(value);
+			}, 1000);	
+		})
+
+		kennyPromise.then(value => {
+			return new Promise((myResolve, myReject) => {
 				setTimeout(() => {
-					document.querySelector(".blok:nth-child(3)").style.backgroundColor = "mediumseagreen";
-					setTimeout(() => {
-						document.querySelector(".blok:nth-child(4)").style.backgroundColor = "silver";
-						setTimeout(() => {
-							document.querySelector(".blok:nth-child(5)").style.backgroundColor = "violet";
-							setTimeout(() => {
-								document.querySelector("h1").innerHTML = "You say tomato, but I say Kenny";
-								setTimeout(() => {
-									document.querySelector("img").src = "images/kenny.png";
-								}, 1000);						
-							}, 600);
-						}, 400);				
-					}, 200);			
-				}, 400);		
-			}, 600);	
-		}, 1000);
+					value ="khaki";
+					document.querySelector(".blok:nth-child(2)").style.backgroundColor = value;
+					console.log(value)
+				myResolve(value);
+				}, 600);	
+			});
+		})
+
+		kennyPromise.then(value => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					value = "mediumseagreen";
+					document.querySelector(".blok:nth-child(3)").style.backgroundColor = value;
+					console.log(value)
+					myResolve(value);
+				}, 400);
+
+			})
+		})
+
+		kennyPromise.then(value => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					console.log(value)
+					value = "silver";
+					document.querySelector(".blok:nth-child(4)").style.backgroundColor = value;
+					console.log(value)
+					myResolve(value);
+				}, 200);	
+			});
+		})
+
+		kennyPromise.then(value => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					value = "violet";
+					document.querySelector(".blok:nth-child(5)").style.backgroundColor = value;
+					console.log
+					myResolve(value);
+				}, 400);
+			})
+		})
+
+		kennyPromise.then(value => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					value = "You say tomato, but I say Kenny";
+					document.querySelector("h1").innerHTML = value;
+					console.log(value)
+				myResolve(value);
+				}, 600);	
+			})	
+		})
+
+		kennyPromise.then(value => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					value = "images/kenny.png";
+					document.querySelector("img").src = value;
+					console.log(value)
+				myResolve(value);
+				}, 1000);	
+			})
+		})
+
+		.then(() => {
+			console.log("Final '.then' DOES activate last! somehow?")
+		})
+		.catch(() => {
+			console.error("something went wrong..again")
+		},)
 
 		setTimeout(() => {
 			console.log("You say yes");
