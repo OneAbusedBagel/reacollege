@@ -28,7 +28,7 @@ console.log(numbers);
 //  console.log(order);
 //  document.getElementById("true").innerHTML = `${order}`;
 
-alert(numbers.join(`\n`));
+// alert(numbers.join(`\n`));
 
 document.getElementById("rgn-1-1").innerHTML = `${numbers[0]} `;
 document.getElementById("rgn-2-1").innerHTML = `${numbers[1]} `;
