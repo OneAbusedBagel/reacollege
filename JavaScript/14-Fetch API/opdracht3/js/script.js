@@ -2,7 +2,7 @@
 
 
 
-function changeFunction() {
+async function changeFunction() {
     fetch("imagecrawler.php")
     .then(response => response.text())
 	.then(data => {
@@ -14,16 +14,14 @@ function changeFunction() {
 
 		for(let i = 0; i < stuff.length; i++) {
 			let alt = stuff[i].alt;
-			console.log(alt);
+			// console.log(alt);
 			alt = alt.replace(".jpg", "");
 			alt = alt.replaceAll("-", " ");
 			let altRest = alt
 			let altLetter = alt.charAt(0).toUpperCase();
 			alt = altLetter + altRest.slice(1)
-			// stuff[i] = alt;
 			console.log(alt);
 		}
-		console.log(stuff)
 	})
 }
 
