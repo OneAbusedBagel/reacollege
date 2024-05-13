@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Promise Chains</title>
+		<style>
+			body {
+				font-family: Verdana, sans-serif;
+				background-color: wheat;
+			}
+			section {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				flex-wrap: wrap;
+			}
+			.blok {
+				background-color: tomato;
+				border: 1px solid black;
+				width: 100px;
+				height: 100px;
+				border-radius: 25px 25px 50px 50px
+			}
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div class="blok"></div>
+			<div class="blok"></div>
+			<div class="blok"></div>
+			<div class="blok"></div>
+			<div class="blok"></div>
+		</section>
+		<h1></h1>
+		<figure>
+			<img src="images/tomato.png" width="600" height="600">
+		</figure>
+	</body>
+	<script>
+		// Original (Kenny img) prymaid of doom left behind to copy from and check/correct new promise chain
+		// setTimeout(() => {
+		// 	document.querySelector(".blok:nth-child(1)").style.backgroundColor = "dodgerblue";
+		// 	setTimeout(() => {
+		// 		document.querySelector(".blok:nth-child(2)").style.backgroundColor = "khaki";
+		// 		setTimeout(() => {
+		// 			document.querySelector(".blok:nth-child(3)").style.backgroundColor = "mediumseagreen";
+		// 			setTimeout(() => {
+		// 				document.querySelector(".blok:nth-child(4)").style.backgroundColor = "silver";
+		// 				setTimeout(() => {
+		// 					document.querySelector(".blok:nth-child(5)").style.backgroundColor = "violet";
+		// 					setTimeout(() => {
+		// 						document.querySelector("h1").innerHTML = "You say tomato, but I say Kenny";
+		// 						setTimeout(() => {
+		// 							document.querySelector("img").src = "images/kenny.png";
+		// 						}, 1000);						
+		// 					}, 600);
+		// 				}, 400);				
+		// 			}, 200);			
+		// 		}, 400);		
+		// 	}, 600);	
+		// }, 1000);
+
+		const kennyPromise = new Promise((myResolve, myReject) => {
+			setTimeout(() => {
+				let value = "dodgerblue";
+				document.querySelector(".blok:nth-child(1)").style.backgroundColor = value;
+			myResolve(value);
+			}, 1000);	
+		})
+		.then((value) => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					value ="khaki";
+					document.querySelector(".blok:nth-child(2)").style.backgroundColor = value;
+					console.log(value)
+				myResolve(value);
+				}, 600);	
+			});
+		})
+		.then((value) => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					value = "mediumseagreen";
+					document.querySelector(".blok:nth-child(3)").style.backgroundColor = value;
+					console.log(value)
+					myResolve(value);
+				}, 400);
+			})
+		})
+		.then((value) => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					console.log(value)
+					value = "silver";
+					document.querySelector(".blok:nth-child(4)").style.backgroundColor = value;
+					console.log(value)
+					myResolve(value);
+				}, 200);	
+			});
+		})
+		.then((value) => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					value = "violet";
+					document.querySelector(".blok:nth-child(5)").style.backgroundColor = value;
+					console.log
+					myResolve(value);
+				}, 400);
+			})
+		})
+		.then((value) => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					value = "You say tomato, but I say Kenny";
+					document.querySelector("h1").innerHTML = value;
+					console.log(value)
+				myResolve(value);
+				}, 600);	
+			})	
+		})
+		.then((value) => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					value = "images/kenny.png";
+					document.querySelector("img").src = value;
+					console.log(value)
+				myResolve(value);
+				}, 1000);	
+			})
+		})
+		.then(() => {
+			console.log("Evrything is functional and in order! (if this is the last console.log)")
+		})
+		.catch(() => {
+			console.error("something went wrong..again")
+		},)
+
+		// Original (console.logs) pyramid of doom left behind to copy from and check/correct new promise chain
+		// setTimeout(() => {
+		// 	console.log("You say yes");
+		// 	setTimeout(() => {
+		// 		console.warn("I say no");
+		// 		setTimeout(() => {
+		// 			console.log("You say stop");
+		// 				setTimeout(() => {
+		// 				console.warn("I say go go go");
+		// 			}, 1000);
+		// 		}, 1500);
+		// 	}, 1000);
+		// }, 1500);
+
+		const consolePromise = new Promise((conResolve, conReject) => {
+			setTimeout(() => {
+				let conValue = "This value is largely irrelevant it just needs to be something";
+				// So it seems the promise chain needs a variable with whatever value (ergo: string, random number or anything really, I think the variable itself functions as an anchor) just for it to function and chain properly?
+				console.log("You say yes");	
+				conResolve()
+				// So while the value of the variable linked to the promise chain has to be there. resolve doesn't need to have any variable in there. you can just declare it empty, as itself.
+				// I was wrong, you can remove that '(con)value' bit entirely as long as everything runs anonymously it still chains properly.
+			}, 1500)
+		})
+		.then((conValue) => {
+			return new Promise((conResolve, conReject) => {
+				setTimeout(() => {
+					console.warn("I say no");	
+					conResolve()
+				}, 1000)
+			})
+		})
+		.then((conValue) => {
+			return new Promise((conResolve, conReject) => {
+				setTimeout(() => {
+					console.log("You say stop");
+					conResolve()
+				},1500)
+			})
+		})
+		.then((conValue) => {
+			return new Promise((conResolve, conReject) => {
+				setTimeout(() => {
+					console.warn("I say go go go");
+					conResolve()
+				}, 1000)
+			})
+		})
+		.then(() => {
+			console.log("everything checks out at the console chain")
+		})
+
+		// I tried 4.3 but the lack of guidance or hint troubled me, I tried something with an overarching promise but it didn't work and I scrapped it. So now instead of being stuck here for days, I'm going to go work on exercise 5
+	</script>	
+</html>

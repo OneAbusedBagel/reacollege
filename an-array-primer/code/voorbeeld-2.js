@@ -1,0 +1,1 @@
+ladekast = new Array(3);

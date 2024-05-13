@@ -1,0 +1,1 @@
+let a = new Array(5, 6, 7, 8);
