@@ -1,0 +1,13 @@
+
+
+line-2 : add proper double quotes on key 'servlet'
+
+line-22: add comma after line-22 
+
+line-43: change semi-colon (;) to regular colon (:)
+
+line-52: change opening square bracket ("[") to opening curly bracket ("{")
+
+line-65: add colon (:) and square bracket
+
+line-88: add closing square bracket ("]") on colum 51  and add closing curly bracket ("}") on column (new)53
