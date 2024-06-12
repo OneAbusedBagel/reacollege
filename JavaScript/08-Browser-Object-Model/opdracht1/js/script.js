@@ -19,7 +19,11 @@ function reportScrollPos() {
 }
 
 window.onresize = reportWindowSize;
-window.onscroll = reportScrollPos
+// window.onscroll = reportScrollPos
 window.onload = reportWindowSize
 
-// Geen null gedoe dus ik kan eindelijk weer doorwerken
+let events = document.getElementById("container");
+events.addEventListener("scroll",reportScrollPos, true);
+
+
+// try and figure out how to properly activate the 'event types'
