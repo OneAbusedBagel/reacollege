@@ -4,25 +4,25 @@ const btn = document.querySelector("#submit")
 // const invalidTel = document.querySelector("#invalidTel")
 const patternTel = /^(06)\-[0-9]{8}|^(06 )([0-9]{8})|^(06)([0-9]{8})|^(\+31 6 )([0-9]{8})/
 const patternBirth = /^([0-9]{2})\-[0-9]{2}|^[0-9] (januarie|februarie|maart|april|mei|junie|julie|augustus|september|oktober|november|december)|^([0-9]{2}) (januarie|februarie|maart|april|mei|junie|julie|augustus|september|oktober|november|december)/gi
+//  the next three regExp patterns are 'borrowed' from a handy site called "regex101" where you can test, save and share regular expressions 
 const patternStreet = /^(?<streetname>\d*[\p{L}\d '\/.\-]+)[,\s]+(?<housenumber>\d+)\s*(?<ext>[\p{L}\d\-\/'"() ]*)$/iu
-//  the patternStreet regExp is 'borrowed' from a handy site called "regex101" where you can test, save and share regular expressions 
 const patternUrl = /^((http|https):\/\/)?(www\.)?[a-zA-Z0-9-_\.]+\.[a-zA-Z]+(:\d+)?(\/[a-zA-Z\d\.\-_]*)*[a-zA-Z#-_\d]*$/gm
 const patternPass =  /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$/
 
 function checkTel() {
     const invalidTel = document.querySelector("#invalidTel")   
     let telcheck = document.querySelector("#tel").value;
-    console.log(telcheck)   
-    if (patternTel.test(telcheck) == true) {
-        btn.disabled = false
-        console.log("check is true")
-        console.log(patternTel) 
-        console.log(telcheck)
-        invalidTel.innerHTML = ("")
-    } else {
-        btn.disabled = true
-        console.warn("check sees false")
-        invalidTel.innerHTML = ("InvalidTel phone number!")
+    console.log(telcheck)
+    invalidTel.innerHTML = ("") 
+    try{
+        if (patternTel.test(telcheck) == false){
+            btn.disabled = true
+            throw "Invalid phone number"
+        }
+    }
+    catch(err){
+        console.warn(err)
+        invalidTel.innerHTML = err
     }
 }
 
@@ -30,33 +30,34 @@ function checkBirth() {
     const invalidBirth = document.querySelector("#invalidBirth") 
     let Birthcheck = document.querySelector("#birth").value;
     console.log(Birthcheck)   
-    if (patternBirth.test(Birthcheck) == true) {
-        btn.disabled = false
-        console.log("check is true")
-        console.log(patternBirth)
-        console.log(Birthcheck)
-        invalidBirth.innerHTML = ("")
-    } else {
-        btn.disabled = true
-        console.warn("check sees false")
-        invalidBirth.innerHTML = ("Invalid birth number!")
+    invalidBirth.innerHTML = ("")
+    try{
+        if (patternBirth.test(Birthcheck) == false) {
+            btn.disabled = true
+            throw "Invalid birth number!"
+        }
     }
+    catch(err) {
+        console.warn(err)
+        invalidBirth.innerHTML = err
+    }
+
 }
 
 function checkStreet() {
     const invalidStreet = document.querySelector("#invalidStreet")
     let streetCheck = document.querySelector("#street").value;
-    console.log(streetCheck)   
-    if (patternStreet.test(streetCheck) == true) {
-        btn.disabled = false
-        console.log("check is true")
-        console.log(patternStreet)
-        console.log(streetCheck)
-        invalidStreet.innerHTML = ("")
-    } else {
-        btn.disabled = true
-        console.warn("check sees false")
-        invalidStreet.innerHTML = ("Invalid Street!")
+    console.log(streetCheck)
+    invalidStreet.innerHTML = ("")
+    try {
+        if (patternStreet.test(streetCheck) == false) {
+            btn.disabled = true
+            throw "Invalid Street!"
+        } 
+    }
+    catch(err) {
+        console.warn(err)
+        invalidStreet.innerHTML = err
     }
 }
 
@@ -64,16 +65,18 @@ function checkUrl() {
     const invalidUrl = document.querySelector("#invalidUrl")
     let urlCheck = document.querySelector("#url").value;
     console.log(urlCheck)   
-    if (patternUrl.test(urlCheck) == true) {
-        btn.disabled = false
-        console.log("check is true")
-        console.log(patternUrl)
-        console.log(urlCheck)
-        invalidUrl.innerHTML = ("")
-    } else {
-        btn.disabled = true
-        console.warn("check sees false")
-        invalidUrl.innerHTML = ("Invalid Url!")
+    invalidUrl.innerHTML = ("")
+    try {
+        if (patternUrl.test(urlCheck) == false) {
+            btn.disabled = true
+            throw "Invalid Url!"
+            invalidUrl.innerHTML = ("")
+        }
+    }
+    
+    catch(err) {
+        console.warn(err)
+        invalidUrl.innerHTML = err
     }
 }
 
@@ -81,16 +84,16 @@ function checkPass() {
     const invalidPass = document.querySelector("#invalidPass")
     let passCheck = document.querySelector("#pass").value;
     console.log(passCheck)   
-    if (patternPass.test(passCheck) == true) {
-        btn.disabled = false
-        console.log("check is true")
-        console.log(patternPass)
-        console.log(passCheck)
-        invalidPass.innerHTML = ("")
-    } else {
-        btn.disabled = true
-        console.warn("check sees false")
-        invalidPass.innerHTML = ("Invalid Password!")
+    invalidPass.innerHTML = ("")
+    try{
+        if (patternPass.test(passCheck) == false) {
+            btn.disabled = true
+            throw "Invalid Password!"
+        }
+    }
+    catch(err) {
+        console.warn(err)
+        invalidPass.innerHTML = err
     }
 }
 
@@ -108,5 +111,4 @@ el3.addEventListener("input", checkUrl);
 
 const el4 = document.getElementById("pass");
 el4.addEventListener("input", checkPass);
-
 
