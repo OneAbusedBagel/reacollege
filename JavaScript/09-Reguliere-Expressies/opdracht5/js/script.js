@@ -1,17 +1,17 @@
 "use strict"
 
 function skillCheck() {
-    let rng = Math.floor(Math.random()*6)+1
-    document.getElementById("output").innerHTML = rng
-    console.log(rng)
+    let rng = Math.floor(Math.random()*6)+1;
+    document.getElementById("output").innerHTML = rng;
+    console.log(rng);
     try{
         if (rng == 1){
             throw "you failed the skillcheck.";
         }
     }
     catch(err) {
-        console.log(err)
-        document.getElementById("output").innerHTML = err
+        console.log(err);
+        document.getElementById("output").innerHTML = err;
     }
 }
 
@@ -20,13 +20,13 @@ function dateCheck() {
     let day = date.getDay()
     console.log(day)
     try{
-        if (day == 6| day == 7){
+        if (day == 6 || day == 7){;
             throw "STOP! Het is weekend!";
         }
     }
     catch(err) {
-        console.warn(err)
-        document.getElementById("output").innerHTML = err
+        console.warn(err);
+        document.getElementById("output").innerHTML = err;
     }
 }
 
