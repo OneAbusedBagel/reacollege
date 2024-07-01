@@ -15,38 +15,23 @@ const audi = {
         "Airconditioning",
         "ABS",
     ],
-    // this stuff is broken. Ask Patrick about how to fix using a getter on a nstled object.
     _motor: {
-        _verbruik: "15,62 km/l",
-        _motorinhoud: "1.984 cc",
-        _topsnelheid: "250 km/h",
-        _vermogen: "211 pk",
+        verbruik: "15,62 km/l",
+        motorinhoud: "1.984 cc",
+        topsnelheid: "250 km/h",
+        vermogen: "211 pk",
     },
-    motor: {
-        get verbruik() {
-            return this._verbruik
-        },
-        get motorinhoud() {
-            return this._motorinhoud
-        },
-        get topsnelheid() {
-            return this._topsnelheid
-        },
-        get vermogen() {
-            return this._vermogen
-        }
-    },
+
     buy: function() {
         console.log(`YOU HAVE BOUGHT THE ${this.naam} FOR ${this.prijs} WOW!! WHAT A DEAL CIRCA ${this.bouwjaar}.`)
     },
     accelerate: function() {
-        console.log(`THIS ${this.naam} CAN GET TO A TOPSPEED OF ${this.motor.topsnelheid}. INCREDIBLE! SO FAST IT'S (almost)ILLEGAL!!`)
+        console.log(`THIS ${this.naam} CAN GET TO A TOPSPEED OF ${this.topsnelheid}. INCREDIBLE! SO FAST IT'S (almost)ILLEGAL!!`)
     },
     refuel: function() {
-        console.log(`THE ${this.naam} DRINKS ABOUT ${this.motor.verbruik} SO DON'T WORRY ABOUT PAYING IT'S TAB FOR ${this.brandstof}`)
+        console.log(`THE ${this.naam} DRINKS ABOUT ${this.verbruik} SO DON'T WORRY ABOUT PAYING IT'S TAB FOR ${this.brandstof}`)
     },
 
-    
     get naam() {
         return this._naam
     },
@@ -65,10 +50,11 @@ const audi = {
     get prijs() {
         let price = this._prijs;
         console.log(price)
-        if(String(price).split(".")[1]?.length == 2) {
-            return ("€")+this._prijs
+        if(String(price).split(".")[1]?.length > 2) {
+            let priceRounded = (Math.round(price * 100)) / 100
+            return ("€")+priceRounded
         } else {
-            return ("€")+this._prijs+("00")
+            return ("€")+price+(".00")
         }
     },
     get garantie() {
@@ -76,6 +62,18 @@ const audi = {
     },
     get opties() {
         return this._opties.join(", ")
+    },
+    get verbruik() {
+        return this._motor.verbruik;
+    },
+    get topsnelheid() {
+        return this._motor.topsnelheid;
+    },
+    get motorinhoud() {
+        return this._motor.motorinhoud;
+    },
+    get vermogen() {
+        return this._motor.vermogen;
     }
 }
 
@@ -94,9 +92,10 @@ document.getElementById("prijs").innerHTML = audi.prijs
 document.getElementById("garantie").innerHTML = audi.garantie
 document.getElementById("opties").innerHTML = audi.opties
 
-for (let property in audi.motor) {
+for (let property in audi._motor) {
     const output_cell0 = property;
-    const output_cell1 = audi.motor[property];
+    // I know this isn't correct but my brain isn't working. so I can't understand the pieces enough to fix it.
+    const output_cell1 = audi._motor[property];
 
     const row = document.createElement("tr");
     const cell0 = document.createElement("td")
