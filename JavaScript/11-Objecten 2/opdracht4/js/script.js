@@ -1,12 +1,9 @@
 "use strict"
 
 // Pattern part
-const bouwjaarPattern = /IDK YET/
-const Km_standPattern = /IDK YET/
-const brandstofPattern = /IDK YET/
-const energielabelPattern = /IDK YET/
-const prijsPattern = /IDK YET/
-const garantiePattern = /IDK YET/
+const energielabelPattern = /(A|B|C|D|E|F|G){1}/i
+const brandstofPattern = /benzine|diesel/
+const prijsPattern = /^[0-9]+\.[0-9]{2}$/
 
 const audi = {
     _naam: "Audi A5 2.0",
@@ -23,22 +20,22 @@ const audi = {
         "Airconditioning",
         "ABS",
     ],
-    // this stuff is broken. Ask Patrick about how to fix using a getter on a nstled object.
+    // this stuff is broken. Ask Patrick about how to fix using a getter on a nestled object.
     _motor: {
-        _verbruik: "15,62 km/l",
-        _motorinhoud: "1.984 cc",
-        _topsnelheid: "250 km/h",
-        _vermogen: "211 pk",
+        verbruik: "15,62 km/l",
+        motorinhoud: "1.984 cc",
+        topsnelheid: "250 km/h",
+        vermogen: "211 pk",
     },
 
     buy: function() {
-        console.log(`YOU HAVE BOUGHT THE ${this.naam} FOR ${this.prijs} WOW!! WHAT A DEAL CIRCA ${this.bouwjaar}.`)
+        console.log(`YOU HAVE BOUGHT THE [${this.naam}] FOR [${this.prijs}] WOW!! WHAT A DEAL CIRCA [${this.bouwjaar}].`)
     },
     accelerate: function() {
-        console.log(`THIS ${this.naam} CAN GET TO A TOPSPEED OF ${this.motor.topsnelheid}. INCREDIBLE! SO FAST IT'S (almost)ILLEGAL!!`)
+        console.log(`THIS [${this.naam}] CAN GET TO A TOPSPEED OF [${this.topsnelheid}]. INCREDIBLE! SO FAST IT'S (almost)ILLEGAL!!`)
     },
     refuel: function() {
-        console.log(`THE ${this.naam} DRINKS ABOUT ${this.motor.verbruik} SO DON'T WORRY ABOUT PAYING IT'S TAB FOR ${this.brandstof}`)
+        console.log(`THE [${this.naam}] DRINKS ABOUT [${this.verbruik}] SO DON'T WORRY ABOUT PAYING IT'S TAB FOR [${this.brandstof}]`)
     },
 
 
@@ -59,33 +56,38 @@ const audi = {
     },
     get prijs() {
         let price = this._prijs;
-        console.log(price)
-        if(String(price).split(".")[1]?.length > 2) {
-            let priceRounded = (Math.round(price * 100)) / 100
-            return ("€")+priceRounded
+        if(String(price).split(".")[1]?.length > 1) {
+            let priceRounded = (Math.round(price * 100)) / 100;
+            return ("€")+priceRounded;
+        } if(String(price).split(".")[1]?.length > 0){
+            return ("€")+price+("0");
         } else {
-            return ("€")+price+(".00")
+            return ("€")+price+(".00");
         }
     },
     get garantie() {
         return this._garantie ? "Ja" : "Nee";
     },
     get opties() {
-        return this._opties.join(", ")
+        return this._opties.join(", ");
     },
-    motor: {
-        get verbruik() {
-            return this._verbruik
-        },
-        get motorinhoud() {
-            return this._motorinhoud
-        },
-        get topsnelheid() {
-            return this._topsnelheid
-        },
-        get vermogen() {
-            return this._vermogen
-        }
+    get garantie() {
+        return this._garantie ? "Ja" : "Nee";
+    },
+    get opties() {
+        return this._opties.join(", ");
+    },
+    get verbruik() {
+        return this._motor.verbruik;
+    },
+    get topsnelheid() {
+        return this._motor.topsnelheid;
+    },
+    get motorinhoud() {
+        return this._motor.motorinhoud;
+    },
+    get vermogen() {
+        return this._motor.vermogen;
     },
     set naam(naam) {
 		if (typeof naam === "string"){
@@ -95,59 +97,111 @@ const audi = {
 		}
 	},
     set bouwjaar(bouwjaar) {
-		if (bouwjaarPattern.test(bouwjaar) == true){
+		if (bouwjaar >= 2007 && bouwjaar <= 2016){
 			this._bouwjaar = bouwjaar;
 		} else {
-			throw new TypeError("'bouwjaar' Value isn't correct");
+			throw new TypeError("Invalid 'bouwjaar' value");
 		}
 	},
-    set Km_stand(Km_stand) {
-        this._Km_stand = Km_stand;
+    set km_stand(km_stand) {
+        if (Number.isInteger(km_stand) === true){
+            this._km_stand = km_stand;
+		} else {
+			throw new TypeError("Number isn't valid (only whole numbers)");
+		}
 	},
     set energielabel(energielabel) {
-        this._energielabel = energielabel;
+        if (energielabelPattern.test(energielabel) === true) {
+            this._energielabel = energielabel;
+        } else {
+            console.log(energielabel)
+            throw new TypeError("Invalid energielabel value");
+        }
 	},
     set brandstof(brandstof) {
-        this._brandstof = brandstof;
+        if(brandstofPattern.test(brandstof) === true){
+            this._brandstof = brandstof;
+        } else {
+            throw new TypeError("'brandstof' isn't either 'diesl' or 'benzine'");
+        }
 	},
     set prijs(prijs) {
-        this._prijs = prijs;
+        if(prijsPattern.test(prijs) === true) {
+            this._prijs = prijs;
+        } else {
+            throw new TypeError 
+        }
 	},
     set garantie(garantie) {
+        if(garantie === Boolean){
         this._garantie = garantie;
+        } else {
+            throw new TypeError("'Garantie' value isn't a boolean")
+        }
 	},
+    set opties(opties) {
+        this._opties = opties;
+    },
+    set verbruik(verbruik) {
+        this._motor.verbruik = verbruik
+    },
+    set topsnelheid(topsnelheid) {
+        this._motor.topsnelheid = topsnelheid
+    },
+    set motorinhoud(motorinhoud) {
+        this._motor.motorinhoud = motorinhoud
+    },
+    set vermogen(vermogen) {
+        this._motor.vermogen = vermogen
+    }
 }
 
-audi.buy()
-audi.accelerate()
-audi.refuel()
-audi.naam = "Honda civic"
+// setter tesing lines
+audi.buy();
+audi.accelerate();
+audi.refuel();
+// audi.naam = "Honda civic";
+// audi.bouwjaar = 2011;
+// audi.km_stand = 200191;
+// audi.energielabel = "b";
+// audi.brandstof = "diesel";
+// audi.verbruik =  "12,3 Km/A"
+audi.topsnelheid = "270 km/h"
+// audi.motorinhoud = "176 apples"
+// audi.vermogen = "20 Pp"
+audi.opties = [
+    "Lichtmetalen velgen",
+    "LED koplampen",
+    "Opgevoerde motor",
+    "Dikke bass speaker",
+]
 
-console.log("it all works, but man what a weird car salesman...")
+console.log("it all works, but man what a weird car salesman...");
 
-document.getElementById("naam").innerHTML = audi.naam
-document.getElementById("bouwjaar").innerHTML = audi.bouwjaar
-document.getElementById("km-stand").innerHTML = audi.km_stand
-document.getElementById("energielabel").innerHTML = audi.energielabel
-document.getElementById("brandstof").innerHTML = audi.brandstof
-document.getElementById("prijs").innerHTML = audi.prijs
-document.getElementById("garantie").innerHTML = audi.garantie
-document.getElementById("opties").innerHTML = audi.opties
+document.getElementById("naam").innerHTML = audi.naam;
+document.getElementById("bouwjaar").innerHTML = audi.bouwjaar;
+document.getElementById("km-stand").innerHTML = audi.km_stand;
+document.getElementById("energielabel").innerHTML = audi.energielabel;
+document.getElementById("brandstof").innerHTML = audi.brandstof;
+document.getElementById("prijs").innerHTML = audi.prijs;
+document.getElementById("garantie").innerHTML = audi.garantie;
+document.getElementById("opties").innerHTML = audi.opties;
 
-for (let property in audi.motor) {
+for (let property in audi._motor) {
     const output_cell0 = property;
-    const output_cell1 = audi.motor[property];
+    // I know this isn't correct but my brain isn't working. so I can't understand the pieces enough to fix it.
+    const output_cell1 = audi._motor[property];
 
     const row = document.createElement("tr");
-    const cell0 = document.createElement("td")
+    const cell0 = document.createElement("td");
     const content0 = document.createTextNode(output_cell0);
-    const cell1 = document.createElement("td")
+    const cell1 = document.createElement("td");
     const content1 = document.createTextNode(output_cell1);
 
     cell0.appendChild(content0);
     cell1.appendChild(content1);
-    row.appendChild(cell0)
+    row.appendChild(cell0);
     row.appendChild(cell1);
 
-document.getElementById("test2").appendChild(row)
+document.getElementById("test2").appendChild(row);
 }
