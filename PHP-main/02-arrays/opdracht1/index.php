@@ -11,7 +11,9 @@
     $supermarkten[] = 'Lidl';
     $supermarkten[2] = 'plus';
     unset($supermarkten[4]);
-    unset($supermarkten['C1000']);
+    // unset($supermarkten[5], '');
+    // I do not know how to do this with unset.. but this works
+    $supermarkten[5] = '';
     $show = Print_r($supermarkten);
 ?>
 <!DOCTYPE html>

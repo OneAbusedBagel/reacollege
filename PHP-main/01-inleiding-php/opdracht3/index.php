@@ -5,20 +5,21 @@
 	$string3 = 'La nouvelle version propose une optimisation du code et, d\'après la société Zend, offre des performances dépassant celles de machines virtuelles comme HHVM. Les benchmarks externes montrent des performances similaires pour HHVM et PHP 7, avec un léger avantage d\'HHVM dans la plupart des scénarios.';
 	$string4 = 'Nach einer Diskussion darüber, ob die nächste PHP-Version den Namen des ehemals gescheiterten PHP 6 wiederaufnehmen soll, oder stattdessen eine Versionsnummer überspringen und PHP 7 heißen soll, wurde am 29. Juli 2014 bekanntgegeben, dass die Entwickler sich mit 58 zu 24 Stimmen für die Hauptversionsnummer 7 entschieden haben. Der Nachfolger von PHP 5 heißt somit offiziell PHP 7.';
 
+	$titel = 'standardfunktionen' 
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Standaardfuncties</title>
+		<title><?=mb_strtoupper($titel)?></title>
 	</head>
 	<body>
 		<div id="container">
 			<?php
-				echo '<p>'.$string1.'</p>';
-				echo '<p>'.$string2.'</p>';
-				echo '<p>'.$string3.'</p>';
-				echo '<p>'.$string4.'</p>';
+				echo '<p>'.mb_strtoupper($string1).'</p>';
+				echo '<p>'.mb_strtoupper($string2).'</p>';
+				echo '<p>'.mb_strtoupper($string3).'</p>';
+				echo '<p>'.mb_strtoupper($string4).'</p>';
 			?>			
 		</div>
 	</body>

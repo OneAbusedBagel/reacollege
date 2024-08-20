@@ -1,8 +1,8 @@
 <?php
 
     $r1 = rand(1,255); 
-    $r2 = round(rand(2,40)/2)*2; // even is done
-    $r3 = rand(30.0,90.0)/10;	// I assume it always wants a decimal for numbers like '6.0'instead of just 6.. but I haven't figured out hwo to do that and I've wasted enough hours here
+    $r2 = round(rand(1,20))*2; // even is done
+    $r3 = rand(30, 90)/10;	// I assume it always wants a decimal for numbers like '6.0'instead of just 6.. but I haven't figured out hwo to do that and I've wasted enough hours here
 
 ?>
 <!DOCTYPE html>
