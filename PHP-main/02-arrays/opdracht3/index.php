@@ -11,7 +11,7 @@
         rand(0,1000),
         rand(0,1000)
     ];
-    sort($numbers);
+    rsort($numbers);
 ?>
 <!DOCTYPE html>
 <html>
