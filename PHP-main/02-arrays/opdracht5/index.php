@@ -1,5 +1,4 @@
 <?php
-    $wines = ['Merlot', 'Carbernet Sauvignon', 'Grenache', 'Malbec'];
 	$catalogus = [
 		'Rode wijnen' => ['Merlot', 'Carbernet Sauvignon', 'Grenache', 'Malbec'],
 		'Witte wijnen' => ['Chardonnay', 'Riesling', 'Pinot Blanc', 'Trebbiano'],
@@ -8,13 +7,17 @@
 	];
     $catalogus['Witte wijnen'][2] = 'pinot Gris';
     $catalogus['Sterke dranken'] = 'Gedestilleerde dranken';
-    $catalogus['Sterke dranken'][0] = 'test'; /* probably gonna have to change this to unset -- it didn't work anyway so no worries*/
-    $catalogus['Sterke dranken'][4] = 'test'; 
+    // $catalogus['Sterke dranken'][0] = 'test'; /* stopped working on this for a while beacuse I was running into mental issues and workspeed slowed to a crawl - putting this one on pause for now and working on exercise 6 instead to hopefully clear my mind */
+    // $catalogus['Sterke dranken'][4] = 'test'; 
     foreach ($catalogus as $key => $types){
-        echo '<h2>' .$key. '</h2>';
+		echo '<ul>';
+        echo '<li>' .$key. '</li>';
+		echo '<ul>';
         foreach ($types as $brand){
-            echo '<span>' .$brand. '</span> <br>';
-        }
+            echo '<li>' .$brand. '</li>';
+        };
+		echo '</ul>';
+		echo '</ul>';
     }
 ?>
 <!DOCTYPE html>
