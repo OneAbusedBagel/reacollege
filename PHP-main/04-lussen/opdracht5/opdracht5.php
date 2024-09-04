@@ -17,10 +17,10 @@
         'December',
     ];
     echo '<ul>' ;
-    for ($i = 0; $i < count($months); $i++ ) {
-        if($i < 2 || $i > 10) {
-            continue;
-        };
+    for ($i = 2; $i < (count($months)-1); $i++ ) {
+        // if($i < 2 || $i > 10) {
+        //     continue;
+        // };
         echo '<li>';
         echo $months[$i];
         echo '</li>';
@@ -29,10 +29,10 @@
 
 
     echo '<ul>' ;
-    for ($i = 8; $i < count($months) && $i > 0; $i-- ) {
-        if($i < 4) {
-            continue;
-        };
+    for ($i = 8; $i < count($months) && $i > 3; $i-- ) {
+        // if($i < 4) {
+        //     continue;
+        // };
         echo '<li>';
         echo $months[$i];
         echo '</li>';
