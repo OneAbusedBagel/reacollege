@@ -1,7 +1,12 @@
 <?php
+	require_once('classes/USer.php');
+	require_once('lib/helpers.php');
     $user1 = new User('Mark', 'mzuckerberg@gmail.com');
 
-    celebrateBirthDay($user1);
+
+	for ($i=0; $i < 37 ; $i++) { 
+	    celebrateBirthDay($user1);
+	};
 ?>
 <!DOCTYPE html>
 <html>
