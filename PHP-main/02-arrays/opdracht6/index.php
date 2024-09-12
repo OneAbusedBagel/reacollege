@@ -34,36 +34,28 @@
 	// };
 
 	function compare($a, $b) {
-		if ($a == $b) {
+		if ($a['Strength'] == $b['Strength']) {
 			return 0;
 		}
-		return ($a < $b) ? -1 : 1;
+		return ($a['Strength'] < $b['Strength']) ? -1 : 1;
 	};
 
-	function compare($a, $b) {
-		if ($a[3] == $b[3]) {
-			return 0;
-		}
-		return ($a[3] < $b[3]) ? -1 : 1;
-	};
-
-	// shuffle($katanas);
-	// arsort($katanas);
 	uasort($katanas, "compare");
 
-    foreach ($katanas as $id => $types){
-        echo '<article id="'.$id.'">';
-        echo '<h2>' .$types['Name']. '</h2>';
-        echo '<h3>' .$types['Description']. '</h3>';
-        echo '<table>';
-        echo  '<tr> <th> Price </th> <th> Elemental properties </th> </tr>';
-        echo  '<tr> <td>' .$types['Price']. '</td>  <td>' .$types['Elemental properties']. '</td> </tr>';
+	foreach ($katanas as $id => $types){
+		echo '<div>';
+		echo '<article id="'.$id.'">';
+		echo '<h2>' .$types['Name']. '</h2>';
+		echo '<h3>' .$types['Description']. '</h3>';
+		echo '<table>';
+		echo  '<tr> <th> Price </th> <th> Elemental properties </th> </tr>';
+		echo  '<tr> <td>' .$types['Price']. '</td>  <td>' .$types['Elemental properties']. '</td> </tr>';
 		echo  '<tr> <th> Strength </th> <th> Status ailments </th> </tr>';
-        echo  '<tr> <td>' .$types['Strength']. '</td>  <td>' .$types['Status ailments']. '</td> </tr>';
-        echo '</table>';
-        echo '</article>';
-        echo '<br>';
-    };
+		echo  '<tr> <td>' .$types['Strength']. '</td>  <td>' .$types['Status ailments']. '</td> </tr>';
+		echo '</table>';
+		echo '</article>';
+		echo '<div>';
+	};
 
     ?>
 <!DOCTYPE html>
@@ -98,7 +90,7 @@
 		<section>
             <pre>
                 <?php
-                    // print_r($katanas)
+                    // test()
                 ?> 
             </pre>
 		</section>

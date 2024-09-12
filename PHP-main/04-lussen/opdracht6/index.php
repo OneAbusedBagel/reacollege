@@ -2,11 +2,9 @@
 		echo '<div id="wrapper">';
 			echo '<div id="container">';
 				echo '<div id="checker-board">';
-					for($i=0; $i < 10;) {
-						$i++;
+					for($i=1; $i < 11; $i++) {
 						echo '<div class="row">';
-						for($i2=0; $i2 <= 4;) {
-							$i2++;
+						for($i2=1; $i2 <= 5; $i2++) {
 
 							$i < 4 ? $class = 'class="pawn-white"' : null;
 							$i > 6 ? $class = 'class="pawn-black"' : null;

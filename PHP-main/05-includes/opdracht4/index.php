@@ -1,13 +1,26 @@
 <?php
 
-    include_once 'lib/menu.php'
+    include_once 'lib/menu.php';
 
 
-//     echo '<ul>';
-//         foreach ($menu as $menuText => $menuLink){
-// 	echo '<li><a href="'.$menuLink.'">'.$menuText.'</li>';
-// }
-// echo '</ul>';
+	function compare($a, $b) {
+		if ($a['order'] == $b['order']) {
+			return 0;
+		}
+		return ($a['order'] < $b['order']) ? -1 : 1;
+	};
+
+	uasort($menu, "compare");
+
+    echo '<nav> <ul>';
+        foreach ($menu as $menuText => $menuLink){
+			if($menuLink['active'] === true) {
+				echo '<li><a href="'.$menuLink['href'].'">'.$menuLink['text'].'</a> </li>' ;
+			} else {
+				continue;
+			}
+	}
+	echo '<nav> </ul>';
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,9 +35,31 @@
 				color: brown;
 				background-color: orange;
 			}
-            .modulus_four {
-                color: green;
-            }
+            nav {
+				height: 60px;
+				font-size: 1.2em;
+			}
+			nav ul {
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+			}
+			nav ul li {
+				list-style-type: none;
+				width: 100%;
+				border: 2px solid black;
+				line-height: 56px;
+				text-align: center;
+				box-sizing: border-box;
+				background-color: sandybrown;
+			}
+			nav ul li a {
+				color: seashell;
+				display: block;
+				text-decoration: none;
+			}
 		</style>
 	</head>
 	<body>
