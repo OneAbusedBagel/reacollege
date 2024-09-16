@@ -1,9 +1,10 @@
 <?php
 
     $x = 5;
+	$length = 20;
 
     echo '<table>';
-    for ($i = 1; $i <= 20;) {
+    for ($i = 1; $i <= $length;) {
         $solve = $x * $i;
 
     // table was modified from one long line to cascaded for ease of viewing / editing 
@@ -14,7 +15,6 @@
         echo    '<td>' .$solve. '</td>' ;
         echo '</tr>';
 
-        $x * $i;
         $i++;
     };
     echo '</table >';

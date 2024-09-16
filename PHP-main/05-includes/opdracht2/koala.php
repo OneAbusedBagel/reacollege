@@ -3,20 +3,18 @@
 	<head>
 		<title>Beren</title>
 		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<script src="https://kit.fontawesome.com/e9b552d600.js" crossorigin="anonymous"></script>	</head>
 	</head>
 	<body>
 		<div id="container">
-			<div id="header">
-			
+			<div>
+				<header id="header">
+					<?php include('includes/header.php') ?>
+				</header>
 			</div>
-			<div id="menu">
-				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li><a href="koala.php">Koala</a></li>
-					<li><a href="grizzlybeer.php">Grizzlyber</a></li>
-					<li><a href="ijsbeer.php">IJsbeer</a></li>
-				</ul>
-			</div>
+			<menu id="menu">
+				<?php include('includes/menu.php') ?>
+			</menu>
 			<div id="content">
 				<h1>Koala</h1>
 				<p>
@@ -24,9 +22,9 @@
 				</p>
 				<img src="images/koala-family-train.jpg">
 			</div>
-			<div id="footer">
-				<span><?php echo $_SERVER["REMOTE_ADDR"];?></span>
-			</div>		
+			<footer id="footer">
+				<?php include('includes/footer.php');?>
+			</footer>		
 		</div>
 	</body>
 </html>

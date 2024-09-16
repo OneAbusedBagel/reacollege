@@ -1,18 +1,16 @@
 <?php
 
-    $i = 0;
     $numbers = [
 
     ];
 
-    do {
+    for ($i=0; $i <= 10 ; $i++) { 
         $nmbr = rand(1, 20);
         $numbers[] = $nmbr;
         if($nmbr == 13) {
             break;
         };
-        $i++;
-    } while ($i <= 10);
+    }
 
     print_r($numbers);
     sort($numbers);

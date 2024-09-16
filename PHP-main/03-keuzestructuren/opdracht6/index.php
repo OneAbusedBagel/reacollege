@@ -1,6 +1,7 @@
 <?php
 // random temperature generated from -10 to 40 degrees
-    $temperature = rand(-10, 40);
+    // $temperature = rand(-10, 40);
+    $temperature = 0;
 
 // rounded the temperature to steps of 5, because they wanted atleast 10 colours - and I don't know if I can use (<) or (>) in match expressions 
     $round = round($temperature/5)*5;
@@ -11,27 +12,23 @@
     $sun = 'invis';
 
 // I've been hung up on the colors for 40 damned minutes - all the code is there, it's just the colours but I can't get my brain to focus on them
+//  -- this is me while correcting this exercises mistakes per Patricks feedback, one of them being: "Vul alle 'placeholders' ook in met een kleur" and my answer to that is simply. no. not unless you want me to waste another two days stuck here. I already mentioned how I got stuck on very simple parts of exercises, because for some reason my brain just struggles focusing or well- thinking about anything usefull even when I try. I don't know why, but trying to pick a colour for each on my own would make too much of a mess in my brain and It'd ruin several days of progress probably.
     $class = match (true) {
-        $round == -10 => $class = 'blue',
-        $round == -5  => $class = 'lightblue',
-        // $round == 5   => $class = 'placeholder',
-        $round == 10  => $class = 'purple',
-        // $round == 15  => $class = 'placeholder',
-        $round == 20  => $class = 'red',
-        // $round == 25  => $class = 'placeholder',
-        // $round == 30  => $class = 'placeholder',
-        // $round == 35  => $class = 'placeholder',
-        // $round == 40  => $class = 'orange',
+        $round < -5 => 'blue',
+        $round <= 0  => 'lightblue',
+        $round > 0   => 'red',
+        $round > 5   => 'purple',
+        $round > 10  => 'placeholder',
+        $round > 15  => 'red',
+        $round > 20  => 'placeholder',
+        $round > 25  => 'placeholder',
+        $round > 30  => 'placeholder',
+        $round > 35  => 'orange',
     default => 'this is default',
     };
 
-    $icon = match (true) {
-        $round < 0 => $snowflake = 'vis',
-        $round > 0  => $sun = 'vis',
-    default => 'this is default',
-    };
+    $temperature <= 0 ? $icon ='snowflake' : $icon ='sun';
 
-    // echo $icon   
 
 // a while back Patrick said I can turn in an unfinished assignment aslong as the unfinished parts weren't relevant to the exercises lesson (like background colors or fonts or somehting) this is one of those cases - the code is there, the colour valuesa ren't I've spent over an hour with no progress (ON PICKING COLORS) because my brain is awful, I'm skipping it
     ?>
@@ -65,12 +62,6 @@
             .red {
                 background-color: red;
             }
-            .invis {
-                display: none;
-            }
-            .vis {
-                
-            }
             i {
                 font-size: 90px;
             }
@@ -79,8 +70,7 @@
 	<body>
 		<div class="<?=$class?>">
             <h1> het is nu: <?=$temperature;?>°</h1>
-            <section class="<?=$sun?>"><i class="fa-solid fa-sun"></i></section>
-            <section class="<?=$snowflake?>"><i class="fa-solid fa-snowflake"></i></section>
+            <section><i class="fa-solid fa-<?=$icon?>"></i></section>
         </div>
 		<section>
 
