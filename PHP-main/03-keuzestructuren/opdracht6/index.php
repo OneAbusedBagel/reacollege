@@ -1,7 +1,7 @@
 <?php
 // random temperature generated from -10 to 40 degrees
-    // $temperature = rand(-10, 40);
-    $temperature = 0;
+    $temperature = rand(-10, 40);
+    // $temperature = 0;
 
 // rounded the temperature to steps of 5, because they wanted atleast 10 colours - and I don't know if I can use (<) or (>) in match expressions 
     $round = round($temperature/5)*5;
@@ -16,14 +16,15 @@
     $class = match (true) {
         $round < -5 => 'blue',
         $round <= 0  => 'lightblue',
-        $round > 0   => 'red',
-        $round > 5   => 'purple',
-        $round > 10  => 'placeholder',
-        $round > 15  => 'red',
-        $round > 20  => 'placeholder',
-        $round > 25  => 'placeholder',
-        $round > 30  => 'placeholder',
-        $round > 35  => 'orange',
+        $round < 0   => 'red',
+        $round < 5   => 'purple',
+        $round < 10  => 'grey',
+        $round < 15  => 'red',
+        $round < 20  => 'crimson',
+        $round < 25  => 'green',
+        $round < 30  => 'gray',
+        $round < 35  => 'lime',
+        $round <= 40  => 'darkorange',
     default => 'this is default',
     };
 
@@ -50,17 +51,8 @@
                 margin: 10px;
                 padding: 20px;
             }
-            .purple {
-                background-color: slateblue;
-            }
-            .blue {
-                background-color: blue;
-            }
-            .lightblue {
-                background-color: lightblue;
-            }
-            .red {
-                background-color: red;
+            .temperature {
+                background-color: <?=$class;?>;
             }
             i {
                 font-size: 90px;
@@ -68,7 +60,7 @@
 		</style>
 	</head>
 	<body>
-		<div class="<?=$class?>">
+		<div class="temperature">
             <h1> het is nu: <?=$temperature;?>°</h1>
             <section><i class="fa-solid fa-<?=$icon?>"></i></section>
         </div>
