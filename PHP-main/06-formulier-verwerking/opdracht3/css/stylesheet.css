@@ -11,6 +11,10 @@ body, html {
 	padding: 20px;
 }
 
+.error {
+	color: crimson;
+}
+
 .form-row {
 	display: flex;
 	flex-direction: row;

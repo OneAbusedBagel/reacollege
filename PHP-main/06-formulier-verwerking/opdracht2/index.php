@@ -35,6 +35,7 @@
         }
     }
 
+    !empty($_POST['color']) ? $color = $color : $color = 'orange';
 
 ?>
 <!DOCTYPE html>
@@ -44,6 +45,7 @@
 		<title>6.2</title>
 		<style>
 			html, body {
+                <?php !empty($_POST['color']) ? $color = $color : $color = 'orange'; ?>;
 				font-family: Arial, sans-serif;
 				font-size: 24px;
 				color: brown;
@@ -51,9 +53,6 @@
 			}
             .modulus_four {
                 color: green;
-            }
-            .red {
-                color: crimson;
             }
 		</style>
 	</head>
@@ -63,7 +62,7 @@
         </header>
 		<section>
             <form action="index.php" method="post">
-                <input type="text" name="firstname" placeholder="Jane"><br>
+                <input type="text" name="firstname" placeholder="John"><br>
                 <input type="text" name="lastname" placeholder="Doe"><br>
                 <input type="number" name="age"><br>
                 <input type="date" name="date"><br>
@@ -73,7 +72,7 @@
             <?php
                 if (isset($_POST['register']) && count($errors) > 0){
                     foreach ($errors as $error){
-                        echo '<p class="red">'.$error.'</p>';
+                        echo '<p class="error">'.$error.'</p>';
                     }
                 } else {
                     if (isset($firstname)){
@@ -89,7 +88,11 @@
                         echo '<p>Your birthdate: '.$date.'</p>';
                     }
                     if (isset($color)){
-                        echo '<p>Your color: '.$color.'</p>';
+                        if($color == 'orange'){
+                            echo "<p>This is the default background color: ".$color.". you didn't pick this..</p>";
+                        } else {
+                            echo '<p>Your color: '.$color.'</p>';
+                        }
                     }
                 }
 

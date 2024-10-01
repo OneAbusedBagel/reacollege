@@ -2,29 +2,35 @@
     if (isset($_POST['verzenden'])){
         $errors = [];
         if (!empty($_POST['naam'])){
-            $naam = $_POST['naam'];
+            $naam = htmlspecialchars($_POST['naam']);
         } else {
-            $errors[] = "you didn't give us a naam!";
+            $errors[] = "you didn't give us a name!";
         }
         if (!empty($_POST['email'])){
-            $email = $_POST['email'];
+            $email = htmlspecialchars($_POST['email']);
         } else {
-            $errors[] = "you didn't give us a email!";
+            $errors[] = "you didn't give us an email!";
         }
         if (!empty($_POST['staat'])){
-			$staat = $_POST['staat'];
+			$staat = htmlspecialchars($_POST['staat']);
         } else {
-			$errors[] = "you didn't give us a staat!";
+			$errors[] = "you didn't give us a burgerlijke staat thingy!!";
+        }
+		if (!empty($_POST['nationaliteit'])){
+			$nationaliteit = htmlspecialchars($_POST['nationaliteit']);
+        } else {
+			$errors[] = "you didn't give us a nationality!";
         }
 		if (!empty($_POST['kinderen'])){
-			$_POST['kinderen'] > 0 ? $kinderen = $_POST['kinderen'] :  $errors[] = "not a valid childnieuwsbrief value";
+			$_POST['kinderen'] > 0 ? $kinderen = htmlspecialchars($_POST['kinderen']) :  $errors[] = "you can't have negative kids!";
 		} else {
-			$errors[] = "you didn't give us an age!";
+			$errors[] = "you didn't give us a child, amount..?";
 		}
         if (!empty($_POST['nieuwsbrief'])){
+			// I don't think it's necesary to sanitize the input of a checkbox
             $nieuwsbrief = $_POST['nieuwsbrief'];
         } else {
-            $errors[] = "You don't want a newsletter?";
+            $errors[] = "You don't want a newsletter? :(";
         }
     }
 
@@ -81,25 +87,29 @@
 				<section>
 					TESTING PHP
 				<?php
+
                 if (isset($_POST['verzenden']) && count($errors) > 0){
                     foreach ($errors as $error){
                         echo '<p class="red">'.$error.'</p>';
                     }
                 } else {
                     if (isset($naam)){
-                        echo '<p>Your firstname: '.$naam.'</p>';
+                        echo '<p>Naam: '.$naam.'</p>';
                     }
                     if (isset($email)){
-                        echo '<p>Your lastname: '.$email.'</p>';
+                        echo '<p>E-mail: '.$email.'</p>';
                     }
                     if (isset($staat)){
-						echo '<p>Your birthdate: '.$staat.'</p>';
+						echo '<p>Burgerlijke staat: '.$staat.'</p>';
                     }
 					if (isset($kinderen)){
-						echo '<p>Your age: '.$kinderen.'</p>';
+						echo '<p>Aantal kinderen: '.$kinderen.'</p>';
 					}
-                    if (isset($color)){
-                        echo '<p>Your color: '.$color.'</p>';
+					if (isset($nationaliteit)){
+						echo '<p>nationaliteit: '.$nationaliteit.'</p>';
+					}
+                    if (isset($nieuwsbrief)){
+                        echo '<p>Nieuwsbrief: ja, ik wil abonneren op de nieuwsbrief</p>';
                     }
                 }
 

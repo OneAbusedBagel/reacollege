@@ -1,7 +1,7 @@
 
-<?php
-
+<?php 
 // checks, sanitizes and sets the form values as variables.
+// though I don't think I need to sanitize a select value but hey, symmetry
 if (isset($_POST['submit'])){
     $errors = [];
     if (!empty($_POST['firstname'])){
@@ -11,11 +11,14 @@ if (isset($_POST['submit'])){
         $gender = htmlspecialchars($_POST['gender']);
     }
     if (!empty($_POST['residence'])){
-        $residence = htmlspecialchars($_post['residence']);
+        $residence = htmlspecialchars($_POST['residence']);
     }
     if (!empty($_POST['postcode'])){
         $postcode = htmlspecialchars($_POST['postcode']);
     }
+    if (!empty($_POST['province'])){
+      $province = htmlspecialchars($_POST['province']);
+  }
 
 }
 
@@ -47,19 +50,23 @@ if (isset($_POST['submit'])){
     <table>
   <tr>
     <td>Firstname</td>
-    <td><?php if (isset($residence)){ $residence ?? 'niet ingevuld'; }?></td>
+    <td><?= $firstname ?? ' <em> onbekend </em>'; ?></td>
   </tr>
   <tr>
     <td>Gender</td>
-    <td><?php  if (isset($residence)){ $residence ?? 'niet ingevuld'; } ?></td>
+    <td><?= $gender ?? ' <em> onbekend </em>'; ?></td>
   </tr>
   <tr>
     <td>Residence</td>
-    <td><?php if (isset($residence)){ $residence ?? 'niet ingevuld'; } ?></td>
+    <td><?= $residence ?? ' <em> onbekend </em>'; ?></td>
   </tr>
   <tr>
     <td>Postcode</td>
-    <td><?php if (isset($color)){ $postcode ?? 'niet ingevuld'; } ?></td>
+    <td><?= $postcode ?? ' <em> onbekend </em>'; ?></td>
+  </tr>
+  <tr>
+    <td>province</td>
+    <td><?= $province ?? ' <em> onbekend </em>'; ?></td>
   </tr>
 </table>
     </body>
