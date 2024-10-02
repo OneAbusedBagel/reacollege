@@ -66,7 +66,7 @@ if (isset($_POST['generate'])){
                     }
                 } else {
                     echo '<table>';
-                    for ($i = 1; $i <= $length;) {
+                    for ($i = 1; $i <= $length; $i++) {
                         $solve = $table * $i;
                         
                     // table was modified from one long line to cascaded for ease of viewing / editing 
@@ -77,7 +77,6 @@ if (isset($_POST['generate'])){
                         echo    '<td>' .$solve. '</td>' ;
                         echo '</tr>';
                         
-                        $i++;
                     };
                     echo '</table >';
                 }

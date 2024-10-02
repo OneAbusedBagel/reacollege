@@ -45,11 +45,10 @@
 		<title>6.2</title>
 		<style>
 			html, body {
-                <?php !empty($_POST['color']) ? $color = $color : $color = 'orange'; ?>;
 				font-family: Arial, sans-serif;
 				font-size: 24px;
 				color: brown;
-				background-color: <?=$color?>;
+				background-color: <?= $color ?? 'orange' ?>;
 			}
             .modulus_four {
                 color: green;
