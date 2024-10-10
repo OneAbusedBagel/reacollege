@@ -3,6 +3,28 @@
     include_once 'lib/menu.php';
 
 
+	// function compare($a, $b) {
+	// 	if ($a['order'] == $b['order']) {
+	// 		return 0;
+	// 	}
+	// 	return ($a['order'] < $b['order']) ? -1 : 1;
+	// };
+
+	// uasort($menu, "compare");
+
+    // echo '<nav> <ul>';
+    //     foreach ($menu as $menuText => $menuLink){
+	// 		if($menuLink['active'] === true) {
+	// 			echo '<li><a href="'.$menuLink['href'].'">'.$menuLink['text'].'</a> </li>' ;
+	// 		} else {
+	// 			continue;
+	// 		}
+	// }
+	// echo '<nav> </ul>';
+
+// new  lesson 7 divider line [so I don't screw up by deleting old useful things]
+
+function makeMenu(array $menu){
 	function compare($a, $b) {
 		if ($a['order'] == $b['order']) {
 			return 0;
@@ -12,23 +34,26 @@
 
 	uasort($menu, "compare");
 
-    echo '<nav> <ul>';
+	// I thought this exercise would be harder than expected- then I realised it was easy- then it got hard again and I've been stuck here all day
         foreach ($menu as $menuText => $menuLink){
 			if($menuLink['active'] === true) {
-				echo '<li><a href="'.$menuLink['href'].'">'.$menuLink['text'].'</a> </li>' ;
+				$currentItem = '<li><a href="'.$menuLink['href'].'">'.$menuLink['text'].'</a> </li>' ;
+
+				// I have no idea how this is both the solution that works- and the thing that's causing problems. declaring it with an empty string doens't work anymore then for some reason
+				$row .= $currentItem ;
 			} else {
 				continue;
 			}
 	}
-	echo '<nav> </ul>';
-
-// new  lesson 7 divider line [so I don't screw up by deleting old things]
-
-function makeMenu(array $menu) {
+	// $fullRow = 
+	$fullMenu = '<nav> <ul>' .$row.  '</nav> </ul>';
 	
+	// return $row;
+	return $fullMenu;
+
 }
 
-
+echo makeMenu($menu);
 
 
 ?>
@@ -74,7 +99,7 @@ function makeMenu(array $menu) {
 	</head>
 	<body>
         <header>
-            <!-- <pre> <?=print_r($placeholder)?> </pre> -->
+			
         </header>
 		<section>
 
