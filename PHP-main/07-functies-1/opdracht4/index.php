@@ -1,7 +1,6 @@
 <?php
 
-// Don't know exactly how to add Null coalescing operators into this- will ask about it tommorow as day is almost over (and am working from home)
-function printBusinessCard(string $firstName, string $lastName, int $age, string $title, string $location, string $biography){
+function printBusinessCard(string $firstName = 'unknown', string $lastName = 'unknown', $age = 'unknown', string $title = 'unknown', string $location = 'unknown', string $biography = 'unknown'){
 	$output = '<article>';
 	$output .= '<p>Naam: '.$firstName.' '.$lastName.'</p>';
 	$output .= '<p>Leeftijd: '.$age.'</p>';
@@ -12,7 +11,15 @@ function printBusinessCard(string $firstName, string $lastName, int $age, string
 	return $output;
 }
 
-echo printBusinessCard('bass', 'pro', '289', 'CEO of Bass Pro Ind.', 'The Country of Djibouti', 'professional fish'); 
+echo printBusinessCard(
+	'Sonic',
+//   the
+	'Hedgehog',
+	'33',
+	"Founder of the 'stopping that egghead' club", 
+	'Greenhill', 
+	'goes fast',
+); 
 ?>
 <!DOCTYPE html>
 <html>

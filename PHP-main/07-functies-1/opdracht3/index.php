@@ -2,28 +2,6 @@
 
     include_once 'lib/menu.php';
 
-
-	// function compare($a, $b) {
-	// 	if ($a['order'] == $b['order']) {
-	// 		return 0;
-	// 	}
-	// 	return ($a['order'] < $b['order']) ? -1 : 1;
-	// };
-
-	// uasort($menu, "compare");
-
-    // echo '<nav> <ul>';
-    //     foreach ($menu as $menuText => $menuLink){
-	// 		if($menuLink['active'] === true) {
-	// 			echo '<li><a href="'.$menuLink['href'].'">'.$menuLink['text'].'</a> </li>' ;
-	// 		} else {
-	// 			continue;
-	// 		}
-	// }
-	// echo '<nav> </ul>';
-
-// new  lesson 7 divider line [so I don't screw up by deleting old useful things]
-
 function makeMenu(array $menu){
 	function compare($a, $b) {
 		if ($a['order'] == $b['order']) {
@@ -33,6 +11,7 @@ function makeMenu(array $menu){
 	};
 
 	uasort($menu, "compare");
+	$row = '';
 
 	// I thought this exercise would be harder than expected- then I realised it was easy- then it got hard again and I've been stuck here all day
         foreach ($menu as $menuText => $menuLink){
@@ -45,23 +24,19 @@ function makeMenu(array $menu){
 				continue;
 			}
 	}
-	// $fullRow = 
+
 	$fullMenu = '<nav> <ul>' .$row.  '</nav> </ul>';
-	
-	// return $row;
+
 	return $fullMenu;
 
 }
-
-echo makeMenu($menu);
-
 
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>5.4</title>
+		<title>7.3</title>
         <script defer src="https://kit.fontawesome.com/e9b552d600.js" crossorigin="anonymous"></script>
 		<style>
 			html, body {
@@ -99,7 +74,7 @@ echo makeMenu($menu);
 	</head>
 	<body>
         <header>
-			
+			<?= makeMenu($menu);?>
         </header>
 		<section>
 

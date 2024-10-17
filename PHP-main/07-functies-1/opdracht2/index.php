@@ -5,35 +5,32 @@ function truncateString(string $text,int $limit) {
 	if (strlen($text) > $limit) {
 		$newtext = substr($text, 0,  $limit). '...';
 	}
-	echo "<p> truncate string funciton started: </p>";
-	echo $newtext. "<br>";
-	echo $text. "<br>";
-	echo 'word length = ' .strlen($text);
-	echo "<br>";
-	echo "limit set to = " .$limit;
-	echo "<br> function ended <br> <br>";
 	return $newtext;
 };
 
-// use str_replace
 function l33tifyString(string $text){
 	$search = array("a","A", "o", "O", "e", "E", "i", "I" );
 	$replace = array("@","@", "0","0", "3","3", "1","1" );
 	$newtext = str_replace($search, $replace, $text);
-	echo "<br>". $newtext. "<br>";
-	echo $text. "<br>";
+	return $newtext;
 }
 
 truncateString('very super long testing word.. (sentence)', 12);
 l33tifyString('very super long testing word.. (sentence).. a-A o-O e-E i-I');
 
-$test_1 = truncateString('Phantom train', 9);
-$test_2 = l33tifyString('Figaro castle');
-$test_3 = truncateString('Pheonix cave', 9);
+$string_1 = 'Phantom train';
+$string_2 = 'Figaro castle';
+$string_3 = 'Pheonix cave';
+
+$test_1 = truncateString($string_1, 10);
+$test_2 = l33tifyString($string_2);
+$test_3 = truncateString($string_3, 10);
 $test_3 = l33tifyString($test_3);
-echo $test_1. '<br>';
-echo $test_2. '<br>';
-echo $test_3. '<br>';
+
+echo '<p>' .$string_1. ' --> ' .$test_1. '</p>';
+echo '<p>' .$string_2. ' --> ' .$test_2. '</p>';
+echo '<p>' .$string_3. ' --> ' .$test_3. '</p>';
+
 ?>
 <!DOCTYPE html>
 <html>
