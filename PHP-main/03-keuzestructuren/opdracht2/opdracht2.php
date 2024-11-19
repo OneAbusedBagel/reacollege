@@ -16,7 +16,7 @@
 	// echo $dayOfMonth;
 	// echo $month;
 
-    if($dayOfWeek == 'Mon'||'Teu'||'Wed'||'Thu'||'Fri') {
+    if($dayOfWeek == ($dayOfWeek == 'Mon'|| $dayOfWeek == 'Tue'|| $dayOfWeek == 'Wed'|| $dayOfWeek == 'Thu'|| $dayOfWeek == 'Fri')) {
         echo 'Het is een werkdag!';
     };
     if($dayOfWeek == 'Fri' && $dayOfMonth == 13) {

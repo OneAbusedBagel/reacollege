@@ -11,14 +11,24 @@ function printBusinessCard(string $firstName = 'unknown', string $lastName = 'un
 	return $output;
 }
 
+// // opdracht 4.3
+// echo printBusinessCard(
+// 	'Sonic',
+// //   the
+// 	'Hedgehog',
+// 	'33',
+// 	"Founder of the 'stopping that egghead' club", 
+// 	'Greenhill', 
+// ); 
+
 echo printBusinessCard(
-	'Sonic',
+	firstName: 'Sonic',
 //   the
-	'Hedgehog',
-	'33',
-	"Founder of the 'stopping that egghead' club", 
-	'Greenhill', 
-	'goes fast',
+	// lastName: 'Hedgehog',
+	// age: '33',
+	title: "Founder of the 'stopping that egghead' club", 
+	location: 'Greenhill', 
+	biography: 'goes fast',
 ); 
 ?>
 <!DOCTYPE html>

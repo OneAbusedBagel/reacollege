@@ -28,11 +28,11 @@
     default => 'this is default',
     };
 
-    $temperature <= 0 ? $icon ='snowflake' : $icon ='sun';
+    $icon = $temperature <= 0 ? 'snowflake' : 'sun';
 
 
 // a while back Patrick said I can turn in an unfinished assignment aslong as the unfinished parts weren't relevant to the exercises lesson (like background colors or fonts or somehting) this is one of those cases - the code is there, the colour valuesa ren't I've spent over an hour with no progress (ON PICKING COLORS) because my brain is awful, I'm skipping it
-    ?>
+?>
 <!DOCTYPE html>
 <html>
 	<head>

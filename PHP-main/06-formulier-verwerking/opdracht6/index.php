@@ -67,10 +67,10 @@
             <br>
 
             <label for="bg_color">Background color</label>
-            <input type="text" name="bg_color">
+            <input type="color" name="bg_color">
 
             <label for="text_color">Text color</label>
-            <input type="text" name="text_color">
+            <input type="color" name="text_color">
 
             <label for="txt_size">text size</label>
             <input type="number" name="txt_size" min="10" max="20">

@@ -18,6 +18,11 @@ if (isset($_POST['submit'])){
     }
     if (!empty($_POST['province'])){
       $province = htmlspecialchars($_POST['province']);
+  } 
+  else {
+    //  forced redirect to index.php
+    header("location: index.php");
+
   }
 
 }

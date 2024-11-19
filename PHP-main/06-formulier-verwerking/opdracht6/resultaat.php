@@ -59,8 +59,8 @@ if (isset($_POST['submit'])) {
         </style>
 	</head>
     <body>
-        <h1> <?= $header; ?></h1>
-        <p><?= $paragraph; ?></p>
-        <img src="<?= $hyperlink; ?>" alt="if ur reading this- the img link didn't work. Not because of me! you just don't know how to send an img link">
+        <h1> <?= $header ?? 'You forgot to fill in a header!'; ?></h1>
+        <p><?= $paragraph ?? "And you forgot the paragraph!"; ?></p>
+        <img src="<?= $hyperlink ?? "https://th.bing.com/th/id/R.f4ce3d025a0d1083fa1fe223db773699?rik=1Xz8AXaj8jgcPQ&pid=ImgRaw&r=0"; ?>" alt="if ur reading this- the img link didn't work. Not because of me! you just don't know how to send an img link">
     </body>
 </html>

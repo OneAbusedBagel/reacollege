@@ -48,7 +48,7 @@
 				font-family: Arial, sans-serif;
 				font-size: 24px;
 				color: brown;
-				background-color: <?= $color ?? 'orange' ?>;
+				background-color: <?= $color ?>;
 			}
             .modulus_four {
                 color: green;

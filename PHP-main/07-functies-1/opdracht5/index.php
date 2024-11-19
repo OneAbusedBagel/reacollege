@@ -5,7 +5,7 @@
 	['name' => $name, 'description' => $description, 'genre' => $genre, 'price' => $price, 'releaseDate' => $releaseDate, ] = $gameInfo;
 
 	//this function should swap the two, I have no ide why it's so simple but not working.
-	str_replace('.', ',', $price);
+	$price = str_replace('.', ',', $price);
 ?>
 <!DOCTYPE html>
 <html>
