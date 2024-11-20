@@ -22,7 +22,7 @@ if (isset($_POST['submit'])){
   else {
     //  forced redirect to index.php
     header("location: index.php");
-
+    exit;
   }
 
 }

@@ -3,28 +3,20 @@
     $temperature = rand(-10, 40);
     // $temperature = 0;
 
-// rounded the temperature to steps of 5, because they wanted atleast 10 colours - and I don't know if I can use (<) or (>) in match expressions 
-    $round = round($temperature/5)*5;
-    // echo $round;
-
-// giving up on the sun and snowflake for now, just gonna try and finish the exercise - 
-    $snowflake = 'invis';
-    $sun = 'invis';
-
 // I've been hung up on the colors for 40 damned minutes - all the code is there, it's just the colours but I can't get my brain to focus on them
 //  -- this is me while correcting this exercises mistakes per Patricks feedback, one of them being: "Vul alle 'placeholders' ook in met een kleur" and my answer to that is simply. no. not unless you want me to waste another two days stuck here. I already mentioned how I got stuck on very simple parts of exercises, because for some reason my brain just struggles focusing or well- thinking about anything usefull even when I try. I don't know why, but trying to pick a colour for each on my own would make too much of a mess in my brain and It'd ruin several days of progress probably.
     $class = match (true) {
-        $round < -5 => 'blue',
-        $round <= 0  => 'lightblue',
-        $round < 0   => 'red',
-        $round < 5   => 'purple',
-        $round < 10  => 'grey',
-        $round < 15  => 'red',
-        $round < 20  => 'crimson',
-        $round < 25  => 'green',
-        $round < 30  => 'gray',
-        $round < 35  => 'lime',
-        $round <= 40  => 'darkorange',
+        $temperature < -5 => 'blue',
+        $temperature <= 0  => 'lightblue',
+        $temperature < 0   => 'red',
+        $temperature < 5   => 'purple',
+        $temperature < 10  => 'grey',
+        $temperature < 15  => 'red',
+        $temperature < 20  => 'crimson',
+        $temperature < 25  => 'green',
+        $temperature < 30  => 'gray',
+        $temperature < 35  => 'lime',
+        $temperature <= 40  => 'darkorange',
     default => 'this is default',
     };
 

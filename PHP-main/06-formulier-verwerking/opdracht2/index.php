@@ -35,7 +35,7 @@
         }
     }
 
-    !empty($_POST['color']) ? $color = $color : $color = 'orange';
+    $color ??= "orange";
 
 ?>
 <!DOCTYPE html>

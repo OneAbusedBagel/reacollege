@@ -13,16 +13,14 @@
 <nav>
 	<ul>
 	<?php
-		$name = $_SERVER['SCRIPT_NAME'];
-		echo $name;
+		$name = basename($_SERVER['SCRIPT_NAME']);
+		// echo $name;
 
 		foreach ($mainMenu as $menuItem){
 			if($menuItem['active'] === true) {
-				echo '<li><a href="'.$menuItem['href'].'" target="_self">'.$menuItem['title'].'</a></li>';
-			// } elseif ($name = $menuItem['title']) {
-				// maybe use the string search thing to get rid of anything but the last bit. and then match that.
-			} {
-				continue;
+				$class = $name == $menuItem['href'] ? 'class="current"' : "";
+
+				echo '<li ><a href="'.$menuItem['href'].'" target="_self" '.$class.'> ' .$menuItem['title'].'</a></li>';
 			}
 		};
 	?>
