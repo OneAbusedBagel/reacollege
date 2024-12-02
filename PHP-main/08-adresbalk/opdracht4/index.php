@@ -1,3 +1,6 @@
+<?php 
+	require('lib/array.php');
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -31,7 +34,29 @@
 						Er is een groot aanbod in PlayStation 4 games. Elke game is divers en heeft unieke eigenschappen. Bedenk dus goed in wat voor game jij geïnteresseerd bent. In ons assortiment vind je games in verschillende genres van sport tot actie en van simulatie tot Role Playing Game (RPG). Exclusieve games voor de PlayStation 4 zijn Horizon Zero Dawn, Uncharted, Gran Turismo, InFamous, Killzone.
 					</p>
 				</section>
-				<section id="products">
+				<section>
+					<form action="">
+						<label for="amount">amount of products shown</label>
+						<select id="amount" name="amount">
+							<option value="2">2</option>
+							<option value="4">4</option>
+							<option value="6">6</option>
+							<option value="8">8</option>
+						</select>
+
+						<input type="radio" name="sort" id="descending" value="descending">
+						<label for="descending">sort descending</label> 
+						<input type="radio" name="sort" id="ascending" value="ascending">
+						<label for="ascending">sort ascending</label> 
+
+						<br>
+						<input type="submit" name="submit" value="submit">
+					</form>
+				</section>
+				<?=makeCatalogue($products);?>
+				<!-- <?= $_GET['amount'];?>
+				<?= $_GET['sort'];?> -->
+				<!-- <section id="products">
 					<article>
 						<span class="release">26-10-2018</span>
 						<img src="images/9200000067180307.jpg" alt="Red Dead Redemption 2 - PS4" width="168" height="210">
@@ -88,7 +113,7 @@
 						<span class="name">Attack on Titan 2 - A.O.T. 2</span>
 						<span class="price">€ 59.99</span>
 					</article>					
-				</section>
+				</section> -->
 			</main>
 		</div>
 		<footer></footer>		
