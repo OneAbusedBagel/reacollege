@@ -7,8 +7,7 @@
 		$nmbr1 = $_GET['panel1'];
 		$nmbr2 = $_GET['panel2'];
 		$nmbr3 = $_GET['panel3'];
-		
-		
+
 		$panel1 = 'images/panel-1-' .$nmbr1. '.png';
 		$panel2 = 'images/panel-2-' .$nmbr2. '.png';
 		$panel3 = 'images/panel-3-' .$nmbr3. '.png';
@@ -56,8 +55,8 @@
 					<label for="panel3"> Third panel</label>
 					<input type="number" name="panel3" id="panel3" min="1" max="8" value="<?=$nmbr3?>">
 					<br>
-					<input type="submit" name="generate" value="Generate">
-					<input type="submit" name="random" value="Random">
+					<input type="submit" name="generate" value="Generate comic">
+					<input type="submit" name="random" value="Random comic">
 				</form>
 			</section>
 		</div>
