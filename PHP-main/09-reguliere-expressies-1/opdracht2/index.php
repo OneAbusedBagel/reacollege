@@ -1,13 +1,23 @@
 <?php
-	$pattern = '/^([0-9]{4})\s?[A-Z]{2}/';
+	$pattern_post = '/^([0-9]{4})\s?[A-Z]{2}/';
+	$pattern_iban = '/^NL[0-9]{2}\s?[A-Z]{4}\s?[0-9]{10}/';
 	if (isset($_GET['search-button'])){
-		$string = $_GET['search'] ?? ''; 
-		if (preg_match($pattern, $string)){
-			$msg = 'Geldige postcode!! hier:'.$_GET['search'];
+		$post = $_GET['search_post'] ?? ''; 
+		$iban = $_GET['search_iban'] ?? ''; 
+
+		if (preg_match($pattern_post, $post)){
+			$msg_post = 'Geldige postcode!! hier:'.$_GET['search_post'];
 		} else {
-			$msg = 'U heeft geen geldige postcode opgegeven.';
+			$msg_post = 'U heeft geen geldige postcode opgegeven.';
 		}
-		$previous_search = $_GET['search'] ?? 'no previous search';
+		if (preg_match($pattern_iban, $iban)){
+			$msg_iban = 'Geldige rekeningnummer!! hier:'.$_GET['search_iban'];
+		} else {
+			$msg_iban = 'U heeft geen geldige rekeningnummer opgegeven.';
+		}
+
+		$previous_search_post = $_GET['search_post'] ?? 'no previous check';
+		$previous_search_iban = $_GET['search_iban'] ?? 'no previous check';
 	}
 ?>
 <!DOCTYPE html>
@@ -21,14 +31,20 @@
 		<section>
 			<form action="index.php" method="GET">
 				<label for="postcode">postcode check:</label>
-				<input type="text" name="search" id="postcode" placeholder="<?= $previous_search ?? 'Vul uw postcode in...';?>">
+				<input type="text" name="search_post" id="postcode" placeholder="<?= $previous_search_post ?? 'Vul uw postcode in...';?>">
+				<br>
+				<label for="iban">rekeningnummer check:</label>
+				<input type="text" name="search_iban" id="iban" placeholder="<?= $previous_search_iban ?? 'Vul uw rekeningnummer in...';?>">
 				<input type="submit" name="search-button" value="controleren">
 			</form>
 			<?php
-				if (isset($msg) && $msg != ''){
-					echo '<p>'.$msg.'</p>';
+				if (isset($msg_post) && $msg_post != ''){
+					echo '<p>'.$msg_post.'</p>';
 				}
-			?>
+				if (isset($msg_iban) && $msg_iban != ''){
+					echo '<p>'.$msg_iban.'</p>';
+				}
+				?>
 		</section>
 	</body>
 </html>
